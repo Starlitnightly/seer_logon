@@ -15,6 +15,11 @@
 
 #include <QProcess>
 #include<Qdir>
+#include<QApplication>
+#include<QDebug>
+#include <QList>
+#include <QVariantList>
+
 
 
 
@@ -30,6 +35,20 @@ void AutoRegDm()
 }
 
 
+HWND Getpid(){
+    HWND test;
+    HWND hq=FindWindow(L"Qt5QWindowIcon",L"seer");
+    test=GetWindow(hq,5);
+    test=GetWindow(test,2);
+    test=GetWindow(test,5);
+    test=GetWindow(test,5);
+    test=GetWindow(test,5);
+    test=GetWindow(test,5);
+    test=GetWindow(test,5);
+    test=GetWindow(test,5);
+    return test;
+}
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -40,20 +59,11 @@ MainWindow::MainWindow(QWidget *parent) :
     //setWindowFlags(Qt::FramelessWindowHint);//无边框
     //setAttribute(Qt::WA_TranslucentBackground);//背景透明
     ui->setupUi(this);
-
-    //自动注册大漠插件
-    //AutoRegDm();
-
-    //初始化大漠插件
-    //QAxWidget *dm=new QAxWidget();
-    //dm->setControl(QString::fromUtf8("{26037A0E-7CBD-4FFF-9C63-56F2D0770214}"));
-    //QMessageBox::information(this,"this",dm->dynamicCall("Ver()").toString());//测试是否成功
-
-    //AutoRegDm();
+    //setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint | Qt::CustomizeWindowHint);
 
 
 
-   // QLibrary mylib("speedhack-i386.dll");
+
 
 
     //载入赛尔号游戏
@@ -73,8 +83,22 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->action,SIGNAL(triggered()),this,SLOT(FreshSeer()));
     connect(ui->action_2,SIGNAL(triggered()),this,SLOT(Mute()));
     connect(ui->action_3,SIGNAL(triggered()),this,SLOT(unMute()));
-    connect(ui->action_4,SIGNAL(triggered()),this,SLOT(open()));
-    connect(ui->action_5,SIGNAL(triggered()),this,SLOT(speedopen()));
+    //connect(ui->action_4,SIGNAL(triggered()),this,SLOT(open()));
+    //connect(ui->action_5,SIGNAL(triggered()),this,SLOT(speedopen()));
+
+    connect(ui->action_ie,SIGNAL(triggered()),this,SLOT(ClearCache()));
+
+    qDebug()<<(int)Getpid();
+    f.show();
+
+    //初始化大漠插件
+    /*
+    QAxWidget *dm=new QAxWidget();
+    dm->setControl(QString::fromUtf8("{26037A0E-7CBD-4FFF-9C63-56F2D0770214}"));
+    //QMessageBox::information(this,"this",dm->dynamicCall("Ver()").toString());//测试是否成功
+    AutoRegDm();
+    //dm->dynamicCall("BindWindow(int,QString,QString,QString,int)",pid,"dx2", "windows","windows",1)
+    */
 
 }
 
@@ -82,6 +106,27 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::Binddm(){
+    int pid=(int)Getpid();
+    AutoRegDm();
+    dm.setControl("dm.dmsoft");
+    if(dm.BindWindow(pid,"dx2", "windows","windows",1)==0){
+        if(dm.GetLastError()==-18){
+            QMessageBox::information(this,"this","关于绑定失败，请在群公告内查找解决方法[记得关闭杀毒软件]，若不看公告，私聊星夜大概率会被拉黑");
+        }else if(dm.GetLastError()==0)
+            QMessageBox::information(this,"this","错误代码：0，本错误请关闭所有杀毒软件，并用管理员模式启动");
+        else{
+            QString tmp="错误代码："+QString::number(dm.GetLastError())+"，可发送错误代码给星夜咨询错误问题";
+            QMessageBox::information(this,"this",tmp);
+        }
+    }
+    QString path=QDir::currentPath()+"/pic";
+    dm.SetPath(path);
+    QVariant x,y;
+    dm.FindPic(0,0,1000,600,"test.bmp","000000",0.8,0,x,y);
+    qDebug()<<x.toInt()<<y.toInt();
 }
 
 void MainWindow::FreshSeer()//刷新游戏
@@ -105,69 +150,115 @@ void MainWindow::OptimizingMemory()//内存优化
     SetProcessWorkingSetSize(GetCurrentProcess(),-1,-1);
 }
 
-void MainWindow::ChangeSpeedPrepare()
-{
-/*
-    speedhackhw=LoadLibraryA("speedhack-i386.dll");
-    const char* s1="speedhackversion_GetTickCount";
-    LPCSTR z1;
-    z1=s1;
-    speedhook[0].InHook("kernel32","GetTickCount",GetProcAddress(speedhackhw,z1),7);
-    const char* s2="speedhackversion_QueryPerformanceCounter";
-    LPCSTR z2;
-    z2=s2;
-    speedhook[1].InHook("kernel32","QueryPerformanceCounter",GetProcAddress(speedhackhw,z2),5);
-    const char* s3="speedhackversion_GetTickCount";
-    LPCSTR z3;
-    z3=s3;
-    speedhook[2].InHook("winmm","timeGetTime",GetProcAddress(speedhackhw,z3),5);
+void MainWindow::ReleaseMemory(){
+    //内存释放
+}
+
+void MainWindow::ClearCache(){
+    //清理ie缓存
+    Binddm();
+
+
 
     /*
-    LPVOID getick=new LPVOID;
-    LPVOID query=new LPVOID;
-    BYTE tbyte1[5],tbyte2[5];
-    DWORD dwWriteByte;
-    tbyte1[0]=0xE9;
-    tbyte1[1]=speedhook[0].bOldByte[1];
-    *(&(tbyte1[1]))+=*(Jmp((LPVOID)(getick+7),(LPVOID)(speedhook[0].pOldFunEntry+7)));
-    WriteProcessMemory( GetCurrentProcess(), getick, tbyte1, 5, &dwWriteByte );
-    tbyte2[0]=0xE9;
-    tbyte2[1]=speedhook[1].bOldByte[1];
-    *(&(tbyte2[1]))+=*(Jmp((LPVOID)(query+5),(LPVOID)(speedhook[1].pOldFunEntry+5)));
-    WriteProcessMemory( GetCurrentProcess(), query, tbyte2, 5, &dwWriteByte );
-    
-    WriteProcessMemory( GetCurrentProcess(), (LPVOID)GetProcAddress(speedhackhw,"realGetTickCount"), getick, 5, &dwWriteByte );
-    WriteProcessMemory( GetCurrentProcess(), (LPVOID)GetProcAddress(speedhackhw,"realQueryPerformanceCounter"), query, 5, &dwWriteByte );
+    QProcess p(0);
+    p.start("cmd");
+    p.waitForStarted();
+    p.write("RunDll32.exe InetCpl.cpl,ClearMyTracksByProcess 8");
+    p.closeWriteChannel();
+    p.waitForFinished();
+    qDebug()<<QString::fromLocal8Bit(p.readAllStandardOutput());
+    */
+}
 
-    speedhook[0].Hook(7);
-    speedhook[1].Hook(5);
-    speedhook[2].Hook(5);
-*/
+void MainWindow::Opence(){
+    //打开ce
+}
 
+void MainWindow::Openfd(){
+    //打开fd
+}
 
+void MainWindow::OpenKeyandMouse(){
+    //打开键鼠录制器
+}
 
+void MainWindow::OpenMousepoint(){
+    //打开鼠标连点器
+}
+
+void MainWindow::ChangeSpirit(){
+    //一键换精灵窗口
+}
+
+void MainWindow::ChangeBag(){
+    //一键换背包
+}
+
+void MainWindow::Gemsynthesis(){
+    //宝石合成
+}
+
+void MainWindow::Inputcdk(){
+    //一键输入cdk
+}
+
+void MainWindow::GreenfireTimer(){
+    //绿火计时器
+}
+
+void MainWindow::PeakMode(){
+    //巅峰模式
+}
+
+void MainWindow::Openscript(){
+    //打开脚本
+}
+
+void MainWindow::ChangeSpeedPrepare()
+{
 }
 
 void MainWindow::ChangeSpeed()
 {
-    ui->axWidget->setFocus();
-    mouse_event(MOUSEEVENTF_ABSOLUTE|MOUSEEVENTF_WHEEL,0,0, 200, 0);
+
 
 }
 
 void MainWindow::open()
 {
-    QProcess pro;
-    QString strPath = QDir::currentPath()+"\\tools.exe";
-    pro.startDetached(strPath);
+    f.show();
+
+    //QProcess pro;
+    //QString strPath = QDir::currentPath()+"\\tools.exe";
+    //pro.startDetached(strPath);
 }
 
 void MainWindow::speedopen()
 {
-    QProcess pro;
-    QString strPath = QDir::currentPath()+"\\speed\\speed.exe";
-    pro.startDetached(strPath);
+    QLibrary lib("SpeedControl.dll");
+    if (lib.load())
+    {
+        typedef void(*Fun)(float a);
+        Fun Setrange=(Fun)lib.resolve("SetRange");
+        if (!Setrange)
+        {
+            qDebug()<<"failed";
+        }
+        else
+        {
+            Setrange(4.0);
+            qDebug()<<"变速成功";
+        }
+    }
+    else
+    {
+        qDebug()<<"failed";
+    }
+
 }
+
+
 
 
 

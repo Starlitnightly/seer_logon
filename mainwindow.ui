@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>582</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>seer</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>960</width>
+      <height>560</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QAxWidget" name="axWidget">
+     <property name="geometry" stdset="0">
+      <rect>
+       <x>-8</x>
+       <y>-8</y>
+       <width>1100</width>
+       <height>600</height>
+      </rect>
+     </property>
+     <property name="sizePolicy" stdset="0">
+      <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>960</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="title">
+     <string>菜单</string>
+    </property>
+    <addaction name="action"/>
+    <addaction name="action_2"/>
+    <addaction name="action_3"/>
+    <addaction name="separator"/>
+    <addaction name="action_18"/>
+    <addaction name="action_19"/>
+    <addaction name="action_ie"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="title">
+     <string>工具</string>
+    </property>
+    <widget class="QMenu" name="menu_5">
+     <property name="title">
+      <string>工具</string>
+     </property>
+     <addaction name="action_ce"/>
+     <addaction name="action_fd"/>
+     <addaction name="action_15"/>
+     <addaction name="action_16"/>
+    </widget>
+    <addaction name="menu_5"/>
+    <addaction name="action_5"/>
+    <addaction name="separator"/>
+    <addaction name="action_21"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>功能</string>
+    </property>
+    <addaction name="actionyijian"/>
+    <addaction name="action_6"/>
+    <addaction name="action_7"/>
+    <addaction name="action_cdk"/>
+    <addaction name="separator"/>
+    <addaction name="action_13"/>
+    <addaction name="action_14"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>脚本</string>
+    </property>
+    <addaction name="action_8"/>
+    <addaction name="action_9"/>
+    <addaction name="action_10"/>
+    <addaction name="action_11"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+  </widget>
+  <action name="action">
+   <property name="text">
+    <string>刷新游戏</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>游戏静音</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>解除静音</string>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="text">
+    <string>变速与缩放</string>
+   </property>
+  </action>
+  <action name="actionyijian">
+   <property name="text">
+    <string>一键换精灵</string>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="text">
+    <string>宝石合成</string>
+   </property>
+  </action>
+  <action name="action_7">
+   <property name="text">
+    <string>一键换背包</string>
+   </property>
+  </action>
+  <action name="action_cdk">
+   <property name="text">
+    <string>一键输入cdk</string>
+   </property>
+  </action>
+  <action name="action_8">
+   <property name="text">
+    <string>普通脚本</string>
+   </property>
+  </action>
+  <action name="action_9">
+   <property name="text">
+    <string>自定义脚本</string>
+   </property>
+  </action>
+  <action name="action_10">
+   <property name="text">
+    <string>巅峰脚本</string>
+   </property>
+  </action>
+  <action name="action_11">
+   <property name="text">
+    <string>六界神王殿脚本</string>
+   </property>
+  </action>
+  <action name="action_13">
+   <property name="text">
+    <string>绿火计时器</string>
+   </property>
+  </action>
+  <action name="action_14">
+   <property name="text">
+    <string>巅峰模式</string>
+   </property>
+  </action>
+  <action name="action_ce">
+   <property name="text">
+    <string>载入ce</string>
+   </property>
+  </action>
+  <action name="action_fd">
+   <property name="text">
+    <string>载入fd</string>
+   </property>
+  </action>
+  <action name="action_15">
+   <property name="text">
+    <string>载入键鼠录制工具</string>
+   </property>
+  </action>
+  <action name="action_16">
+   <property name="text">
+    <string>载入鼠标连点器</string>
+   </property>
+  </action>
+  <action name="action_18">
+   <property name="text">
+    <string>内存优化</string>
+   </property>
+  </action>
+  <action name="action_19">
+   <property name="text">
+    <string>内存释放</string>
+   </property>
+  </action>
+  <action name="action_ie">
+   <property name="text">
+    <string>清理ie缓存</string>
+   </property>
+  </action>
+  <action name="action_21">
+   <property name="text">
+    <string>攻略检索</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QAxWidget</class>
+   <extends>QWidget</extends>
+   <header>qaxwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
