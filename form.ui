@@ -11,14 +11,14 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>脚本</string>
   </property>
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
      <y>40</y>
-     <width>531</width>
+     <width>381</width>
      <height>281</height>
     </rect>
    </property>
@@ -29,6 +29,136 @@
     <attribute name="title">
      <string>Tab 1</string>
     </attribute>
+    <widget class="QRadioButton" name="radio_team">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>30</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>一键战队贡献</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radio_vip">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>70</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>vip礼包</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radio_tower">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>110</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>一键勇者之塔</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radio_gem">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>150</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>一键宝石抽奖</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radio_wish">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>190</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>一键许愿</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radio_xxlzc">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>30</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>一键学习力战场</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radio_jlw">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>70</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>精灵王大乱斗脚本</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radio_fw">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>110</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>飞王脚本</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radio_hdblk">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>150</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>混沌布莱克脚本</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radio_spt">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>190</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>spt徽章[瑞尔斯]</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="tab_2">
     <attribute name="title">
@@ -40,7 +170,7 @@
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>80</y>
+     <y>220</y>
      <width>101</width>
      <height>41</height>
     </rect>
@@ -53,13 +183,36 @@
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>140</y>
+     <y>280</y>
      <width>101</width>
      <height>41</height>
     </rect>
    </property>
    <property name="text">
     <string>停止运行</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>110</y>
+     <width>221</width>
+     <height>101</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>90</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>脚本使用说明</string>
    </property>
   </widget>
  </widget>

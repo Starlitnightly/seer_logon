@@ -38,6 +38,7 @@ void AutoRegDm()
 HWND Getpid(){
     HWND test;
     HWND hq=FindWindow(L"Qt5QWindowIcon",L"seer");
+    qDebug()<<"hq"<<(int)hq;
     test=GetWindow(hq,5);
     test=GetWindow(test,2);
     test=GetWindow(test,5);
@@ -60,7 +61,7 @@ MainWindow::MainWindow(QWidget *parent) :
     //setAttribute(Qt::WA_TranslucentBackground);//背景透明
     ui->setupUi(this);
     //setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint | Qt::CustomizeWindowHint);
-
+    //qDebug()<<"test"<<this->winId();
 
 
 
@@ -84,12 +85,11 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->action_2,SIGNAL(triggered()),this,SLOT(Mute()));
     connect(ui->action_3,SIGNAL(triggered()),this,SLOT(unMute()));
     //connect(ui->action_4,SIGNAL(triggered()),this,SLOT(open()));
-    //connect(ui->action_5,SIGNAL(triggered()),this,SLOT(speedopen()));
+    connect(ui->action_5,SIGNAL(triggered()),this,SLOT(speedopen()));
 
     connect(ui->action_ie,SIGNAL(triggered()),this,SLOT(ClearCache()));
-
-    qDebug()<<(int)Getpid();
-    f.show();
+    connect(ui->action_8,SIGNAL(triggered()),this,SLOT(script_open()));
+    //f.show();
 
     //初始化大漠插件
     /*
@@ -109,9 +109,25 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::Binddm(){
-    int pid=(int)Getpid();
+    //获取游戏窗口pid
+    int pid;
+    HWND test;
+    HWND hq=(HWND)this->winId();
+    qDebug()<<"hq"<<(int)hq;
+    test=GetWindow(hq,5);
+    test=GetWindow(test,2);
+    test=GetWindow(test,5);
+    test=GetWindow(test,5);
+    test=GetWindow(test,5);
+    test=GetWindow(test,5);
+    test=GetWindow(test,5);
+    test=GetWindow(test,5);
+    pid=(int)test;
+    //自动注册大漠
     AutoRegDm();
+    //初始化大漠
     dm.setControl("dm.dmsoft");
+    //绑定窗口
     if(dm.BindWindow(pid,"dx2", "windows","windows",1)==0){
         if(dm.GetLastError()==-18){
             QMessageBox::information(this,"this","关于绑定失败，请在群公告内查找解决方法[记得关闭杀毒软件]，若不看公告，私聊星夜大概率会被拉黑");
@@ -122,11 +138,15 @@ void MainWindow::Binddm(){
             QMessageBox::information(this,"this",tmp);
         }
     }
+    //设置识图目录
     QString path=QDir::currentPath()+"/pic";
     dm.SetPath(path);
+    //测试识图效果
     QVariant x,y;
     dm.FindPic(0,0,1000,600,"test.bmp","000000",0.8,0,x,y);
     qDebug()<<x.toInt()<<y.toInt();
+    //设置字库
+    dm.SetDict(0,path+"/ziku.txt");
 }
 
 void MainWindow::FreshSeer()//刷新游戏
@@ -225,7 +245,7 @@ void MainWindow::ChangeSpeed()
 
 }
 
-void MainWindow::open()
+void MainWindow::script_open()
 {
     f.show();
 
@@ -236,25 +256,8 @@ void MainWindow::open()
 
 void MainWindow::speedopen()
 {
-    QLibrary lib("SpeedControl.dll");
-    if (lib.load())
-    {
-        typedef void(*Fun)(float a);
-        Fun Setrange=(Fun)lib.resolve("SetRange");
-        if (!Setrange)
-        {
-            qDebug()<<"failed";
-        }
-        else
-        {
-            Setrange(4.0);
-            qDebug()<<"变速成功";
-        }
-    }
-    else
-    {
-        qDebug()<<"failed";
-    }
+    s.show();
+    s.move(this->x(),this->y()+this->height());
 
 }
 

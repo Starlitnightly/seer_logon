@@ -7,7 +7,7 @@
 QT       += core gui
 QT += core gui axcontainer
 
-RC_ICONS = test1.ico
+RC_ICONS = favicon.ico
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -35,7 +35,9 @@ SOURCES += \
     hookapi.cpp \
     form.cpp \
     dm.cpp \
-    ext.cpp
+    ext.cpp \
+    speed.cpp \
+    xy.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -44,11 +46,14 @@ HEADERS += \
     hookapi.h \
     form.h \
     dm.h \
-    ext.h
+    ext.h \
+    speed.h \
+    xy.h
 
 FORMS += \
         mainwindow.ui \
-    form.ui
+    form.ui \
+    speed.ui
 
 DISTFILES +=
 

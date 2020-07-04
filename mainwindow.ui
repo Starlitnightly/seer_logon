@@ -20,7 +20,7 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>seer</string>
+   <string>星小夜的登录器</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="sizePolicy">

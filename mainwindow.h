@@ -8,6 +8,7 @@
 #include "form.h"
 #include "dm.h"
 #include "ext.h"
+#include "speed.h"
 
 
 
@@ -30,6 +31,7 @@ public:
 private:
     Ui::MainWindow *ui;
     Form f;
+    Speed s;
 
 public slots:
     //菜单
@@ -60,7 +62,7 @@ public slots:
 
     void ChangeSpeedPrepare();//变速准备
     void ChangeSpeed();//修改速度大小为speed_size
-    void open();
+    void script_open();
     void speedopen();
 };
 #endif // MAINWINDOW_H
