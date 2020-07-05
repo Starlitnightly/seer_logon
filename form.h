@@ -4,12 +4,13 @@
 #include <QWidget>
 #include <QThread>
 #include <QDebug>
-#include <QTimer>
-#include <QEventLoop>
 #include <QMessageBox>
+#include <QSettings>
+#include <QDir>
 
 #include "ext.h"
 #include "xy.h"
+
 
 
 namespace Ui {
@@ -27,6 +28,7 @@ class Xxlzc;
 
 class AutoC;
 class Repp;
+class Top;
 }
 //补pp脚本
 class Repp: public QThread
@@ -177,7 +179,7 @@ public:
 protected:
     void run();
 signals:
-    void done();
+    void sendMessage(QString msg);
 };
 //勇者之塔脚本
 class Tower: public QThread
@@ -253,6 +255,125 @@ signals:
 };
 
 
+//判断进入巅峰
+class Pdtop: public QThread
+{
+    Q_OBJECT
+
+public:
+    bool status;
+    int now;
+    QString mode;
+    Pdtop(QObject *parent = 0)
+        : QThread(parent)
+    {
+        status=false;
+    }
+protected:
+    void run();
+signals:
+    void done();
+};
+//ban三黑
+class Ban3: public QThread
+{
+    Q_OBJECT
+
+public:
+    bool status;
+    int now;
+    QString mode;
+    Ban3(QObject *parent = 0)
+        : QThread(parent)
+    {
+        status=false;
+    }
+protected:
+    void run();
+signals:
+    void done();
+};
+//自爆与首发
+class Explode: public QThread
+{
+    Q_OBJECT
+
+public:
+    bool status;
+    int now;
+    QString mode;
+    Explode(QObject *parent = 0)
+        : QThread(parent)
+    {
+        status=false;
+    }
+    void auto33first();
+    void auto33fight();
+    void autofirst();
+    void autofight();
+protected:
+    void run();
+signals:
+    void done();
+};
+
+//巅峰脚本
+class Top: public QThread
+{
+    Q_OBJECT
+
+public:
+    bool status;
+    int now;
+    Repp *script_repp;
+    Pdtop *script_pdtop;
+    Ban3 *script_ban3;
+    Explode *script_explode;
+    QString mode;
+
+    bool robot;
+
+    Top(QObject *parent = 0)
+        : QThread(parent)
+    {
+        status=false;
+        script_repp=NULL;
+        script_ban3=NULL;
+        script_pdtop=NULL;
+        script_explode=NULL;
+        robot=false;
+    }
+
+    void Robotfight();
+protected:
+    void run();
+signals:
+    void done();
+};
+
+//圣瑞脚本
+class Searles: public QThread
+{
+    Q_OBJECT
+
+public:
+    bool status;
+    int now;
+    QString mode;
+    Searles(QObject *parent = 0)
+        : QThread(parent)
+    {
+        status=false;
+    }
+protected:
+    void run();
+signals:
+    void sendreset(QString msg);
+    void sendlose(QString msg);
+    void sendfight(QString msg);
+};
+
+
 
 
 
@@ -286,6 +407,8 @@ public:
     Xxlzc *script_xxlzc;
 
     AutoC *script_auto;
+    Top *script_top;
+    Searles *script_searles;
 
 
     QString mode;
@@ -308,8 +431,22 @@ public slots:
     void vip_selected();
     void wish_selected();
     void xxlzc_selected();
+    //巅峰单选框槽函数
+    void top_jj_selected();
+    void top_ky_selected();
+    void top_33_selected();
+
+    void searles_selected();//选择圣瑞脚本
+
+    void showMessageBox(QString msg);
+
+    void showreset(QString msg);
+    void showlose(QString msg);
+    void showfight(QString msg);
 
 };
+
+
 
 
 

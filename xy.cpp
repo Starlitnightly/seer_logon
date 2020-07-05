@@ -6,6 +6,11 @@ QString xy_shibiejifangjingling(){
     return dm.Ocr(16,91,101,106,"ffffff-111111",1.0);
 }
 
+//星夜_识别对方精灵（战斗中）
+QString xy_shibieduifangjingling(){
+    return dm.Ocr(877, 89, 961, 107, "ffffff-111111",1.0);
+}
+
 //释放技能
 void xy_skill(QString jn,QString jnbmp,QString nextjn){
     QVariant x,y;
@@ -168,4 +173,9 @@ void OpenKingSpirit(){
         dm.MoveTo(x.toInt(),y.toInt());
         dm.LeftClick();
     }
+}
+void Delay(int time){
+    QEventLoop loop;
+    QTimer::singleShot(time, &loop, SLOT(quit()));
+    loop.exec();
 }

@@ -5,11 +5,7 @@
 #include <QThread>
 #include <QObject>
 
-void Delay(int time){
-    QEventLoop loop;
-    QTimer::singleShot(time, &loop, SLOT(quit()));
-    loop.exec();
-}
+
 
 Form::~Form()
 {
@@ -36,6 +32,12 @@ Form::Form(QWidget *parent) :
     connect(ui->radio_vip,SIGNAL(clicked(bool)),this,SLOT(vip_selected()));//vip单选框被选中
     connect(ui->radio_wish,SIGNAL(clicked(bool)),this,SLOT(wish_selected()));//许愿单选框被选中
     connect(ui->radio_xxlzc,SIGNAL(clicked(bool)),this,SLOT(xxlzc_selected()));//学习力战场单选框被选中
+    //巅峰单选框槽函数
+    connect(ui->top_jj,SIGNAL(clicked(bool)),this,SLOT(top_jj_selected()));
+    connect(ui->top_ky,SIGNAL(clicked(bool)),this,SLOT(top_ky_selected()));
+    connect(ui->top_33,SIGNAL(clicked(bool)),this,SLOT(top_33_selected()));
+    //圣瑞
+    connect(ui->radio_searles,SIGNAL(clicked(bool)),this,SLOT(searles_selected()));
 
     script_fw=NULL;
     script_gem=NULL;
@@ -49,12 +51,37 @@ Form::Form(QWidget *parent) :
     script_xxlzc=NULL;
 
     script_auto=NULL;
+    script_top=NULL;
+    script_searles=NULL;
+
+    QString iniFilePath = QDir::currentPath()+"/圣瑞次数统计.ini";  //路径
+    qDebug()<<iniFilePath;
+    QSettings settings(iniFilePath,QSettings::IniFormat);
+    QString searles_cz = settings.value("times/reset").toString();
+    searles_reset=searles_cz.toInt();
+    ui->label_2->setText("重置次数:"+searles_cz);
+    qDebug()<<"重置次数"<<searles_cz;
+    QString searles_fi = settings.value("times/fight").toString();
+    searles_fight=searles_fi.toInt();
+    ui->label_3->setText("挑战次数:"+searles_fi);
+    qDebug()<<"挑战次数"<<searles_fi;
+    QString searles_lo = settings.value("times/lose").toString();
+    searles_lose=searles_lo.toInt();
+    ui->label_4->setText("战败次数:"+searles_lo);
+    qDebug()<<"战败次数"<<searles_lo;
+
+    //重置次数显示
+    settings.setValue("次数统计/重置次数",QString::number(searles_reset,10));
 
 }
 
 
 
-
+void Form::showMessageBox(QString msg){
+    qDebug()<<msg;
+    ui->textEdit->setPlainText(msg);
+    //QMessageBox::information(NULL,"this",msg);
+}
 
 
 void Form::test(){
@@ -134,6 +161,7 @@ void Form::test(){
         if(script_team==NULL)
             script_team=new Team(this);
         script_team->status=true;
+        connect(script_team,SIGNAL(sendMessage(QString)),this,SLOT(showMessageBox(QString)));
 
         friend_click=false;
         script_team->now=4;
@@ -167,8 +195,61 @@ void Form::test(){
         script_wish->start();
         script_auto->start();
 
+    }else if(mode=="xxlzc"){
+        if(script_xxlzc==NULL)
+            script_xxlzc=new Xxlzc(this);
+        script_xxlzc->status=true;
+
+        if(script_auto==NULL)
+            script_auto=new AutoC(this);
+        script_auto->status=true;
+
+        jinglingjineng="第一";
+
+        script_xxlzc->start();
+        script_auto->start();
+
+    }else if(mode=="top_jj" || mode=="top_ky" || mode=="top_33"){
+        if(script_top==NULL)
+            script_top=new Top(this);
+        script_top->status=true;
+
+        if(script_auto==NULL)
+            script_auto=new AutoC(this);
+        script_auto->status=true;
+
+        script_top->mode=mode;
+        if(ui->checkBox->isChecked())
+            script_top->robot=true;
+        else
+            script_top->robot=false;
+        jinglingjineng="第一";
+        script_top->start();
+        script_auto->start();
+
+    }else if(mode=="searles"){
+        if(script_searles==NULL)
+            script_searles=new Searles(this);
+        script_searles->status=true;
+
+        connect(script_searles,SIGNAL(sendreset(QString)),this,SLOT(showreset(QString)));
+        connect(script_searles,SIGNAL(sendlose(QString)),this,SLOT(showlose(QString)));
+        connect(script_searles,SIGNAL(sendfight(QString)),this,SLOT(showfight(QString)));
+
+        script_searles->start();
+
     }
 
+}
+
+void Form::showreset(QString msg){
+    ui->label_2->setText("重置次数:"+msg);
+}
+void Form::showlose(QString msg){
+    ui->label_4->setText("战败次数:"+msg);
+}
+void Form::showfight(QString msg){
+    ui->label_3->setText("挑战次数:"+msg);
 }
 
 void Form::test2(){
@@ -194,6 +275,17 @@ void Form::test2(){
     }else if(mode=="wish"){
         script_wish->status=false;
         script_auto->status=false;
+    }else if(mode=="xxlzc"){
+        script_xxlzc->status=false;
+        script_auto->status=false;
+    }else if(mode=="top_jj" || mode=="top_ky" || mode=="top_33" || mode=="top_robot"){
+        script_top->status=false;
+        script_auto->status=false;
+    }else if(mode=="xxlzc"){
+        script_xxlzc->status=false;
+        script_auto->status=false;
+    }else if(mode=="searles"){
+        script_searles->status=false;
     }
 }
 
@@ -262,6 +354,31 @@ void Form::xxlzc_selected(){
     ui->textEdit->setPlainText(text);
     mode="xxlzc";
 }
+void Form::top_jj_selected(){
+    QString text;
+    text=QString("脚本使用说明：在巅峰地图运行脚本");
+    ui->textEdit->setPlainText(text);
+    mode="top_jj";
+}
+void Form::top_ky_selected(){
+    QString text;
+    text=QString("脚本使用说明：在巅峰地图运行脚本");
+    ui->textEdit->setPlainText(text);
+    mode="top_ky";
+}
+void Form::top_33_selected(){
+    QString text;
+    text=QString("脚本使用说明：在巅峰地图运行脚本");
+    ui->textEdit->setPlainText(text);
+    mode="top_33";
+}
+void Form::searles_selected(){
+    QString text;
+    text=QString("脚本使用说明：表姐（天尊）首发， 王哈，毁灭(可选)");
+    ui->textEdit->setPlainText(text);
+    mode="searles";
+}
+
 
 /*
 脚本实现
@@ -380,7 +497,7 @@ void Fw::run(){
         qDebug()<<fw_lqactive<<fw_llactive<<fw_cxactive;
         if(fw_allactive==true && fw_lqactive==true && fw_llactive==true && fw_cxactive==true){
             fw_trueactive=true;
-            QMessageBox::information(NULL,"this","三种效果已成功打完");
+            //QMessageBox::information(NULL,"this","三种效果已成功打完");
             break;
         }else
             fw_trueactive=false;
@@ -516,7 +633,7 @@ void Gem::run(){
             if(dm.FindPic(751, 136, 942, 258,"rc-bsm.bmp","000000",0.9,0,x,y)!=-1){
                 dm.MoveTo(790,78);
                 dm.LeftClick();
-                QMessageBox::information(NULL,"this","宝石/刻印已抽完");
+                //QMessageBox::information(NULL,"this","宝石/刻印已抽完");
                 break;
             }else {
                 if(dm.FindPic(0,0,1000,600,"rc-bs.bmp","000000",0.9,0,x,y)!=-1){
@@ -579,7 +696,8 @@ void Hdblk::run(){
             hdblk_scriptset();
             Delay(1000);
         }else
-            QMessageBox::information(NULL,"this","混布脚本已自动停止");
+            break;
+            //QMessageBox::information(NULL,"this","混布脚本已自动停止");
     }
 }
 void Jlw::run(){
@@ -601,18 +719,21 @@ void Jlw::run(){
         }
         OpenKingSpirit();
         xy_autofight();
-        if(dm.FindColorE( 13, 440, 76, 462, "93c1ca-000000", 1, 0)!="-1|-1" || dm.FindPic(14, 327, 971, 570, "0.bmp","000000",0.8,0,x,y)!=-1){
-            replenishpp=true;
-            if(script_repp==NULL)
-                script_repp=new Repp(this);
-            script_repp->start();
-        }
-        if(replenishpp==false){
-            if(dm.FindColor(18,476,89,493,"fffad4-000000",1,0,x,y)!=0){
-                dm.MoveTo(40,506);
-                dm.LeftClick();
+        if(dm.FindPic(0,0,1000,600,"道具.bmp","000000",0.8,0,x,y)!=-1){
+            if(dm.FindColorE( 13, 440, 76, 462, "93c1ca-000000", 1, 0)!="-1|-1" || dm.FindPic(14, 327, 971, 570, "0.bmp","000000",0.8,0,x,y)!=-1){
+                replenishpp=true;
+                if(script_repp==NULL)
+                    script_repp=new Repp(this);
+                script_repp->start();
+            }
+            if(replenishpp==false){
+                if(dm.FindColor(18,476,89,493,"fffad4-000000",1,0,x,y)!=0){
+                    dm.MoveTo(40,506);
+                    dm.LeftClick();
+                }
             }
         }
+
         Delay(1000);
     }
 }
@@ -707,9 +828,10 @@ void Team::run(){
                         dm.MoveTo(684,333);
                         dm.LeftClick();
                         Delay(100);
-                        if(dm.Ocr(718,310,939,371,"996600-444444|ffffff-000000",1)=="今日还能生产0")
+                        qDebug()<<dm.Ocr(718,310,939,371,"996600-444444|ffffff-000000",1);
+                        if(dm.Ocr(718,310,939,371,"996600-444444|ffffff-000000",1).contains("今日还能生产0"))
                             break;
-                        if(dm.Ocr(825,312,907,361,"ffffff-000000",1)=="0")
+                        if(dm.Ocr(825,312,907,361,"ffffff-000000",1).contains("0"))
                             break;
                         if(dm.FindPic(480,300,1000,600,"11.bmp","000000",0.9,0,x,y)!=-1)
                             break;
@@ -724,9 +846,10 @@ void Team::run(){
                         || dm.FindPic(825,388,1207,540,"rczd0.bmp","000000",0.9,0,x,y)!=-1
                         || dm.FindPic(474,232,848,434,"hkssc.bmp","000000",0.9,0,x,y)!=-1
                         || dm.FindPic(474,232,848,434,"hkssc1.bmp","000000",0.9,0,x,y)!=-1
-                        || dm.Ocr(718,310,939,371,"996600-444444|ffffff-000000",1)=="今日还能生产0"
-                        || dm.Ocr(825,312,907,361,"ffffff-000000",1)=="0"){
-                    QMessageBox::information(NULL,"this","一键战队贡献已完成");
+                        || dm.Ocr(718,310,939,371,"996600-444444|ffffff-000000",1).contains("今日还能生产0")
+                        || dm.Ocr(825,312,907,361,"ffffff-000000",1).contains("0")){
+                    emit sendMessage(QString("一键战队贡献已完成"));
+                    //QMessageBox::information(form_pointer,"this","一键战队贡献已完成");
                     break;
                 }
             }
@@ -779,7 +902,7 @@ void Vip::run(){
             if(dm.FindPic(0,0,1000,600,"rc-2-3.bmp","000000",0.8,0,x,y)!=-1){
                 dm.MoveTo(941,29);
                 dm.LeftClick();
-                QMessageBox::information(NULL,"this","礼包领取完毕");
+                //QMessageBox::information(NULL,"this","礼包领取完毕");
                 break;
             }
         }
@@ -815,6 +938,22 @@ void Wish::run(){
 void Xxlzc::run(){
     QVariant x,y;
     while(status==true){
+        if(dm.FindPic(129,289,881,383,"jlxxl-kstz.bmp|jlxxl-kstz2.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt()+5,y.toInt()+5);
+            dm.LeftClick();
+        }else if(dm.FindPic(129,289,881,383,"jlxxl-kstz3.bmp|jlxxl-kstz4.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt()+5,y.toInt()+5);
+            dm.LeftClick();
+        }
+
+        if(jinglingjineng=="第一"){
+            if(dm.FindColor(284,509,297,518,"0388ec-000000",1,0,x,y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+                jinglingjineng="第一";
+            }
+        }
+        Delay(500);
 
     }
 }
@@ -907,5 +1046,778 @@ void Repp::run(){
         }
     }
 }
+
+void Top::run(){
+    QVariant x,y;
+    while(status==true){
+        bool replenishpp=false;
+
+        jfjl=xy_shibiejifangjingling();
+        dmjl=xy_shibieduifangjingling();
+        qDebug()<<jfjl<<dmjl;
+
+        if(dm.FindPic(0,0,1000,600,"操作超时.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(489,359);
+            dm.LeftClick();
+        }
+        if(dm.FindPic(0,0,1000,600,"表姐自爆.bmp|机器人自爆.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+        }
+        if(mode=="top_ky" || mode=="top_jj"){
+            qDebug()<<"当前地图"<<xy_shibiemap();
+            if(xy_shibiemap()!="圣战之巅" && dm.FindPic(0,0,1000,600,"dfpd11.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(772,35);
+                dm.LeftClick();
+            }
+            if(xy_shibiemap()=="圣战之巅"){
+                dm.MoveTo(492,231);
+                dm.LeftClick();
+            }
+            if(dm.FindPic(0,0,1000,600,"xdf-szzd.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(492,231);
+                dm.LeftClick();
+            }
+            if(dm.FindPic(0,0,1000,600,"巅峰.bmp","000000",0.8,0,x,y)==-1){
+                if(dm.FindPic(0,0,1000,600,"圣战图标.bmp","000000",0.8,0,x,y)!=-1){
+                    dm.MoveTo(x.toInt()+5,y.toInt()+5);
+                    dm.LeftClick();
+                }
+            }
+            if(mode=="top_ky"){
+                if(dm.FindPic(0,0,1000,600,"xdf-ky.bmp","000000",0.8,0,x,y)!=-1){
+                    dm.MoveTo(x.toInt()+5,y.toInt()+5);
+                    dm.LeftClick();
+                }
+            }else if(mode=="top_jj"){
+                if(dm.FindPic(0,0,1000,600,"xdf-jj.bmp","000000",0.8,0,x,y)!=-1){
+                    dm.MoveTo(x.toInt()+5,y.toInt()+5);
+                    dm.LeftClick();
+                }
+            }
+            if(dm.FindPicE(0,0,1000,600,"巅峰.bmp|狂野.bmp|竞技.bmp|注意.bmp","000000",0.8,0)!="-1|-1|-1"){
+                if(script_pdtop==NULL)
+                    script_pdtop=new Pdtop(this);
+                script_pdtop->mode=mode;
+                script_pdtop->start();
+            }
+            if(dm.FindPicE(0,0,1000,600,"ban.bmp","000000",0.8,0)!="-1|-1|-1"){
+                if(script_ban3==NULL)
+                    script_ban3=new Ban3(this);
+                script_ban3->mode=mode;
+                script_ban3->start();
+            }
+            if(dm.FindPic(0,0,1000,600,"×.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt()+5,y.toInt()+5);
+                dm.LeftClick();
+            }
+
+        }else if(mode=="top_33"){
+            if(xy_shibiemap()=="圣战之巅"){
+                dm.MoveTo(492,231);
+                dm.LeftClick();
+            }
+            if(dm.FindPic(0,0,1000,600,"xdf-33.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt()+5,y.toInt()+5);
+                dm.LeftClick();
+            }
+            if(dm.FindPicE(0,0,1000,600,"进入33-1.bmp|进入33-2.bmp|注意.bmp","000000",0.8,0)!="-1|-1|-1"){
+                if(script_pdtop==NULL)
+                    script_pdtop=new Pdtop(this);
+                script_pdtop->mode=mode;
+                script_pdtop->start();
+            }
+            if(dm.FindPicE(0,0,1000,600,"ban.bmp|33ban.bmp","000000",0.8,0)!="-1|-1|-1"){
+                if(script_ban3==NULL)
+                    script_ban3=new Ban3(this);
+                script_ban3->mode=mode;
+                script_ban3->start();
+            }
+            if(dm.FindPic(0,0,1000,600,"×.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt()+5,y.toInt()+5);
+                dm.LeftClick();
+            }
+        }
+        //自动克制系出战
+        xy_autofight();
+
+        if(mode=="top_ky" || mode=="top_jj" || mode=="top_robot"){
+            if(dm.FindPic(0,0,1000,600,"首发.bmp|出战.bmp","000000",0.8,0,x,y)!=-1){
+                if(script_explode==NULL)
+                    script_explode=new Explode(this);
+                script_explode->mode=mode;
+                script_explode->start();
+            }
+        }
+        if(mode=="top_33"){
+            if(dm.FindPic(0,0,1000,600,"首发33.bmp|dfxzcz.bmp","000000",0.8,0,x,y)!=-1){
+                if(script_explode==NULL)
+                    script_explode=new Explode(this);
+                script_explode->mode=mode;
+                script_explode->start();
+            }
+        }
+        if(robot==true){
+            //智能出招（）
+            Robotfight();
+
+        }else{
+            if(dm.FindPic(0,0,1000,600,"道具.bmp","000000",0.8,0,x,y)!=-1){
+                if(dm.FindColorE( 13, 440, 76, 462, "93c1ca-000000", 1, 0)!="-1|-1" || dm.FindPic(14, 327, 971, 570, "0.bmp","000000",0.8,0,x,y)!=-1){
+                    replenishpp=true;
+                    if(script_repp==NULL)
+                        script_repp=new Repp(this);
+                    script_repp->start();
+                }
+                if(replenishpp==false){
+                    if(dm.FindColor(18,476,89,493,"fffad4-000000",1,0,x,y)!=0){
+                        dm.MoveTo(40,506);
+                        dm.LeftClick();
+                    }
+                }
+            }
+        }
+
+
+
+        if(dm.FindPic(0,0,1000,600,"确认1.bmp","000000",0.9,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+        }
+        Delay(1000);
+
+    }
+}
+void Top::Robotfight(){
+    QVariant x,y;
+    bool replenishpp=false;
+
+    if(dm.FindPic(0,0,1000,600,"道具.bmp","000000",0.8,0,x,y)!=-1){
+        if(dm.FindColorE( 13, 440, 76, 462, "93c1ca-000000", 1, 0)!="-1|-1" || dm.FindPic(14, 327, 971, 570, "0.bmp","000000",0.8,0,x,y)!=-1){
+            replenishpp=true;
+            if(script_repp==NULL)
+                script_repp=new Repp(this);
+            script_repp->start();
+        }
+    }
+    if(replenishpp==false){
+        if(jinglingjineng=="第一"){
+            if(dm.FindColor(284,509,297,518,"0388ec-000000",1,0,x,y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+                jinglingjineng="第五";
+            }
+        }else if(jinglingjineng=="第五"){
+            if(dm.FindColor(18,476,89,493,"fffad4-000000",1,0,x,y)!=0){
+                dm.MoveTo(40,506);
+                dm.LeftClick();
+                jinglingjineng="第一";
+            }
+        }
+    }
+
+}
+
+void Pdtop::run(){
+    QVariant x,y;
+    if(mode=="top_jj" || mode=="top_ky"){
+        if(dm.FindPic(0,0,1000,600,"巅峰.bmp","000000",0.8,0,x,y)!=-1){
+            qDebug()<<"巅峰";
+            Delay(200);
+            if(dm.FindPic(0,0,1000,600,"巅峰.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt(),y.toInt());
+                dm.LeftClick();
+                for(int i=0;i<30;i++){
+                    if(mode=="top_jj"){
+                        if(dm.FindPic(0,0,1000,600,"竞技.bmp","000000",0.8,0,x,y)!=-1){
+                            dm.MoveTo(x.toInt(),y.toInt());
+                            dm.LeftClick();
+                            break;
+                        }
+                    }
+                    if(mode=="top_ky"){
+                        if(dm.FindPic(0,0,1000,600,"狂野.bmp","000000",0.8,0,x,y)!=-1){
+                            dm.MoveTo(x.toInt(),y.toInt());
+                            dm.LeftClick();
+                            break;
+                        }
+                    }
+                    Delay(100);
+                }
+                for(int i=0;i<30;i++){
+                    if(dm.FindPic(0,0,1000,600,"注意.bmp","000000",0.8,0,x,y)!=-1){
+                        Delay(500);
+                        dm.MoveTo(826,488);
+                        dm.LeftClick();
+                        qDebug()<<"已点击";
+                        break;
+                    }else
+                        qDebug()<<"找不到";
+                    Delay(100);
+                }
+            }
+        }else {
+            if(mode=="top_ky"){
+                if(dm.FindPic(0,0,1000,600,"狂野.bmp","000000",0.8,0,x,y)!=-1){
+                    dm.MoveTo(x.toInt(),y.toInt());
+                    dm.LeftClick();
+                    qDebug()<<"狂野";
+                    for(int i=0;i<30;i++){
+                        if(dm.FindPic(0,0,1000,600,"注意.bmp","000000",0.8,0,x,y)!=-1){
+                            Delay(500);
+                            dm.MoveTo(826,488);
+                            dm.LeftClick();
+                            qDebug()<<"已点击";
+                            break;
+                        }else
+                            qDebug()<<"找不到";
+                        Delay(100);
+                    }
+                }
+            }
+            if(mode=="top_jj"){
+                if(dm.FindPic(0,0,1000,600,"竞技.bmp","000000",0.8,0,x,y)!=-1){
+                    dm.MoveTo(x.toInt(),y.toInt());
+                    dm.LeftClick();
+                    qDebug()<<"竞技";
+                    for(int i=0;i<30;i++){
+                        if(dm.FindPic(0,0,1000,600,"注意.bmp","000000",0.8,0,x,y)!=-1){
+                            Delay(500);
+                            dm.MoveTo(826,488);
+                            dm.LeftClick();
+                            qDebug()<<"已点击";
+                            break;
+                        }else
+                            qDebug()<<"找不到";
+                        Delay(100);
+                    }
+                }
+            }
+            if(dm.FindPic(0,0,1000,600,"注意.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(826,488);
+                dm.LeftClick();
+            }
+
+        }
+
+    }else if(mode=="top_33"){
+        if(dm.FindPic(0,0,1000,600,"进入33-1.bmp","000000",0.8,0,x,y)!=-1){
+            qDebug()<<"巅峰";
+            Delay(200);
+            if(dm.FindPic(0,0,1000,600,"进入33-1.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt(),y.toInt());
+                dm.LeftClick();
+                for(int i=0;i<30;i++){
+                    if(mode=="top_33"){
+                        if(dm.FindPic(0,0,1000,600,"进入33-2.bmp","000000",0.8,0,x,y)!=-1){
+                            dm.MoveTo(x.toInt(),y.toInt());
+                            dm.LeftClick();
+                            break;
+                        }
+                    }
+
+                    Delay(100);
+                }
+                for(int i=0;i<30;i++){
+                    if(dm.FindPic(0,0,1000,600,"注意.bmp","000000",0.8,0,x,y)!=-1){
+                        Delay(500);
+                        dm.MoveTo(826,488);
+                        dm.LeftClick();
+                        qDebug()<<"已点击";
+                        break;
+                    }else
+                        qDebug()<<"找不到";
+                    Delay(100);
+                }
+            }
+        }else {
+            if(mode=="top_33"){
+                if(dm.FindPic(0,0,1000,600,"进入33-2.bmp","000000",0.8,0,x,y)!=-1){
+                    dm.MoveTo(x.toInt(),y.toInt());
+                    dm.LeftClick();
+                    qDebug()<<"狂野";
+                    for(int i=0;i<30;i++){
+                        if(dm.FindPic(0,0,1000,600,"注意.bmp","000000",0.8,0,x,y)!=-1){
+                            Delay(500);
+                            dm.MoveTo(826,488);
+                            dm.LeftClick();
+                            qDebug()<<"已点击";
+                            break;
+                        }else
+                            qDebug()<<"找不到";
+                        Delay(100);
+                    }
+                }
+            }
+
+            if(dm.FindPic(0,0,1000,600,"注意.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(826,488);
+                dm.LeftClick();
+            }
+
+        }
+    }
+
+}
+
+void Ban3::run(){
+    QVariant x,y;
+    int ban=0;
+    if(mode=="top_ky" || mode=="top_jj"){
+        if(dm.FindPic(480,0,1000,600,"大葱.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+            ban++;
+        }
+        if(dm.FindPic(480,0,1000,600,"光嘤.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+            ban++;
+        }
+        if(dm.FindPic(480,0,1000,600,"帝姬.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+            ban++;
+        }
+        if(dm.FindPic(480,0,1000,600,"ban启灵.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+            ban++;
+        }
+        if(dm.FindPic(480,0,1000,600,"天尊.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+            ban++;
+        }
+        if(dm.FindPic(480,0,1000,600,"banchongsheng.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+            ban++;
+        }
+        if(ban>=3){
+            for(int i=0;i<60;i++){
+                if(dm.FindPic(0,0,1000,600,"确认.bmp","000000",0.8,0,x,y)!=-1){
+                    dm.MoveTo(x.toInt(),y.toInt());
+                    dm.LeftClick();
+                    break;
+                }
+            }
+        }else{
+            dm.MoveTo(612,268);
+            dm.LeftClick();
+            dm.MoveTo(712,268);
+            dm.LeftClick();
+            dm.MoveTo(812,268);
+            dm.LeftClick();
+            dm.MoveTo(912,268);
+            dm.LeftClick();
+            for(int i=0;i<30;i++){
+                if(dm.FindPic(0,0,1000,600,"确认.bmp","000000",0.8,0,x,y)!=-1){
+                    dm.MoveTo(x.toInt(),y.toInt());
+                    dm.LeftClick();
+                    break;
+                }
+            }
+        }
+    }else if(mode=="top_33"){
+        if(dm.FindPic(480,0,1000,600,"bansp.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+            ban++;
+        }
+        if(dm.FindPic(480,0,1000,600,"bantl.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+            ban++;
+        }
+        if(dm.FindPic(480,0,1000,600,"banjg.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+            ban++;
+        }
+        if(dm.FindPic(480,0,1000,600,"bandz.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+            ban++;
+        }
+        if(dm.FindPic(480,0,1000,600,"banxh.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+            ban++;
+        }
+        if(dm.FindPic(480,0,1000,600,"bantz.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+            ban++;
+        }
+        if(dm.FindPic(480,0,1000,600,"bancs.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+            ban++;
+        }
+        if(ban>=2){
+            for(int i=0;i<60;i++){
+                if(dm.FindPic(0,0,1000,600,"确认.bmp","000000",0.8,0,x,y)!=-1){
+                    dm.MoveTo(x.toInt(),y.toInt());
+                    dm.LeftClick();
+                    break;
+                }
+            }
+        }else{
+            dm.MoveTo(650,309);
+            dm.LeftClick();
+            dm.MoveTo(770,309);
+            dm.LeftClick();
+            dm.MoveTo(840,309);
+            dm.LeftClick();
+            for(int i=0;i<30;i++){
+                if(dm.FindPic(0,0,1000,600,"确认.bmp","000000",0.8,0,x,y)!=-1){
+                    dm.MoveTo(x.toInt(),y.toInt());
+                    dm.LeftClick();
+                    break;
+                }
+            }
+        }
+    }
+}
+
+void Explode::run(){
+    QVariant x,y;
+    if(mode=="top_33"){
+        if(dm.FindPic(0,0,1000,600,"首发33.bmp|33首发.bmp","000000",0.8,0,x,y)!=-1){
+            //自动33首发()
+            auto33first();
+            for(int i=0;i<10;i++){
+                if(dm.FindPic(0,0,1000,600,"确认.bmp|确认1.bmp|df33.bmp","000000",0.8,0,x,y)!=-1){
+                    dm.MoveTo(x.toInt()+10,y.toInt()+10);
+                    dm.LeftClick();
+                    break;
+                }
+            }
+        }
+        //自动33出战（）
+        auto33fight();
+        for(int i=0;i<10;i++){
+            if(dm.FindPic(0,0,1000,600,"确认.bmp|确认1.bmp|df33.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt()+10,y.toInt()+10);
+                dm.LeftClick();
+                break;
+            }
+            if(dm.FindPic(527,253,616,286,"df332.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(423,362);
+                dm.LeftClick();
+                break;
+            }
+        }
+
+
+    }else if(mode=="top_jj" || mode=="top_ky"){
+        if(dm.FindPic(0,0,1000,600,"首发.bmp","000000",0.8,0,x,y)!=-1){
+            //自动首发（）
+            autofirst();
+            //自动出战（）
+            autofight();
+            for(int i=0;i<10;i++){
+                if(dm.FindPic(0,0,1000,600,"确认.bmp|确认1.bmp","000000",0.8,0,x,y)!=-1){
+                    dm.MoveTo(x.toInt()+10,y.toInt()+10);
+                    dm.LeftClick();
+                    break;
+                }
+            }
+        }
+        if(dm.FindPic(0,0,1000,600,"出战.bmp","000000",0.8,0,x,y)!=-1){
+            //自动首发（）
+            autofirst();
+            //自动出战（）
+            autofight();
+            for(int i=0;i<10;i++){
+                if(dm.FindPic(0,0,1000,600,"确认.bmp|确认1.bmp","000000",0.8,0,x,y)!=-1){
+                    dm.MoveTo(x.toInt()+10,y.toInt()+10);
+                    dm.LeftClick();
+                    break;
+                }
+            }
+        }
+    }
+
+}
+
+void Explode::auto33first(){
+    QVariant x,y;
+    if(dm.FindPic(0,0,1000,600,"首发33.bmp|33首发.bmp","000000",0.8,0,x,y)!=-1){
+        Delay(1000);
+        if(dm.FindPic(0,0,600,559,"wpdn.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt()+5,y.toInt()+5);
+            dm.LeftClick();
+        }
+        if(dm.FindPic(0,0,600,559,"wlh.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt()+5,y.toInt()+5);
+            dm.LeftClick();
+        }
+        if(dm.FindPic(0,0,600,559,"wsz.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt()+5,y.toInt()+5);
+            dm.LeftClick();
+        }
+        if(dm.FindPic(0,0,600,559,"wzh.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt()+5,y.toInt()+5);
+            dm.LeftClick();
+        }
+
+    }
+}
+
+void Explode::autofirst(){
+    QVariant x,y;
+    bool shoufayixuan=false;
+    if(dm.FindPic(469,12,958,559,"禁用.bmp","000000",0.8,0,x,y)!=-1){
+        Delay(1000);
+        if(shoufayixuan!=true){
+            if(dm.FindPic(0,0,600,559,"pnsf.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt()+5,y.toInt()+5);
+                dm.LeftClick();
+            }else if(dm.FindPic(0,0,600,559,"sfkl.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt()+5,y.toInt()+5);
+                dm.LeftClick();
+            }else if(dm.FindPic(0,0,600,559,"xwsf.bmp|xwsf.bmp","000000",0.9,0,x,y)!=-1){
+                dm.MoveTo(x.toInt()+5,y.toInt()+5);
+                dm.LeftClick();
+            }else if(dm.FindPic(0,0,600,559,"gwsf.bmp|gwsf1.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt()+5,y.toInt()+5);
+                dm.LeftClick();
+            }else if(dm.FindPic(0,0,600,559,"lh.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt()+5,y.toInt()+5);
+                dm.LeftClick();
+            }else if(dm.FindPic(0,0,600,559,"lhsf.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt()+5,y.toInt()+5);
+                dm.LeftClick();
+            }else if(dm.FindPic(0,0,600,559,"pdl.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt()+5,y.toInt()+5);
+                dm.LeftClick();
+            }else if(dm.FindPic(0,0,600,559,"sz.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt()+5,y.toInt()+5);
+                dm.LeftClick();
+            }else if(dm.FindPic(0,0,600,559,"zh.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt()+5,y.toInt()+5);
+                dm.LeftClick();
+            }
+
+        }
+    }
+}
+
+void Explode::auto33fight(){
+    QVariant x,y;
+    if(dm.FindPic(11, 232, 85, 317, "df33-jy.bmp|df33-sf.bmp","000000",0.8,0,x,y)!=-1){
+       dm.MoveTo(70,298);
+       dm.LeftClick();
+    }
+    if(dm.FindPic(140, 232, 211, 337, "df33-jy.bmp|df33-sf.bmp","000000",0.8,0,x,y)!=-1){
+       dm.MoveTo(198,298);
+       dm.LeftClick();
+    }
+    if(dm.FindPic(270, 232, 340, 337, "df33-jy.bmp|df33-sf.bmp","000000",0.8,0,x,y)!=-1){
+       dm.MoveTo(345,298);
+       dm.LeftClick();
+    }
+    if(dm.FindPic( 11, 382, 85, 468, "df33-jy.bmp|df33-sf.bmp","000000",0.8,0,x,y)!=-1){
+       dm.MoveTo(70,468);
+       dm.LeftClick();
+    }
+    if(dm.FindPic( 140, 382, 210, 468, "df33-jy.bmp|df33-sf.bmp","000000",0.8,0,x,y)!=-1){
+       dm.MoveTo(198,468);
+       dm.LeftClick();
+    }
+    if(dm.FindPic( 270, 382, 340, 468, "df33-jy.bmp|df33-sf.bmp","000000",0.8,0,x,y)!=-1){
+       dm.MoveTo(345,468);
+       dm.LeftClick();
+    }
+    for(int i=0;i<10;i++){
+        if(dm.FindPic(0,0,1000,600,"确认.bmp|确认1.bmp|df33qr.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt()+10,y.toInt()+10);
+            dm.LeftClick();
+            break;
+        }
+        if(dm.FindPic(527, 253, 616, 286,"df332.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(423,362);
+            dm.LeftClick();
+            break;
+        }
+    }
+}
+
+void Explode::autofight(){
+    QVariant x,y;
+    if(dm.FindPic(11, 221, 112, 337, "禁用.bmp|首发小图.bmp","000000",0.8,0,x,y)!=-1){
+       dm.MoveTo(11+25,246);
+       dm.LeftClick();
+    }
+    if(dm.FindPic(109, 221, 211, 337, "禁用.bmp|首发小图.bmp","000000",0.8,0,x,y)!=-1){
+       dm.MoveTo(122+25,246);
+       dm.LeftClick();
+    }
+    if(dm.FindPic(211, 221, 307, 337, "禁用.bmp|首发小图.bmp","000000",0.8,0,x,y)!=-1){
+       dm.MoveTo(211+25,246);
+       dm.LeftClick();
+    }
+    if(dm.FindPic(307, 221, 404, 337, "禁用.bmp|首发小图.bmp","000000",0.8,0,x,y)!=-1){
+       dm.MoveTo(307+25,246);
+       dm.LeftClick();
+    }
+    if(dm.FindPic(11, 337, 112, 455, "禁用.bmp|首发小图.bmp","000000",0.8,0,x,y)!=-1){
+       dm.MoveTo(11+25,362);
+       dm.LeftClick();
+    }
+    if(dm.FindPic(109, 337, 211, 455, "禁用.bmp|首发小图.bmp","000000",0.8,0,x,y)!=-1){
+       dm.MoveTo(122+25,362);
+       dm.LeftClick();
+    }
+    if(dm.FindPic(211, 337, 307, 455, "禁用.bmp|首发小图.bmp","000000",0.8,0,x,y)!=-1){
+       dm.MoveTo(211+25,362);
+       dm.LeftClick();
+    }
+    if(dm.FindPic(307, 337, 404, 455, "禁用.bmp|首发小图.bmp","000000",0.8,0,x,y)!=-1){
+       dm.MoveTo(307+25,362);
+       dm.LeftClick();
+    }
+    if(dm.FindPic(11, 455, 112, 564, "禁用.bmp|首发小图.bmp","000000",0.8,0,x,y)!=-1){
+       dm.MoveTo(11+25,480);
+       dm.LeftClick();
+    }
+    if(dm.FindPic(109, 455, 211, 564, "禁用.bmp|首发小图.bmp","000000",0.8,0,x,y)!=-1){
+       dm.MoveTo(122+25,480);
+       dm.LeftClick();
+    }
+    if(dm.FindPic(211, 455, 307, 564, "禁用.bmp|首发小图.bmp","000000",0.8,0,x,y)!=-1){
+       dm.MoveTo(211+25,480);
+       dm.LeftClick();
+    }
+    if(dm.FindPic(307, 455, 404, 564, "禁用.bmp|首发小图.bmp","000000",0.8,0,x,y)!=-1){
+       dm.MoveTo(307+25,480);
+       dm.LeftClick();
+    }
+
+}
+
+
+void Searles::run(){
+    QVariant x,y;
+    while(status==true){
+        if(dm.FindPic(0,0,1000,600,"重置.bmp","000000",0.8,0,x,y)!=-1){
+            if(dm.FindPic(0,0,1000,600,"重置.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt(),y.toInt());
+                dm.LeftClick();
+                searles_reset++;
+                QString iniFilePath = QDir::currentPath()+"/圣瑞次数统计.ini";  //路径
+                QSettings settings(iniFilePath,QSettings::IniFormat);
+                //重置次数显示
+                emit sendreset(QString::number(searles_reset,10));
+                settings.setValue("times/reset",QString::number(searles_reset,10));
+            }
+        }else if(dm.FindPic(0,0,1000,600,"胜利.bmp","000000",0.8,0,x,y)!=-1){
+            if(dm.FindPic(0,0,1000,600,"战胜确认.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt(),y.toInt());
+                dm.LeftClick();
+            }
+        }else if(dm.FindPic(0,0,1000,600,"击败.bmp","000000",0.8,0,x,y)!=-1){
+            if(dm.FindPic(0,0,1000,600,"战败确认.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt(),y.toInt());
+                dm.LeftClick();
+                searles_lose++;
+                QString iniFilePath = QDir::currentPath()+"/圣瑞次数统计.ini";  //路径
+                QSettings settings(iniFilePath,QSettings::IniFormat);
+                //重置次数显示
+                emit sendlose(QString::number(searles_lose,10));
+                settings.setValue("times/lose",QString::number(searles_lose,10));
+            }
+        }else if(dm.FindPic(0,0,1000,600,"融入圣光.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+            searles_fight++;
+            QString iniFilePath = QDir::currentPath()+"/圣瑞次数统计.ini";  //路径
+            QSettings settings(iniFilePath,QSettings::IniFormat);
+            //重置次数显示
+            emit sendfight(QString::number(searles_fight,10));
+            settings.setValue("times/fight",QString::number(searles_fight,10));
+        }else if(dm.FindPic(0,0,1000,600,"天尊.bmp|表姐自爆.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+        }else if(dm.FindPic(0,0,1000,600,"王哈出战.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+            for(int i=0;i<30;i++){
+                if(dm.FindPic(0,0,1000,600,"出战按钮.bmp","000000",0.8,0,x,y)!=-1){
+                    dm.MoveTo(x.toInt(),y.toInt());
+                    dm.LeftClick();
+                    break;
+                }
+                Delay(100);
+            }
+            for(int i=0;i<30;i++){
+                if(dm.FindPic(0,0,1000,600,"王哈第五.bmp","000000",0.8,0,x,y)!=-1){
+                    dm.MoveTo(x.toInt(),y.toInt());
+                    dm.LeftClick();
+                    break;
+                }
+                Delay(100);
+            }
+        }else if(dm.FindPic(0,0,1000,600,"幻境出战.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+            for(int i=0;i<30;i++){
+                if(dm.FindPic(0,0,1000,600,"出战按钮.bmp","000000",0.8,0,x,y)!=-1){
+                    dm.MoveTo(x.toInt(),y.toInt());
+                    dm.LeftClick();
+                    break;
+                }
+                Delay(100);
+            }
+            for(int i=0;i<30;i++){
+                if(dm.FindPic(0,0,1000,600,"幻境第五.bmp","000000",0.8,0,x,y)!=-1){
+                    dm.MoveTo(x.toInt(),y.toInt());
+                    dm.LeftClick();
+                    break;
+                }
+                Delay(100);
+            }
+        }else if(dm.FindPic(0,0,1000,600,"毁灭出战.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+            for(int i=0;i<30;i++){
+                if(dm.FindPic(0,0,1000,600,"出战按钮.bmp","000000",0.8,0,x,y)!=-1){
+                    dm.MoveTo(x.toInt(),y.toInt());
+                    dm.LeftClick();
+                    break;
+                }
+                Delay(100);
+            }
+            for(int i=0;i<30;i++){
+                if(dm.FindPic(0,0,1000,600,"毁灭.bmp","000000",0.8,0,x,y)!=-1){
+                    dm.MoveTo(x.toInt(),y.toInt());
+                    dm.LeftClick();
+                    break;
+                }
+                Delay(100);
+            }
+        }else if(dm.FindPic(0,0,1000,600,"王哈第五.bmp|毁灭.bmp|幻境第五.bmp|重置确认.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+        }
+        Delay(1000);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

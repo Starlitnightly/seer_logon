@@ -37,7 +37,8 @@ SOURCES += \
     dm.cpp \
     ext.cpp \
     speed.cpp \
-    xy.cpp
+    xy.cpp \
+    nono.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -48,12 +49,14 @@ HEADERS += \
     dm.h \
     ext.h \
     speed.h \
-    xy.h
+    xy.h \
+    nono.h
 
 FORMS += \
         mainwindow.ui \
     form.ui \
-    speed.ui
+    speed.ui \
+    nono.ui
 
 DISTFILES +=
 

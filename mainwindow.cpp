@@ -14,9 +14,9 @@
 #include <QtGui/QMouseEvent>
 
 #include <QProcess>
-#include<Qdir>
-#include<QApplication>
-#include<QDebug>
+#include <Qdir>
+#include <QApplication>
+#include <QDebug>
 #include <QList>
 #include <QVariantList>
 
@@ -73,6 +73,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->axWidget->setProperty("DisplayScrollBars",true);//不显示滚动条
     QString webstr=QString("http://seer.61.com/play.shtml");//设置要打开的网页
     ui->axWidget->dynamicCall("Navigate(const QString&)",webstr);//显示网页
+
     Mute();
 
 
@@ -89,8 +90,32 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connect(ui->action_ie,SIGNAL(triggered()),this,SLOT(ClearCache()));
     connect(ui->action_8,SIGNAL(triggered()),this,SLOT(script_open()));
+
+    //工具信号
+    connect(ui->action_ce,SIGNAL(triggered()),this,SLOT(Opence()));
+    connect(ui->action_fd,SIGNAL(triggered()),this,SLOT(Openfd()));
+
+    //一键换装备信号
+    connect(ui->bag_sk,SIGNAL(triggered()),this,SLOT(Changebag_sk()));
+    connect(ui->bag_fs,SIGNAL(triggered()),this,SLOT(Changebag_fs()));
+    connect(ui->bag_ld,SIGNAL(triggered()),this,SLOT(Changebag_ld()));
+    connect(ui->bag_hd,SIGNAL(triggered()),this,SLOT(Changebag_hd()));
+    connect(ui->bag_dy,SIGNAL(triggered()),this,SLOT(Changebag_dy()));
+    connect(ui->bag_xa,SIGNAL(triggered()),this,SLOT(Changebag_xa()));
+    connect(ui->bag_wl,SIGNAL(triggered()),this,SLOT(Changebag_wl()));
+    connect(ui->bag_ys,SIGNAL(triggered()),this,SLOT(Changebag_ys()));
+    connect(ui->bag_tz,SIGNAL(triggered()),this,SLOT(Changebag_tz()));
+    connect(ui->bag_yy,SIGNAL(triggered()),this,SLOT(Changebag_yy()));
+    connect(ui->bag_tq,SIGNAL(triggered()),this,SLOT(Changebag_tq()));
+    connect(ui->bag_yh,SIGNAL(triggered()),this,SLOT(Changebag_yh()));
     //f.show();
 
+    //nono窗口
+    n=new Nono();
+    connect(ui->action_13,SIGNAL(triggered(bool)),n,SLOT(slot_startedTimer_clicked(bool)));
+    connect(ui->action_14,SIGNAL(triggered()),this,SLOT(dianfeng()));
+    connect(this,SIGNAL(sendcap(bool)),n,SLOT(slot_capture(bool)));
+    n->show();
     //初始化大漠插件
     /*
     QAxWidget *dm=new QAxWidget();
@@ -99,13 +124,25 @@ MainWindow::MainWindow(QWidget *parent) :
     AutoRegDm();
     //dm->dynamicCall("BindWindow(int,QString,QString,QString,int)",pid,"dx2", "windows","windows",1)
     */
+    //wPid=(HWND)this->winId();
+    //Bind *bdm=new Bind(this);
+    //bdm->start();
+    bind_status=false;
+
 
 }
 
 
+void MainWindow::dianfeng(){
+    if(bind_status==false)
+        Binddm();
+    emit sendcap(true);
+}
+
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete n;
 }
 
 void MainWindow::Binddm(){
@@ -123,6 +160,7 @@ void MainWindow::Binddm(){
     test=GetWindow(test,5);
     test=GetWindow(test,5);
     pid=(int)test;
+    Pid=test;
     //自动注册大漠
     AutoRegDm();
     //初始化大漠
@@ -147,12 +185,14 @@ void MainWindow::Binddm(){
     qDebug()<<x.toInt()<<y.toInt();
     //设置字库
     dm.SetDict(0,path+"/ziku.txt");
+    bind_status=true;
 }
 
 void MainWindow::FreshSeer()//刷新游戏
 {
-    QString webstr=QString("http://seer.61.com/play.shtml");//设置要打开的网页
-    ui->axWidget->dynamicCall("Navigate(const QString&)",webstr);//显示网页
+    qDebug()<<"通信无异常";
+    //QString webstr=QString("http://seer.61.com/play.shtml");//设置要打开的网页
+    ui->axWidget->dynamicCall("Refresh(void)");//显示网页
 }
 
 void MainWindow::Mute()//静音
@@ -193,10 +233,16 @@ void MainWindow::ClearCache(){
 
 void MainWindow::Opence(){
     //打开ce
+    QProcess pro;
+    QString strPath = QDir::currentPath()+"/工具/ce6.8.exe";
+    pro.startDetached(strPath);
 }
 
 void MainWindow::Openfd(){
     //打开fd
+    QProcess pro;
+    QString strPath = QDir::currentPath()+"/Fiddler/Fiddlerh.exe";
+    pro.startDetached(strPath);
 }
 
 void MainWindow::OpenKeyandMouse(){
@@ -247,11 +293,10 @@ void MainWindow::ChangeSpeed()
 
 void MainWindow::script_open()
 {
+    if(bind_status==false)
+        Binddm();
     f.show();
 
-    //QProcess pro;
-    //QString strPath = QDir::currentPath()+"\\tools.exe";
-    //pro.startDetached(strPath);
 }
 
 void MainWindow::speedopen()
@@ -260,6 +305,138 @@ void MainWindow::speedopen()
     s.move(this->x(),this->y()+this->height());
 
 }
+void MainWindow::Changebag_sk(){
+    if(bind_status==false)
+        Binddm();
+    Changebag("时空");
+}
+void MainWindow::Changebag_fs(){
+    if(bind_status==false)
+        Binddm();
+    Changebag("腐蚀");
+}
+void MainWindow::Changebag_ld(){
+    if(bind_status==false)
+        Binddm();
+    Changebag("零度");
+}
+void MainWindow::Changebag_hd(){
+    if(bind_status==false)
+        Binddm();
+    Changebag("皇帝");
+}
+void MainWindow::Changebag_dy(){
+    if(bind_status==false)
+        Binddm();
+    Changebag("毒液");
+}
+void MainWindow::Changebag_xa(){
+    if(bind_status==false)
+        Binddm();
+    Changebag("笑傲");
+}
+void MainWindow::Changebag_wl(){
+    if(bind_status==false)
+        Binddm();
+    Changebag("未来");
+}
+void MainWindow::Changebag_ys(){
+    if(bind_status==false)
+        Binddm();
+    Changebag("元神");
+}
+void MainWindow::Changebag_tz(){
+    if(bind_status==false)
+        Binddm();
+    Changebag("天尊");
+}
+void MainWindow::Changebag_yy(){
+    if(bind_status==false)
+        Binddm();
+    Changebag("银翼骑士");
+}
+void MainWindow::Changebag_tq(){
+    if(bind_status==false)
+        Binddm();
+    Changebag("天启");
+}
+void MainWindow::Changebag_yh(){
+    if(bind_status==false)
+        Binddm();
+    Changebag("浴火");
+}
+
+void MainWindow::Changebag(QString name){
+    Delay(100);
+    //非法确认按钮
+    ffAutoC *tmp=new ffAutoC(this);
+    tmp->status=true;
+    tmp->start();
+    dm.MoveTo(582,487);
+    dm.LeftClick();
+    Openbag();
+    Searchbag(Pid,name);
+    Wearbag();
+    tmp->status=false;
+    Delay(1000);
+    delete tmp;
+    //QMessageBox::information(NULL,"this","小铁皮换装成功");
+}
+
+void Openbag(){
+    QVariant x,y;
+    while(dm.FindPic(18,11,526,316,"查看个人信息.bmp","000000",0.8,0,x,y)==-1){
+        dm.MoveTo(670,293);
+        dm.LeftClick();
+        Delay(500);
+    }
+}
+
+void Searchbag(HWND pid,QString name){
+    dm.MoveTo(736,382);
+    dm.LeftClick();
+    QString s=name;
+    foreach(QChar c, s)
+        PostMessage(pid, WM_CHAR, c.unicode(), 0);
+    Delay(500);
+    dm.MoveTo(797,380);
+    dm.LeftClick();
+}
+
+void Wearbag(){
+    QVariant x,y;
+    while(dm.FindPic(0,0,1000,600,"装备选完.bmp","000000",0.8,0,x,y)==-1){
+        dm.MoveTo(202,445);
+        dm.LeftClick();
+        Delay(100);
+        qDebug()<<"装备选完中";
+    }
+    qDebug()<<"装备选完";
+    dm.MoveTo(357,314);
+    dm.LeftClick();
+    Delay(100);
+}
+
+void ffAutoC::run(){
+    QVariant x,y;
+    while(status==true){
+        if(dm.FindPic(406, 322, 562, 402,"放入背包确认.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+        }
+        if(dm.FindPic(400, 200, 600, 300, "数据非法.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+        }
+        if(dm.FindPic(0,0,1000,600,"消息盒子x.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+        }
+
+        Delay(1000);
+    }
+}
+
 
 
 

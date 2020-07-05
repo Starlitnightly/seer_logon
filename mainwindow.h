@@ -9,12 +9,33 @@
 #include "dm.h"
 #include "ext.h"
 #include "speed.h"
+#include "nono.h"
 
 
 
 namespace Ui {
 class MainWindow;
+class ffAutoC;
 }
+
+//自动确认
+class ffAutoC: public QThread
+{
+    Q_OBJECT
+
+public:
+    bool status;
+    int now;
+    ffAutoC(QObject *parent = 0)
+        : QThread(parent)
+    {
+        status=false;
+    }
+protected:
+    void run();
+signals:
+    void done();
+};
 
 class MainWindow : public QMainWindow
 {
@@ -25,6 +46,7 @@ public:
     MediaMute Cmute;
     ~MainWindow();
     void Binddm();
+    bool bind_status;
 public:
 
 
@@ -32,6 +54,7 @@ private:
     Ui::MainWindow *ui;
     Form f;
     Speed s;
+    Nono *n;
 
 public slots:
     //菜单
@@ -64,5 +87,29 @@ public slots:
     void ChangeSpeed();//修改速度大小为speed_size
     void script_open();
     void speedopen();
+
+    //一键换装备
+    void Changebag_sk();
+    void Changebag_fs();
+    void Changebag_ld();
+    void Changebag_hd();
+    void Changebag_dy();
+    void Changebag_xa();
+    void Changebag_wl();
+    void Changebag_ys();
+    void Changebag_tz();
+    void Changebag_yy();
+    void Changebag_tq();
+    void Changebag_yh();
+    void Changebag(QString name);
+
+    void dianfeng();
+signals:
+    void sendcap(bool msg);
+
 };
+
+void Openbag();
+void Searchbag(HWND pid,QString name);
+void Wearbag();
 #endif // MAINWINDOW_H
