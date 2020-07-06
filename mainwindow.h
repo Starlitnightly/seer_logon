@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <windows.h>
+#include <QDesktopWidget>
+#include <QScreen>
 
 #include "mediamute.h"
 #include "form.h"
@@ -10,32 +12,14 @@
 #include "ext.h"
 #include "speed.h"
 #include "nono.h"
+#include "changesp.h"
 
 
 
 namespace Ui {
 class MainWindow;
-class ffAutoC;
 }
 
-//自动确认
-class ffAutoC: public QThread
-{
-    Q_OBJECT
-
-public:
-    bool status;
-    int now;
-    ffAutoC(QObject *parent = 0)
-        : QThread(parent)
-    {
-        status=false;
-    }
-protected:
-    void run();
-signals:
-    void done();
-};
 
 class MainWindow : public QMainWindow
 {
@@ -55,6 +39,8 @@ private:
     Form f;
     Speed s;
     Nono *n;
+    Changesp *csp;
+
 
 public slots:
     //菜单
@@ -104,8 +90,11 @@ public slots:
     void Changebag(QString name);
 
     void dianfeng();
+    void show_csp();
 signals:
     void sendcap(bool msg);
+    void sendtip(QString msg);
+
 
 };
 

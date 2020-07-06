@@ -25,3 +25,5 @@ int panel_wish;//许愿面板
 int searles_lose;//圣瑞战败次数
 int searles_fight;//圣瑞挑战次数
 int searles_reset;//圣瑞重置次数
+
+bool explode_death;//神王_自爆死

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Changesp</class>
+ <widget class="QWidget" name="Changesp">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>654</width>
+    <height>161</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QAxWidget" name="axWidget">
+   <property name="geometry" stdset="0">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>71</width>
+     <height>70</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QAxWidget" name="axWidget_2">
+   <property name="geometry" stdset="0">
+    <rect>
+     <x>70</x>
+     <y>0</y>
+     <width>71</width>
+     <height>70</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QAxWidget" name="axWidget_3">
+   <property name="geometry" stdset="0">
+    <rect>
+     <x>140</x>
+     <y>0</y>
+     <width>71</width>
+     <height>70</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QAxWidget" name="axWidget_4">
+   <property name="geometry" stdset="0">
+    <rect>
+     <x>210</x>
+     <y>0</y>
+     <width>71</width>
+     <height>70</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QAxWidget" name="axWidget_5">
+   <property name="geometry" stdset="0">
+    <rect>
+     <x>280</x>
+     <y>0</y>
+     <width>71</width>
+     <height>70</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QAxWidget" name="axWidget_6">
+   <property name="geometry" stdset="0">
+    <rect>
+     <x>350</x>
+     <y>0</y>
+     <width>71</width>
+     <height>70</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QAxWidget" name="axWidget_7">
+   <property name="geometry" stdset="0">
+    <rect>
+     <x>0</x>
+     <y>70</y>
+     <width>71</width>
+     <height>70</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QAxWidget" name="axWidget_8">
+   <property name="geometry" stdset="0">
+    <rect>
+     <x>70</x>
+     <y>70</y>
+     <width>71</width>
+     <height>70</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QAxWidget" name="axWidget_9">
+   <property name="geometry" stdset="0">
+    <rect>
+     <x>140</x>
+     <y>70</y>
+     <width>71</width>
+     <height>70</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QAxWidget" name="axWidget_10">
+   <property name="geometry" stdset="0">
+    <rect>
+     <x>210</x>
+     <y>70</y>
+     <width>71</width>
+     <height>70</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QAxWidget" name="axWidget_11">
+   <property name="geometry" stdset="0">
+    <rect>
+     <x>280</x>
+     <y>70</y>
+     <width>71</width>
+     <height>70</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QAxWidget" name="axWidget_12">
+   <property name="geometry" stdset="0">
+    <rect>
+     <x>350</x>
+     <y>70</y>
+     <width>71</width>
+     <height>70</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>140</y>
+     <width>351</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="tabChangesFocus">
+    <bool>false</bool>
+   </property>
+   <property name="acceptRichText">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>140</y>
+     <width>81</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>输入精灵序号</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>60</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存背包</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>110</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>一键换背包</string>
+   </property>
+  </widget>
+  <widget class="QTreeView" name="treeView">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>0</y>
+     <width>91</width>
+     <height>161</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>10</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>预览背包</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QAxWidget</class>
+   <extends>QWidget</extends>
+   <header>qaxwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -373,6 +373,29 @@ signals:
     void sendfight(QString msg);
 };
 
+//六界神王殿脚本
+class Sixworld: public QThread
+{
+    Q_OBJECT
+
+public:
+    bool status;
+    int now;
+    int god;
+    void god_condition();
+    void god_changesp(QString sp);
+    void god_method(int method);
+    bool jianchashoufa(QString shoufajingling);
+    void shezhishoufa(QString shoufajingling);
+    Sixworld(QObject *parent = 0)
+        : QThread(parent)
+    {
+        status=false;
+    }
+protected:
+    void run();
+
+};
 
 
 
@@ -409,6 +432,7 @@ public:
     AutoC *script_auto;
     Top *script_top;
     Searles *script_searles;
+    Sixworld *script_sixworld;
 
 
     QString mode;
@@ -437,7 +461,7 @@ public slots:
     void top_33_selected();
 
     void searles_selected();//选择圣瑞脚本
-
+    void sixworld_selected();//选择六界
     void showMessageBox(QString msg);
 
     void showreset(QString msg);

@@ -38,6 +38,8 @@ Form::Form(QWidget *parent) :
     connect(ui->top_33,SIGNAL(clicked(bool)),this,SLOT(top_33_selected()));
     //圣瑞
     connect(ui->radio_searles,SIGNAL(clicked(bool)),this,SLOT(searles_selected()));
+    //六界
+    connect(ui->radio_sixworld,SIGNAL(clicked(bool)),this,SLOT(sixworld_selected()));
 
     script_fw=NULL;
     script_gem=NULL;
@@ -53,6 +55,7 @@ Form::Form(QWidget *parent) :
     script_auto=NULL;
     script_top=NULL;
     script_searles=NULL;
+    script_sixworld=NULL;
 
     QString iniFilePath = QDir::currentPath()+"/圣瑞次数统计.ini";  //路径
     qDebug()<<iniFilePath;
@@ -238,6 +241,18 @@ void Form::test(){
 
         script_searles->start();
 
+    }else if(mode=="sixworld"){
+        if(script_sixworld==NULL)
+            script_sixworld=new Sixworld(this);
+        script_sixworld->status=true;
+
+        if(script_auto==NULL)
+            script_auto=new AutoC(this);
+        script_auto->status=true;
+
+        script_sixworld->start();
+        script_auto->start();
+
     }
 
 }
@@ -286,6 +301,9 @@ void Form::test2(){
         script_auto->status=false;
     }else if(mode=="searles"){
         script_searles->status=false;
+    }else if(mode=="sixworld"){
+        script_sixworld->status=false;
+        script_auto->status=false;
     }
 }
 
@@ -378,6 +396,13 @@ void Form::searles_selected(){
     ui->textEdit->setPlainText(text);
     mode="searles";
 }
+void Form::sixworld_selected(){
+    QString text;
+    text=QString("脚本使用说明：看图");
+    ui->textEdit->setPlainText(text);
+    mode="sixworld";
+}
+
 
 
 /*
@@ -1807,8 +1832,561 @@ void Searles::run(){
 }
 
 
+void Sixworld::run(){
+    QVariant x,y;
+    while(status==true){
+        if(dm.FindPic(0,0,1000,600,"六界-天玄.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+        }else if(dm.FindPic(0,0,1000,600,"六界-瀚海.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+        }else if(dm.FindPic(0,0,1000,600,"六界-地葬.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+        }else if(dm.FindPic(0,0,1000,600,"六界-混沌.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+        }else if(dm.FindPic(0,0,1000,600,"六界-时空.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+        }else if(dm.FindPic(0,0,1000,600,"六界-幻境.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+        }else if(dm.FindPic(0,0,1000,600,"六界-六界.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+        }
+        Delay(500);
+        god_condition();
+        god_condition();
+        god_condition();
+        god_method(god);
+        if(dm.FindPic(0,0,1000,600,"六界-开启认可.bmp","000000",0.8,0,x,y)!=-1){
+            dm.MoveTo(x.toInt(),y.toInt());
+            dm.LeftClick();
+        }
+    }
+}
 
+void Sixworld::god_condition(){
+    if(dm.Ocr(343, 538, 542, 563, "ffffff-111111",1).contains("最后一击使用致命一击战胜"))
+        god=1;
+    else if(dm.Ocr(343, 538, 542, 563, "ffffff-111111",1).contains("处于满体力时战胜"))
+        god=2;
+    else if(dm.Ocr(343, 538, 542, 563, "ffffff-111111",1).contains("最后一击使用物理攻击战胜"))
+        god=3;
+    else if(dm.Ocr(343, 538, 542, 563, "ffffff-111111",1).contains("最后一击使用先制攻击战胜"))
+        god=4;
+    else if(dm.Ocr(343, 538, 542, 563, "ffffff-111111",1).contains("6个回合以后战胜")){
+        god=5;
+        explode_death=true;
+    }else if(dm.Ocr(343, 538, 542, 563, "ffffff-111111",1).contains("3个回合以内战胜"))
+        god=6;
+    else if(dm.Ocr(343, 538, 542, 563, "ffffff-111111",1).contains("处于能力提升状态下战胜")){
+        god=7;
+        jinglingjineng="王哈-强化";
+    }else if(dm.Ocr(343, 538, 542, 563, "ffffff-111111",1).contains("最后一击使用特殊攻击战胜"))
+        god=8;
+    else if(dm.Ocr(343, 538, 542, 563, "ffffff-111111",1).contains("使用<3个精灵战胜"))
+        god=9;
+    else if(dm.Ocr(343, 538, 542, 563, "ffffff-111111",1).contains("最后一击使用必中攻击战胜"))
+        god=10;
 
+}
+
+void Sixworld::god_changesp(QString sp){
+    QVariant x,y;
+    if(dm.FindPic(7,340,968,569,sp,"000000",0.8,0,x,y)!=-1){
+        dm.MoveTo(x.toInt(),y.toInt());
+        dm.LeftClick();
+        for(int i=0;i<30;i++){
+            if(dm.FindPic(0,0,1000,600,"出战按钮.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt(),y.toInt());
+                dm.LeftClick();
+                break;
+            }
+        }
+    }
+}
+
+bool Sixworld::jianchashoufa(QString shoufajingling){
+    //QVariant x,y;
+    Delay(1000);
+    QString tmp=dm.Ocr(194,376,293,477,"ffffff-111111",1.0);
+    if(tmp.contains(shoufajingling)){
+        qDebug()<<shoufajingling;
+        qDebug()<<tmp;
+        dangqianshoufa=shoufajingling;
+        dm.MoveTo(940,28);
+        dm.LeftClick();
+        return true;
+    }else{
+        qDebug()<<shoufajingling;
+        qDebug()<<tmp;
+        return false;
+    }
+}
+void Sixworld::shezhishoufa(QString shoufajingling){
+    QVariant x,y;
+    while(jianchashoufa(shoufajingling)==false){
+        if(dm.FindStr(192,377,791,476,shoufajingling,"ffffff-111111",0.9,x,y)!=-1){
+            qDebug()<<x.toInt()<<y.toInt();
+            dm.MoveTo(x.toInt()+5,y.toInt()+20);
+            dm.LeftClick();
+            dm.LeftClick();
+            dm.LeftClick();
+            if(dm.FindStr(0,0,1000,600,"fw-sf.bmp","000000",0.9,x,y)!=-1){
+                dm.MoveTo(x.toInt(),y.toInt());
+                dm.LeftClick();
+            }
+            if(jianchashoufa(shoufajingling)){
+                dangqianshoufa=shoufajingling;
+                break;
+            }
+        }
+    }
+}
+
+void Sixworld::god_method(int method){
+    QVariant x,y;
+    dangqianjingling=xy_shibiejifangjingling();
+    if(method==1 || method==2 || method==3 || method==6 || method==9 || method==10){
+        if(dangqianshoufa!="幻影蝶" && dangqianshoufa!="帝皇之御"){
+            if(dm.FindPic(25, 497, 208, 572, "六界-bb.bmp","000000",0.9,0,x,y)!=-1){
+                dm.MoveTo(x.toInt(),y.toInt());
+                dm.LeftClick();
+            }
+            if(jianchashoufa("幻影蝶")==false && jianchashoufa("帝皇之御")==false){
+                qDebug()<<"进入循环";
+                while(jianchashoufa("幻影蝶")==false && jianchashoufa("帝皇之御")==false){
+                    if(dm.FindStr(192, 377, 791, 476, "幻影蝶|帝皇之御","ffffff-111111",0.9,x,y)!=-1){
+                        dm.MoveTo(x.toInt()+5,y.toInt()+20);
+                        dm.LeftClick();
+                        dm.LeftClick();
+                        dm.LeftClick();
+                        if(dm.FindPic(0,0,1000,600, "fw-sf.bmp","000000",0.9,0,x,y)!=-1){
+                            dm.MoveTo(x.toInt(),y.toInt());
+                            dm.LeftClick();
+                        }
+                        if(jianchashoufa("幻影蝶")){
+                            dangqianshoufa="幻影蝶";
+                            break;
+                        }else if(jianchashoufa("帝皇之御")){
+                            dangqianshoufa="帝皇之御";
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        if(dangqianjingling.contains("幻影蝶")){
+            if(dm.FindPic(149, 473, 305, 560, "技能-自爆.bmp|jn-jxcd1.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt(),y.toInt());
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("帝皇之御")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        god_changesp("切精灵-埃尔尼亚.bmp");
+        god_changesp("切精灵-六界.bmp");
+        god_changesp("切精灵-六界1.bmp");
+        god_changesp("切精灵-张飞.bmp");
+        god_changesp("六界-切龙妈.bmp|六界-切龙妈1.bmp");
+        god_changesp("切精灵-王哈.bmp");
+        if(dangqianjingling.contains("埃尔尼亚")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("六界神王")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("六界帝神")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("万人敌")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("乔特鲁德") || dangqianjingling.contains("乔德")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("王之哈莫")){
+            if(dm.FindColor(18, 476, 89, 493, "fffad4-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(40,506);
+                dm.LeftClick();
+            }
+        }
+    }else if(method==4){
+        if(dangqianshoufa!="幻影蝶" && dangqianshoufa!="帝皇之御"){
+            if(dm.FindPic(25, 497, 208, 572, "六界-bb.bmp","000000",0.9,0,x,y)!=-1){
+                dm.MoveTo(x.toInt(),y.toInt());
+                dm.LeftClick();
+            }
+            if(jianchashoufa("幻影蝶")==false && jianchashoufa("帝皇之御")==false){
+                qDebug()<<"进入循环";
+                while(jianchashoufa("幻影蝶")==false && jianchashoufa("帝皇之御")==false){
+                    if(dm.FindStr(192, 377, 791, 476, "幻影蝶|帝皇之御","ffffff-111111",0.9,x,y)!=-1){
+                        dm.MoveTo(x.toInt()+5,y.toInt()+20);
+                        dm.LeftClick();
+                        dm.LeftClick();
+                        dm.LeftClick();
+                        if(dm.FindPic(0,0,1000,600, "fw-sf.bmp","000000",0.9,0,x,y)!=-1){
+                            dm.MoveTo(x.toInt(),y.toInt());
+                            dm.LeftClick();
+                        }
+                        if(jianchashoufa("幻影蝶")){
+                            dangqianshoufa="幻影蝶";
+                            break;
+                        }else if(jianchashoufa("帝皇之御")){
+                            dangqianshoufa="帝皇之御";
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        if(dangqianjingling.contains("幻影蝶")){
+            if(dm.FindPic(149, 473, 305, 560, "技能-自爆.bmp|jn-jxcd1.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt(),y.toInt());
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("帝皇之御")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        god_changesp("切精灵-埃尔尼亚.bmp");
+        god_changesp("切精灵-六界.bmp");
+        god_changesp("切精灵-六界1.bmp");
+        god_changesp("切精灵-张飞.bmp");
+        god_changesp("六界-切龙妈.bmp|六界-切龙妈1.bmp");
+        god_changesp("切精灵-王哈.bmp");
+        if(dangqianjingling.contains("埃尔尼亚")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("六界神王")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("六界帝神")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("万人敌")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("乔特鲁德") || dangqianjingling.contains("乔德")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("王之哈莫")){
+            if(dm.FindPic(0, 0, 1000, 600, "王哈-先手.bmp", "000000", 0.8, 0, x, y)!=-1){
+                dm.MoveTo(x.toInt(),y.toInt());
+                dm.LeftClick();
+            }
+        }
+    }else if(method==5){
+        if(dangqianshoufa!="王之哈莫"){
+            if(dm.FindPic(25, 497, 208, 572, "六界-bb.bmp","000000",0.9,0,x,y)!=-1){
+                dm.MoveTo(x.toInt(),y.toInt());
+                dm.LeftClick();
+            }
+            if(jianchashoufa("王之哈莫")==false){
+                shezhishoufa("王之哈莫");
+            }
+        }
+        if(dangqianjingling.contains("幻影蝶") && explode_death==true){
+            if(dm.FindPic(149, 473, 305, 560, "技能-自爆.bmp|jn-jxcd1.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt(),y.toInt());
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("帝皇之御") && explode_death==true){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("王之哈莫")){
+            if(dm.FindPic(149, 473, 1000, 600, "王哈-强化.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt(),y.toInt());
+                dm.LeftClick();
+            }
+            if(dm.FindPic(149, 473, 1000, 600, "王哈-强化次数0.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(819,533);
+                dm.LeftClick();
+                Delay(1000);
+                if(dm.FindPic(7, 340, 968, 569, "切精灵-幻影蝶.bmp","000000",0.8,0,x,y)!=-1){
+                    dm.MoveTo(x.toInt(),y.toInt());
+                    dm.LeftClick();
+                    for(int i=0;i<30;i++){
+                        if(dm.FindPic(0,0, 1000, 600, "出战按钮.bmp","000000",0.8,0,x,y)!=-1){
+                            dm.MoveTo(x.toInt(),y.toInt());
+                            dm.LeftClick();
+                            explode_death=true;
+                            break;
+                        }
+                    }
+                }
+                if(dm.FindPic(7, 340, 968, 569, "切精灵-表姐.bmp","000000",0.8,0,x,y)!=-1){
+                    dm.MoveTo(x.toInt(),y.toInt());
+                    dm.LeftClick();
+                    for(int i=0;i<30;i++){
+                        if(dm.FindPic(0,0, 1000, 600, "出战按钮.bmp","000000",0.8,0,x,y)!=-1){
+                            dm.MoveTo(x.toInt(),y.toInt());
+                            dm.LeftClick();
+                            explode_death=true;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        if(explode_death==true){
+            god_changesp("切精灵-埃尔尼亚.bmp");
+            god_changesp("切精灵-六界.bmp");
+            god_changesp("切精灵-六界1.bmp");
+            god_changesp("切精灵-张飞.bmp");
+            god_changesp("六界-切龙妈.bmp|六界-切龙妈1.bmp");
+            god_changesp("切精灵-幻境.bmp");
+            if(dangqianjingling.contains("埃尔尼亚")){
+                if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                    dm.MoveTo(245,516);
+                    dm.LeftClick();
+                }
+            }
+            if(dangqianjingling.contains("六界神王")){
+                if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                    dm.MoveTo(245,516);
+                    dm.LeftClick();
+                }
+            }
+            if(dangqianjingling.contains("六界帝神")){
+                if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                    dm.MoveTo(245,516);
+                    dm.LeftClick();
+                }
+            }
+            if(dangqianjingling.contains("万人敌")){
+                if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                    dm.MoveTo(245,516);
+                    dm.LeftClick();
+                }
+            }
+            if(dangqianjingling.contains("乔特鲁德") || dangqianjingling.contains("乔德")){
+                if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                    dm.MoveTo(245,516);
+                    dm.LeftClick();
+                }
+            }
+            if(dangqianjingling.contains("幻境界皇")){
+                if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                    dm.MoveTo(245,516);
+                    dm.LeftClick();
+                }
+            }
+        }
+    }else if(method==7){
+        if(dangqianshoufa!="幻影蝶" && dangqianshoufa!="帝皇之御"){
+            if(dm.FindPic(25, 497, 208, 572, "六界-bb.bmp","000000",0.9,0,x,y)!=-1){
+                dm.MoveTo(x.toInt(),y.toInt());
+                dm.LeftClick();
+            }
+            if(jianchashoufa("幻影蝶")==false && jianchashoufa("帝皇之御")==false){
+                qDebug()<<"进入循环";
+                while(jianchashoufa("幻影蝶")==false && jianchashoufa("帝皇之御")==false){
+                    if(dm.FindStr(192, 377, 791, 476, "幻影蝶|帝皇之御","ffffff-111111",0.9,x,y)!=-1){
+                        dm.MoveTo(x.toInt()+5,y.toInt()+20);
+                        dm.LeftClick();
+                        dm.LeftClick();
+                        dm.LeftClick();
+                        if(dm.FindPic(0,0,1000,600, "fw-sf.bmp","000000",0.9,0,x,y)!=-1){
+                            dm.MoveTo(x.toInt(),y.toInt());
+                            dm.LeftClick();
+                        }
+                        if(jianchashoufa("幻影蝶")){
+                            dangqianshoufa="幻影蝶";
+                            break;
+                        }else if(jianchashoufa("帝皇之御")){
+                            dangqianshoufa="帝皇之御";
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        if(dangqianjingling.contains("幻影蝶")){
+            if(dm.FindPic(149, 473, 305, 560, "技能-自爆.bmp|jn-jxcd1.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt(),y.toInt());
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("帝皇之御")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        god_changesp("切精灵-埃尔尼亚.bmp");
+        god_changesp("切精灵-六界.bmp");
+        god_changesp("切精灵-六界1.bmp");
+        god_changesp("切精灵-张飞.bmp");
+        god_changesp("六界-切龙妈.bmp|六界-切龙妈1.bmp");
+        god_changesp("切精灵-王哈.bmp");
+        if(dangqianjingling.contains("埃尔尼亚")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("六界神王")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("六界帝神")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("万人敌")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("乔特鲁德") || dangqianjingling.contains("乔德")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("王之哈莫")){
+            if(jinglingjineng=="王哈-强化")
+                xy_skill("王哈-强化","王哈-强化.bmp","第五");
+            else if(jinglingjineng=="第五")
+                xy_skill("第五","","王哈-强化");
+        }
+
+    }else if(method==8){
+        if(dangqianshoufa!="幻影蝶" && dangqianshoufa!="帝皇之御"){
+            if(dm.FindPic(25, 497, 208, 572, "六界-bb.bmp","000000",0.9,0,x,y)!=-1){
+                dm.MoveTo(x.toInt(),y.toInt());
+                dm.LeftClick();
+            }
+            if(jianchashoufa("幻影蝶")==false && jianchashoufa("帝皇之御")==false){
+                qDebug()<<"进入循环";
+                while(jianchashoufa("幻影蝶")==false && jianchashoufa("帝皇之御")==false){
+                    if(dm.FindStr(192, 377, 791, 476, "幻影蝶|帝皇之御","ffffff-111111",0.9,x,y)!=-1){
+                        dm.MoveTo(x.toInt()+5,y.toInt()+20);
+                        dm.LeftClick();
+                        dm.LeftClick();
+                        dm.LeftClick();
+                        if(dm.FindPic(0,0,1000,600, "fw-sf.bmp","000000",0.9,0,x,y)!=-1){
+                            dm.MoveTo(x.toInt(),y.toInt());
+                            dm.LeftClick();
+                        }
+                        if(jianchashoufa("幻影蝶")){
+                            dangqianshoufa="幻影蝶";
+                            break;
+                        }else if(jianchashoufa("帝皇之御")){
+                            dangqianshoufa="帝皇之御";
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        if(dangqianjingling.contains("幻影蝶")){
+            if(dm.FindPic(149, 473, 305, 560, "技能-自爆.bmp|jn-jxcd1.bmp","000000",0.8,0,x,y)!=-1){
+                dm.MoveTo(x.toInt(),y.toInt());
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("帝皇之御")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        god_changesp("切精灵-埃尔尼亚.bmp");
+        god_changesp("切精灵-六界.bmp");
+        god_changesp("切精灵-六界1.bmp");
+        god_changesp("切精灵-张飞.bmp");
+        god_changesp("六界-切龙妈.bmp|六界-切龙妈1.bmp");
+        god_changesp("切精灵-幻境.bmp");
+        if(dangqianjingling.contains("埃尔尼亚")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("六界神王")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("六界帝神")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("万人敌")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("乔特鲁德") || dangqianjingling.contains("乔德")){
+            if(dm.FindColor(284, 509, 297, 518, "0388ec-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(245,516);
+                dm.LeftClick();
+            }
+        }
+        if(dangqianjingling.contains("幻境界皇")){
+            if(dm.FindColor(18, 476, 89, 493, "fffad4-000000", 1, 0, x, y)!=0){
+                dm.MoveTo(40,506);
+                dm.LeftClick();
+            }
+        }
+    }
+}
 
 
 

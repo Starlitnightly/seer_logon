@@ -155,8 +155,6 @@
     </property>
     <addaction name="action_8"/>
     <addaction name="action_9"/>
-    <addaction name="action_10"/>
-    <addaction name="action_11"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
@@ -265,7 +263,7 @@
   </action>
   <action name="action_21">
    <property name="text">
-    <string>攻略检索</string>
+    <string>赛尔计算器</string>
    </property>
   </action>
   <action name="bag_sk">

@@ -87,8 +87,9 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->action_3,SIGNAL(triggered()),this,SLOT(unMute()));
     //connect(ui->action_4,SIGNAL(triggered()),this,SLOT(open()));
     connect(ui->action_5,SIGNAL(triggered()),this,SLOT(speedopen()));
-
+    //清理缓存
     connect(ui->action_ie,SIGNAL(triggered()),this,SLOT(ClearCache()));
+    //脚本
     connect(ui->action_8,SIGNAL(triggered()),this,SLOT(script_open()));
 
     //工具信号
@@ -108,14 +109,30 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->bag_yy,SIGNAL(triggered()),this,SLOT(Changebag_yy()));
     connect(ui->bag_tq,SIGNAL(triggered()),this,SLOT(Changebag_tq()));
     connect(ui->bag_yh,SIGNAL(triggered()),this,SLOT(Changebag_yh()));
+
+    //一键换精灵窗口信号
+    connect(ui->actionyijian,SIGNAL(triggered()),this,SLOT(show_csp()));
     //f.show();
 
     //nono窗口
+    //巅峰模式
     n=new Nono();
     connect(ui->action_13,SIGNAL(triggered(bool)),n,SLOT(slot_startedTimer_clicked(bool)));
     connect(ui->action_14,SIGNAL(triggered()),this,SLOT(dianfeng()));
     connect(this,SIGNAL(sendcap(bool)),n,SLOT(slot_capture(bool)));
+    connect(this,SIGNAL(sendtip(QString)),n,SLOT(slot_tip(QString)));
+    connect(n,SIGNAL(signal_fresh()),this,SLOT(FreshSeer()));
     n->show();
+    //QDesktopWidget* desktopWidget = QApplication::desktop();
+    QScreen *screen=QGuiApplication::primaryScreen ();
+    QRect mm=screen->availableGeometry() ;
+    int screen_width = mm.width();
+    int screen_height = mm.height();
+    n->move(50,screen_height-n->height()-50);
+
+
+
+
     //初始化大漠插件
     /*
     QAxWidget *dm=new QAxWidget();
@@ -132,17 +149,26 @@ MainWindow::MainWindow(QWidget *parent) :
 
 }
 
+void MainWindow::show_csp(){
+    if(bind_status==false)
+        Binddm();
+    csp=new Changesp();
+    csp->show();
+}
+
 
 void MainWindow::dianfeng(){
     if(bind_status==false)
         Binddm();
     emit sendcap(true);
+    emit sendtip("精灵阵容已截图完毕");
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
     delete n;
+    delete csp;
 }
 
 void MainWindow::Binddm(){
@@ -198,37 +224,35 @@ void MainWindow::FreshSeer()//刷新游戏
 void MainWindow::Mute()//静音
 {
     Cmute.SetMute(true);
+    emit sendtip("小赛尔，游戏静音成功啦，如果没有成功再按一次");
 }
 
 void MainWindow::unMute()//解除静音
 {
     Cmute.SetMute(false);
+    emit sendtip("小赛尔，游戏成功解除静音了");
 }
 
 void MainWindow::OptimizingMemory()//内存优化
 {
     SetProcessWorkingSetSize(GetCurrentProcess(),-1,-1);
+    emit sendtip("内存优化成功，如果还是卡顿建议刷新");
 }
 
 void MainWindow::ReleaseMemory(){
-    //内存释放
+    //内存释放(之后有空再写，暂时用内存优化代替下)
+    SetProcessWorkingSetSize(GetCurrentProcess(),-1,-1);
+    emit sendtip("内存释放成功，如果还是卡顿建议刷新");
 }
 
 void MainWindow::ClearCache(){
     //清理ie缓存
-    Binddm();
+    QProcess process(0);
+    process.start("cmd",QStringList()<<"/c"<<"RunDll32.exe InetCpl.cpl,ClearMyTracksByProcess 8");
+    process.waitForStarted();
+    process.waitForFinished();
+    emit sendtip("ie缓存清理成功，如果还是卡顿建议刷新");
 
-
-
-    /*
-    QProcess p(0);
-    p.start("cmd");
-    p.waitForStarted();
-    p.write("RunDll32.exe InetCpl.cpl,ClearMyTracksByProcess 8");
-    p.closeWriteChannel();
-    p.waitForFinished();
-    qDebug()<<QString::fromLocal8Bit(p.readAllStandardOutput());
-    */
 }
 
 void MainWindow::Opence(){
@@ -236,66 +260,45 @@ void MainWindow::Opence(){
     QProcess pro;
     QString strPath = QDir::currentPath()+"/工具/ce6.8.exe";
     pro.startDetached(strPath);
+    emit sendtip("Cheatengine正在加载中，请不要用此工具做出不允许的事情哦");
 }
 
 void MainWindow::Openfd(){
     //打开fd
     QProcess pro;
-    QString strPath = QDir::currentPath()+"/Fiddler/Fiddlerh.exe";
+    QString strPath = QDir::currentPath()+"/工具/Fiddler/Fiddlerh.exe";
     pro.startDetached(strPath);
+    emit sendtip("fiddler正在加载中，请不要用此工具做出不允许的事情哦");
 }
 
 void MainWindow::OpenKeyandMouse(){
     //打开键鼠录制器
+    QProcess pro;
+    QString strPath = QDir::currentPath()+"/工具/录制/星小夜的键鼠录制工具.exe";
+    pro.startDetached(strPath);
+    emit sendtip("鼠标录制器启动中，可以开始做你的脚本啦");
 }
 
 void MainWindow::OpenMousepoint(){
     //打开鼠标连点器
+    QMessageBox::information(NULL,"this","开发中");
+    emit sendtip("此功能还在开发中，敬请期待");
 }
 
-void MainWindow::ChangeSpirit(){
-    //一键换精灵窗口
-}
-
-void MainWindow::ChangeBag(){
-    //一键换背包
-}
 
 void MainWindow::Gemsynthesis(){
     //宝石合成
+    emit sendtip("此功能还在开发中，敬请期待");
 }
 
-void MainWindow::Inputcdk(){
-    //一键输入cdk
-}
 
-void MainWindow::GreenfireTimer(){
-    //绿火计时器
-}
-
-void MainWindow::PeakMode(){
-    //巅峰模式
-}
-
-void MainWindow::Openscript(){
-    //打开脚本
-}
-
-void MainWindow::ChangeSpeedPrepare()
-{
-}
-
-void MainWindow::ChangeSpeed()
-{
-
-
-}
 
 void MainWindow::script_open()
 {
     if(bind_status==false)
         Binddm();
     f.show();
+    emit sendtip("脚本已打开，本功能搜集自网络，星夜对本功能带来的一切后果概不负责");
 
 }
 
@@ -303,67 +306,80 @@ void MainWindow::speedopen()
 {
     s.show();
     s.move(this->x(),this->y()+this->height());
+    emit sendtip("变速功能已开启，请正确合理地使用该功能哦");
 
 }
 void MainWindow::Changebag_sk(){
     if(bind_status==false)
         Binddm();
     Changebag("时空");
+    emit sendtip("一键更换时空成功啦，快看看换好的套装吧");
 }
 void MainWindow::Changebag_fs(){
     if(bind_status==false)
         Binddm();
-    Changebag("腐蚀");
+    Changebag("腐蚀者");
+    emit sendtip("一键更换腐蚀者成功啦，快看看换好的套装吧");
 }
 void MainWindow::Changebag_ld(){
     if(bind_status==false)
         Binddm();
     Changebag("零度");
+    emit sendtip("一键更换零度成功啦，快看看换好的套装吧");
 }
 void MainWindow::Changebag_hd(){
     if(bind_status==false)
         Binddm();
     Changebag("皇帝");
+    emit sendtip("一键更换皇帝成功啦，快看看换好的套装吧");
 }
 void MainWindow::Changebag_dy(){
     if(bind_status==false)
         Binddm();
     Changebag("毒液");
+    emit sendtip("一键更换毒液成功啦，快看看换好的套装吧");
 }
 void MainWindow::Changebag_xa(){
     if(bind_status==false)
         Binddm();
     Changebag("笑傲");
+    emit sendtip("一键更换笑傲成功啦，快看看换好的套装吧");
 }
 void MainWindow::Changebag_wl(){
     if(bind_status==false)
         Binddm();
     Changebag("未来");
+    emit sendtip("一键更换未来成功啦，快看看换好的套装吧");
 }
 void MainWindow::Changebag_ys(){
     if(bind_status==false)
         Binddm();
     Changebag("元神");
+    emit sendtip("一键更换元神成功啦，快看看换好的套装吧");
 }
 void MainWindow::Changebag_tz(){
     if(bind_status==false)
         Binddm();
     Changebag("天尊");
+    emit sendtip("一键更换天尊成功啦，快看看换好的套装吧");
 }
 void MainWindow::Changebag_yy(){
     if(bind_status==false)
         Binddm();
     Changebag("银翼骑士");
+    emit sendtip("一键更换银翼成功啦，快看看换好的套装吧");
 }
 void MainWindow::Changebag_tq(){
     if(bind_status==false)
         Binddm();
     Changebag("天启");
+    emit sendtip("一键更换天启成功啦，快看看换好的套装吧");
 }
 void MainWindow::Changebag_yh(){
     if(bind_status==false)
         Binddm();
     Changebag("浴火");
+    emit sendtip("一键更换浴火成功啦，快看看换好的套装吧");
 }
 
 void MainWindow::Changebag(QString name){
@@ -417,24 +433,40 @@ void Wearbag(){
     Delay(100);
 }
 
-void ffAutoC::run(){
-    QVariant x,y;
-    while(status==true){
-        if(dm.FindPic(406, 322, 562, 402,"放入背包确认.bmp","000000",0.8,0,x,y)!=-1){
-            dm.MoveTo(x.toInt(),y.toInt());
-            dm.LeftClick();
-        }
-        if(dm.FindPic(400, 200, 600, 300, "数据非法.bmp","000000",0.8,0,x,y)!=-1){
-            dm.MoveTo(x.toInt(),y.toInt());
-            dm.LeftClick();
-        }
-        if(dm.FindPic(0,0,1000,600,"消息盒子x.bmp","000000",0.8,0,x,y)!=-1){
-            dm.MoveTo(x.toInt(),y.toInt());
-            dm.LeftClick();
-        }
 
-        Delay(1000);
-    }
+/*以下函数作废*/
+void MainWindow::Inputcdk(){
+    //一键输入cdk
+}
+
+void MainWindow::GreenfireTimer(){
+    //绿火计时器
+}
+
+void MainWindow::PeakMode(){
+    //巅峰模式
+}
+
+void MainWindow::Openscript(){
+    //打开脚本
+}
+
+void MainWindow::ChangeSpirit(){
+    //一键换精灵窗口
+}
+
+void MainWindow::ChangeBag(){
+    //一键换背包
+}
+
+void MainWindow::ChangeSpeedPrepare()
+{
+}
+
+void MainWindow::ChangeSpeed()
+{
+
+
 }
 
 

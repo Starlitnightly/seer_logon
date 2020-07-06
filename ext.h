@@ -28,5 +28,7 @@ extern int searles_lose;//圣瑞战败次数
 extern int searles_fight;//圣瑞挑战次数
 extern int searles_reset;//圣瑞重置次数
 
+extern bool explode_death;//神王_自爆死
+
 
 #endif // EXT_H
