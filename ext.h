@@ -4,6 +4,16 @@
 #include "dm.h"
 #include "windows.h"
 
+extern QString current_version;
+
+extern QString new_version;
+extern QString new_content;
+extern QString new_error;
+extern QString new_upurl;
+extern QString new_time;
+extern QString new_news;
+extern QString new_guanggao;
+
 extern HWND Pid;
 extern HWND wPid;
 extern Dm::Idmsoft dm;

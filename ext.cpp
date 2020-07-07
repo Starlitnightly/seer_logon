@@ -1,8 +1,18 @@
 #include "ext.h"
 
+QString current_version="6.0.0";
+
 Dm::Idmsoft dm;
 HWND Pid;
 HWND wPid;
+
+QString new_version;
+QString new_content;
+QString new_error;
+QString new_upurl;
+QString new_time;
+QString new_news;
+QString new_guanggao;
 
 QString dangqianshoufa;
 QString dangqianjingling;

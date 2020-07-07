@@ -21,7 +21,6 @@ Pettip::Pettip(QWidget *parent) :
     QString value = file.readAll();
     file.close();
 
-    parseJsonErr;
     QJsonDocument document = QJsonDocument::fromJson(value.toUtf8(), &parseJsonErr);
     jsonObject = document.object();
 

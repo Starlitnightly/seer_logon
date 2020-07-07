@@ -157,10 +157,21 @@
     <addaction name="action_8"/>
     <addaction name="action_9"/>
    </widget>
+   <widget class="QMenu" name="menu_7">
+    <property name="title">
+     <string>关于</string>
+    </property>
+    <addaction name="action_7"/>
+    <addaction name="action_12"/>
+    <addaction name="separator"/>
+    <addaction name="action_20"/>
+    <addaction name="action_22"/>
+   </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
    <addaction name="menu_3"/>
    <addaction name="menu_4"/>
+   <addaction name="menu_7"/>
   </widget>
   <action name="action">
    <property name="text">
@@ -330,6 +341,26 @@
   <action name="action_4">
    <property name="text">
     <string>精灵技能快查</string>
+   </property>
+  </action>
+  <action name="action_7">
+   <property name="text">
+    <string>使用说明</string>
+   </property>
+  </action>
+  <action name="action_12">
+   <property name="text">
+    <string>项目源码</string>
+   </property>
+  </action>
+  <action name="action_20">
+   <property name="text">
+    <string>免责协议</string>
+   </property>
+  </action>
+  <action name="action_22">
+   <property name="text">
+    <string>作者与鸣谢</string>
    </property>
   </action>
  </widget>

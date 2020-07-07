@@ -6,6 +6,7 @@ CdkForm::CdkForm(QWidget *parent) :
     ui(new Ui::CdkForm)
 {
     ui->setupUi(this);
+    setAttribute(Qt::WA_QuitOnClose,false);
     int fontId = QFontDatabase::addApplicationFont(QDir::currentPath() + "/font/RuiZiZhenYanTiMianFeiShangYong-2.ttf");
     //qDebug() << "fontId = "<< fontId;
     QString nonot = QFontDatabase::applicationFontFamilies(fontId).at(0);

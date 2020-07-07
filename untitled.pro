@@ -7,6 +7,7 @@ win32:LIBS += -lpsapi
 QT += core gui
 QT += core gui axcontainer
 QT += network
+QT += xml
 
 RC_ICONS = favicon.ico
 

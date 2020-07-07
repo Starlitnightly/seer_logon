@@ -5,6 +5,7 @@
 #include <windows.h>
 #include <QDesktopWidget>
 #include <QScreen>
+#include <QtXml>
 
 #include "mediamute.h"
 #include "form.h"
@@ -15,6 +16,7 @@
 #include "changesp.h"
 #include "pettip.h"
 #include "cdkform.h"
+#include "atoken.h"
 
 
 
@@ -33,8 +35,10 @@ public:
     ~MainWindow();
     void Binddm();
     bool bind_status;
+    QNetworkAccessManager *nam;
 private:
     Ui::MainWindow *ui;
+    Atoken *ato;
     Form f;
     Speed s;
     Nono *n;
@@ -96,6 +100,13 @@ public slots:
 
     void slot_sb();
     void seer_cal();
+
+    void slot_shiyongshuoming();
+    void slot_xiangmuyuanma();
+    void slot_mianzexieyi();
+    void slot_author();
+
+    void slot_new(QNetworkReply* reply);
 signals:
     void sendcap(bool msg);
     void sendtip(QString msg);

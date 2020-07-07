@@ -172,67 +172,42 @@ MainWindow::MainWindow(QWidget *parent) :
     //Bind *bdm=new Bind(this);
     //bdm->start();
     bind_status=false;
-    /*
-    QFile file("F:/seer/test.json");
-    //qDebug()<<allpath+"/json/new.json";
-    file.open(QIODevice::ReadOnly | QIODevice::Text);
-    QString value = file.readAll();
+    QXmlStreamWriter::setCodec("gbk");
+    QFile file("F:/seer/update51.xml"); //相对路径、绝对路径、资源路径都行
+    if(!file.open(QFile::ReadOnly))
+        return;
+
+    QDomDocument doc;
+    if(!doc.setContent(&file))
+    {
+        file.close();
+        return;
+    }
     file.close();
-    //value.replace("\n","");
-    //value.replace("\t","");
-    qDebug()<<value.mid(0,100);
-    QJsonParseError parseJsonErr;
-    QJsonDocument document = QJsonDocument::fromJson(value.toUtf8(), &parseJsonErr);
-    QJsonObject jsonObject = document.object();
-    if(jsonObject["newversion"]!=current_version)
-        qDebug()<<"有新版本";
-    */
-    nam = new QNetworkAccessManager(this);
-    connect(nam,SIGNAL(finished(QNetworkReply*)),this,SLOT(slot_new(QNetworkReply*)));
-    QUrl url;
-    url.setUrl("http://jlhsmuseum.cn/news/test.json");
-    QNetworkRequest request;
-    request.setUrl(url);
-    request.setHeader(QNetworkRequest::ContentTypeHeader,QVariant("application/x-www-form-urlencoded"));
-    QNetworkReply* reply = nam->get(request);
 
-}
-
-void MainWindow::slot_new(QNetworkReply *reply){
-    QNetworkReply::NetworkError err = reply->error();
-    //qDebug()<<reply->readAll();
-    if(err != QNetworkReply::NoError) {
-        qDebug() << "accFailed: " << reply->errorString();
-    }else {
-        // 获取返回内容
-        QString str = reply->readAll();//读取接收到的数据
-        //parse_UpdateJSON(str);
-        QJsonParseError json_error;
-        QJsonDocument parse_doucment = QJsonDocument::fromJson(str.toUtf8(), &json_error);
-        QJsonObject obj = parse_doucment.object();
-        new_version=obj.take("newversion").toString();
-        new_content=obj.take("content").toString();
-        new_error=obj.take("error").toString();
-        new_time=obj.take("time").toString();
-        new_upurl=obj.take("upurl").toString();
-        new_news=obj.take("news").toString();
-        new_guanggao=obj.take("guanggao").toString();
+    QDomElement root=doc.documentElement(); //返回根节点
+    qDebug()<<root.nodeName();
+    QDomNode node=root.firstChild(); //获得第一个子节点
+        while(!node.isNull())  //如果节点不空
+        {
+            if(node.isElement()) //如果节点是元素
+            {
+                QDomElement e=node.toElement(); //转换为元素，注意元素和节点是两个数据结构，其实差不多
+                qDebug()<<e.tagName()<<" "<<e.attribute("id")<<" "<<e.attribute("time"); //打印键值对，tagName和nodeName是一个东西
+                QDomNodeList list=e.childNodes();
+                for(int i=0;i<list.count();i++) //遍历子元素，count和size都可以用,可用于标签数计数
+                {
+                    QDomNode n=list.at(i);
+                    //if(node.isElement())
+                        //qDebug()<<n.nodeName()<<":"<<n.toElement().text();
+                }
+            }
+            node=node.nextSibling(); //下一个兄弟节点,nextSiblingElement()是下一个兄弟元素，都差不多
+        }
 
 
-    }
-    if(new_error!="667"){
-        QMessageBox::about(NULL,"tip","抱歉，星小夜登录器停止使用，如果非公告停止那么请检查网络连接");
-        exit(0);
-    }
-    if(new_time!="假"){
-        QMessageBox::about(NULL,"tip",new_news);
-        if(new_guanggao!=" ")
-            QDesktopServices::openUrl(QUrl(new_guanggao));
-    }
-    if(new_version!=current_version){
-        emit sendtip("发现新版本！版本号："+new_version);
-        QDesktopServices::openUrl(QUrl(new_upurl));
-    }
+
+
 
 }
 
