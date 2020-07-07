@@ -1,4 +1,7 @@
 #include "xy.h"
+#include <Tlhelp32.h>
+#include <Psapi.h>
+#pragma comment(lib, "Psapi.lib")
 
 
 //星夜_识别己方精灵（战斗中）
@@ -178,4 +181,27 @@ void Delay(int time){
     QEventLoop loop;
     QTimer::singleShot(time, &loop, SLOT(quit()));
     loop.exec();
+}
+
+double xy_memory(DWORD pid){
+    /*
+    MEMORYSTATUSEX memoryInfo;
+    memoryInfo.dwLength = sizeof(memoryInfo);
+    GlobalMemoryStatusEx(&memoryInfo);
+    UINT mb = 1024 * 1024;
+    qDebug()<<QString::number(memoryInfo.dwMemoryLoad).append("%");
+    qDebug()<<QString::number(memoryInfo.ullTotalPhys / mb);
+    */
+
+    PROCESS_MEMORY_COUNTERS pmc;
+    HANDLE hProcess = NULL;
+    hProcess=OpenProcess(PROCESS_ALL_ACCESS,false,pid);
+    if(GetProcessMemoryInfo(hProcess, &pmc, sizeof(pmc))){
+        CloseHandle(hProcess);
+        long int a=1024*1024;
+        return(pmc.WorkingSetSize/a);
+    }
+    CloseHandle(hProcess);
+    return 0;
+
 }

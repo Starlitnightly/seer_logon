@@ -10,6 +10,7 @@ QString jinglingjineng;
 
 QString jfjl;//己方精灵
 QString dmjl;//对面精灵
+QString allpath;
 
 bool fw_allactive;
 bool fw_lqactive;//飞王灵巧激活

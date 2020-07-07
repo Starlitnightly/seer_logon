@@ -2,7 +2,6 @@
 #include "ui_mainwindow.h"
 #include "mediamute.h"
 #include <QLibrary>
-#include "hookapi.h"
 #include<qprocess.h>
 #include<qmessagebox.h>
 #include <Windows.h>
@@ -74,6 +73,8 @@ MainWindow::MainWindow(QWidget *parent) :
     QString webstr=QString("http://seer.61.com/play.shtml");//设置要打开的网页
     ui->axWidget->dynamicCall("Navigate(const QString&)",webstr);//显示网页
 
+    cd=NULL;
+
     Mute();
 
 
@@ -91,10 +92,15 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->action_ie,SIGNAL(triggered()),this,SLOT(ClearCache()));
     //脚本
     connect(ui->action_8,SIGNAL(triggered()),this,SLOT(script_open()));
+    connect(ui->action_9,SIGNAL(triggered()),this,SLOT(Openscript()));
 
     //工具信号
     connect(ui->action_ce,SIGNAL(triggered()),this,SLOT(Opence()));
     connect(ui->action_fd,SIGNAL(triggered()),this,SLOT(Openfd()));
+    connect(ui->action_cdk,SIGNAL(triggered()),this,SLOT(Inputcdk()));
+    connect(ui->action_4,SIGNAL(triggered()),this,SLOT(PeakMode()));
+    connect(ui->action_21,SIGNAL(triggered()),this,SLOT(seer_cal()));
+
 
     //一键换装备信号
     connect(ui->bag_sk,SIGNAL(triggered()),this,SLOT(Changebag_sk()));
@@ -116,12 +122,15 @@ MainWindow::MainWindow(QWidget *parent) :
 
     //nono窗口
     //巅峰模式
+    allpath=QDir::currentPath();
     n=new Nono();
     connect(ui->action_13,SIGNAL(triggered(bool)),n,SLOT(slot_startedTimer_clicked(bool)));
     connect(ui->action_14,SIGNAL(triggered()),this,SLOT(dianfeng()));
     connect(this,SIGNAL(sendcap(bool)),n,SLOT(slot_capture(bool)));
     connect(this,SIGNAL(sendtip(QString)),n,SLOT(slot_tip(QString)));
     connect(n,SIGNAL(signal_fresh()),this,SLOT(FreshSeer()));
+    connect(n,SIGNAL(signal_sb()),this,SLOT(slot_sb()));
+    connect(this,SIGNAL(signal_openskill()),n,SLOT(showskill()));
     n->show();
     //QDesktopWidget* desktopWidget = QApplication::desktop();
     QScreen *screen=QGuiApplication::primaryScreen ();
@@ -129,6 +138,7 @@ MainWindow::MainWindow(QWidget *parent) :
     int screen_width = mm.width();
     int screen_height = mm.height();
     n->move(50,screen_height-n->height()-50);
+    this->setAttribute(Qt::WA_QuitOnClose,true);
 
 
 
@@ -147,6 +157,8 @@ MainWindow::MainWindow(QWidget *parent) :
     bind_status=false;
 
 
+
+
 }
 
 void MainWindow::show_csp(){
@@ -154,6 +166,11 @@ void MainWindow::show_csp(){
         Binddm();
     csp=new Changesp();
     csp->show();
+
+}
+void MainWindow::slot_sb(){
+    if(bind_status==false)
+        Binddm();
 }
 
 
@@ -433,10 +450,32 @@ void Wearbag(){
     Delay(100);
 }
 
+void MainWindow::Openscript(){
+    //打开脚本
+    QProcess pro;
+    QString strPath = QDir::currentPath()+"/工具/自定义脚本工具.exe";
+    pro.startDetached(strPath);
+    emit sendtip("自定义脚本工具加载中，发挥你的创意吧");
+}
+
 
 /*以下函数作废*/
 void MainWindow::Inputcdk(){
     //一键输入cdk
+    if(cd==NULL)
+        cd=new CdkForm();
+    if(bind_status==false)
+        Binddm();
+    cd->show();
+
+
+}
+
+void MainWindow::seer_cal(){
+    QProcess pro;
+    QString strPath = QDir::currentPath()+"/工具/赛尔数据计算器/赛尔数据计算器.exe";
+    pro.startDetached(strPath);
+    emit sendtip("赛尔数值计算器正在加载中（by橙汁）");
 }
 
 void MainWindow::GreenfireTimer(){
@@ -444,12 +483,11 @@ void MainWindow::GreenfireTimer(){
 }
 
 void MainWindow::PeakMode(){
-    //巅峰模式
+    //精灵技能快查
+    emit signal_openskill();
 }
 
-void MainWindow::Openscript(){
-    //打开脚本
-}
+
 
 void MainWindow::ChangeSpirit(){
     //一键换精灵窗口

@@ -7,6 +7,8 @@
 #include <QTimer>
 #include <QEventLoop>
 
+
+
 #include "ext.h"
 
 
@@ -20,6 +22,7 @@ void xy_autofight();//星夜_自动克制系出战
 void hdblk_scriptset();//混沌布莱克脚本配置
 void OpenKingSpirit();//打开精灵王装置
 void Delay(int time);
+double xy_memory(DWORD pid);
 
 
 #endif // XY_H

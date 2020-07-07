@@ -12,6 +12,7 @@ extern QString dangqianjingling;//当前战斗精灵
 extern QString jinglingjineng;//要释放的精灵技能
 extern QString jfjl;//己方精灵
 extern QString dmjl;//对面精灵
+extern QString allpath;
 
 extern bool fw_allactive;//飞王全部激活
 extern bool fw_lqactive;//飞王灵巧激活

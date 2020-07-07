@@ -13,6 +13,8 @@
 #include "speed.h"
 #include "nono.h"
 #include "changesp.h"
+#include "pettip.h"
+#include "cdkform.h"
 
 
 
@@ -31,15 +33,15 @@ public:
     ~MainWindow();
     void Binddm();
     bool bind_status;
-public:
-
-
 private:
     Ui::MainWindow *ui;
     Form f;
     Speed s;
     Nono *n;
     Changesp *csp;
+    CdkForm *cd;
+
+
 
 
 public slots:
@@ -91,9 +93,14 @@ public slots:
 
     void dianfeng();
     void show_csp();
+
+    void slot_sb();
+    void seer_cal();
 signals:
     void sendcap(bool msg);
     void sendtip(QString msg);
+    void signal_openskill();
+
 
 
 };

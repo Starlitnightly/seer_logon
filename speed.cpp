@@ -30,6 +30,7 @@ Speed::Speed(QWidget *parent) :
     ui(new Ui::Speed)
 {
     ui->setupUi(this);
+    setAttribute(Qt::WA_QuitOnClose,false);
     game_speed=1.0;
     Setrange=(Fun)lib.resolve("SetRange");
     connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(Changespeed()));

@@ -12,9 +12,22 @@
 #include <QFontDatabase>
 #include <QLabel>
 #include <QtGlobal>
+#include <QNetworkReply>
+#include <QNetworkRequest>
+#include <QJsonParseError>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QTextCodec>
+#include <QJsonArray>
+#include <QClipboard>
+#include <QSettings>
+#include <QMessageBox>
+#include <QBuffer>
+
 
 #include "ext.h"
 #include "xy.h"
+#include "pettip.h"
 
 namespace Ui {
 class Nono;
@@ -55,8 +68,13 @@ public:
     QMovie *movie3;
     QMovie *movie4;
 
+    void getAccessToken(QString key, QString secret);
+    void recognition();
+
+
 private:
     Ui::Nono *ui;
+    DWORD tmp1;
 
     QTime *time;
     QTimer *timer;
@@ -71,6 +89,10 @@ private:
     ClickedLabel *clabel;
     ClickedLabel *freshlabel;
     ClickedLabel *shibielabel;
+
+    QString accessToken;
+    QNetworkAccessManager *nam;
+    Pettip *pt;
 public slots:
     void slot_startedTimer_clicked(bool);
     void slot_stopedTimer_clicked(bool);
@@ -84,8 +106,14 @@ public slots:
 
     void slot_shibie();
     void slot_Fresh();
+
+    void getAccessTokenRequestFinished(QNetworkReply* reply);
+    void recognitionRequestFinished(QNetworkReply* reply);
+    void showskill();
 signals:
     void signal_fresh();
+    void signal_sb();
+    void signal_pet(QString name);
 };
 
 

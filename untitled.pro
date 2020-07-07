@@ -3,9 +3,10 @@
 # Project created by QtCreator 2019-08-09T21:38:33
 #
 #-------------------------------------------------
-
-QT       += core gui
+win32:LIBS += -lpsapi
+QT += core gui
 QT += core gui axcontainer
+QT += network
 
 RC_ICONS = favicon.ico
 
@@ -32,34 +33,43 @@ SOURCES += \
         mainwindow.cpp \
     mediamute.cpp \
     mutedsessionevents.cpp \
-    hookapi.cpp \
     form.cpp \
     dm.cpp \
     ext.cpp \
     speed.cpp \
     xy.cpp \
     nono.cpp \
-    changesp.cpp
+    changesp.cpp \
+    pettip.cpp \
+    hookapi.cpp \
+    cdkform.cpp \
+    atoken.cpp
 
 HEADERS += \
         mainwindow.h \
     mediamute.h \
     mutedsessionevents.h \
-    hookapi.h \
     form.h \
     dm.h \
     ext.h \
     speed.h \
     xy.h \
     nono.h \
-    changesp.h
+    changesp.h \
+    pettip.h \
+    hookapi.h \
+    cdkform.h \
+    atoken.h
 
 FORMS += \
         mainwindow.ui \
     form.ui \
     speed.ui \
     nono.ui \
-    changesp.ui
+    changesp.ui \
+    pettip.ui \
+    cdkform.ui \
+    atoken.ui
 
 DISTFILES +=
 

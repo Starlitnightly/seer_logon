@@ -4,20 +4,23 @@
 
 void change_init(QAxWidget *tmp){
     tmp->setControl(QString::fromUtf8("{8856F961-340A-11D0-A96B-00C04FD705A2}"));//注册组件ID
-    QString webstr=QString("http://seer.61.com/resource/pet/head/5000.swf");//设置要打开的网页
-    tmp->dynamicCall("Navigate(QString)",webstr);//显示网页
+}
+void deletesp(QAxWidget *tmp){
+    tmp->setControl(QString::fromUtf8("{d27cdb6e-ae6d-11cf-96b8-444553540000}"));
 }
 void change_sp(QAxWidget *tmp,QString url){
-    tmp->setControl(QString::fromUtf8("{d27cdb6e-ae6d-11cf-96b8-444553540000}"));
+    deletesp(tmp);
     tmp->setControl(QString::fromUtf8("{8856F961-340A-11D0-A96B-00C04FD705A2}"));//注册组件ID
     tmp->dynamicCall("Navigate(QString)",url);
 }
+
 
 Changesp::Changesp(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Changesp)
 {
     ui->setupUi(this);
+    setAttribute(Qt::WA_QuitOnClose,false);
     sp=new QAxWidget*[12];
     for(int i=0;i<12;i++)
         sp[i]=NULL;
@@ -38,7 +41,7 @@ Changesp::Changesp(QWidget *parent) :
 
     model = new QDirModel;
     ui->treeView->setModel(model);
-    path="F:/seer/薄荷味的seer背包";
+    path=allpath+"/薄荷味的seer背包";
     ui->treeView->setRootIndex(model->index(path));
 
     connect(ui->treeView,SIGNAL(pressed(QModelIndex)),this,SLOT(slot_treeView_pressed(QModelIndex)));
@@ -51,6 +54,8 @@ void Changesp::slot_pre_bag(){
     QString tmp=ui->textEdit->toPlainText();
     QStringList sections = tmp.split(QRegExp("[|]"));
     QString webstr=QString("http://seer.61.com/resource/pet/head/"+sections[1]+".swf");//设置要打开的网页
+    for(int i=0;i<12;i++)
+        deletesp(sp[i]);
     for(int i=0;i<sections.length();i++){
         qDebug()<<sections[i];
         webstr=QString("http://seer.61.com/resource/pet/head/"+sections[i]+".swf");
@@ -69,7 +74,7 @@ void Changesp::slot_savebag(){
     //设置对话框的标题
     saveDialog.setWindowTitle("0.0");
     //设置对话框的打开路径(只是路径，加上文件名失效)
-    saveDialog.setDirectory("F:/seer/薄荷味的seer背包");
+    saveDialog.setDirectory(allpath+"/薄荷味的seer背包");
     //设置对话框默认显示文件名
     saveDialog.selectFile("1");
     //设置文件过滤器
@@ -103,7 +108,10 @@ void Changesp::slot_treeView_pressed(QModelIndex modeIndex)
 {
     ui->treeView->resizeColumnToContents(modeIndex.row());
     QString selectedRowTxt = ui->treeView->model()->itemData(modeIndex).values()[0].toString();
-    qDebug()<<"result=="<<selectedRowTxt;
+    QFile file(path+"/"+selectedRowTxt);
+    file.open(QIODevice::ReadOnly | QIODevice::Text);
+    QString value = file.readAll();
+    ui->textEdit->setText(value);
 }
 
 Changesp::~Changesp()
@@ -150,12 +158,12 @@ void Changesp::Searchsp(HWND pid, QString name){
 }
 
 void Changesp::Putsp_bag(){
-    for(int i=0;i<5;i++){
+    for(int i=0;i<15;i++){
         dm.MoveTo(216,489);
         dm.LeftClick();
         Delay(100);
     }
-    for(int i=0;i<5;i++){
+    for(int i=0;i<15;i++){
         dm.MoveTo(925,137);
         dm.LeftClick();
         Delay(100);
@@ -191,8 +199,9 @@ void Changesp::slot_auto_bag(){
     Opensphome();
     QString tmp1=ui->textEdit->toPlainText();
     QStringList sections = tmp1.split(QRegExp("[|]"));
+    bag.clear();
     for(int i=0;i<sections.length();i++){
-        bag[i]=sections[i];
+        bag<<sections[i];
     }
     for(int i=0;i<bag.length();i++){
         Searchsp(Pid,bag[i]);

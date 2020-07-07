@@ -118,6 +118,7 @@
     <addaction name="action_5"/>
     <addaction name="separator"/>
     <addaction name="action_21"/>
+    <addaction name="action_4"/>
    </widget>
    <widget class="QMenu" name="menu_3">
     <property name="title">
@@ -324,6 +325,11 @@
   <action name="bag_yh">
    <property name="text">
     <string>一键换浴火</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>精灵技能快查</string>
    </property>
   </action>
  </widget>

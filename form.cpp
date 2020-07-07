@@ -10,6 +10,21 @@
 Form::~Form()
 {
     delete ui;
+    delete script_fw;
+    delete script_gem;
+    delete script_hdblk;
+    delete script_jlw;
+    delete script_spt;
+    delete script_team;
+    delete script_tower;
+    delete script_vip;
+    delete script_wish;
+    delete script_xxlzc;
+
+    delete script_auto;
+    delete script_top;
+    delete script_searles;
+    delete script_sixworld;
 }
 
 Form::Form(QWidget *parent) :
@@ -17,6 +32,7 @@ Form::Form(QWidget *parent) :
     ui(new Ui::Form)
 {
     ui->setupUi(this);
+    setAttribute(Qt::WA_QuitOnClose,false);
 
     connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(test()));//开始运行
     connect(ui->pushButton_2, SIGNAL(clicked()), this, SLOT(test2()));//停止运行
