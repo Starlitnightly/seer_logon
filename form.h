@@ -1,3 +1,12 @@
+/**
+ * @file form.h
+ * @brief 脚本窗口头文件
+ * @author starlitnightly
+ * @email Starlitnightly@163.com
+ * @version 1.0.0
+ * @date 2020-07-09
+ * @license GPL
+ */
 #ifndef FORM_H
 #define FORM_H
 
@@ -30,7 +39,10 @@ class AutoC;
 class Repp;
 class Top;
 }
-//补pp脚本
+/**
+ * @brief 补pp-多线程类
+ * 对战中0pp时启动此线程可以自动补pp，（bug）如果网速过慢可能点不到药
+ */
 class Repp: public QThread
 {
     Q_OBJECT
@@ -48,7 +60,10 @@ protected:
 signals:
     void done();
 };
-//自动确认
+/**
+ * @brief 自动确认-多线程类
+ * 用于自动按下赛尔号的确认按钮的多线程
+ */
 class AutoC: public QThread
 {
     Q_OBJECT
@@ -66,7 +81,10 @@ protected:
 signals:
     void done();
 };
-//飞王脚本
+/**
+ * @brief 飞王脚本-多线程类
+ * 飞王脚本相关的函数配置
+ */
 class Fw: public QThread
 {
     Q_OBJECT
@@ -86,7 +104,10 @@ protected:
 signals:
     void done();
 };
-//一键刻印/宝石合成脚本
+/**
+ * @brief 一键刻印/宝石抽奖脚本-多线程类
+ * 脚本相关的配置
+ */
 class Gem: public QThread
 {
     Q_OBJECT
@@ -104,7 +125,10 @@ protected:
 signals:
     void done();
 };
-//混沌布莱克脚本
+/**
+ * @brief 混沌布莱克脚本-多线程类
+ * 脚本相关的配置
+ */
 class Hdblk: public QThread
 {
     Q_OBJECT
@@ -122,7 +146,10 @@ protected:
 signals:
     void done();
 };
-//精灵王大乱斗脚本
+/**
+ * @brief 精灵王大乱斗脚本-多线程类
+ * 脚本相关的配置
+ */
 class Jlw: public QThread
 {
     Q_OBJECT
@@ -143,7 +170,10 @@ protected:
 signals:
     void done();
 };
-//spt徽章脚本
+/**
+ * @brief spt徽章相关脚本-多线程类
+ * 脚本相关的配置
+ */
 class Spt: public QThread
 {
     Q_OBJECT
@@ -163,7 +193,10 @@ protected:
 signals:
     void done();
 };
-//一键战队贡献脚本
+/**
+ * @brief 一键战队贡献脚本-多线程类
+ * 脚本相关的配置
+ */
 class Team: public QThread
 {
     Q_OBJECT
@@ -181,7 +214,10 @@ protected:
 signals:
     void sendMessage(QString msg);
 };
-//勇者之塔脚本
+/**
+ * @brief 一键勇者之塔脚本-多线程类
+ * 脚本相关的配置
+ */
 class Tower: public QThread
 {
     Q_OBJECT
@@ -199,7 +235,10 @@ protected:
 signals:
     void done();
 };
-//一键vip礼包脚本
+/**
+ * @brief 一键vip礼包脚本-多线程类
+ * 脚本相关的配置
+ */
 class Vip: public QThread
 {
     Q_OBJECT
@@ -217,7 +256,10 @@ protected:
 signals:
     void done();
 };
-//一键许愿脚本
+/**
+ * @brief 一键许愿脚本-多线程类
+ * 脚本相关的配置
+ */
 class Wish: public QThread
 {
     Q_OBJECT
@@ -235,7 +277,10 @@ protected:
 signals:
     void done();
 };
-//一键学习力战场脚本
+/**
+ * @brief 一键学习力战场脚本-多线程类
+ * 脚本相关的配置
+ */
 class Xxlzc: public QThread
 {
     Q_OBJECT
@@ -255,7 +300,10 @@ signals:
 };
 
 
-//判断进入巅峰
+/**
+ * @brief 判断进入巅峰-多线程类
+ * 用于巅峰脚本判断要进入哪个巅峰以及当前所处的位置
+ */
 class Pdtop: public QThread
 {
     Q_OBJECT
@@ -274,7 +322,10 @@ protected:
 signals:
     void done();
 };
-//ban三黑
+/**
+ * @brief 禁用黑屋精灵-多线程类
+ * 禁用黑屋精灵以及无黑屋精灵相关的ban操作
+ */
 class Ban3: public QThread
 {
     Q_OBJECT
@@ -293,7 +344,10 @@ protected:
 signals:
     void done();
 };
-//自爆与首发
+/**
+ * @brief 首发与出战-多线程类
+ * 巅峰脚本自动选择首发与自动选择出战精灵
+ */
 class Explode: public QThread
 {
     Q_OBJECT
@@ -317,7 +371,10 @@ signals:
     void done();
 };
 
-//巅峰脚本
+/**
+ * @brief 巅峰主脚本-多线程类
+ * 脚本相关的配置
+ */
 class Top: public QThread
 {
     Q_OBJECT
@@ -351,7 +408,10 @@ signals:
     void done();
 };
 
-//圣瑞脚本
+/**
+ * @brief 圣瑞儿子脚本-多线程类
+ * 脚本相关的配置
+ */
 class Searles: public QThread
 {
     Q_OBJECT
@@ -373,7 +433,10 @@ signals:
     void sendfight(QString msg);
 };
 
-//六界神王殿脚本
+/**
+ * @brief 六界神王殿脚本-多线程类
+ * 脚本相关的配置
+ */
 class Sixworld: public QThread
 {
     Q_OBJECT
@@ -408,7 +471,10 @@ protected:
 
 
 
-
+/**
+ * @brief 脚本主窗口类
+ * 本类记载了所有的脚本
+ */
 class Form : public QWidget
 {
     Q_OBJECT

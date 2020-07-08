@@ -1,0 +1,170 @@
+\hypertarget{class_xxlzc}{}\doxysection{Xxlzc类 参考}
+\label{class_xxlzc}\index{Xxlzc@{Xxlzc}}
+
+
+一键学习力战场脚本-\/多线程类 脚本相关的配置  
+
+
+
+
+{\ttfamily \#include $<$form.\+h$>$}
+
+
+
+类 Xxlzc 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_xxlzc__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Xxlzc 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_xxlzc__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{信号}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_xxlzc_a8a0d9ed2515a66a911df4ef5b1fc74a1}{done}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_xxlzc_aefa8f8906cb0618ed3188f8069a9c331}{Xxlzc}} (Q\+Object $\ast$parent=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_xxlzc_ae9359e757db2a4c2f66c8fafda8c3660}{status}}
+\item 
+int \mbox{\hyperlink{class_xxlzc_a5d031e06374f886042bf9d2b54b01311}{now}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_xxlzc_a1da799628e7ee157db11b31e4c745245}{run}} ()
+\begin{DoxyCompactList}\small\item\em 学习力战场脚本-\/线程启动函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+一键学习力战场脚本-\/多线程类 脚本相关的配置 
+
+在文件 form.\+h 第 284 行定义.
+
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_xxlzc_aefa8f8906cb0618ed3188f8069a9c331}\label{class_xxlzc_aefa8f8906cb0618ed3188f8069a9c331}} 
+\index{Xxlzc@{Xxlzc}!Xxlzc@{Xxlzc}}
+\index{Xxlzc@{Xxlzc}!Xxlzc@{Xxlzc}}
+\doxysubsubsection{\texorpdfstring{Xxlzc()}{Xxlzc()}}
+{\footnotesize\ttfamily Xxlzc\+::\+Xxlzc (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+在文件 form.\+h 第 291 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{292         : QThread(parent)}
+\DoxyCodeLine{293     \{}
+\DoxyCodeLine{294         \mbox{\hyperlink{class_xxlzc_ae9359e757db2a4c2f66c8fafda8c3660}{status}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{295     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_xxlzc_a8a0d9ed2515a66a911df4ef5b1fc74a1}\label{class_xxlzc_a8a0d9ed2515a66a911df4ef5b1fc74a1}} 
+\index{Xxlzc@{Xxlzc}!done@{done}}
+\index{done@{done}!Xxlzc@{Xxlzc}}
+\doxysubsubsection{\texorpdfstring{done}{done}}
+{\footnotesize\ttfamily void Xxlzc\+::done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_xxlzc_a1da799628e7ee157db11b31e4c745245}\label{class_xxlzc_a1da799628e7ee157db11b31e4c745245}} 
+\index{Xxlzc@{Xxlzc}!run@{run}}
+\index{run@{run}!Xxlzc@{Xxlzc}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Xxlzc\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+学习力战场脚本-\/线程启动函数 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 form.\+cpp 第 1108 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1108                \{}
+\DoxyCodeLine{1109     QVariant x,y;}
+\DoxyCodeLine{1110     \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_xxlzc_ae9359e757db2a4c2f66c8fafda8c3660}{status}}==\textcolor{keyword}{true})\{}
+\DoxyCodeLine{1111         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(129,289,881,383,\textcolor{stringliteral}{"jlxxl-\/kstz.bmp|jlxxl-\/kstz2.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1112             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt()+5,y.toInt()+5);}
+\DoxyCodeLine{1113             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1114         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(129,289,881,383,\textcolor{stringliteral}{"jlxxl-\/kstz3.bmp|jlxxl-\/kstz4.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1115             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt()+5,y.toInt()+5);}
+\DoxyCodeLine{1116             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1117         \}}
+\DoxyCodeLine{1118 }
+\DoxyCodeLine{1119         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a77f100ccfb5a76cf7077eca85eda6643}{jinglingjineng}}==\textcolor{stringliteral}{"第一"})\{}
+\DoxyCodeLine{1120             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284,509,297,518,\textcolor{stringliteral}{"0388ec-\/000000"},1,0,x,y)!=0)\{}
+\DoxyCodeLine{1121                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{1122                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1123                 \mbox{\hyperlink{ext_8cpp_a77f100ccfb5a76cf7077eca85eda6643}{jinglingjineng}}=\textcolor{stringliteral}{"第一"};}
+\DoxyCodeLine{1124             \}}
+\DoxyCodeLine{1125         \}}
+\DoxyCodeLine{1126         \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(500);}
+\DoxyCodeLine{1127 }
+\DoxyCodeLine{1128     \}}
+\DoxyCodeLine{1129 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{class_xxlzc_a1da799628e7ee157db11b31e4c745245_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_xxlzc_a5d031e06374f886042bf9d2b54b01311}\label{class_xxlzc_a5d031e06374f886042bf9d2b54b01311}} 
+\index{Xxlzc@{Xxlzc}!now@{now}}
+\index{now@{now}!Xxlzc@{Xxlzc}}
+\doxysubsubsection{\texorpdfstring{now}{now}}
+{\footnotesize\ttfamily int Xxlzc\+::now}
+
+
+
+在文件 form.\+h 第 290 行定义.
+
+\mbox{\Hypertarget{class_xxlzc_ae9359e757db2a4c2f66c8fafda8c3660}\label{class_xxlzc_ae9359e757db2a4c2f66c8fafda8c3660}} 
+\index{Xxlzc@{Xxlzc}!status@{status}}
+\index{status@{status}!Xxlzc@{Xxlzc}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily bool Xxlzc\+::status}
+
+
+
+在文件 form.\+h 第 289 行定义.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{form_8h}{form.\+h}}\item 
+\mbox{\hyperlink{form_8cpp}{form.\+cpp}}\end{DoxyCompactItemize}

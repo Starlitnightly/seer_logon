@@ -1,0 +1,764 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>星小夜的登录器: xy.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">星小夜的登录器
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">xy.cpp 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="xy_8h_source.html">xy.h</a>&quot;</code><br />
+<code>#include &lt;Tlhelp32.h&gt;</code><br />
+<code>#include &lt;Psapi.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+xy.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xy_8cpp__incl.png" border="0" usemap="#xy_8cpp" alt=""/></div>
+<map name="xy_8cpp" id="xy_8cpp">
+<area shape="rect" title=" " alt="" coords="332,5,393,32"/>
+<area shape="rect" href="xy_8h.html" title="星夜特色函数" alt="" coords="251,80,297,107"/>
+<area shape="rect" title=" " alt="" coords="322,80,403,107"/>
+<area shape="rect" title=" " alt="" coords="428,80,495,107"/>
+<area shape="rect" title=" " alt="" coords="5,155,72,181"/>
+<area shape="rect" title=" " alt="" coords="97,155,169,181"/>
+<area shape="rect" title=" " alt="" coords="195,155,264,181"/>
+<area shape="rect" title=" " alt="" coords="288,155,352,181"/>
+<area shape="rect" title=" " alt="" coords="377,155,468,181"/>
+<area shape="rect" href="ext_8h.html" title="全局变量声明头文件" alt="" coords="493,155,544,181"/>
+<area shape="rect" href="dm_8h.html" title=" " alt="" coords="448,229,499,256"/>
+<area shape="rect" title=" " alt="" coords="523,229,605,256"/>
+<area shape="rect" title=" " alt="" coords="257,304,345,331"/>
+<area shape="rect" title=" " alt="" coords="371,304,461,331"/>
+<area shape="rect" title=" " alt="" coords="485,304,576,331"/>
+<area shape="rect" title=" " alt="" coords="600,304,683,331"/>
+</map>
+</div>
+</div>
+<p><a href="xy_8cpp_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a41461f0789f05b4eada3c31940bc6e52"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xy_8cpp.html#a41461f0789f05b4eada3c31940bc6e52">xy_shibiejifangjingling</a> ()</td></tr>
+<tr class="memdesc:a41461f0789f05b4eada3c31940bc6e52"><td class="mdescLeft">&#160;</td><td class="mdescRight">星夜_识别己方精灵（战斗中）  <a href="xy_8cpp.html#a41461f0789f05b4eada3c31940bc6e52">更多...</a><br /></td></tr>
+<tr class="separator:a41461f0789f05b4eada3c31940bc6e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b9e45446cfb0613a72e981d612807f7"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xy_8cpp.html#a8b9e45446cfb0613a72e981d612807f7">xy_shibieduifangjingling</a> ()</td></tr>
+<tr class="memdesc:a8b9e45446cfb0613a72e981d612807f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">星夜_识别对方精灵（战斗中）  <a href="xy_8cpp.html#a8b9e45446cfb0613a72e981d612807f7">更多...</a><br /></td></tr>
+<tr class="separator:a8b9e45446cfb0613a72e981d612807f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac42138cfdbe6de4a997a561ae8d4b0c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xy_8cpp.html#ac42138cfdbe6de4a997a561ae8d4b0c0">xy_skill</a> (QString jn, QString jnbmp, QString nextjn)</td></tr>
+<tr class="memdesc:ac42138cfdbe6de4a997a561ae8d4b0c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">精灵释放技能  <a href="xy_8cpp.html#ac42138cfdbe6de4a997a561ae8d4b0c0">更多...</a><br /></td></tr>
+<tr class="separator:ac42138cfdbe6de4a997a561ae8d4b0c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc5a3afd15ea1c25148483bd1df95ebf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xy_8cpp.html#afc5a3afd15ea1c25148483bd1df95ebf">xy_autofight</a> ()</td></tr>
+<tr class="memdesc:afc5a3afd15ea1c25148483bd1df95ebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">自动克制系出战（战斗中）  <a href="xy_8cpp.html#afc5a3afd15ea1c25148483bd1df95ebf">更多...</a><br /></td></tr>
+<tr class="separator:afc5a3afd15ea1c25148483bd1df95ebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a719182cdae3e46550dffed25970ee9e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xy_8cpp.html#a719182cdae3e46550dffed25970ee9e0">hdblk_scriptset</a> ()</td></tr>
+<tr class="memdesc:a719182cdae3e46550dffed25970ee9e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">混布脚本出战设置  <a href="xy_8cpp.html#a719182cdae3e46550dffed25970ee9e0">更多...</a><br /></td></tr>
+<tr class="separator:a719182cdae3e46550dffed25970ee9e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ea2c896fa964f516cd5d85b10aad31f"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xy_8cpp.html#a9ea2c896fa964f516cd5d85b10aad31f">xy_shibiemap</a> ()</td></tr>
+<tr class="memdesc:a9ea2c896fa964f516cd5d85b10aad31f"><td class="mdescLeft">&#160;</td><td class="mdescRight">星夜_识别当前所在的地图  <a href="xy_8cpp.html#a9ea2c896fa964f516cd5d85b10aad31f">更多...</a><br /></td></tr>
+<tr class="separator:a9ea2c896fa964f516cd5d85b10aad31f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1f716a1ace435f62910f610ed1cbf81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xy_8cpp.html#ac1f716a1ace435f62910f610ed1cbf81">OpenKingSpirit</a> ()</td></tr>
+<tr class="memdesc:ac1f716a1ace435f62910f610ed1cbf81"><td class="mdescLeft">&#160;</td><td class="mdescRight">打开精灵王大乱斗装置  <a href="xy_8cpp.html#ac1f716a1ace435f62910f610ed1cbf81">更多...</a><br /></td></tr>
+<tr class="separator:ac1f716a1ace435f62910f610ed1cbf81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a925196a6417535216cfd7ea936e4ca50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xy_8cpp.html#a925196a6417535216cfd7ea936e4ca50">Delay</a> (int time)</td></tr>
+<tr class="memdesc:a925196a6417535216cfd7ea936e4ca50"><td class="mdescLeft">&#160;</td><td class="mdescRight">延迟线程（非阻塞）  <a href="xy_8cpp.html#a925196a6417535216cfd7ea936e4ca50">更多...</a><br /></td></tr>
+<tr class="separator:a925196a6417535216cfd7ea936e4ca50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58270384b018ce426d489991e1540a0c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xy_8cpp.html#a58270384b018ce426d489991e1540a0c">xy_memory</a> (DWORD pid)</td></tr>
+<tr class="memdesc:a58270384b018ce426d489991e1540a0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取程序使用内存  <a href="xy_8cpp.html#a58270384b018ce426d489991e1540a0c">更多...</a><br /></td></tr>
+<tr class="separator:a58270384b018ce426d489991e1540a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a925196a6417535216cfd7ea936e4ca50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a925196a6417535216cfd7ea936e4ca50">&#9670;&nbsp;</a></span>Delay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Delay </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>延迟线程（非阻塞） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>延迟时间（毫秒） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="xy_8cpp_source.html">xy.cpp</a> 第 <a class="el" href="xy_8cpp_source.html#l00217">217</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                    {</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    QEventLoop loop;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    QTimer::singleShot(time, &amp;loop, SLOT(quit()));</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    loop.exec();</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xy_8cpp_a925196a6417535216cfd7ea936e4ca50_icgraph.png" border="0" usemap="#xy_8cpp_a925196a6417535216cfd7ea936e4ca50_icgraph" alt=""/></div>
+<map name="xy_8cpp_a925196a6417535216cfd7ea936e4ca50_icgraph" id="xy_8cpp_a925196a6417535216cfd7ea936e4ca50_icgraph">
+<area shape="rect" title="延迟线程（非阻塞）" alt="" coords="678,867,733,893"/>
+<area shape="rect" href="class_explode.html#a98495d45ed7f4506c56fa5af66c3301f" title="首发与出战&#45;自动33首发" alt="" coords="478,56,615,83"/>
+<area shape="rect" href="class_cdk_form.html#ab3ebc679e724c763ac1e165b41cb7c18" title="自动输入cdk函数" alt="" coords="482,107,611,133"/>
+<area shape="rect" href="class_explode.html#aff39855645600bd82019590b50f08596" title="首发与出战&#45;自动66首发" alt="" coords="485,5,608,32"/>
+<area shape="rect" href="class_main_window.html#a2ed0a143484d1184f034c7deb4cc0505" title="一键换装备&#45;主函数" alt="" coords="246,436,415,463"/>
+<area shape="rect" href="class_sixworld.html#ae04b87558d8f5c5b41d3a69079eef987" title="六界脚本&#45;对战出战设置" alt="" coords="255,157,406,184"/>
+<area shape="rect" href="class_sixworld.html#a5363d5ae5c05203784eaf6d95b7b0d9e" title="六界脚本&#45;线程启动函数" alt="" coords="53,144,150,171"/>
+<area shape="rect" href="class_fw.html#a6c3d8a44da9fcead8c3b3d30638e4495" title="飞王脚本&#45;检查首发" alt="" coords="483,563,610,589"/>
+<area shape="rect" href="class_fw.html#a2336962e1178af8b6fe6dbf349cd1a8e" title="飞王脚本&#45;线程启动函数" alt="" coords="298,537,363,564"/>
+<area shape="rect" href="class_sixworld.html#adb299e28d0900c6800a5cd5c61bc8cc3" title="六界脚本&#45;检查首发" alt="" coords="467,157,626,184"/>
+<area shape="rect" href="mainwindow_8h.html#a2ef2be9078be3fbf8434cc61495d24bd" title="一键换装备&#45;打开装备背包" alt="" coords="509,309,584,336"/>
+<area shape="rect" href="class_changesp.html#a28916b4d95f4e648255c9ce3d8722785" title="打开精灵仓库函数" alt="" coords="464,1475,629,1501"/>
+<area shape="rect" href="class_changesp.html#a94ce8e3a047a1b40319a51efed195f42" title="一键换背包主函数" alt="" coords="246,1424,415,1451"/>
+<area shape="rect" href="class_changesp.html#aaafbea9fea0c62585ad940f3e1b6ca7d" title="仓库精灵放入背包函数" alt="" coords="471,613,622,640"/>
+<area shape="rect" href="class_changesp.html#a6bc2e14cefa3f8fecf72f1a0b80e243e" title="背包精灵全部入库函数" alt="" coords="466,664,627,691"/>
+<area shape="rect" href="classff_auto_c.html#a47e3627ad87c9951dd0138a59b8a062e" title="自动非法确认&#45;线程启动函数" alt="" coords="501,715,592,741"/>
+<area shape="rect" href="class_repp.html#a155e9490b29f7ac04ed42f14ae78eb1f" title="补pp&#45;线程启动函数" alt="" coords="507,765,586,792"/>
+<area shape="rect" href="class_auto_c.html#af53bbcd67d17396788bf86da94b5e372" title="自动确认脚本&#45;线程启动函数" alt="" coords="505,816,589,843"/>
+<area shape="rect" href="class_gem.html#af6f23b8ce868e2185f204b72937f9d12" title="一键刻印/宝石抽奖脚本&#45;线程启动函数" alt="" coords="509,867,585,893"/>
+<area shape="rect" href="class_hdblk.html#aaf03ee62b81c598e11019cd87a0c3455" title="混沌布莱克脚本&#45;线程启动函数" alt="" coords="506,917,587,944"/>
+<area shape="rect" href="class_jlw.html#a145a21cdc00244f97d9f91aa52d1a556" title="精灵王大乱斗脚本&#45;线程启动函数" alt="" coords="513,968,580,995"/>
+<area shape="rect" href="class_spt.html#a3a6dd7e2fa4422857925bd76381be961" title="spt徽章脚本&#45;线程启动函数" alt="" coords="513,1019,581,1045"/>
+<area shape="rect" href="class_team.html#ab247d3622b762f0f4a856c79f4823b88" title="一键战队贡献脚本&#45;线程启动函数" alt="" coords="507,1069,587,1096"/>
+<area shape="rect" href="class_vip.html#ae970b8413ff5e8003715e274339fc5a2" title="vip礼包领取脚本&#45;线程启动函数" alt="" coords="513,1120,580,1147"/>
+<area shape="rect" href="class_wish.html#a437a750262b0ae55e0a76f38b308aa7a" title="一键许愿脚本&#45;线程启动函数" alt="" coords="507,1171,586,1197"/>
+<area shape="rect" href="class_xxlzc.html#a1da799628e7ee157db11b31e4c745245" title="学习力战场脚本&#45;线程启动函数" alt="" coords="507,1221,586,1248"/>
+<area shape="rect" href="class_pdtop.html#a651e0babbb70430654baf8472594f479" title="进入巅峰&#45;线程启动函数" alt="" coords="505,1272,588,1299"/>
+<area shape="rect" href="class_top.html#ae9f4ac4d51bf31effd9f028f940dbbaf" title="巅峰脚本&#45;线程启动函数" alt="" coords="512,1323,581,1349"/>
+<area shape="rect" href="class_searles.html#aa44aa200f9e6f18328a70768d628d2d2" title="圣瑞脚本&#45;线程启动函数" alt="" coords="501,1373,593,1400"/>
+<area shape="rect" href="mainwindow_8h.html#aba1d780cdbc29d99be3cc3fde400d02d" title="一键换装备&#45;搜索装备" alt="" coords="505,360,589,387"/>
+<area shape="rect" href="class_changesp.html#a274ef8d0e7c4eb624d2b2a3d8138f516" title="精灵仓库搜索精灵函数" alt="" coords="475,1424,618,1451"/>
+<area shape="rect" href="class_nono.html#a4cce37537ea1b3c71e05ed92a52570f2" title="nono状态改变" alt="" coords="248,1677,413,1704"/>
+<area shape="rect" href="class_nono.html#ab754e1ac200a41a51f6d90b5d537fcea" title="识别对战精灵" alt="" coords="485,1576,608,1603"/>
+<area shape="rect" href="class_nono.html#aa793569399f3e07fb9513129a6df55ac" title="nono窗口提示信息" alt="" coords="495,1728,598,1755"/>
+<area shape="rect" href="class_form.html#ab225cc1a20235bb39cff8ffa6dd77f96" title="开启脚本" alt="" coords="505,1677,588,1704"/>
+<area shape="rect" href="mainwindow_8h.html#abb6ab68f7f5c4af65390e0966c12cb9e" title="一键换装备&#45;穿上装备" alt="" coords="509,411,584,437"/>
+<area shape="rect" href="class_explode.html#a1a51ec7a91585d90e588a4a661ea697a" title="首发与出战&#45;线程启动函数" alt="" coords="283,31,378,57"/>
+<area shape="rect" href="class_cdk_form.html#a543a538eb975b5035d2651c8f2c2acec" title="一键输入cdk窗口构造函数" alt="" coords="263,107,399,133"/>
+<area shape="rect" href="class_main_window.html#ad39f71eb2e8f6e363c7c24f1e7b9270e" title="一键换装备&#45;毒液" alt="" coords="6,195,197,221"/>
+<area shape="rect" href="class_main_window.html#a0698988cb169afaba82b543f9f06e3c2" title="一键换装备&#45;腐蚀者" alt="" coords="8,245,195,272"/>
+<area shape="rect" href="class_main_window.html#a8d1d66a77c1cc0f2a464d2aefa7adf32" title="一键换装备&#45;皇帝" alt="" coords="6,296,197,323"/>
+<area shape="rect" href="class_main_window.html#a4904d7f222f79f6592a765f182e7f7f1" title="一键换装备&#45;零度" alt="" coords="8,347,195,373"/>
+<area shape="rect" href="class_main_window.html#a4aee5e17419866a9e5db98de199c9570" title="一键换装备&#45;时空" alt="" coords="6,397,197,424"/>
+<area shape="rect" href="class_main_window.html#a21b53de7c272ee93ce95145774e1665a" title="一键换装备&#45;天启" alt="" coords="8,448,195,475"/>
+<area shape="rect" href="class_main_window.html#aa8647a92042c41b85e869af0f384c9b6" title="一键换装备&#45;天尊" alt="" coords="8,499,195,525"/>
+<area shape="rect" href="class_main_window.html#a0184bce95af5551ddf6ebd2c04b34dcb" title="一键换装备&#45;未来" alt="" coords="7,549,195,576"/>
+<area shape="rect" href="class_main_window.html#a7d0091787103e42169b0fe52cbc752bc" title="一键换装备&#45;笑傲" alt="" coords="6,600,197,627"/>
+<area shape="rect" href="class_main_window.html#a02d0ec9daa3e9aec30eae11f7c4ca967" title="一键换装备&#45;浴火" alt="" coords="6,651,197,677"/>
+<area shape="rect" href="class_main_window.html#ae94a0b4e90637692bdd691b82d401e71" title="一键换装备&#45;元神" alt="" coords="6,701,197,728"/>
+<area shape="rect" href="class_main_window.html#ab42f0ca52f7699f40bb2f71dafd8f830" title="一键换装备&#45;银翼骑士" alt="" coords="6,752,197,779"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a719182cdae3e46550dffed25970ee9e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a719182cdae3e46550dffed25970ee9e0">&#9670;&nbsp;</a></span>hdblk_scriptset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hdblk_scriptset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>混布脚本出战设置 </p>
+<dl class="section return"><dt>返回</dt><dd>无 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="xy_8cpp_source.html">xy.cpp</a> 第 <a class="el" href="xy_8cpp_source.html#l00111">111</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                      {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    QVariant x,y;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">    if(dm.FindPic(0,0,1000,600,&quot;克制图片.bmp&quot;,&quot;000000&quot;,0.8,2,x,y)!=-1){</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">        dm.MoveTo(x.toInt(),y.toInt()+10);</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">        dm.LeftClick();</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">    }*/</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(83, 9, 212, 100,<span class="stringliteral">&quot;dqwh.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,0,x,y)!=-1){</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a5bd7389a02c70f26bc06def4612f1021">dangqianjingling</a>!=<span class="stringliteral">&quot;王之哈莫&quot;</span>)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>=<span class="stringliteral">&quot;狂龙击杀1&quot;</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <a class="code" href="ext_8cpp.html#a5bd7389a02c70f26bc06def4612f1021">dangqianjingling</a>=<span class="stringliteral">&quot;王之哈莫&quot;</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>==<span class="stringliteral">&quot;狂龙击杀1&quot;</span>){</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(66, 417, 836, 565,<span class="stringliteral">&quot;jn-kljs.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,0,x,y)!=-1){</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(x.toInt(),y.toInt());</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>=<span class="stringliteral">&quot;狂龙击杀2&quot;</span>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>==<span class="stringliteral">&quot;狂龙击杀2&quot;</span>){</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(66, 417, 836, 565,<span class="stringliteral">&quot;jn-kljs.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,0,x,y)!=-1){</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(x.toInt(),y.toInt());</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                <a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>=<span class="stringliteral">&quot;第五1&quot;</span>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>==<span class="stringliteral">&quot;第五1&quot;</span>){</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a33b66b7e95ff6e7e90e159b67273dd8a">FindColor</a>(18, 476, 89, 493,<span class="stringliteral">&quot;fffad4-000000&quot;</span>,1,0,x,y)!=0){</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(40,506);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                <a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>=<span class="stringliteral">&quot;第五2&quot;</span>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>==<span class="stringliteral">&quot;第五2&quot;</span>){</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a33b66b7e95ff6e7e90e159b67273dd8a">FindColor</a>(18, 476, 89, 493,<span class="stringliteral">&quot;fffad4-000000&quot;</span>,1,0,x,y)!=0){</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(40,506);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                <a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>=<span class="stringliteral">&quot;狂龙击杀2&quot;</span>;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(83, 9, 212, 100,<span class="stringliteral">&quot;dqao1.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,0,x,y)!=-1){</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a5bd7389a02c70f26bc06def4612f1021">dangqianjingling</a>!=<span class="stringliteral">&quot;艾欧&quot;</span>)</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>=<span class="stringliteral">&quot;魂魄缠绕&quot;</span>;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <a class="code" href="ext_8cpp.html#a5bd7389a02c70f26bc06def4612f1021">dangqianjingling</a>=<span class="stringliteral">&quot;艾欧&quot;</span>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>==<span class="stringliteral">&quot;魂魄缠绕&quot;</span>){</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(66, 417, 836, 565,<span class="stringliteral">&quot;jn-hpcr.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,0,x,y)!=-1){</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(x.toInt(),y.toInt());</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                <a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>=<span class="stringliteral">&quot;魂魄缠绕&quot;</span>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(83, 9, 212, 100,<span class="stringliteral">&quot;dqsz.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,0,x,y)!=-1){</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a5bd7389a02c70f26bc06def4612f1021">dangqianjingling</a>!=<span class="stringliteral">&quot;混沌魔君索伦森&quot;</span>)</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>=<span class="stringliteral">&quot;第五&quot;</span>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <a class="code" href="ext_8cpp.html#a5bd7389a02c70f26bc06def4612f1021">dangqianjingling</a>=<span class="stringliteral">&quot;混沌魔君索伦森&quot;</span>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>==<span class="stringliteral">&quot;诸雄之主&quot;</span>){</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(66, 417, 836, 565,<span class="stringliteral">&quot;jn-zxzz.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,0,x,y)!=-1){</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(x.toInt(),y.toInt());</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                <a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>=<span class="stringliteral">&quot;诸雄之主&quot;</span>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>==<span class="stringliteral">&quot;第五&quot;</span>){</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a33b66b7e95ff6e7e90e159b67273dd8a">FindColor</a>(18, 476, 89, 493,<span class="stringliteral">&quot;fffad4-000000&quot;</span>,1,0,x,y)!=0){</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(40,506);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                <a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>=<span class="stringliteral">&quot;诸雄之主&quot;</span>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(83, 9, 212, 100,<span class="stringliteral">&quot;dqjh.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,0,x,y)!=-1){</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a5bd7389a02c70f26bc06def4612f1021">dangqianjingling</a>!=<span class="stringliteral">&quot;幻境界皇&quot;</span>)</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>=<span class="stringliteral">&quot;精神幻灭&quot;</span>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <a class="code" href="ext_8cpp.html#a5bd7389a02c70f26bc06def4612f1021">dangqianjingling</a>=<span class="stringliteral">&quot;幻境界皇&quot;</span>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>==<span class="stringliteral">&quot;精神幻灭&quot;</span>){</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(66, 417, 836, 565,<span class="stringliteral">&quot;jn-jshm.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,0,x,y)!=-1){</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(x.toInt(),y.toInt());</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                <a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>=<span class="stringliteral">&quot;精神幻灭&quot;</span>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            }</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    }<span class="keywordflow">else</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <a class="code" href="ext_8cpp.html#a5bd7389a02c70f26bc06def4612f1021">dangqianjingling</a>=<span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xy_8cpp_a719182cdae3e46550dffed25970ee9e0_cgraph.png" border="0" usemap="#xy_8cpp_a719182cdae3e46550dffed25970ee9e0_cgraph" alt=""/></div>
+<map name="xy_8cpp_a719182cdae3e46550dffed25970ee9e0_cgraph" id="xy_8cpp_a719182cdae3e46550dffed25970ee9e0_cgraph">
+<area shape="rect" title="混布脚本出战设置" alt="" coords="6,81,117,108"/>
+<area shape="rect" href="class_dm_1_1_idmsoft.html#a33b66b7e95ff6e7e90e159b67273dd8a" title=" " alt="" coords="165,5,320,32"/>
+<area shape="rect" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0" title=" " alt="" coords="171,56,315,83"/>
+<area shape="rect" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a" title=" " alt="" coords="167,107,318,133"/>
+<area shape="rect" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49" title=" " alt="" coords="171,157,315,184"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xy_8cpp_a719182cdae3e46550dffed25970ee9e0_icgraph.png" border="0" usemap="#xy_8cpp_a719182cdae3e46550dffed25970ee9e0_icgraph" alt=""/></div>
+<map name="xy_8cpp_a719182cdae3e46550dffed25970ee9e0_icgraph" id="xy_8cpp_a719182cdae3e46550dffed25970ee9e0_icgraph">
+<area shape="rect" title="混布脚本出战设置" alt="" coords="137,5,247,32"/>
+<area shape="rect" href="class_hdblk.html#aaf03ee62b81c598e11019cd87a0c3455" title="混沌布莱克脚本&#45;线程启动函数" alt="" coords="6,5,87,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac1f716a1ace435f62910f610ed1cbf81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1f716a1ace435f62910f610ed1cbf81">&#9670;&nbsp;</a></span>OpenKingSpirit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpenKingSpirit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>打开精灵王大乱斗装置 </p>
+<dl class="section return"><dt>返回</dt><dd>无 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="xy_8cpp_source.html">xy.cpp</a> 第 <a class="el" href="xy_8cpp_source.html#l00201">201</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                     {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    QVariant x,y;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(0,0,1000,600,<span class="stringliteral">&quot;jlwzz.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,0,x,y)!=-1){</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(x.toInt()+20,y.toInt()+10);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(0,0,1000,600,<span class="stringliteral">&quot;jlwksld.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,0,x,y)!=-1){</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(x.toInt(),y.toInt());</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xy_8cpp_ac1f716a1ace435f62910f610ed1cbf81_cgraph.png" border="0" usemap="#xy_8cpp_ac1f716a1ace435f62910f610ed1cbf81_cgraph" alt=""/></div>
+<map name="xy_8cpp_ac1f716a1ace435f62910f610ed1cbf81_cgraph" id="xy_8cpp_ac1f716a1ace435f62910f610ed1cbf81_cgraph">
+<area shape="rect" title="打开精灵王大乱斗装置" alt="" coords="5,56,115,83"/>
+<area shape="rect" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0" title=" " alt="" coords="167,5,311,32"/>
+<area shape="rect" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a" title=" " alt="" coords="163,56,314,83"/>
+<area shape="rect" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49" title=" " alt="" coords="167,107,311,133"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xy_8cpp_ac1f716a1ace435f62910f610ed1cbf81_icgraph.png" border="0" usemap="#xy_8cpp_ac1f716a1ace435f62910f610ed1cbf81_icgraph" alt=""/></div>
+<map name="xy_8cpp_ac1f716a1ace435f62910f610ed1cbf81_icgraph" id="xy_8cpp_ac1f716a1ace435f62910f610ed1cbf81_icgraph">
+<area shape="rect" title="打开精灵王大乱斗装置" alt="" coords="120,5,229,32"/>
+<area shape="rect" href="class_jlw.html#a145a21cdc00244f97d9f91aa52d1a556" title="精灵王大乱斗脚本&#45;线程启动函数" alt="" coords="5,5,72,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afc5a3afd15ea1c25148483bd1df95ebf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc5a3afd15ea1c25148483bd1df95ebf">&#9670;&nbsp;</a></span>xy_autofight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void xy_autofight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>自动克制系出战（战斗中） </p>
+<dl class="section return"><dt>返回</dt><dd>无 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="xy_8cpp_source.html">xy.cpp</a> 第 <a class="el" href="xy_8cpp_source.html#l00073">73</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                   {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    QVariant x,y;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(0,0,1000,600,<span class="stringliteral">&quot;克制图片.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,2,x,y)!=-1){</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(x.toInt(),y.toInt()+10);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;30;i++){</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(0,0,1000,600,<span class="stringliteral">&quot;出战按钮.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,0,x,y)!=-1){</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(x.toInt(),y.toInt());</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(0,0,1000,600,<span class="stringliteral">&quot;普通.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,2,x,y)!=-1){</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(x.toInt(),y.toInt()+10);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;30;i++){</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(0,0,1000,600,<span class="stringliteral">&quot;出战按钮.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,0,x,y)!=-1){</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(x.toInt(),y.toInt());</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(0,0,1000,600,<span class="stringliteral">&quot;微弱.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,2,x,y)!=-1){</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(x.toInt(),y.toInt()+10);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;30;i++){</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(0,0,1000,600,<span class="stringliteral">&quot;出战按钮.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,0,x,y)!=-1){</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(x.toInt(),y.toInt());</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xy_8cpp_afc5a3afd15ea1c25148483bd1df95ebf_cgraph.png" border="0" usemap="#xy_8cpp_afc5a3afd15ea1c25148483bd1df95ebf_cgraph" alt=""/></div>
+<map name="xy_8cpp_afc5a3afd15ea1c25148483bd1df95ebf_cgraph" id="xy_8cpp_afc5a3afd15ea1c25148483bd1df95ebf_cgraph">
+<area shape="rect" title="自动克制系出战（战斗中）" alt="" coords="6,56,98,83"/>
+<area shape="rect" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0" title=" " alt="" coords="151,5,295,32"/>
+<area shape="rect" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a" title=" " alt="" coords="147,56,298,83"/>
+<area shape="rect" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49" title=" " alt="" coords="151,107,295,133"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xy_8cpp_afc5a3afd15ea1c25148483bd1df95ebf_icgraph.png" border="0" usemap="#xy_8cpp_afc5a3afd15ea1c25148483bd1df95ebf_icgraph" alt=""/></div>
+<map name="xy_8cpp_afc5a3afd15ea1c25148483bd1df95ebf_icgraph" id="xy_8cpp_afc5a3afd15ea1c25148483bd1df95ebf_icgraph">
+<area shape="rect" title="自动克制系出战（战斗中）" alt="" coords="137,81,229,108"/>
+<area shape="rect" href="class_hdblk.html#aaf03ee62b81c598e11019cd87a0c3455" title="混沌布莱克脚本&#45;线程启动函数" alt="" coords="6,5,87,32"/>
+<area shape="rect" href="class_jlw.html#a145a21cdc00244f97d9f91aa52d1a556" title="精灵王大乱斗脚本&#45;线程启动函数" alt="" coords="13,56,80,83"/>
+<area shape="rect" href="class_spt.html#a3a6dd7e2fa4422857925bd76381be961" title="spt徽章脚本&#45;线程启动函数" alt="" coords="13,107,81,133"/>
+<area shape="rect" href="class_top.html#ae9f4ac4d51bf31effd9f028f940dbbaf" title="巅峰脚本&#45;线程启动函数" alt="" coords="12,157,81,184"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a58270384b018ce426d489991e1540a0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58270384b018ce426d489991e1540a0c">&#9670;&nbsp;</a></span>xy_memory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double xy_memory </td>
+          <td>(</td>
+          <td class="paramtype">DWORD&#160;</td>
+          <td class="paramname"><em>pid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>读取程序使用内存 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pid</td><td>当前进程pid </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>程序使用的内存大小 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="xy_8cpp_source.html">xy.cpp</a> 第 <a class="el" href="xy_8cpp_source.html#l00227">227</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                           {</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment">    MEMORYSTATUSEX memoryInfo;</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment">    memoryInfo.dwLength = sizeof(memoryInfo);</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment">    GlobalMemoryStatusEx(&amp;memoryInfo);</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="comment">    UINT mb = 1024 * 1024;</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="comment">    qDebug()&lt;&lt;QString::number(memoryInfo.dwMemoryLoad).append(&quot;%&quot;);</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="comment">    qDebug()&lt;&lt;QString::number(memoryInfo.ullTotalPhys / mb);</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    PROCESS_MEMORY_COUNTERS pmc;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    HANDLE hProcess = NULL;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    hProcess=OpenProcess(PROCESS_ALL_ACCESS,<span class="keyword">false</span>,pid);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordflow">if</span>(GetProcessMemoryInfo(hProcess, &amp;pmc, <span class="keyword">sizeof</span>(pmc))){</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        CloseHandle(hProcess);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="keywordtype">long</span> <span class="keywordtype">int</span> a=1024*1024;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keywordflow">return</span>(pmc.WorkingSetSize/a);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    CloseHandle(hProcess);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xy_8cpp_a58270384b018ce426d489991e1540a0c_icgraph.png" border="0" usemap="#xy_8cpp_a58270384b018ce426d489991e1540a0c_icgraph" alt=""/></div>
+<map name="xy_8cpp_a58270384b018ce426d489991e1540a0c_icgraph" id="xy_8cpp_a58270384b018ce426d489991e1540a0c_icgraph">
+<area shape="rect" title="读取程序使用内存" alt="" coords="357,5,448,32"/>
+<area shape="rect" href="class_nono.html#a4cce37537ea1b3c71e05ed92a52570f2" title="nono状态改变" alt="" coords="144,5,309,32"/>
+<area shape="rect" href="class_nono.html#a3a59dc5f43458df16fc2dd5cd4aace99" title="nono窗口构造函数" alt="" coords="5,5,96,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8b9e45446cfb0613a72e981d612807f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b9e45446cfb0613a72e981d612807f7">&#9670;&nbsp;</a></span>xy_shibieduifangjingling()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString xy_shibieduifangjingling </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>星夜_识别对方精灵（战斗中） </p>
+<dl class="section return"><dt>返回</dt><dd>己方精灵名 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="xy_8cpp_source.html">xy.cpp</a> 第 <a class="el" href="xy_8cpp_source.html#l00028">28</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                                  {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a7abfd21911d9917bad69f48e54c22eed">Ocr</a>(877, 89, 961, 107, <span class="stringliteral">&quot;ffffff-111111&quot;</span>,1.0);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xy_8cpp_a8b9e45446cfb0613a72e981d612807f7_cgraph.png" border="0" usemap="#xy_8cpp_a8b9e45446cfb0613a72e981d612807f7_cgraph" alt=""/></div>
+<map name="xy_8cpp_a8b9e45446cfb0613a72e981d612807f7_cgraph" id="xy_8cpp_a8b9e45446cfb0613a72e981d612807f7_cgraph">
+<area shape="rect" title="星夜_识别对方精灵（战斗中）" alt="" coords="6,5,165,32"/>
+<area shape="rect" href="class_dm_1_1_idmsoft.html#a7abfd21911d9917bad69f48e54c22eed" title=" " alt="" coords="214,5,335,32"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xy_8cpp_a8b9e45446cfb0613a72e981d612807f7_icgraph.png" border="0" usemap="#xy_8cpp_a8b9e45446cfb0613a72e981d612807f7_icgraph" alt=""/></div>
+<map name="xy_8cpp_a8b9e45446cfb0613a72e981d612807f7_icgraph" id="xy_8cpp_a8b9e45446cfb0613a72e981d612807f7_icgraph">
+<area shape="rect" title="星夜_识别对方精灵（战斗中）" alt="" coords="123,5,282,32"/>
+<area shape="rect" href="class_top.html#ae9f4ac4d51bf31effd9f028f940dbbaf" title="巅峰脚本&#45;线程启动函数" alt="" coords="5,5,75,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a41461f0789f05b4eada3c31940bc6e52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41461f0789f05b4eada3c31940bc6e52">&#9670;&nbsp;</a></span>xy_shibiejifangjingling()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString xy_shibiejifangjingling </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>星夜_识别己方精灵（战斗中） </p>
+<dl class="section return"><dt>返回</dt><dd>己方精灵名 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="xy_8cpp_source.html">xy.cpp</a> 第 <a class="el" href="xy_8cpp_source.html#l00020">20</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                                 {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a7abfd21911d9917bad69f48e54c22eed">Ocr</a>(16,91,101,106,<span class="stringliteral">&quot;ffffff-111111&quot;</span>,1.0);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xy_8cpp_a41461f0789f05b4eada3c31940bc6e52_cgraph.png" border="0" usemap="#xy_8cpp_a41461f0789f05b4eada3c31940bc6e52_cgraph" alt=""/></div>
+<map name="xy_8cpp_a41461f0789f05b4eada3c31940bc6e52_cgraph" id="xy_8cpp_a41461f0789f05b4eada3c31940bc6e52_cgraph">
+<area shape="rect" title="星夜_识别己方精灵（战斗中）" alt="" coords="5,5,152,32"/>
+<area shape="rect" href="class_dm_1_1_idmsoft.html#a7abfd21911d9917bad69f48e54c22eed" title=" " alt="" coords="201,5,322,32"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xy_8cpp_a41461f0789f05b4eada3c31940bc6e52_icgraph.png" border="0" usemap="#xy_8cpp_a41461f0789f05b4eada3c31940bc6e52_icgraph" alt=""/></div>
+<map name="xy_8cpp_a41461f0789f05b4eada3c31940bc6e52_icgraph" id="xy_8cpp_a41461f0789f05b4eada3c31940bc6e52_icgraph">
+<area shape="rect" title="星夜_识别己方精灵（战斗中）" alt="" coords="352,56,499,83"/>
+<area shape="rect" href="class_sixworld.html#ae04b87558d8f5c5b41d3a69079eef987" title="六界脚本&#45;对战出战设置" alt="" coords="153,5,303,32"/>
+<area shape="rect" href="class_fw.html#a2336962e1178af8b6fe6dbf349cd1a8e" title="飞王脚本&#45;线程启动函数" alt="" coords="195,56,261,83"/>
+<area shape="rect" href="class_top.html#ae9f4ac4d51bf31effd9f028f940dbbaf" title="巅峰脚本&#45;线程启动函数" alt="" coords="193,107,263,133"/>
+<area shape="rect" href="class_sixworld.html#a5363d5ae5c05203784eaf6d95b7b0d9e" title="六界脚本&#45;线程启动函数" alt="" coords="6,5,103,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9ea2c896fa964f516cd5d85b10aad31f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ea2c896fa964f516cd5d85b10aad31f">&#9670;&nbsp;</a></span>xy_shibiemap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString xy_shibiemap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>星夜_识别当前所在的地图 </p>
+<dl class="section return"><dt>返回</dt><dd>当前地图 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="xy_8cpp_source.html">xy.cpp</a> 第 <a class="el" href="xy_8cpp_source.html#l00194">194</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                      {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a7abfd21911d9917bad69f48e54c22eed">Ocr</a>( 419, 6, 556, 96, <span class="stringliteral">&quot;ffff00-111111&quot;</span>, 1);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xy_8cpp_a9ea2c896fa964f516cd5d85b10aad31f_cgraph.png" border="0" usemap="#xy_8cpp_a9ea2c896fa964f516cd5d85b10aad31f_cgraph" alt=""/></div>
+<map name="xy_8cpp_a9ea2c896fa964f516cd5d85b10aad31f_cgraph" id="xy_8cpp_a9ea2c896fa964f516cd5d85b10aad31f_cgraph">
+<area shape="rect" title="星夜_识别当前所在的地图" alt="" coords="6,5,109,32"/>
+<area shape="rect" href="class_dm_1_1_idmsoft.html#a7abfd21911d9917bad69f48e54c22eed" title=" " alt="" coords="158,5,279,32"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xy_8cpp_a9ea2c896fa964f516cd5d85b10aad31f_icgraph.png" border="0" usemap="#xy_8cpp_a9ea2c896fa964f516cd5d85b10aad31f_icgraph" alt=""/></div>
+<map name="xy_8cpp_a9ea2c896fa964f516cd5d85b10aad31f_icgraph" id="xy_8cpp_a9ea2c896fa964f516cd5d85b10aad31f_icgraph">
+<area shape="rect" title="星夜_识别当前所在的地图" alt="" coords="134,56,237,83"/>
+<area shape="rect" href="class_jlw.html#a145a21cdc00244f97d9f91aa52d1a556" title="精灵王大乱斗脚本&#45;线程启动函数" alt="" coords="12,5,79,32"/>
+<area shape="rect" href="class_team.html#ab247d3622b762f0f4a856c79f4823b88" title="一键战队贡献脚本&#45;线程启动函数" alt="" coords="5,56,85,83"/>
+<area shape="rect" href="class_top.html#ae9f4ac4d51bf31effd9f028f940dbbaf" title="巅峰脚本&#45;线程启动函数" alt="" coords="11,107,80,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac42138cfdbe6de4a997a561ae8d4b0c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac42138cfdbe6de4a997a561ae8d4b0c0">&#9670;&nbsp;</a></span>xy_skill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void xy_skill </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>jn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>jnbmp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>nextjn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>精灵释放技能 </p>
+<dl class="section note"><dt>注解</dt><dd>可设置当前要释放的技能与即将释放的技能，配合智能脚本使用 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jn</td><td>当前要释放的技能 </td></tr>
+    <tr><td class="paramname">jnbmp</td><td>当前要释放的技能识别的图片 </td></tr>
+    <tr><td class="paramname">nextjn</td><td>接下来要释放的技能 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="xy_8cpp_source.html">xy.cpp</a> 第 <a class="el" href="xy_8cpp_source.html#l00040">40</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                                                      {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    QVariant x,y;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span>(jn==<span class="stringliteral">&quot;第五&quot;</span> || jn==<span class="stringliteral">&quot;第五1&quot;</span> || jn==<span class="stringliteral">&quot;第五2&quot;</span>){</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>==jn){</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a33b66b7e95ff6e7e90e159b67273dd8a">FindColor</a>(18,476,89,493,<span class="stringliteral">&quot;fffad4-000000&quot;</span>,1,0,x,y)!=0){</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(40,506);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>=nextjn;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                qDebug()&lt;&lt;<span class="stringliteral">&quot;已释放&quot;</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(jn==<span class="stringliteral">&quot;第一&quot;</span>){</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>==jn){</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a33b66b7e95ff6e7e90e159b67273dd8a">FindColor</a>(284,509,297,518,<span class="stringliteral">&quot;0388ec-000000&quot;</span>,1,0,x,y)!=0){</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(245,516);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>=nextjn;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                qDebug()&lt;&lt;<span class="stringliteral">&quot;已释放&quot;</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>==jn){</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(66,417,836,565,jnbmp,<span class="stringliteral">&quot;000000&quot;</span>,0.8,0,x,y)!=-1){</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(x.toInt(),y.toInt());</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a>=nextjn;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            qDebug()&lt;&lt;<span class="stringliteral">&quot;已释放&quot;</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xy_8cpp_ac42138cfdbe6de4a997a561ae8d4b0c0_cgraph.png" border="0" usemap="#xy_8cpp_ac42138cfdbe6de4a997a561ae8d4b0c0_cgraph" alt=""/></div>
+<map name="xy_8cpp_ac42138cfdbe6de4a997a561ae8d4b0c0_cgraph" id="xy_8cpp_ac42138cfdbe6de4a997a561ae8d4b0c0_cgraph">
+<area shape="rect" title="精灵释放技能" alt="" coords="5,81,72,108"/>
+<area shape="rect" href="class_dm_1_1_idmsoft.html#a33b66b7e95ff6e7e90e159b67273dd8a" title=" " alt="" coords="120,5,275,32"/>
+<area shape="rect" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0" title=" " alt="" coords="125,56,269,83"/>
+<area shape="rect" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a" title=" " alt="" coords="122,107,273,133"/>
+<area shape="rect" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49" title=" " alt="" coords="125,157,269,184"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="xy_8cpp_ac42138cfdbe6de4a997a561ae8d4b0c0_icgraph.png" border="0" usemap="#xy_8cpp_ac42138cfdbe6de4a997a561ae8d4b0c0_icgraph" alt=""/></div>
+<map name="xy_8cpp_ac42138cfdbe6de4a997a561ae8d4b0c0_icgraph" id="xy_8cpp_ac42138cfdbe6de4a997a561ae8d4b0c0_icgraph">
+<area shape="rect" title="精灵释放技能" alt="" coords="352,31,419,57"/>
+<area shape="rect" href="class_sixworld.html#ae04b87558d8f5c5b41d3a69079eef987" title="六界脚本&#45;对战出战设置" alt="" coords="153,5,303,32"/>
+<area shape="rect" href="class_fw.html#a2336962e1178af8b6fe6dbf349cd1a8e" title="飞王脚本&#45;线程启动函数" alt="" coords="195,56,261,83"/>
+<area shape="rect" href="class_sixworld.html#a5363d5ae5c05203784eaf6d95b7b0d9e" title="六界脚本&#45;线程启动函数" alt="" coords="6,5,103,32"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="aclass_dm_1_1_idmsoft_html_a1fde0da7b0ec5c141bdb8b38bc809ea0"><div class="ttname"><a href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">Dm::Idmsoft::FindPic</a></div><div class="ttdeci">int FindPic(int x1, int y1, int x2, int y2, const QString &amp;pic_name, const QString &amp;delta_color, double sim, int dir, QVariant &amp;x, QVariant &amp;y)</div><div class="ttdef"><b>Definition:</b> <a href="dm_8h_source.html#l08311">dm.h:8311</a></div></div>
+<div class="ttc" id="aclass_dm_1_1_idmsoft_html_a33b66b7e95ff6e7e90e159b67273dd8a"><div class="ttname"><a href="class_dm_1_1_idmsoft.html#a33b66b7e95ff6e7e90e159b67273dd8a">Dm::Idmsoft::FindColor</a></div><div class="ttdeci">int FindColor(int x1, int y1, int x2, int y2, const QString &amp;color, double sim, int dir, QVariant &amp;x, QVariant &amp;y)</div><div class="ttdef"><b>Definition:</b> <a href="dm_8h_source.html#l08175">dm.h:8175</a></div></div>
+<div class="ttc" id="aclass_dm_1_1_idmsoft_html_a49c9f38bed76689957f7218c265b7c49"><div class="ttname"><a href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">Dm::Idmsoft::MoveTo</a></div><div class="ttdeci">int MoveTo(int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="dm_8h_source.html#l09423">dm.h:9423</a></div></div>
+<div class="ttc" id="aext_8cpp_html_a5bd7389a02c70f26bc06def4612f1021"><div class="ttname"><a href="ext_8cpp.html#a5bd7389a02c70f26bc06def4612f1021">dangqianjingling</a></div><div class="ttdeci">QString dangqianjingling</div><div class="ttdoc">当前对战精灵</div><div class="ttdef"><b>Definition:</b> <a href="ext_8cpp_source.html#l00037">ext.cpp:37</a></div></div>
+<div class="ttc" id="aext_8cpp_html_a02a7230d0f93f7aa4a80065a9e032ae1"><div class="ttname"><a href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a></div><div class="ttdeci">Dm::Idmsoft dm</div><div class="ttdoc">大漠插件相关的对象（唯一）</div><div class="ttdef"><b>Definition:</b> <a href="ext_8cpp_source.html#l00015">ext.cpp:15</a></div></div>
+<div class="ttc" id="aclass_dm_1_1_idmsoft_html_ad28afe0a9d51358420621d7db04fce5a"><div class="ttname"><a href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">Dm::Idmsoft::LeftClick</a></div><div class="ttdeci">int LeftClick()</div><div class="ttdef"><b>Definition:</b> <a href="dm_8h_source.html#l09303">dm.h:9303</a></div></div>
+<div class="ttc" id="aclass_dm_1_1_idmsoft_html_a7abfd21911d9917bad69f48e54c22eed"><div class="ttname"><a href="class_dm_1_1_idmsoft.html#a7abfd21911d9917bad69f48e54c22eed">Dm::Idmsoft::Ocr</a></div><div class="ttdeci">QString Ocr(int x1, int y1, int x2, int y2, const QString &amp;color, double sim)</div><div class="ttdef"><b>Definition:</b> <a href="dm_8h_source.html#l09447">dm.h:9447</a></div></div>
+<div class="ttc" id="aext_8cpp_html_a77f100ccfb5a76cf7077eca85eda6643"><div class="ttname"><a href="ext_8cpp.html#a77f100ccfb5a76cf7077eca85eda6643">jinglingjineng</a></div><div class="ttdeci">QString jinglingjineng</div><div class="ttdoc">当前对战精灵要释放的技能</div><div class="ttdef"><b>Definition:</b> <a href="ext_8cpp_source.html#l00039">ext.cpp:39</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

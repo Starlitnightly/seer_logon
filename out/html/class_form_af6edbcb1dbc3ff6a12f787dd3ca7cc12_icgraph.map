@@ -1,0 +1,5 @@
+<map id="Form::showMessageBox" name="Form::showMessageBox">
+<area shape="rect" id="node1" title="脚本说明提示函数" alt="" coords="275,5,442,32"/>
+<area shape="rect" id="node2" href="$class_form.html#ab225cc1a20235bb39cff8ffa6dd77f96" title="开启脚本" alt="" coords="144,5,227,32"/>
+<area shape="rect" id="node3" href="$class_form.html#a9a921e26a02f23bffdea4330d6795796" title="脚本窗口构造函数" alt="" coords="5,5,96,32"/>
+</map>

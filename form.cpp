@@ -1,3 +1,12 @@
+/**
+ * @file form.cpp
+ * @brief 脚本窗口及其相关
+ * @author starlitnightly
+ * @email Starlitnightly@163.com
+ * @version 1.0.0
+ * @date 2020-07-09
+ * @license GPL
+ */
 #include "form.h"
 #include "ui_form.h"
 
@@ -6,7 +15,10 @@
 #include <QObject>
 
 
-
+/**
+ * @brief 脚本窗口析构函数
+ * @return 无
+ */
 Form::~Form()
 {
     delete ui;
@@ -26,7 +38,11 @@ Form::~Form()
     delete script_searles;
     delete script_sixworld;
 }
-
+/**
+ * @brief 脚本窗口构造函数
+ * @param parent 父类指针
+ * @return 无
+ */
 Form::Form(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Form)
@@ -73,7 +89,7 @@ Form::Form(QWidget *parent) :
     script_searles=NULL;
     script_sixworld=NULL;
 
-    QString iniFilePath = QDir::currentPath()+"/圣瑞次数统计.ini";  //路径
+    QString iniFilePath = allpath+"/圣瑞次数统计.ini";  //路径
     qDebug()<<iniFilePath;
     QSettings settings(iniFilePath,QSettings::IniFormat);
     QString searles_cz = settings.value("times/reset").toString();
@@ -95,23 +111,23 @@ Form::Form(QWidget *parent) :
 }
 
 
-
+/**
+ * @brief 脚本说明提示函数
+ * @param msg 脚本说明内容
+ * @return 无
+ */
 void Form::showMessageBox(QString msg){
     qDebug()<<msg;
     ui->textEdit->setPlainText(msg);
     //QMessageBox::information(NULL,"this",msg);
 }
 
-
+/**
+ * @brief 开启脚本
+ * @return 无
+ */
 void Form::test(){
-    //connect(test,, SIGNAL(finished()), workerThread, SLOT(deleteLater()));
-    /*
-    test1=new Tower(this);
-    test1->status=true;
-    test1->now=6;
-    test1->start();
-    //test.wait();
-    */
+
     qDebug()<<mode;
     if(mode=="fw"){
         if(script_fw==NULL)
@@ -273,16 +289,34 @@ void Form::test(){
 
 }
 
+/**
+ * @brief 圣瑞脚本重置次数显示
+ * @param msg 重置次数
+ * @return 无
+ */
 void Form::showreset(QString msg){
     ui->label_2->setText("重置次数:"+msg);
 }
+/**
+ * @brief 圣瑞脚本战败次数显示
+ * @param msg 战败次数
+ * @return 无
+ */
 void Form::showlose(QString msg){
     ui->label_4->setText("战败次数:"+msg);
 }
+/**
+ * @brief 圣瑞脚本挑战次数显示
+ * @param msg 挑战次数
+ * @return 无
+ */
 void Form::showfight(QString msg){
     ui->label_3->setText("挑战次数:"+msg);
 }
-
+/**
+ * @brief 脚本停止函数
+ * @return 无
+ */
 void Form::test2(){
     if(mode=="fw")
         script_fw->status=false;
@@ -323,95 +357,150 @@ void Form::test2(){
     }
 }
 
-
-
-/*
-单选框槽函数集合
-*/
+/**
+ * @brief 飞王脚本单选框被选中后初始化
+ * @return 无
+ */
 void Form::fw_selected(){
     QString text;
     text=QString("脚本使用说明：首发艾欧，第一个技能有女(带上绿火)\n\n背包带上圣普");
     ui->textEdit->setPlainText(text);
     mode="fw";
 }
+/**
+ * @brief 一键抽宝石/刻印脚本单选框被选中后初始化
+ * @return 无
+ */
 void Form::gem_selected(){
     QString text;
     text=QString("脚本使用说明：无");
     ui->textEdit->setPlainText(text);
     mode="gem";
 }
+/**
+ * @brief 混沌布莱克脚本单选框被选中后初始化
+ * @return 无
+ */
 void Form::hdblk_selected(){
     QString text;
     text=QString("脚本使用说明：\n首发王哈（带先三）\n背包艾欧（带魂魄缠绕）\n索总（带先三）\n幻境（带精神幻灭）");
     ui->textEdit->setPlainText(text);
     mode="hdblk";
 }
+/**
+ * @brief 精灵王大乱斗脚本单选框被选中后初始化
+ * @return 无
+ */
 void Form::jlw_selected(){
     QString text;
     text=QString("脚本使用说明：在竞技天堂（有精灵王装置的地图）运行脚本");
     ui->textEdit->setPlainText(text);
     mode="jlw";
 }
+/**
+ * @brief spt徽章脚本单选框被选中后初始化
+ * @return 无
+ */
 void Form::spt_selected(){
     QString text;
     text=QString("脚本使用说明：首发幻境，第一个技能精神幻灭");
     ui->textEdit->setPlainText(text);
     mode="spt";
 }
+/**
+ * @brief 战队贡献脚本单选框被选中后初始化
+ * @return 无
+ */
 void Form::team_selected(){
     QString text;
     text=QString("脚本使用说明：无");
     ui->textEdit->setPlainText(text);
     mode="team";
 }
+/**
+ * @brief 勇者之塔脚本单选框被选中后初始化
+ * @return 无
+ */
 void Form::tower_selected(){
     QString text;
-    text=QString("脚本使用说明：无");
+    text=QString("脚本使用说明：30分钟后再点一次");
     ui->textEdit->setPlainText(text);
     mode="tower";
 }
+/**
+ * @brief vip礼包脚本单选框被选中后初始化
+ * @return 无
+ */
 void Form::vip_selected(){
     QString text;
     text=QString("脚本使用说明：无");
     ui->textEdit->setPlainText(text);
     mode="vip";
 }
+/**
+ * @brief 一键许愿脚本单选框被选中后初始化
+ * @return 无
+ */
 void Form::wish_selected(){
     QString text;
     text=QString("脚本使用说明：无");
     ui->textEdit->setPlainText(text);
     mode="wish";
 }
+/**
+ * @brief 学习力战场脚本单选框被选中后初始化
+ * @return 无
+ */
 void Form::xxlzc_selected(){
     QString text;
     text=QString("脚本使用说明：在学习力战场副本运行脚本，首发艾欧，第一个技能有女");
     ui->textEdit->setPlainText(text);
     mode="xxlzc";
 }
+/**
+ * @brief 巅峰竞技脚本单选框被选中后初始化
+ * @return 无
+ */
 void Form::top_jj_selected(){
     QString text;
     text=QString("脚本使用说明：在巅峰地图运行脚本");
     ui->textEdit->setPlainText(text);
     mode="top_jj";
 }
+/**
+ * @brief 巅峰狂野脚本单选框被选中后初始化
+ * @return 无
+ */
 void Form::top_ky_selected(){
     QString text;
     text=QString("脚本使用说明：在巅峰地图运行脚本");
     ui->textEdit->setPlainText(text);
     mode="top_ky";
 }
+/**
+ * @brief 巅峰33脚本单选框被选中后初始化
+ * @return 无
+ */
 void Form::top_33_selected(){
     QString text;
     text=QString("脚本使用说明：在巅峰地图运行脚本");
     ui->textEdit->setPlainText(text);
     mode="top_33";
 }
+/**
+ * @brief 圣战瑞尔斯脚本单选框被选中后初始化
+ * @return 无
+ */
 void Form::searles_selected(){
     QString text;
     text=QString("脚本使用说明：表姐（天尊）首发， 王哈，毁灭(可选)");
     ui->textEdit->setPlainText(text);
     mode="searles";
 }
+/**
+ * @brief 六界神王脚本单选框被选中后初始化
+ * @return 无
+ */
 void Form::sixworld_selected(){
     QString text;
     text=QString("脚本使用说明：看图");
@@ -420,11 +509,10 @@ void Form::sixworld_selected(){
 }
 
 
-
-/*
-脚本实现
-*/
-//一键勇者之塔
+/**
+ * @brief 勇者之塔脚本-线程启动函数
+ * @return 无
+ */
 void Tower::run(){
     QVariant x,y;
     while(status==true){
@@ -473,8 +561,13 @@ void Tower::run(){
     }
 }
 
-//飞王脚本
-//检查首发函数
+/**
+ * @brief 飞王脚本-检查首发
+ * @param shoufajingling 要检查的精灵
+ * @return 返回当前首发是否与检查相同
+ *   @retval true 当前首发与检查相同
+ *   @retval false 当前首发与检查不同
+ */
 bool Fw::jianchashoufa(QString shoufajingling){
     //QVariant x,y;
     Delay(1000);
@@ -492,7 +585,10 @@ bool Fw::jianchashoufa(QString shoufajingling){
         return false;
     }
 }
-//设置首发函数
+/**
+ * @brief 飞王脚本-设置首发
+ * @param shoufajingling 要设置的精灵
+ */
 void Fw::shezhishoufa(QString shoufajingling){
     QVariant x,y;
     while(jianchashoufa(shoufajingling)==false){
@@ -513,7 +609,10 @@ void Fw::shezhishoufa(QString shoufajingling){
         }
     }
 }
-//飞王
+/**
+ * @brief 飞王脚本-线程启动函数
+ * @return 无
+ */
 void Fw::run(){
     QVariant x,y;
     while(status==true){
@@ -645,7 +744,10 @@ void Fw::run(){
     }
 }
 
-//一键刻印/宝石脚本
+/**
+ * @brief 一键刻印/宝石抽奖脚本-线程启动函数
+ * @return 无
+ */
 void Gem::run(){
     QVariant x,y;
     while(status==true){
@@ -705,7 +807,10 @@ void Gem::run(){
 
     }
 }
-
+/**
+ * @brief 混沌布莱克脚本-线程启动函数
+ * @return 无
+ */
 void Hdblk::run(){
     QVariant x,y;
     while(status==true){
@@ -741,6 +846,10 @@ void Hdblk::run(){
             //QMessageBox::information(NULL,"this","混布脚本已自动停止");
     }
 }
+/**
+ * @brief 精灵王大乱斗脚本-线程启动函数
+ * @return 无
+ */
 void Jlw::run(){
     QVariant x,y;
     qDebug()<<"进入精灵王脚本";
@@ -778,6 +887,10 @@ void Jlw::run(){
         Delay(1000);
     }
 }
+/**
+ * @brief spt徽章脚本-线程启动函数
+ * @return 无
+ */
 void Spt::run(){
     QVariant x,y;
     while(status==true){
@@ -803,6 +916,10 @@ void Spt::run(){
 
     }
 }
+/**
+ * @brief 一键战队贡献脚本-线程启动函数
+ * @return 无
+ */
 void Team::run(){
     QVariant x,y;
     while(status==true){
@@ -899,6 +1016,10 @@ void Team::run(){
 
     }
 }
+/**
+ * @brief vip礼包领取脚本-线程启动函数
+ * @return 无
+ */
 void Vip::run(){
     QVariant x,y;
     while(status==true){
@@ -951,6 +1072,10 @@ void Vip::run(){
 
     }
 }
+/**
+ * @brief 一键许愿脚本-线程启动函数
+ * @return 无
+ */
 void Wish::run(){
     QVariant x,y;
     while(status==true){
@@ -976,6 +1101,10 @@ void Wish::run(){
 
     }
 }
+/**
+ * @brief 学习力战场脚本-线程启动函数
+ * @return 无
+ */
 void Xxlzc::run(){
     QVariant x,y;
     while(status==true){
@@ -998,7 +1127,10 @@ void Xxlzc::run(){
 
     }
 }
-
+/**
+ * @brief 自动确认脚本-线程启动函数
+ * @return 无
+ */
 void AutoC::run(){
     QVariant x,y;
     while(status==true){
@@ -1053,7 +1185,10 @@ void AutoC::run(){
         Delay(1000);
     }
 }
-
+/**
+ * @brief 补pp-线程启动函数
+ * @return 无
+ */
 void Repp::run(){
     QVariant x,y;
     if(dm.FindPic(0,0,1000,600,"道具.bmp","000000",0.8,0,x,y)!=-1){
@@ -1087,7 +1222,10 @@ void Repp::run(){
         }
     }
 }
-
+/**
+ * @brief 巅峰脚本-线程启动函数
+ * @return 无
+ */
 void Top::run(){
     QVariant x,y;
     while(status==true){
@@ -1229,6 +1367,10 @@ void Top::run(){
 
     }
 }
+/**
+ * @brief 巅峰脚本-精灵智能出招函数
+ * @return 无
+ */
 void Top::Robotfight(){
     QVariant x,y;
     bool replenishpp=false;
@@ -1258,7 +1400,10 @@ void Top::Robotfight(){
     }
 
 }
-
+/**
+ * @brief 进入巅峰-线程启动函数
+ * @return 无
+ */
 void Pdtop::run(){
     QVariant x,y;
     if(mode=="top_jj" || mode=="top_ky"){
@@ -1400,7 +1545,10 @@ void Pdtop::run(){
     }
 
 }
-
+/**
+ * @brief ban黑屋-线程启动函数
+ * @return 无
+ */
 void Ban3::run(){
     QVariant x,y;
     int ban=0;
@@ -1521,7 +1669,10 @@ void Ban3::run(){
         }
     }
 }
-
+/**
+ * @brief 首发与出战-线程启动函数
+ * @return 无
+ */
 void Explode::run(){
     QVariant x,y;
     if(mode=="top_33"){
@@ -1582,7 +1733,10 @@ void Explode::run(){
     }
 
 }
-
+/**
+ * @brief 首发与出战-自动33首发
+ * @return 无
+ */
 void Explode::auto33first(){
     QVariant x,y;
     if(dm.FindPic(0,0,1000,600,"首发33.bmp|33首发.bmp","000000",0.8,0,x,y)!=-1){
@@ -1606,7 +1760,10 @@ void Explode::auto33first(){
 
     }
 }
-
+/**
+ * @brief 首发与出战-自动66首发
+ * @return 无
+ */
 void Explode::autofirst(){
     QVariant x,y;
     bool shoufayixuan=false;
@@ -1645,7 +1802,10 @@ void Explode::autofirst(){
         }
     }
 }
-
+/**
+ * @brief 首发与出战-自动33出战
+ * @return 无
+ */
 void Explode::auto33fight(){
     QVariant x,y;
     if(dm.FindPic(11, 232, 85, 317, "df33-jy.bmp|df33-sf.bmp","000000",0.8,0,x,y)!=-1){
@@ -1685,7 +1845,10 @@ void Explode::auto33fight(){
         }
     }
 }
-
+/**
+ * @brief 首发与出战-自动66出战
+ * @return 无
+ */
 void Explode::autofight(){
     QVariant x,y;
     if(dm.FindPic(11, 221, 112, 337, "禁用.bmp|首发小图.bmp","000000",0.8,0,x,y)!=-1){
@@ -1739,7 +1902,10 @@ void Explode::autofight(){
 
 }
 
-
+/**
+ * @brief 圣瑞脚本-线程启动函数
+ * @return 无
+ */
 void Searles::run(){
     QVariant x,y;
     while(status==true){
@@ -1748,7 +1914,7 @@ void Searles::run(){
                 dm.MoveTo(x.toInt(),y.toInt());
                 dm.LeftClick();
                 searles_reset++;
-                QString iniFilePath = QDir::currentPath()+"/圣瑞次数统计.ini";  //路径
+                QString iniFilePath = allpath+"/圣瑞次数统计.ini";  //路径
                 QSettings settings(iniFilePath,QSettings::IniFormat);
                 //重置次数显示
                 emit sendreset(QString::number(searles_reset,10));
@@ -1764,7 +1930,7 @@ void Searles::run(){
                 dm.MoveTo(x.toInt(),y.toInt());
                 dm.LeftClick();
                 searles_lose++;
-                QString iniFilePath = QDir::currentPath()+"/圣瑞次数统计.ini";  //路径
+                QString iniFilePath = allpath+"/圣瑞次数统计.ini";  //路径
                 QSettings settings(iniFilePath,QSettings::IniFormat);
                 //重置次数显示
                 emit sendlose(QString::number(searles_lose,10));
@@ -1774,7 +1940,7 @@ void Searles::run(){
             dm.MoveTo(x.toInt(),y.toInt());
             dm.LeftClick();
             searles_fight++;
-            QString iniFilePath = QDir::currentPath()+"/圣瑞次数统计.ini";  //路径
+            QString iniFilePath = allpath+"/圣瑞次数统计.ini";  //路径
             QSettings settings(iniFilePath,QSettings::IniFormat);
             //重置次数显示
             emit sendfight(QString::number(searles_fight,10));
@@ -1847,7 +2013,10 @@ void Searles::run(){
     }
 }
 
-
+/**
+ * @brief 六界脚本-线程启动函数
+ * @return 无
+ */
 void Sixworld::run(){
     QVariant x,y;
     while(status==true){
@@ -1884,7 +2053,10 @@ void Sixworld::run(){
         }
     }
 }
-
+/**
+ * @brief 六界脚本-判断当前界王要求
+ * @return 无
+ */
 void Sixworld::god_condition(){
     if(dm.Ocr(343, 538, 542, 563, "ffffff-111111",1).contains("最后一击使用致命一击战胜"))
         god=1;
@@ -1910,7 +2082,11 @@ void Sixworld::god_condition(){
         god=10;
 
 }
-
+/**
+ * @brief 六界脚本-对战中更换精灵
+ * @param sp 要更换出战的精灵
+ * @return 无
+ */
 void Sixworld::god_changesp(QString sp){
     QVariant x,y;
     if(dm.FindPic(7,340,968,569,sp,"000000",0.8,0,x,y)!=-1){
@@ -1925,7 +2101,13 @@ void Sixworld::god_changesp(QString sp){
         }
     }
 }
-
+/**
+ * @brief 六界脚本-检查首发
+ * @param shoufajingling 要检查的精灵
+ * @return 返回当前首发是否与检查相同
+ *   @retval true 当前首发与检查相同
+ *   @retval false 当前首发与检查不同
+ */
 bool Sixworld::jianchashoufa(QString shoufajingling){
     //QVariant x,y;
     Delay(1000);
@@ -1943,6 +2125,11 @@ bool Sixworld::jianchashoufa(QString shoufajingling){
         return false;
     }
 }
+/**
+ * @brief 六界脚本-设置首发
+ * @param shoufajingling 要设置的精灵
+ * @return 无
+ */
 void Sixworld::shezhishoufa(QString shoufajingling){
     QVariant x,y;
     while(jianchashoufa(shoufajingling)==false){
@@ -1963,7 +2150,11 @@ void Sixworld::shezhishoufa(QString shoufajingling){
         }
     }
 }
-
+/**
+ * @brief 六界脚本-对战出战设置
+ * @param method 界王条件
+ * @return 无
+ */
 void Sixworld::god_method(int method){
     QVariant x,y;
     dangqianjingling=xy_shibiejifangjingling();

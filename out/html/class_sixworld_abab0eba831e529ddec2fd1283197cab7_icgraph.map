@@ -1,0 +1,4 @@
+<map id="Sixworld::god_condition" name="Sixworld::god_condition">
+<area shape="rect" id="node1" title="六界脚本&#45;判断当前界王要求" alt="" coords="153,5,311,32"/>
+<area shape="rect" id="node2" href="$class_sixworld.html#a5363d5ae5c05203784eaf6d95b7b0d9e" title="六界脚本&#45;线程启动函数" alt="" coords="6,5,103,32"/>
+</map>

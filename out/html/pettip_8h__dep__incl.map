@@ -1,0 +1,13 @@
+<map id="pettip.h" name="pettip.h">
+<area shape="rect" id="node1" title="精灵技能快查窗口头文件" alt="" coords="342,5,407,32"/>
+<area shape="rect" id="node2" href="$nono_8h.html" title="nono主窗口头文件" alt="" coords="189,80,251,107"/>
+<area shape="rect" id="node5" href="$mainwindow_8h.html" title="游戏主窗口头文件" alt="" coords="169,229,271,256"/>
+<area shape="rect" id="node11" href="$pettip_8cpp.html" title="精灵技能快查窗口及其相关" alt="" coords="413,80,491,107"/>
+<area shape="rect" id="node3" href="$atoken_8h.html" title="免责协议窗口头文件" alt="" coords="12,155,84,181"/>
+<area shape="rect" id="node8" href="$cdkform_8h.html" title="一键输入cdk窗口头文件" alt="" coords="258,155,336,181"/>
+<area shape="rect" id="node10" href="$nono_8cpp.html" title="nono主窗口及其相关" alt="" coords="108,155,183,181"/>
+<area shape="rect" id="node4" href="$atoken_8cpp.html" title="免责协议窗口及其相关函数" alt="" coords="5,229,91,256"/>
+<area shape="rect" id="node6" href="$main_8cpp.html" title="应用程序入口主文件" alt="" coords="123,304,197,331"/>
+<area shape="rect" id="node7" href="$mainwindow_8cpp.html" title="游戏主窗口及其相关" alt="" coords="221,304,339,331"/>
+<area shape="rect" id="node9" href="$cdkform_8cpp.html" title="一键输入cdk窗口及其相关" alt="" coords="296,229,389,256"/>
+</map>

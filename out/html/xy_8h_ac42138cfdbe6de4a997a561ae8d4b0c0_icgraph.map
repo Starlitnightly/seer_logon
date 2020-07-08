@@ -1,0 +1,6 @@
+<map id="xy_skill" name="xy_skill">
+<area shape="rect" id="node1" title="精灵释放技能" alt="" coords="352,31,419,57"/>
+<area shape="rect" id="node2" href="$class_sixworld.html#ae04b87558d8f5c5b41d3a69079eef987" title="六界脚本&#45;对战出战设置" alt="" coords="153,5,303,32"/>
+<area shape="rect" id="node4" href="$class_fw.html#a2336962e1178af8b6fe6dbf349cd1a8e" title="飞王脚本&#45;线程启动函数" alt="" coords="195,56,261,83"/>
+<area shape="rect" id="node3" href="$class_sixworld.html#a5363d5ae5c05203784eaf6d95b7b0d9e" title="六界脚本&#45;线程启动函数" alt="" coords="6,5,103,32"/>
+</map>

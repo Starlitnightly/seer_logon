@@ -1,0 +1,34 @@
+<map id="MainWindow" name="MainWindow">
+<area shape="rect" id="node1" title="游戏主窗口类 加载项较多可能会卡一秒" alt="" coords="763,264,859,291"/>
+<area shape="rect" id="node2" title=" " alt="" coords="565,67,672,93"/>
+<area shape="rect" id="node3" href="$class_nono.html" title="nono窗口类 这个类跟nono相关" alt="" coords="593,117,645,144"/>
+<area shape="rect" id="node4" title=" " alt="" coords="129,232,202,259"/>
+<area shape="rect" id="node7" href="$class_pettip.html" title="精灵技能快查窗口类 这个类写了整整一天，格式化精灵技能真难" alt="" coords="361,131,417,157"/>
+<area shape="rect" id="node8" href="$class_changesp.html" title="一键换背包窗口类 一键换背包窗口这个类相关的函数" alt="" coords="461,176,541,203"/>
+<area shape="rect" id="node9" href="$class_form.html" title="脚本主窗口类 本类记载了所有的脚本" alt="" coords="593,749,645,776"/>
+<area shape="rect" id="node30" href="$class_speed.html" title=" " alt="" coords="472,232,531,259"/>
+<area shape="rect" id="node31" href="$class_atoken.html" title="免责协议窗口类 免责协议窗口这个类相关的函数" alt="" coords="470,288,533,315"/>
+<area shape="rect" id="node32" href="$class_cdk_form.html" title="一键输入cdk窗口类 一键输入cdk窗口这个类相关的函数" alt="" coords="464,341,539,368"/>
+<area shape="rect" id="node5" href="$class_clicked_label.html" title="重载标签（可点击） 重载了标签，造了一个带有点击信号的标签类" alt="" coords="341,29,437,56"/>
+<area shape="rect" id="node6" title=" " alt="" coords="134,29,197,56"/>
+<area shape="rect" id="node10" href="$class_top.html" title="巅峰主脚本&#45;多线程类 脚本相关的配置" alt="" coords="368,820,411,847"/>
+<area shape="rect" id="node11" title=" " alt="" coords="6,885,77,912"/>
+<area shape="rect" id="node12" href="$class_repp.html" title="补pp&#45;多线程类 对战中0pp时启动此线程可以自动补pp，（bug）如果网速过慢可能点不到药" alt="" coords="139,960,191,987"/>
+<area shape="rect" id="node13" href="$class_ban3.html" title="禁用黑屋精灵&#45;多线程类 禁用黑屋精灵以及无黑屋精灵相关的ban操作" alt="" coords="139,808,191,835"/>
+<area shape="rect" id="node14" href="$class_pdtop.html" title="判断进入巅峰&#45;多线程类 用于巅峰脚本判断要进入哪个巅峰以及当前所处的位置" alt="" coords="137,859,193,885"/>
+<area shape="rect" id="node15" href="$class_explode.html" title="首发与出战&#45;多线程类 巅峰脚本自动选择首发与自动选择出战精灵" alt="" coords="131,909,200,936"/>
+<area shape="rect" id="node16" href="$class_jlw.html" title="精灵王大乱斗脚本&#45;多线程类 脚本相关的配置" alt="" coords="369,1005,409,1032"/>
+<area shape="rect" id="node17" href="$class_hdblk.html" title="混沌布莱克脚本&#45;多线程类 脚本相关的配置" alt="" coords="245,1116,299,1143"/>
+<area shape="rect" id="node18" href="$class_xxlzc.html" title="一键学习力战场脚本&#45;多线程类 脚本相关的配置" alt="" coords="245,1156,299,1183"/>
+<area shape="rect" id="node19" href="$class_spt.html" title="spt徽章相关脚本&#45;多线程类 脚本相关的配置" alt="" coords="368,955,411,981"/>
+<area shape="rect" id="node20" href="$class_sixworld.html" title="六界神王殿脚本&#45;多线程类 脚本相关的配置" alt="" coords="237,1201,307,1228"/>
+<area shape="rect" id="node21" href="$class_auto_c.html" title="自动确认&#45;多线程类 用于自动按下赛尔号的确认按钮的多线程" alt="" coords="243,1257,301,1284"/>
+<area shape="rect" id="node22" href="$class_tower.html" title="一键勇者之塔脚本&#45;多线程类 脚本相关的配置" alt="" coords="244,1313,300,1340"/>
+<area shape="rect" id="node23" href="$class_wish.html" title="一键许愿脚本&#45;多线程类 脚本相关的配置" alt="" coords="246,443,298,469"/>
+<area shape="rect" id="node24" href="$class_vip.html" title="一键vip礼包脚本&#45;多线程类 脚本相关的配置" alt="" coords="251,500,293,527"/>
+<area shape="rect" id="node25" href="$class_searles.html" title="圣瑞儿子脚本&#45;多线程类 脚本相关的配置" alt="" coords="239,560,305,587"/>
+<area shape="rect" id="node26" href="$class_gem.html" title="一键刻印/宝石抽奖脚本&#45;多线程类 脚本相关的配置" alt="" coords="247,617,297,644"/>
+<area shape="rect" id="node27" href="$class_team.html" title="一键战队贡献脚本&#45;多线程类 脚本相关的配置" alt="" coords="138,656,193,683"/>
+<area shape="rect" id="node28" href="$class_fw.html" title="飞王脚本&#45;多线程类 飞王脚本相关的函数配置" alt="" coords="146,707,185,733"/>
+<area shape="rect" id="node29" href="$class_media_mute.html" title="媒体静音类 用于媒体静音" alt="" coords="575,800,662,827"/>
+</map>

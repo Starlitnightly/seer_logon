@@ -1,0 +1,5 @@
+<map id="Pettip::Pettip" name="Pettip::Pettip">
+<area shape="rect" id="node1" title="精灵技能快查窗口构造函数" alt="" coords="5,31,104,57"/>
+<area shape="rect" id="node2" href="$class_pettip.html#a586e47bc92f4b71f8a0b7eef1cae4fe5" title="精灵技能查询" alt="" coords="167,5,313,32"/>
+<area shape="rect" id="node3" href="$class_pettip.html#a3f10357631e72f192d6386b5c28c78a9" title="读取精灵技能" alt="" coords="152,56,328,83"/>
+</map>

@@ -1,0 +1,1376 @@
+\hypertarget{class_nono}{}\doxysection{Nono类 参考}
+\label{class_nono}\index{Nono@{Nono}}
+
+
+nono窗口类 这个类跟nono相关  
+
+
+
+
+{\ttfamily \#include $<$nono.\+h$>$}
+
+
+
+类 Nono 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{class_nono__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Nono 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{class_nono__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 槽}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_nono_a2a04d7f62992081bbf68f547a82ac263}{slot\+\_\+started\+Timer\+\_\+clicked}} (bool)
+\begin{DoxyCompactList}\small\item\em 绿火计时器开启函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nono_ab18539270a140dbfccf7c0f48865dbe6}{slot\+\_\+stoped\+Timer\+\_\+clicked}} (bool)
+\begin{DoxyCompactList}\small\item\em 绿火计时器停止函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nono_a13b9700b7d23739b3a13350460c0d7e8}{slot\+\_\+timer\+\_\+timeout}} ()
+\begin{DoxyCompactList}\small\item\em 绿火计时器每秒处理动作 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nono_ace86157f9ea4aac8893036fe1553e0a2}{slot\+\_\+capture}} (bool tmp)
+\begin{DoxyCompactList}\small\item\em 显示对面巅峰阵容-\/nono举牌 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nono_a4cce37537ea1b3c71e05ed92a52570f2}{slot\+\_\+nono\+\_\+change}} ()
+\begin{DoxyCompactList}\small\item\em nono状态改变 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nono_aa793569399f3e07fb9513129a6df55ac}{slot\+\_\+tip}} (Q\+String content)
+\begin{DoxyCompactList}\small\item\em nono窗口提示信息 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nono_a104f8a6ea5b1404eb1b2a21708354491}{slot\+\_\+hidecap}} ()
+\begin{DoxyCompactList}\small\item\em 巅峰阵容截图隐藏 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nono_ab754e1ac200a41a51f6d90b5d537fcea}{slot\+\_\+shibie}} ()
+\begin{DoxyCompactList}\small\item\em 识别对战精灵 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nono_a92cf5ab9ed5949e1bba165c80034cd54}{slot\+\_\+\+Fresh}} ()
+\begin{DoxyCompactList}\small\item\em 刷新按钮按下 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nono_a2248710774a77c06dd7977bba561e716}{get\+Access\+Token\+Request\+Finished}} (Q\+Network\+Reply $\ast$reply)
+\begin{DoxyCompactList}\small\item\em 获取accesstoken网页返回内容处理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nono_ae6ae4d7add2cd4d6ffc0bfc62ba5351b}{recognition\+Request\+Finished}} (Q\+Network\+Reply $\ast$reply)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_nono_ae6ae4d7add2cd4d6ffc0bfc62ba5351b}{Nono\+::recognition\+Request\+Finished}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nono_a4795edd08eb19afc8b2e1f37ac9c041f}{showskill}} ()
+\begin{DoxyCompactList}\small\item\em 打开精灵技能快查窗口 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{信号}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_nono_aa5b7d240ee11551a3e62241949c4d3ad}{signal\+\_\+fresh}} ()
+\item 
+void \mbox{\hyperlink{class_nono_a78243d01059eb7cc0956b4147ad9b0e5}{signal\+\_\+sb}} ()
+\item 
+void \mbox{\hyperlink{class_nono_ae94ec0447bca413a93a92c08a1b65970}{signal\+\_\+pet}} (Q\+String name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_nono_a3a59dc5f43458df16fc2dd5cd4aace99}{Nono}} (Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em nono窗口构造函数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_nono_a04710b270c58c6e8a31df42612a05ca0}{$\sim$\+Nono}} ()
+\begin{DoxyCompactList}\small\item\em nono窗口析构函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nono_afbbc90840a38cd93a9e5691740337638}{mouse\+Move\+Event}} (Q\+Mouse\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em 鼠标按下nono窗口并移动重载 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nono_af3b68cea1469d0f7932b0fea39b3f9e3}{mouse\+Press\+Event}} (Q\+Mouse\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em 鼠标按下nono窗口重载 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nono_a3a75e697e056964af18a080d8e1e9a38}{mouse\+Release\+Event}} (Q\+Mouse\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em 鼠标离开nono窗口重载 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nono_ad59e12150488b6dcc0b113f0dc2d044a}{get\+Access\+Token}} (Q\+String key, Q\+String secret)
+\begin{DoxyCompactList}\small\item\em 获取百度ocr的accesstoken \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nono_a103f87a55f9ec70d34f7c219b6343761}{recognition}} ()
+\begin{DoxyCompactList}\small\item\em 识别对面精灵的名字 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Point \mbox{\hyperlink{class_nono_a0f6a6b37c5e7363fe380e1efc2ef830b}{mouse\+Move\+Pos}}
+\item 
+Q\+Movie $\ast$ \mbox{\hyperlink{class_nono_a459d1532f21b30ff4698a712efed91f1}{movie}}
+\item 
+Q\+Movie $\ast$ \mbox{\hyperlink{class_nono_ace77e3a52e41ea5686761723484401a3}{movie1}}
+\item 
+Q\+Movie $\ast$ \mbox{\hyperlink{class_nono_a92f74b6e013f2ffcde22667dcebb2f6c}{movie2}}
+\item 
+Q\+Movie $\ast$ \mbox{\hyperlink{class_nono_aa93d475cac641b6de87ea7045e164c43}{movie3}}
+\item 
+Q\+Movie $\ast$ \mbox{\hyperlink{class_nono_a80134b6a3277fe2e3d2c01c9902365ce}{movie4}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Nono $\ast$ \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}
+\item 
+D\+W\+O\+RD \mbox{\hyperlink{class_nono_a52f5304b64b796cb44aaae7989ecb8fc}{tmp1}}
+\item 
+Q\+Time $\ast$ \mbox{\hyperlink{class_nono_a8496d9c60cfcd201b419a3c7f45cee27}{time}}
+\item 
+Q\+Timer $\ast$ \mbox{\hyperlink{class_nono_ae1766b9b3038c6ebd7c0dae156fd82bd}{timer}}
+\item 
+Q\+Time $\ast$ \mbox{\hyperlink{class_nono_a074bef3e57bed55a5883a0287950bfba}{time1}}
+\item 
+Q\+Timer $\ast$ \mbox{\hyperlink{class_nono_af2afe93076ef58d563ff655f1e2213d9}{timer1}}
+\item 
+int \mbox{\hyperlink{class_nono_ad65958b9cfa8b724b1a87dd697845616}{firetime}}
+\item 
+int \mbox{\hyperlink{class_nono_a88bef14846384cd23beb8e017f720938}{firetime\+\_\+min}}
+\item 
+int \mbox{\hyperlink{class_nono_a5b1249d45fac2b3031aad5ed4742d18b}{firetime\+\_\+sec}}
+\item 
+bool \mbox{\hyperlink{class_nono_acb752049da1d787724c508f6fc469001}{hidecap}}
+\item 
+\mbox{\hyperlink{class_clicked_label}{Clicked\+Label}} $\ast$ \mbox{\hyperlink{class_nono_a6d4ed13ee71824916804628a078b6a4a}{clabel}}
+\item 
+\mbox{\hyperlink{class_clicked_label}{Clicked\+Label}} $\ast$ \mbox{\hyperlink{class_nono_aa8bdc7a3711472b9ff71d94ff9a3b2df}{freshlabel}}
+\item 
+\mbox{\hyperlink{class_clicked_label}{Clicked\+Label}} $\ast$ \mbox{\hyperlink{class_nono_a035b3ef6c8f9b155fc78c7800f34c73d}{shibielabel}}
+\item 
+Q\+String \mbox{\hyperlink{class_nono_aa25080152c56a00ceabda207ebb894b5}{access\+Token}}
+\item 
+Q\+Network\+Access\+Manager $\ast$ \mbox{\hyperlink{class_nono_a08b20e005d1133261da47f8cc88239e5}{nam}}
+\item 
+\mbox{\hyperlink{class_pettip}{Pettip}} $\ast$ \mbox{\hyperlink{class_nono_a89410be6331188052b654763d3ab199c}{pt}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+nono窗口类 这个类跟nono相关 
+
+在文件 nono.\+h 第 68 行定义.
+
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_nono_a3a59dc5f43458df16fc2dd5cd4aace99}\label{class_nono_a3a59dc5f43458df16fc2dd5cd4aace99}} 
+\index{Nono@{Nono}!Nono@{Nono}}
+\index{Nono@{Nono}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{Nono()}{Nono()}}
+{\footnotesize\ttfamily Nono\+::\+Nono (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+nono窗口构造函数 
+
+
+\begin{DoxyParams}{参数}
+{\em parent} & 父类指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 nono.\+cpp 第 17 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17                           :}
+\DoxyCodeLine{18     QWidget(parent),}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}(\textcolor{keyword}{new} Ui::Nono)}
+\DoxyCodeLine{20 \{}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{22     setAttribute(Qt::WA\_QuitOnClose,\textcolor{keyword}{false});}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     this-\/>setWindowOpacity(1);\textcolor{comment}{//设置窗体不透明}}
+\DoxyCodeLine{25     this-\/>setWindowFlags(Qt::FramelessWindowHint | Qt::WindowSystemMenuHint);\textcolor{comment}{//设置窗体无边框,允许任务栏按钮右键菜单}}
+\DoxyCodeLine{26     this-\/>setAttribute(Qt::WA\_TranslucentBackground);\textcolor{comment}{//设置背景透明}}
+\DoxyCodeLine{27     \textcolor{comment}{//vipfire}}
+\DoxyCodeLine{28     QPixmap pixmap(\mbox{\hyperlink{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}{allpath}}+\textcolor{stringliteral}{"/gif/buff\_VIP\_5.png"});}
+\DoxyCodeLine{29     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_2-\/>setPixmap(pixmap);}
+\DoxyCodeLine{30     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_2-\/>show();}
+\DoxyCodeLine{31     qDebug()<<\textcolor{stringliteral}{"绿火初始化无问题"};}
+\DoxyCodeLine{32     QFont font ( \textcolor{stringliteral}{"Microsoft YaHei"}, 10, 75); \textcolor{comment}{//第一个属性是字体（微软雅黑），第二个是大小，第三个是加粗（权重是75）}}
+\DoxyCodeLine{33     \textcolor{comment}{//QFont font1("Microsoft YaHei", 15,75);}}
+\DoxyCodeLine{34     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_3-\/>setFont(font);}
+\DoxyCodeLine{35     \textcolor{comment}{//ui-\/>label\_6-\/>setFont(font1);}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{keywordtype}{int} fontId = QFontDatabase::addApplicationFont(\mbox{\hyperlink{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}{allpath}} + \textcolor{stringliteral}{"/font/RuiZiZhenYanTiMianFeiShangYong-\/2.ttf"});}
+\DoxyCodeLine{38     qDebug()<<\mbox{\hyperlink{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}{allpath}} + \textcolor{stringliteral}{"/font/RuiZiZhenYanTiMianFeiShangYong-\/2.ttf"};}
+\DoxyCodeLine{39     qDebug() << \textcolor{stringliteral}{"fontId = "}<< fontId;}
+\DoxyCodeLine{40     QString nonot = QFontDatabase::applicationFontFamilies(fontId).at(0);}
+\DoxyCodeLine{41     qDebug() <<\textcolor{stringliteral}{"fontname = "} <<nonot;}
+\DoxyCodeLine{42     QFont font1(nonot,12);}
+\DoxyCodeLine{43     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_6-\/>setFont(font1);\textcolor{comment}{//设置控件自定义字体}}
+\DoxyCodeLine{44     qDebug()<<\textcolor{stringliteral}{"nono字体无问题"};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_2-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{48     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_3-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{49     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_4-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{50     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_5-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{51     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_6-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{52     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_7-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{53     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_8-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{54     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_9-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{55     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_10-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{56     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_11-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{57     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_12-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{58     \mbox{\hyperlink{class_nono_acb752049da1d787724c508f6fc469001}{hidecap}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     \textcolor{comment}{/*初始化时间*/}}
+\DoxyCodeLine{61     \mbox{\hyperlink{class_nono_a8496d9c60cfcd201b419a3c7f45cee27}{time}} = \textcolor{keyword}{new} QTime();}
+\DoxyCodeLine{62     \mbox{\hyperlink{class_nono_ae1766b9b3038c6ebd7c0dae156fd82bd}{timer}} = \textcolor{keyword}{new} QTimer();}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64     \mbox{\hyperlink{class_nono_a074bef3e57bed55a5883a0287950bfba}{time1}} = \textcolor{keyword}{new} QTime();}
+\DoxyCodeLine{65     \mbox{\hyperlink{class_nono_af2afe93076ef58d563ff655f1e2213d9}{timer1}} = \textcolor{keyword}{new} QTimer();}
+\DoxyCodeLine{66     connect(\mbox{\hyperlink{class_nono_ae1766b9b3038c6ebd7c0dae156fd82bd}{timer}},SIGNAL(timeout()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_nono_a13b9700b7d23739b3a13350460c0d7e8}{slot\_timer\_timeout}}()));}
+\DoxyCodeLine{67     connect(\mbox{\hyperlink{class_nono_af2afe93076ef58d563ff655f1e2213d9}{timer1}},SIGNAL(timeout()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_nono_a4cce37537ea1b3c71e05ed92a52570f2}{slot\_nono\_change}}()));}
+\DoxyCodeLine{68     \mbox{\hyperlink{class_nono_aa8bdc7a3711472b9ff71d94ff9a3b2df}{freshlabel}}=\textcolor{keyword}{new} \mbox{\hyperlink{class_clicked_label}{ClickedLabel}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{69     \mbox{\hyperlink{class_nono_aa8bdc7a3711472b9ff71d94ff9a3b2df}{freshlabel}}-\/>setGeometry(120,420,50,50);}
+\DoxyCodeLine{70     connect(\mbox{\hyperlink{class_nono_aa8bdc7a3711472b9ff71d94ff9a3b2df}{freshlabel}},SIGNAL(Clicked(\mbox{\hyperlink{class_clicked_label}{ClickedLabel}}*)),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_nono_a92cf5ab9ed5949e1bba165c80034cd54}{slot\_Fresh}}()));}
+\DoxyCodeLine{71     \mbox{\hyperlink{class_nono_a035b3ef6c8f9b155fc78c7800f34c73d}{shibielabel}}=\textcolor{keyword}{new} \mbox{\hyperlink{class_clicked_label}{ClickedLabel}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{72     \mbox{\hyperlink{class_nono_a035b3ef6c8f9b155fc78c7800f34c73d}{shibielabel}}-\/>setGeometry(120,530,50,50);}
+\DoxyCodeLine{73     connect(\mbox{\hyperlink{class_nono_a035b3ef6c8f9b155fc78c7800f34c73d}{shibielabel}},SIGNAL(Clicked(\mbox{\hyperlink{class_clicked_label}{ClickedLabel}}*)),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_nono_ab754e1ac200a41a51f6d90b5d537fcea}{slot\_shibie}}()));}
+\DoxyCodeLine{74     \textcolor{comment}{//connect(ui-\/>pushButton,SIGNAL(clicked(bool)),this,SLOT(slot\_startedTimer\_clicked(bool)));}}
+\DoxyCodeLine{75     qDebug()<<\textcolor{stringliteral}{"nono时间无问题"};}
+\DoxyCodeLine{76     \textcolor{comment}{//nonogif}}
+\DoxyCodeLine{77     \mbox{\hyperlink{class_nono_a0f6a6b37c5e7363fe380e1efc2ef830b}{mouseMovePos}} = QPoint(0, 0);}
+\DoxyCodeLine{78     \mbox{\hyperlink{class_nono_a459d1532f21b30ff4698a712efed91f1}{movie}} = \textcolor{keyword}{new} QMovie(\mbox{\hyperlink{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}{allpath}}+\textcolor{stringliteral}{"/gif/nono3.gif"});}
+\DoxyCodeLine{79     \mbox{\hyperlink{class_nono_ace77e3a52e41ea5686761723484401a3}{movie1}} = \textcolor{keyword}{new} QMovie(\mbox{\hyperlink{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}{allpath}}+\textcolor{stringliteral}{"/gif/nono\_1\_1.gif"});}
+\DoxyCodeLine{80     \mbox{\hyperlink{class_nono_a92f74b6e013f2ffcde22667dcebb2f6c}{movie2}} = \textcolor{keyword}{new} QMovie(\mbox{\hyperlink{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}{allpath}}+\textcolor{stringliteral}{"/gif/nono\_2\_1.gif"});}
+\DoxyCodeLine{81     \mbox{\hyperlink{class_nono_aa93d475cac641b6de87ea7045e164c43}{movie3}} = \textcolor{keyword}{new} QMovie(\mbox{\hyperlink{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}{allpath}}+\textcolor{stringliteral}{"/gif/nono\_3\_1.gif"});}
+\DoxyCodeLine{82     \mbox{\hyperlink{class_nono_a80134b6a3277fe2e3d2c01c9902365ce}{movie4}} = \textcolor{keyword}{new} QMovie(\mbox{\hyperlink{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}{allpath}}+\textcolor{stringliteral}{"/gif/nono\_4\_1.gif"});}
+\DoxyCodeLine{83     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label-\/>setMovie(\mbox{\hyperlink{class_nono_a459d1532f21b30ff4698a712efed91f1}{movie}}); \textcolor{comment}{// 1. 设置要显示的 GIF 动画图片}}
+\DoxyCodeLine{84     \mbox{\hyperlink{class_nono_a459d1532f21b30ff4698a712efed91f1}{movie}}-\/>start(); \textcolor{comment}{// 2. 启动动画}}
+\DoxyCodeLine{85     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label-\/>show();}
+\DoxyCodeLine{86     qDebug()<<\textcolor{stringliteral}{"nonogif无问题"};}
+\DoxyCodeLine{87     \textcolor{comment}{//cap}}
+\DoxyCodeLine{88     \mbox{\hyperlink{class_nono_a6d4ed13ee71824916804628a078b6a4a}{clabel}} =\textcolor{keyword}{new} \mbox{\hyperlink{class_clicked_label}{ClickedLabel}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{89     \mbox{\hyperlink{class_nono_a6d4ed13ee71824916804628a078b6a4a}{clabel}}-\/>setGeometry(50,0,396,345);}
+\DoxyCodeLine{90     connect(\mbox{\hyperlink{class_nono_a6d4ed13ee71824916804628a078b6a4a}{clabel}},SIGNAL(Clicked(\mbox{\hyperlink{class_clicked_label}{ClickedLabel}}*)),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_nono_a104f8a6ea5b1404eb1b2a21708354491}{slot\_hidecap}}()));}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92     \textcolor{comment}{//定时更换nono}}
+\DoxyCodeLine{93     \mbox{\hyperlink{class_nono_a074bef3e57bed55a5883a0287950bfba}{time1}}-\/>restart();}
+\DoxyCodeLine{94     \mbox{\hyperlink{class_nono_af2afe93076ef58d563ff655f1e2213d9}{timer1}}-\/>start(1000);}
+\DoxyCodeLine{95     qsrand(QTime(0,0,0).secsTo(QTime::currentTime()));}
+\DoxyCodeLine{96     \mbox{\hyperlink{class_nono_a52f5304b64b796cb44aaae7989ecb8fc}{tmp1}}=GetCurrentProcessId();}
+\DoxyCodeLine{97     \textcolor{comment}{//识别}}
+\DoxyCodeLine{98     \mbox{\hyperlink{class_nono_a89410be6331188052b654763d3ab199c}{pt}}=\textcolor{keyword}{new} \mbox{\hyperlink{class_pettip}{Pettip}}();}
+\DoxyCodeLine{99     connect(\mbox{\hyperlink{class_nono_a89410be6331188052b654763d3ab199c}{pt}},SIGNAL(sendmes(QString)),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_nono_aa793569399f3e07fb9513129a6df55ac}{slot\_tip}}(QString)));}
+\DoxyCodeLine{100     connect(\textcolor{keyword}{this},SIGNAL(\mbox{\hyperlink{class_nono_ae94ec0447bca413a93a92c08a1b65970}{signal\_pet}}(QString)),\mbox{\hyperlink{class_nono_a89410be6331188052b654763d3ab199c}{pt}},SLOT(slot\_getname(QString)));}
+\DoxyCodeLine{101 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_nono_a3a59dc5f43458df16fc2dd5cd4aace99_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_nono_a04710b270c58c6e8a31df42612a05ca0}\label{class_nono_a04710b270c58c6e8a31df42612a05ca0}} 
+\index{Nono@{Nono}!````~Nono@{$\sim$Nono}}
+\index{````~Nono@{$\sim$Nono}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{$\sim$Nono()}{~Nono()}}
+{\footnotesize\ttfamily Nono\+::$\sim$\+Nono (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+nono窗口析构函数 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 nono.\+cpp 第 212 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{213 \{}
+\DoxyCodeLine{214     \textcolor{keyword}{delete} \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}};}
+\DoxyCodeLine{215     \textcolor{keyword}{delete} \mbox{\hyperlink{class_nono_a459d1532f21b30ff4698a712efed91f1}{movie}};}
+\DoxyCodeLine{216     \textcolor{keyword}{delete} \mbox{\hyperlink{class_nono_ace77e3a52e41ea5686761723484401a3}{movie1}};}
+\DoxyCodeLine{217     \textcolor{keyword}{delete} \mbox{\hyperlink{class_nono_a92f74b6e013f2ffcde22667dcebb2f6c}{movie2}};}
+\DoxyCodeLine{218     \textcolor{keyword}{delete} \mbox{\hyperlink{class_nono_aa93d475cac641b6de87ea7045e164c43}{movie3}};}
+\DoxyCodeLine{219     \textcolor{keyword}{delete} \mbox{\hyperlink{class_nono_a80134b6a3277fe2e3d2c01c9902365ce}{movie4}};}
+\DoxyCodeLine{220 }
+\DoxyCodeLine{221     \textcolor{keyword}{delete} \mbox{\hyperlink{class_nono_a8496d9c60cfcd201b419a3c7f45cee27}{time}};}
+\DoxyCodeLine{222     \textcolor{keyword}{delete} \mbox{\hyperlink{class_nono_ae1766b9b3038c6ebd7c0dae156fd82bd}{timer}};}
+\DoxyCodeLine{223 }
+\DoxyCodeLine{224     \textcolor{keyword}{delete} \mbox{\hyperlink{class_nono_a074bef3e57bed55a5883a0287950bfba}{time1}};}
+\DoxyCodeLine{225     \textcolor{keyword}{delete} \mbox{\hyperlink{class_nono_af2afe93076ef58d563ff655f1e2213d9}{timer1}};}
+\DoxyCodeLine{226     \textcolor{keyword}{delete} \mbox{\hyperlink{class_nono_a6d4ed13ee71824916804628a078b6a4a}{clabel}};}
+\DoxyCodeLine{227     \textcolor{keyword}{delete} \mbox{\hyperlink{class_nono_aa8bdc7a3711472b9ff71d94ff9a3b2df}{freshlabel}};}
+\DoxyCodeLine{228     \textcolor{keyword}{delete} \mbox{\hyperlink{class_nono_a035b3ef6c8f9b155fc78c7800f34c73d}{shibielabel}};}
+\DoxyCodeLine{229 }
+\DoxyCodeLine{230     \textcolor{keyword}{delete} \mbox{\hyperlink{class_nono_a08b20e005d1133261da47f8cc88239e5}{nam}};}
+\DoxyCodeLine{231     \textcolor{keyword}{delete} \mbox{\hyperlink{class_nono_a89410be6331188052b654763d3ab199c}{pt}};}
+\DoxyCodeLine{232 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_nono_ad59e12150488b6dcc0b113f0dc2d044a}\label{class_nono_ad59e12150488b6dcc0b113f0dc2d044a}} 
+\index{Nono@{Nono}!getAccessToken@{getAccessToken}}
+\index{getAccessToken@{getAccessToken}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{getAccessToken()}{getAccessToken()}}
+{\footnotesize\ttfamily void Nono\+::get\+Access\+Token (\begin{DoxyParamCaption}\item[{Q\+String}]{key,  }\item[{Q\+String}]{secret }\end{DoxyParamCaption})}
+
+
+
+获取百度ocr的accesstoken 
+
+\begin{DoxyNote}{注解}
+每30天获取一次 
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em key} & 百度ocr的key \\
+\hline
+{\em secret} & 百度ocr的secret \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 nono.\+cpp 第 349 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{350 \{}
+\DoxyCodeLine{351 }
+\DoxyCodeLine{352     QSettings *configIniWrite = \textcolor{keyword}{new} QSettings(\textcolor{stringliteral}{"set.ini"}, QSettings::IniFormat);}
+\DoxyCodeLine{353     QDateTime \mbox{\hyperlink{class_nono_a8496d9c60cfcd201b419a3c7f45cee27}{time}} = QDateTime::currentDateTime();   \textcolor{comment}{//获取当前时间}}
+\DoxyCodeLine{354     \textcolor{keywordtype}{int} timeT = \mbox{\hyperlink{class_nono_a8496d9c60cfcd201b419a3c7f45cee27}{time}}.toTime\_t();}
+\DoxyCodeLine{355 }
+\DoxyCodeLine{356     \textcolor{keywordflow}{if}((configIniWrite-\/>value(\textcolor{stringliteral}{"tokenTime"}).toInt() + 30*24*3600) < timeT)\{}
+\DoxyCodeLine{357         \mbox{\hyperlink{class_nono_a08b20e005d1133261da47f8cc88239e5}{nam}} = \textcolor{keyword}{new} QNetworkAccessManager(\textcolor{keyword}{this});}
+\DoxyCodeLine{358         QString parm = \textcolor{stringliteral}{"https://aip.baidubce.com/oauth/2.0/token?grant\_type=client\_credentials\&client\_id="}+key+\textcolor{stringliteral}{"\&client\_secret="}+secret+\textcolor{stringliteral}{"\&"};}
+\DoxyCodeLine{359         QUrl url(parm);}
+\DoxyCodeLine{360         connect(\mbox{\hyperlink{class_nono_a08b20e005d1133261da47f8cc88239e5}{nam}}, \&QNetworkAccessManager::finished,\textcolor{keyword}{this}, \&\mbox{\hyperlink{class_nono_a2248710774a77c06dd7977bba561e716}{Nono::getAccessTokenRequestFinished}});}
+\DoxyCodeLine{361         QNetworkReply* reply = \mbox{\hyperlink{class_nono_a08b20e005d1133261da47f8cc88239e5}{nam}}-\/>get(QNetworkRequest(url));}
+\DoxyCodeLine{362     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{363         \mbox{\hyperlink{class_nono_aa25080152c56a00ceabda207ebb894b5}{accessToken}} = configIniWrite-\/>value(\textcolor{stringliteral}{"accessToken"}).toString();}
+\DoxyCodeLine{364     \}}
+\DoxyCodeLine{365     qDebug()<<\textcolor{stringliteral}{"access"}<<\mbox{\hyperlink{class_nono_aa25080152c56a00ceabda207ebb894b5}{accessToken}};}
+\DoxyCodeLine{366 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_nono_ad59e12150488b6dcc0b113f0dc2d044a_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_nono_ad59e12150488b6dcc0b113f0dc2d044a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_nono_a2248710774a77c06dd7977bba561e716}\label{class_nono_a2248710774a77c06dd7977bba561e716}} 
+\index{Nono@{Nono}!getAccessTokenRequestFinished@{getAccessTokenRequestFinished}}
+\index{getAccessTokenRequestFinished@{getAccessTokenRequestFinished}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{getAccessTokenRequestFinished}{getAccessTokenRequestFinished}}
+{\footnotesize\ttfamily void Nono\+::get\+Access\+Token\+Request\+Finished (\begin{DoxyParamCaption}\item[{Q\+Network\+Reply $\ast$}]{reply }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+获取accesstoken网页返回内容处理 
+
+
+\begin{DoxyParams}{参数}
+{\em reply} & 网页返回内容指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 nono.\+cpp 第 405 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{405                                                              \{}
+\DoxyCodeLine{406     QNetworkReply::NetworkError err = reply-\/>error();}
+\DoxyCodeLine{407     \textcolor{keywordflow}{if}(err != QNetworkReply::NoError) \{}
+\DoxyCodeLine{408         qDebug() << \textcolor{stringliteral}{"accFailed: "} << reply-\/>errorString();}
+\DoxyCodeLine{409     \}\textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{410         \textcolor{comment}{// 获取返回内容}}
+\DoxyCodeLine{411         QJsonParseError json\_error;}
+\DoxyCodeLine{412         QJsonDocument parse\_doucment = QJsonDocument::fromJson(reply-\/>readAll(), \&json\_error);}
+\DoxyCodeLine{413         \textcolor{keywordflow}{if}(parse\_doucment.isObject())\{}
+\DoxyCodeLine{414              QJsonObject obj = parse\_doucment.object();}
+\DoxyCodeLine{415              \mbox{\hyperlink{class_nono_aa25080152c56a00ceabda207ebb894b5}{accessToken}} = obj.take(\textcolor{stringliteral}{"access\_token"}).toString();}
+\DoxyCodeLine{416              QSettings *configIniWrite = \textcolor{keyword}{new} QSettings(\textcolor{stringliteral}{"set.ini"}, QSettings::IniFormat);}
+\DoxyCodeLine{417             \textcolor{comment}{//向ini文件中写入内容,setValue函数的两个参数是键值对}}
+\DoxyCodeLine{418             configIniWrite-\/>setValue(\textcolor{stringliteral}{"accessToken"}, \mbox{\hyperlink{class_nono_aa25080152c56a00ceabda207ebb894b5}{accessToken}});}
+\DoxyCodeLine{419             QDateTime \mbox{\hyperlink{class_nono_a8496d9c60cfcd201b419a3c7f45cee27}{time}} = QDateTime::currentDateTime();   \textcolor{comment}{//获取当前时间}}
+\DoxyCodeLine{420             \textcolor{keywordtype}{int} timeT = \mbox{\hyperlink{class_nono_a8496d9c60cfcd201b419a3c7f45cee27}{time}}.toTime\_t();   \textcolor{comment}{//将当前时间转为时间戳}}
+\DoxyCodeLine{421             configIniWrite-\/>setValue(\textcolor{stringliteral}{"tokenTime"}, timeT);}
+\DoxyCodeLine{422             \textcolor{comment}{//写入完成后删除指针}}
+\DoxyCodeLine{423             \textcolor{keyword}{delete} configIniWrite;}
+\DoxyCodeLine{424         \}}
+\DoxyCodeLine{425     \}}
+\DoxyCodeLine{426     \mbox{\hyperlink{class_nono_a08b20e005d1133261da47f8cc88239e5}{nam}}-\/>deleteLater();}
+\DoxyCodeLine{427 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_nono_a2248710774a77c06dd7977bba561e716_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_nono_afbbc90840a38cd93a9e5691740337638}\label{class_nono_afbbc90840a38cd93a9e5691740337638}} 
+\index{Nono@{Nono}!mouseMoveEvent@{mouseMoveEvent}}
+\index{mouseMoveEvent@{mouseMoveEvent}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{mouseMoveEvent()}{mouseMoveEvent()}}
+{\footnotesize\ttfamily void Nono\+::mouse\+Move\+Event (\begin{DoxyParamCaption}\item[{Q\+Mouse\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+鼠标按下nono窗口并移动重载 
+
+
+\begin{DoxyParams}{参数}
+{\em event} & 鼠标活动 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 nono.\+cpp 第 253 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{254 \{}
+\DoxyCodeLine{255 }
+\DoxyCodeLine{256     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_nono_a0f6a6b37c5e7363fe380e1efc2ef830b}{mouseMovePos}} != QPoint(0, 0))}
+\DoxyCodeLine{257     \{}
+\DoxyCodeLine{258 }
+\DoxyCodeLine{259         move(geometry().x() + event-\/>globalPos().x() -\/ \mbox{\hyperlink{class_nono_a0f6a6b37c5e7363fe380e1efc2ef830b}{mouseMovePos}}.x(),}
+\DoxyCodeLine{260               geometry().y() + event-\/>globalPos().y() -\/ \mbox{\hyperlink{class_nono_a0f6a6b37c5e7363fe380e1efc2ef830b}{mouseMovePos}}.y());}
+\DoxyCodeLine{261         \mbox{\hyperlink{class_nono_a0f6a6b37c5e7363fe380e1efc2ef830b}{mouseMovePos}} = \textcolor{keyword}{event}-\/>globalPos();}
+\DoxyCodeLine{262 }
+\DoxyCodeLine{263 }
+\DoxyCodeLine{264 }
+\DoxyCodeLine{265     \}}
+\DoxyCodeLine{266 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_nono_af3b68cea1469d0f7932b0fea39b3f9e3}\label{class_nono_af3b68cea1469d0f7932b0fea39b3f9e3}} 
+\index{Nono@{Nono}!mousePressEvent@{mousePressEvent}}
+\index{mousePressEvent@{mousePressEvent}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{mousePressEvent()}{mousePressEvent()}}
+{\footnotesize\ttfamily void Nono\+::mouse\+Press\+Event (\begin{DoxyParamCaption}\item[{Q\+Mouse\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+鼠标按下nono窗口重载 
+
+
+\begin{DoxyParams}{参数}
+{\em event} & 鼠标活动 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 nono.\+cpp 第 274 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{275 \{}
+\DoxyCodeLine{276     \mbox{\hyperlink{class_nono_a0f6a6b37c5e7363fe380e1efc2ef830b}{mouseMovePos}} = \textcolor{keyword}{event}-\/>globalPos();}
+\DoxyCodeLine{277 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_nono_a3a75e697e056964af18a080d8e1e9a38}\label{class_nono_a3a75e697e056964af18a080d8e1e9a38}} 
+\index{Nono@{Nono}!mouseReleaseEvent@{mouseReleaseEvent}}
+\index{mouseReleaseEvent@{mouseReleaseEvent}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{mouseReleaseEvent()}{mouseReleaseEvent()}}
+{\footnotesize\ttfamily void Nono\+::mouse\+Release\+Event (\begin{DoxyParamCaption}\item[{Q\+Mouse\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+鼠标离开nono窗口重载 
+
+
+\begin{DoxyParams}{参数}
+{\em event} & 鼠标活动 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 nono.\+cpp 第 283 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{284 \{}
+\DoxyCodeLine{285     \mbox{\hyperlink{class_nono_a0f6a6b37c5e7363fe380e1efc2ef830b}{mouseMovePos}} = QPoint(0, 0);}
+\DoxyCodeLine{286 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_nono_a103f87a55f9ec70d34f7c219b6343761}\label{class_nono_a103f87a55f9ec70d34f7c219b6343761}} 
+\index{Nono@{Nono}!recognition@{recognition}}
+\index{recognition@{recognition}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{recognition()}{recognition()}}
+{\footnotesize\ttfamily void Nono\+::recognition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+识别对面精灵的名字 
+
+\begin{DoxyNote}{注解}
+带点的精灵识别不一定成功 
+\end{DoxyNote}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 nono.\+cpp 第 372 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{372                       \{}
+\DoxyCodeLine{373     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a030020531afa28b1ce053468ffe95888}{Capture}}(893,90,965,108,QDir::currentPath()+\textcolor{stringliteral}{"/shi.bmp"});}
+\DoxyCodeLine{374     QImage image(QDir::currentPath()+\textcolor{stringliteral}{"/shi.bmp"});}
+\DoxyCodeLine{375     QByteArray ba;}
+\DoxyCodeLine{376     QBuffer buf(\&ba);}
+\DoxyCodeLine{377     image.save(\&buf, \textcolor{stringliteral}{"bmp"});}
+\DoxyCodeLine{378     QByteArray hexed = ba.toBase64();}
+\DoxyCodeLine{379     buf.close();}
+\DoxyCodeLine{380     \textcolor{comment}{//qDebug()<<"hexed"<<hexed;}}
+\DoxyCodeLine{381     QString parm = QString(hexed);}
+\DoxyCodeLine{382     \textcolor{keywordflow}{if}(parm.isEmpty())\{}
+\DoxyCodeLine{383         QMessageBox::information(NULL, \textcolor{stringliteral}{"错误"}, \textcolor{stringliteral}{"图像数据不能为空"});}
+\DoxyCodeLine{384         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{385     \}}
+\DoxyCodeLine{386     \mbox{\hyperlink{class_nono_a08b20e005d1133261da47f8cc88239e5}{nam}} = \textcolor{keyword}{new} QNetworkAccessManager(\textcolor{keyword}{this});}
+\DoxyCodeLine{387     QUrl url;}
+\DoxyCodeLine{388     url.setUrl(\textcolor{stringliteral}{"https://aip.baidubce.com/rest/2.0/ocr/v1/general\_basic?access\_token="}+\mbox{\hyperlink{class_nono_aa25080152c56a00ceabda207ebb894b5}{accessToken}});}
+\DoxyCodeLine{389 }
+\DoxyCodeLine{390     QNetworkRequest request;}
+\DoxyCodeLine{391     request.setUrl(url);}
+\DoxyCodeLine{392     request.setHeader(QNetworkRequest::ContentTypeHeader,QVariant(\textcolor{stringliteral}{"application/x-\/www-\/form-\/urlencoded"}));}
+\DoxyCodeLine{393     QByteArray byteArr;}
+\DoxyCodeLine{394 }
+\DoxyCodeLine{395     byteArr.append(\textcolor{stringliteral}{"image="});}
+\DoxyCodeLine{396     byteArr.append(QUrl::toPercentEncoding(parm));}
+\DoxyCodeLine{397     connect(\mbox{\hyperlink{class_nono_a08b20e005d1133261da47f8cc88239e5}{nam}}, \&QNetworkAccessManager::finished,\textcolor{keyword}{this}, \&\mbox{\hyperlink{class_nono_ae6ae4d7add2cd4d6ffc0bfc62ba5351b}{Nono::recognitionRequestFinished}});}
+\DoxyCodeLine{398     QNetworkReply* reply = \mbox{\hyperlink{class_nono_a08b20e005d1133261da47f8cc88239e5}{nam}}-\/>post(request,byteArr);}
+\DoxyCodeLine{399 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_nono_a103f87a55f9ec70d34f7c219b6343761_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_nono_a103f87a55f9ec70d34f7c219b6343761_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_nono_ae6ae4d7add2cd4d6ffc0bfc62ba5351b}\label{class_nono_ae6ae4d7add2cd4d6ffc0bfc62ba5351b}} 
+\index{Nono@{Nono}!recognitionRequestFinished@{recognitionRequestFinished}}
+\index{recognitionRequestFinished@{recognitionRequestFinished}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{recognitionRequestFinished}{recognitionRequestFinished}}
+{\footnotesize\ttfamily void Nono\+::recognition\+Request\+Finished (\begin{DoxyParamCaption}\item[{Q\+Network\+Reply $\ast$}]{reply }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_nono_ae6ae4d7add2cd4d6ffc0bfc62ba5351b}{Nono\+::recognition\+Request\+Finished}} 
+
+
+\begin{DoxyParams}{参数}
+{\em reply} & 文字识别的信号槽 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 nono.\+cpp 第 434 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{434                                                          \{}
+\DoxyCodeLine{435     QNetworkReply::NetworkError err = reply-\/>error();}
+\DoxyCodeLine{436     \textcolor{comment}{//qDebug()<<reply-\/>readAll();}}
+\DoxyCodeLine{437     \textcolor{keywordflow}{if}(err != QNetworkReply::NoError) \{}
+\DoxyCodeLine{438         qDebug() << \textcolor{stringliteral}{"ocrFailed: "} << reply-\/>errorString();}
+\DoxyCodeLine{439     \}\textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{440         \textcolor{comment}{// 获取返回内容}}
+\DoxyCodeLine{441         QJsonParseError json\_error;}
+\DoxyCodeLine{442         QJsonDocument parse\_doucment = QJsonDocument::fromJson(reply-\/>readAll(), \&json\_error);}
+\DoxyCodeLine{443         \textcolor{keywordflow}{if}(parse\_doucment.isObject())\{}
+\DoxyCodeLine{444             QJsonObject obj = parse\_doucment.object();}
+\DoxyCodeLine{445             \textcolor{keywordtype}{int} wordsNum = obj.take(\textcolor{stringliteral}{"words\_result\_num"}).toInt();}
+\DoxyCodeLine{446             \textcolor{keywordflow}{if}(wordsNum > 0)\{}
+\DoxyCodeLine{447                 QString res;}
+\DoxyCodeLine{448                 QJsonArray jsonArr = obj.take(\textcolor{stringliteral}{"words\_result"}).toArray();}
+\DoxyCodeLine{449                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<wordsNum;i++)\{}
+\DoxyCodeLine{450                    res.append(jsonArr[i].toObject().take(\textcolor{stringliteral}{"words"}).toString());}
+\DoxyCodeLine{451 }
+\DoxyCodeLine{452                 \}}
+\DoxyCodeLine{453                 \mbox{\hyperlink{class_nono_a89410be6331188052b654763d3ab199c}{pt}}-\/>show();}
+\DoxyCodeLine{454                 qDebug()<<res;}
+\DoxyCodeLine{455                 emit \mbox{\hyperlink{class_nono_ae94ec0447bca413a93a92c08a1b65970}{signal\_pet}}(res);}
+\DoxyCodeLine{456                 \mbox{\hyperlink{class_nono_aa793569399f3e07fb9513129a6df55ac}{slot\_tip}}(res);}
+\DoxyCodeLine{457 }
+\DoxyCodeLine{458             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{459                 \mbox{\hyperlink{class_nono_aa793569399f3e07fb9513129a6df55ac}{slot\_tip}}(\textcolor{stringliteral}{"未检测到精灵"});}
+\DoxyCodeLine{460             \}}
+\DoxyCodeLine{461         \}}
+\DoxyCodeLine{462     \}}
+\DoxyCodeLine{463     \mbox{\hyperlink{class_nono_a08b20e005d1133261da47f8cc88239e5}{nam}}-\/>deleteLater();}
+\DoxyCodeLine{464 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_nono_ae6ae4d7add2cd4d6ffc0bfc62ba5351b_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_nono_ae6ae4d7add2cd4d6ffc0bfc62ba5351b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_nono_a4795edd08eb19afc8b2e1f37ac9c041f}\label{class_nono_a4795edd08eb19afc8b2e1f37ac9c041f}} 
+\index{Nono@{Nono}!showskill@{showskill}}
+\index{showskill@{showskill}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{showskill}{showskill}}
+{\footnotesize\ttfamily void Nono\+::showskill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+打开精灵技能快查窗口 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 nono.\+cpp 第 469 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{469                     \{}
+\DoxyCodeLine{470     \mbox{\hyperlink{class_nono_a89410be6331188052b654763d3ab199c}{pt}}-\/>show();}
+\DoxyCodeLine{471 }
+\DoxyCodeLine{472 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_nono_aa5b7d240ee11551a3e62241949c4d3ad}\label{class_nono_aa5b7d240ee11551a3e62241949c4d3ad}} 
+\index{Nono@{Nono}!signal\_fresh@{signal\_fresh}}
+\index{signal\_fresh@{signal\_fresh}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{signal\_fresh}{signal\_fresh}}
+{\footnotesize\ttfamily void Nono\+::signal\+\_\+fresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_nono_aa5b7d240ee11551a3e62241949c4d3ad_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_nono_ae94ec0447bca413a93a92c08a1b65970}\label{class_nono_ae94ec0447bca413a93a92c08a1b65970}} 
+\index{Nono@{Nono}!signal\_pet@{signal\_pet}}
+\index{signal\_pet@{signal\_pet}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{signal\_pet}{signal\_pet}}
+{\footnotesize\ttfamily void Nono\+::signal\+\_\+pet (\begin{DoxyParamCaption}\item[{Q\+String}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_nono_ae94ec0447bca413a93a92c08a1b65970_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_nono_a78243d01059eb7cc0956b4147ad9b0e5}\label{class_nono_a78243d01059eb7cc0956b4147ad9b0e5}} 
+\index{Nono@{Nono}!signal\_sb@{signal\_sb}}
+\index{signal\_sb@{signal\_sb}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{signal\_sb}{signal\_sb}}
+{\footnotesize\ttfamily void Nono\+::signal\+\_\+sb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_nono_a78243d01059eb7cc0956b4147ad9b0e5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_nono_ace86157f9ea4aac8893036fe1553e0a2}\label{class_nono_ace86157f9ea4aac8893036fe1553e0a2}} 
+\index{Nono@{Nono}!slot\_capture@{slot\_capture}}
+\index{slot\_capture@{slot\_capture}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{slot\_capture}{slot\_capture}}
+{\footnotesize\ttfamily void Nono\+::slot\+\_\+capture (\begin{DoxyParamCaption}\item[{bool}]{tmp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+显示对面巅峰阵容-\/nono举牌 
+
+
+\begin{DoxyParams}{参数}
+{\em tmp} & 信号传递 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 nono.\+cpp 第 238 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{238                                \{}
+\DoxyCodeLine{239     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a030020531afa28b1ce053468ffe95888}{Capture}}( 564, 223, 960, 568,QDir::currentPath()+\textcolor{stringliteral}{"/screen.bmp"});}
+\DoxyCodeLine{240     QPixmap pixmap(QDir::currentPath()+\textcolor{stringliteral}{"/screen.bmp"});}
+\DoxyCodeLine{241     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_4-\/>setPixmap(pixmap);}
+\DoxyCodeLine{242     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_4-\/>show();}
+\DoxyCodeLine{243     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_4-\/>setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{244     \mbox{\hyperlink{class_nono_acb752049da1d787724c508f6fc469001}{hidecap}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{245 }
+\DoxyCodeLine{246 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{class_nono_ace86157f9ea4aac8893036fe1553e0a2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_nono_a92cf5ab9ed5949e1bba165c80034cd54}\label{class_nono_a92cf5ab9ed5949e1bba165c80034cd54}} 
+\index{Nono@{Nono}!slot\_Fresh@{slot\_Fresh}}
+\index{slot\_Fresh@{slot\_Fresh}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{slot\_Fresh}{slot\_Fresh}}
+{\footnotesize\ttfamily void Nono\+::slot\+\_\+\+Fresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+刷新按钮按下 
+
+\begin{DoxyNote}{注解}
+向主窗口发送刷新信号 
+\end{DoxyNote}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 nono.\+cpp 第 328 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{328                      \{}
+\DoxyCodeLine{329     emit \mbox{\hyperlink{class_nono_aa5b7d240ee11551a3e62241949c4d3ad}{signal\_fresh}}();}
+\DoxyCodeLine{330 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{class_nono_a92cf5ab9ed5949e1bba165c80034cd54_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_nono_a104f8a6ea5b1404eb1b2a21708354491}\label{class_nono_a104f8a6ea5b1404eb1b2a21708354491}} 
+\index{Nono@{Nono}!slot\_hidecap@{slot\_hidecap}}
+\index{slot\_hidecap@{slot\_hidecap}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{slot\_hidecap}{slot\_hidecap}}
+{\footnotesize\ttfamily void Nono\+::slot\+\_\+hidecap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+巅峰阵容截图隐藏 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 nono.\+cpp 第 305 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{305                        \{}
+\DoxyCodeLine{306     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_nono_acb752049da1d787724c508f6fc469001}{hidecap}}==\textcolor{keyword}{true})\{}
+\DoxyCodeLine{307         \mbox{\hyperlink{class_nono_acb752049da1d787724c508f6fc469001}{hidecap}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{308         \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_4-\/>setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{309     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{310         \mbox{\hyperlink{class_nono_acb752049da1d787724c508f6fc469001}{hidecap}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{311         \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_4-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{312     \}}
+\DoxyCodeLine{313 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{class_nono_a104f8a6ea5b1404eb1b2a21708354491_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_nono_a4cce37537ea1b3c71e05ed92a52570f2}\label{class_nono_a4cce37537ea1b3c71e05ed92a52570f2}} 
+\index{Nono@{Nono}!slot\_nono\_change@{slot\_nono\_change}}
+\index{slot\_nono\_change@{slot\_nono\_change}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{slot\_nono\_change}{slot\_nono\_change}}
+{\footnotesize\ttfamily void Nono\+::slot\+\_\+nono\+\_\+change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+nono状态改变 
+
+\begin{DoxyNote}{注解}
+此函数控制nono的自动提示、自动动作 
+\end{DoxyNote}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 nono.\+cpp 第 131 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{131                            \{}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134     \textcolor{keywordtype}{int} t=\mbox{\hyperlink{class_nono_a074bef3e57bed55a5883a0287950bfba}{time1}}-\/>elapsed()/1000;}
+\DoxyCodeLine{135     \textcolor{keywordtype}{int} k=qrand()\%4;}
+\DoxyCodeLine{136     \textcolor{keywordflow}{if}(t\%15==0)\{}
+\DoxyCodeLine{137         \textcolor{keywordtype}{double} t2=\mbox{\hyperlink{xy_8cpp_a58270384b018ce426d489991e1540a0c}{xy\_memory}}(\mbox{\hyperlink{class_nono_a52f5304b64b796cb44aaae7989ecb8fc}{tmp1}});}
+\DoxyCodeLine{138         \textcolor{keywordflow}{if}(t2>600)}
+\DoxyCodeLine{139             \mbox{\hyperlink{class_nono_aa793569399f3e07fb9513129a6df55ac}{slot\_tip}}(\textcolor{stringliteral}{"当前内存使用:"}+QString::number(t2)+\textcolor{stringliteral}{"MB(内存占用较大及时刷新避免卡顿)"});}
+\DoxyCodeLine{140         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{141             \mbox{\hyperlink{class_nono_aa793569399f3e07fb9513129a6df55ac}{slot\_tip}}(\textcolor{stringliteral}{"当前内存使用:"}+QString::number(t2)+\textcolor{stringliteral}{"MB"});}
+\DoxyCodeLine{142     \}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144     \textcolor{keywordflow}{if}(t\%30==0)\{}
+\DoxyCodeLine{145         \textcolor{keywordflow}{if}(k==0)\{}
+\DoxyCodeLine{146             \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label-\/>setMovie(\mbox{\hyperlink{class_nono_ace77e3a52e41ea5686761723484401a3}{movie1}}); \textcolor{comment}{// 1. 设置要显示的 GIF 动画图片}}
+\DoxyCodeLine{147             \mbox{\hyperlink{class_nono_ace77e3a52e41ea5686761723484401a3}{movie1}}-\/>start(); \textcolor{comment}{// 2. 启动动画}}
+\DoxyCodeLine{148             \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(4000);}
+\DoxyCodeLine{149             \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label-\/>setMovie(\mbox{\hyperlink{class_nono_a459d1532f21b30ff4698a712efed91f1}{movie}}); \textcolor{comment}{// 1. 设置要显示的 GIF 动画图片}}
+\DoxyCodeLine{150             \mbox{\hyperlink{class_nono_a459d1532f21b30ff4698a712efed91f1}{movie}}-\/>start(); \textcolor{comment}{// 2. 启动动画}}
+\DoxyCodeLine{151         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(k==2)\{}
+\DoxyCodeLine{152             \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label-\/>setMovie(\mbox{\hyperlink{class_nono_aa93d475cac641b6de87ea7045e164c43}{movie3}}); \textcolor{comment}{// 1. 设置要显示的 GIF 动画图片}}
+\DoxyCodeLine{153             \mbox{\hyperlink{class_nono_aa93d475cac641b6de87ea7045e164c43}{movie3}}-\/>start(); \textcolor{comment}{// 2. 启动动画}}
+\DoxyCodeLine{154             \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(3000);}
+\DoxyCodeLine{155             \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label-\/>setMovie(\mbox{\hyperlink{class_nono_a459d1532f21b30ff4698a712efed91f1}{movie}}); \textcolor{comment}{// 1. 设置要显示的 GIF 动画图片}}
+\DoxyCodeLine{156             \mbox{\hyperlink{class_nono_a459d1532f21b30ff4698a712efed91f1}{movie}}-\/>start(); \textcolor{comment}{// 2. 启动动画}}
+\DoxyCodeLine{157         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(k==1)\{}
+\DoxyCodeLine{158             \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label-\/>setMovie(\mbox{\hyperlink{class_nono_a92f74b6e013f2ffcde22667dcebb2f6c}{movie2}}); \textcolor{comment}{// 1. 设置要显示的 GIF 动画图片}}
+\DoxyCodeLine{159             \mbox{\hyperlink{class_nono_a92f74b6e013f2ffcde22667dcebb2f6c}{movie2}}-\/>start(); \textcolor{comment}{// 2. 启动动画}}
+\DoxyCodeLine{160             \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(3500);}
+\DoxyCodeLine{161             \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label-\/>setMovie(\mbox{\hyperlink{class_nono_a459d1532f21b30ff4698a712efed91f1}{movie}}); \textcolor{comment}{// 1. 设置要显示的 GIF 动画图片}}
+\DoxyCodeLine{162             \mbox{\hyperlink{class_nono_a459d1532f21b30ff4698a712efed91f1}{movie}}-\/>start(); \textcolor{comment}{// 2. 启动动画}}
+\DoxyCodeLine{163         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(k==3)\{}
+\DoxyCodeLine{164             \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label-\/>setMovie(\mbox{\hyperlink{class_nono_a80134b6a3277fe2e3d2c01c9902365ce}{movie4}}); \textcolor{comment}{// 1. 设置要显示的 GIF 动画图片}}
+\DoxyCodeLine{165             \mbox{\hyperlink{class_nono_a80134b6a3277fe2e3d2c01c9902365ce}{movie4}}-\/>start(); \textcolor{comment}{// 2. 启动动画}}
+\DoxyCodeLine{166             \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(3000);}
+\DoxyCodeLine{167             \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label-\/>setMovie(\mbox{\hyperlink{class_nono_a459d1532f21b30ff4698a712efed91f1}{movie}}); \textcolor{comment}{// 1. 设置要显示的 GIF 动画图片}}
+\DoxyCodeLine{168             \mbox{\hyperlink{class_nono_a459d1532f21b30ff4698a712efed91f1}{movie}}-\/>start(); \textcolor{comment}{// 2. 启动动画}}
+\DoxyCodeLine{169         \}}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171     \}}
+\DoxyCodeLine{172     \textcolor{keywordflow}{if}(this-\/>underMouse())\{}
+\DoxyCodeLine{173         \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_7-\/>setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{174         \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_8-\/>setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{175         \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_9-\/>setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{176         \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_10-\/>setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{177         \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_11-\/>setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{178         \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_12-\/>setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{179     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{180         \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_7-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{181         \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_8-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{182         \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_9-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{183         \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_10-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{184         \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_11-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{185         \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_12-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{186     \}}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_nono_a4cce37537ea1b3c71e05ed92a52570f2_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{class_nono_a4cce37537ea1b3c71e05ed92a52570f2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_nono_ab754e1ac200a41a51f6d90b5d537fcea}\label{class_nono_ab754e1ac200a41a51f6d90b5d537fcea}} 
+\index{Nono@{Nono}!slot\_shibie@{slot\_shibie}}
+\index{slot\_shibie@{slot\_shibie}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{slot\_shibie}{slot\_shibie}}
+{\footnotesize\ttfamily void Nono\+::slot\+\_\+shibie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+识别对战精灵 
+
+\begin{DoxyNote}{注解}
+调用了百度ocr的ai，每日50000次，按理说是无问题的，毕竟登录器使用量没那么大 
+\end{DoxyNote}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 nono.\+cpp 第 336 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{336                       \{}
+\DoxyCodeLine{337     emit \mbox{\hyperlink{class_nono_a78243d01059eb7cc0956b4147ad9b0e5}{signal\_sb}}();}
+\DoxyCodeLine{338     \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(100);}
+\DoxyCodeLine{339     \mbox{\hyperlink{class_nono_ad59e12150488b6dcc0b113f0dc2d044a}{getAccessToken}}(\textcolor{stringliteral}{"RwoxBEWTWXq1rKhiWGQT3UD3"},\textcolor{stringliteral}{"X1TGKuGKClEmP6MAMg5Nw61G2yTBHtMt"});}
+\DoxyCodeLine{340     \mbox{\hyperlink{class_nono_a103f87a55f9ec70d34f7c219b6343761}{recognition}}();}
+\DoxyCodeLine{341 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_nono_ab754e1ac200a41a51f6d90b5d537fcea_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{class_nono_ab754e1ac200a41a51f6d90b5d537fcea_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_nono_a2a04d7f62992081bbf68f547a82ac263}\label{class_nono_a2a04d7f62992081bbf68f547a82ac263}} 
+\index{Nono@{Nono}!slot\_startedTimer\_clicked@{slot\_startedTimer\_clicked}}
+\index{slot\_startedTimer\_clicked@{slot\_startedTimer\_clicked}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{slot\_startedTimer\_clicked}{slot\_startedTimer\_clicked}}
+{\footnotesize\ttfamily void Nono\+::slot\+\_\+started\+Timer\+\_\+clicked (\begin{DoxyParamCaption}\item[{bool}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+绿火计时器开启函数 
+
+
+\begin{DoxyParams}{参数}
+{\em bool} & 信号传递 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 nono.\+cpp 第 108 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{109 \{}
+\DoxyCodeLine{110     qDebug()<<tr(\textcolor{stringliteral}{"开启计时器"});}
+\DoxyCodeLine{111     \mbox{\hyperlink{class_nono_a8496d9c60cfcd201b419a3c7f45cee27}{time}}-\/>restart();}
+\DoxyCodeLine{112     \mbox{\hyperlink{class_nono_ae1766b9b3038c6ebd7c0dae156fd82bd}{timer}}-\/>start(1000);}
+\DoxyCodeLine{113     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_2-\/>setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{114     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_3-\/>setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{115 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_nono_ab18539270a140dbfccf7c0f48865dbe6}\label{class_nono_ab18539270a140dbfccf7c0f48865dbe6}} 
+\index{Nono@{Nono}!slot\_stopedTimer\_clicked@{slot\_stopedTimer\_clicked}}
+\index{slot\_stopedTimer\_clicked@{slot\_stopedTimer\_clicked}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{slot\_stopedTimer\_clicked}{slot\_stopedTimer\_clicked}}
+{\footnotesize\ttfamily void Nono\+::slot\+\_\+stoped\+Timer\+\_\+clicked (\begin{DoxyParamCaption}\item[{bool}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+绿火计时器停止函数 
+
+
+\begin{DoxyParams}{参数}
+{\em bool} & 信号传递 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 nono.\+cpp 第 121 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{122 \{}
+\DoxyCodeLine{123     qDebug()<<tr(\textcolor{stringliteral}{"停止计时器"});}
+\DoxyCodeLine{124     \mbox{\hyperlink{class_nono_ae1766b9b3038c6ebd7c0dae156fd82bd}{timer}}-\/>stop();}
+\DoxyCodeLine{125 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_nono_a13b9700b7d23739b3a13350460c0d7e8}\label{class_nono_a13b9700b7d23739b3a13350460c0d7e8}} 
+\index{Nono@{Nono}!slot\_timer\_timeout@{slot\_timer\_timeout}}
+\index{slot\_timer\_timeout@{slot\_timer\_timeout}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{slot\_timer\_timeout}{slot\_timer\_timeout}}
+{\footnotesize\ttfamily void Nono\+::slot\+\_\+timer\+\_\+timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+绿火计时器每秒处理动作 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 nono.\+cpp 第 193 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{193                              \{}
+\DoxyCodeLine{194     \mbox{\hyperlink{class_nono_ad65958b9cfa8b724b1a87dd697845616}{firetime}}=1800-\/(\mbox{\hyperlink{class_nono_a8496d9c60cfcd201b419a3c7f45cee27}{time}}-\/>elapsed()/1000);}
+\DoxyCodeLine{195     \textcolor{comment}{//qDebug()<<firetime;}}
+\DoxyCodeLine{196     \mbox{\hyperlink{class_nono_a88bef14846384cd23beb8e017f720938}{firetime\_min}}=\mbox{\hyperlink{class_nono_ad65958b9cfa8b724b1a87dd697845616}{firetime}}/60;}
+\DoxyCodeLine{197     \textcolor{comment}{//qDebug()<<firetime\_min;}}
+\DoxyCodeLine{198     \mbox{\hyperlink{class_nono_a5b1249d45fac2b3031aad5ed4742d18b}{firetime\_sec}}=\mbox{\hyperlink{class_nono_ad65958b9cfa8b724b1a87dd697845616}{firetime}}-\/\mbox{\hyperlink{class_nono_a88bef14846384cd23beb8e017f720938}{firetime\_min}}*60;}
+\DoxyCodeLine{199     \textcolor{comment}{//qDebug()<<firetime\_sec;}}
+\DoxyCodeLine{200     QString tmp=QString::number(\mbox{\hyperlink{class_nono_a88bef14846384cd23beb8e017f720938}{firetime\_min}},10)+\textcolor{stringliteral}{":"}+QString::number(\mbox{\hyperlink{class_nono_a5b1249d45fac2b3031aad5ed4742d18b}{firetime\_sec}},10);}
+\DoxyCodeLine{201     \textcolor{comment}{//qDebug()<<tmp;}}
+\DoxyCodeLine{202     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_nono_ad65958b9cfa8b724b1a87dd697845616}{firetime}}<10)\{}
+\DoxyCodeLine{203         \mbox{\hyperlink{class_nono_ae1766b9b3038c6ebd7c0dae156fd82bd}{timer}}-\/>stop();}
+\DoxyCodeLine{204     \}}
+\DoxyCodeLine{205     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_3-\/>setText(tmp);}
+\DoxyCodeLine{206 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{class_nono_a13b9700b7d23739b3a13350460c0d7e8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_nono_aa793569399f3e07fb9513129a6df55ac}\label{class_nono_aa793569399f3e07fb9513129a6df55ac}} 
+\index{Nono@{Nono}!slot\_tip@{slot\_tip}}
+\index{slot\_tip@{slot\_tip}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{slot\_tip}{slot\_tip}}
+{\footnotesize\ttfamily void Nono\+::slot\+\_\+tip (\begin{DoxyParamCaption}\item[{Q\+String}]{content }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+nono窗口提示信息 
+
+
+\begin{DoxyParams}{参数}
+{\em content} & nono提示内容 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 nono.\+cpp 第 292 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{292                                   \{}
+\DoxyCodeLine{293     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_5-\/>setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{294     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_6-\/>setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{295     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_6-\/>setText(content);}
+\DoxyCodeLine{296     \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(4000);}
+\DoxyCodeLine{297     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_5-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{298     \mbox{\hyperlink{class_nono_a8b681996961bd36763731b4177d9a87f}{ui}}-\/>label\_6-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{299 }
+\DoxyCodeLine{300 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{class_nono_aa793569399f3e07fb9513129a6df55ac_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_nono_aa793569399f3e07fb9513129a6df55ac_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_nono_aa25080152c56a00ceabda207ebb894b5}\label{class_nono_aa25080152c56a00ceabda207ebb894b5}} 
+\index{Nono@{Nono}!accessToken@{accessToken}}
+\index{accessToken@{accessToken}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{accessToken}{accessToken}}
+{\footnotesize\ttfamily Q\+String Nono\+::access\+Token\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 nono.\+h 第 109 行定义.
+
+\mbox{\Hypertarget{class_nono_a6d4ed13ee71824916804628a078b6a4a}\label{class_nono_a6d4ed13ee71824916804628a078b6a4a}} 
+\index{Nono@{Nono}!clabel@{clabel}}
+\index{clabel@{clabel}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{clabel}{clabel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_clicked_label}{Clicked\+Label}}$\ast$ Nono\+::clabel\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 nono.\+h 第 105 行定义.
+
+\mbox{\Hypertarget{class_nono_ad65958b9cfa8b724b1a87dd697845616}\label{class_nono_ad65958b9cfa8b724b1a87dd697845616}} 
+\index{Nono@{Nono}!firetime@{firetime}}
+\index{firetime@{firetime}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{firetime}{firetime}}
+{\footnotesize\ttfamily int Nono\+::firetime\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 nono.\+h 第 101 行定义.
+
+\mbox{\Hypertarget{class_nono_a88bef14846384cd23beb8e017f720938}\label{class_nono_a88bef14846384cd23beb8e017f720938}} 
+\index{Nono@{Nono}!firetime\_min@{firetime\_min}}
+\index{firetime\_min@{firetime\_min}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{firetime\_min}{firetime\_min}}
+{\footnotesize\ttfamily int Nono\+::firetime\+\_\+min\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 nono.\+h 第 102 行定义.
+
+\mbox{\Hypertarget{class_nono_a5b1249d45fac2b3031aad5ed4742d18b}\label{class_nono_a5b1249d45fac2b3031aad5ed4742d18b}} 
+\index{Nono@{Nono}!firetime\_sec@{firetime\_sec}}
+\index{firetime\_sec@{firetime\_sec}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{firetime\_sec}{firetime\_sec}}
+{\footnotesize\ttfamily int Nono\+::firetime\+\_\+sec\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 nono.\+h 第 103 行定义.
+
+\mbox{\Hypertarget{class_nono_aa8bdc7a3711472b9ff71d94ff9a3b2df}\label{class_nono_aa8bdc7a3711472b9ff71d94ff9a3b2df}} 
+\index{Nono@{Nono}!freshlabel@{freshlabel}}
+\index{freshlabel@{freshlabel}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{freshlabel}{freshlabel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_clicked_label}{Clicked\+Label}}$\ast$ Nono\+::freshlabel\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 nono.\+h 第 106 行定义.
+
+\mbox{\Hypertarget{class_nono_acb752049da1d787724c508f6fc469001}\label{class_nono_acb752049da1d787724c508f6fc469001}} 
+\index{Nono@{Nono}!hidecap@{hidecap}}
+\index{hidecap@{hidecap}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{hidecap}{hidecap}}
+{\footnotesize\ttfamily bool Nono\+::hidecap\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 nono.\+h 第 104 行定义.
+
+\mbox{\Hypertarget{class_nono_a0f6a6b37c5e7363fe380e1efc2ef830b}\label{class_nono_a0f6a6b37c5e7363fe380e1efc2ef830b}} 
+\index{Nono@{Nono}!mouseMovePos@{mouseMovePos}}
+\index{mouseMovePos@{mouseMovePos}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{mouseMovePos}{mouseMovePos}}
+{\footnotesize\ttfamily Q\+Point Nono\+::mouse\+Move\+Pos}
+
+
+
+在文件 nono.\+h 第 76 行定义.
+
+\mbox{\Hypertarget{class_nono_a459d1532f21b30ff4698a712efed91f1}\label{class_nono_a459d1532f21b30ff4698a712efed91f1}} 
+\index{Nono@{Nono}!movie@{movie}}
+\index{movie@{movie}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{movie}{movie}}
+{\footnotesize\ttfamily Q\+Movie$\ast$ Nono\+::movie}
+
+
+
+在文件 nono.\+h 第 81 行定义.
+
+\mbox{\Hypertarget{class_nono_ace77e3a52e41ea5686761723484401a3}\label{class_nono_ace77e3a52e41ea5686761723484401a3}} 
+\index{Nono@{Nono}!movie1@{movie1}}
+\index{movie1@{movie1}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{movie1}{movie1}}
+{\footnotesize\ttfamily Q\+Movie$\ast$ Nono\+::movie1}
+
+
+
+在文件 nono.\+h 第 82 行定义.
+
+\mbox{\Hypertarget{class_nono_a92f74b6e013f2ffcde22667dcebb2f6c}\label{class_nono_a92f74b6e013f2ffcde22667dcebb2f6c}} 
+\index{Nono@{Nono}!movie2@{movie2}}
+\index{movie2@{movie2}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{movie2}{movie2}}
+{\footnotesize\ttfamily Q\+Movie$\ast$ Nono\+::movie2}
+
+
+
+在文件 nono.\+h 第 83 行定义.
+
+\mbox{\Hypertarget{class_nono_aa93d475cac641b6de87ea7045e164c43}\label{class_nono_aa93d475cac641b6de87ea7045e164c43}} 
+\index{Nono@{Nono}!movie3@{movie3}}
+\index{movie3@{movie3}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{movie3}{movie3}}
+{\footnotesize\ttfamily Q\+Movie$\ast$ Nono\+::movie3}
+
+
+
+在文件 nono.\+h 第 84 行定义.
+
+\mbox{\Hypertarget{class_nono_a80134b6a3277fe2e3d2c01c9902365ce}\label{class_nono_a80134b6a3277fe2e3d2c01c9902365ce}} 
+\index{Nono@{Nono}!movie4@{movie4}}
+\index{movie4@{movie4}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{movie4}{movie4}}
+{\footnotesize\ttfamily Q\+Movie$\ast$ Nono\+::movie4}
+
+
+
+在文件 nono.\+h 第 85 行定义.
+
+\mbox{\Hypertarget{class_nono_a08b20e005d1133261da47f8cc88239e5}\label{class_nono_a08b20e005d1133261da47f8cc88239e5}} 
+\index{Nono@{Nono}!nam@{nam}}
+\index{nam@{nam}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{nam}{nam}}
+{\footnotesize\ttfamily Q\+Network\+Access\+Manager$\ast$ Nono\+::nam\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 nono.\+h 第 110 行定义.
+
+\mbox{\Hypertarget{class_nono_a89410be6331188052b654763d3ab199c}\label{class_nono_a89410be6331188052b654763d3ab199c}} 
+\index{Nono@{Nono}!pt@{pt}}
+\index{pt@{pt}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{pt}{pt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pettip}{Pettip}}$\ast$ Nono\+::pt\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 nono.\+h 第 111 行定义.
+
+\mbox{\Hypertarget{class_nono_a035b3ef6c8f9b155fc78c7800f34c73d}\label{class_nono_a035b3ef6c8f9b155fc78c7800f34c73d}} 
+\index{Nono@{Nono}!shibielabel@{shibielabel}}
+\index{shibielabel@{shibielabel}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{shibielabel}{shibielabel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_clicked_label}{Clicked\+Label}}$\ast$ Nono\+::shibielabel\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 nono.\+h 第 107 行定义.
+
+\mbox{\Hypertarget{class_nono_a8496d9c60cfcd201b419a3c7f45cee27}\label{class_nono_a8496d9c60cfcd201b419a3c7f45cee27}} 
+\index{Nono@{Nono}!time@{time}}
+\index{time@{time}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily Q\+Time$\ast$ Nono\+::time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 nono.\+h 第 95 行定义.
+
+\mbox{\Hypertarget{class_nono_a074bef3e57bed55a5883a0287950bfba}\label{class_nono_a074bef3e57bed55a5883a0287950bfba}} 
+\index{Nono@{Nono}!time1@{time1}}
+\index{time1@{time1}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{time1}{time1}}
+{\footnotesize\ttfamily Q\+Time$\ast$ Nono\+::time1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 nono.\+h 第 98 行定义.
+
+\mbox{\Hypertarget{class_nono_ae1766b9b3038c6ebd7c0dae156fd82bd}\label{class_nono_ae1766b9b3038c6ebd7c0dae156fd82bd}} 
+\index{Nono@{Nono}!timer@{timer}}
+\index{timer@{timer}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{timer}{timer}}
+{\footnotesize\ttfamily Q\+Timer$\ast$ Nono\+::timer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 nono.\+h 第 96 行定义.
+
+\mbox{\Hypertarget{class_nono_af2afe93076ef58d563ff655f1e2213d9}\label{class_nono_af2afe93076ef58d563ff655f1e2213d9}} 
+\index{Nono@{Nono}!timer1@{timer1}}
+\index{timer1@{timer1}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{timer1}{timer1}}
+{\footnotesize\ttfamily Q\+Timer$\ast$ Nono\+::timer1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 nono.\+h 第 99 行定义.
+
+\mbox{\Hypertarget{class_nono_a52f5304b64b796cb44aaae7989ecb8fc}\label{class_nono_a52f5304b64b796cb44aaae7989ecb8fc}} 
+\index{Nono@{Nono}!tmp1@{tmp1}}
+\index{tmp1@{tmp1}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{tmp1}{tmp1}}
+{\footnotesize\ttfamily D\+W\+O\+RD Nono\+::tmp1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 nono.\+h 第 93 行定义.
+
+\mbox{\Hypertarget{class_nono_a8b681996961bd36763731b4177d9a87f}\label{class_nono_a8b681996961bd36763731b4177d9a87f}} 
+\index{Nono@{Nono}!ui@{ui}}
+\index{ui@{ui}!Nono@{Nono}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Nono$\ast$ Nono\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 nono.\+h 第 92 行定义.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{nono_8h}{nono.\+h}}\item 
+\mbox{\hyperlink{nono_8cpp}{nono.\+cpp}}\end{DoxyCompactItemize}

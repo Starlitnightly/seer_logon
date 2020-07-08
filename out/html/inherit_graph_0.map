@@ -1,0 +1,10 @@
+<map id="类继承关系图" name="类继承关系图">
+<area shape="rect" id="node1" title=" " alt="" coords="6,157,79,184"/>
+<area shape="rect" id="node2" href="$class_atoken.html" title="免责协议窗口类 免责协议窗口这个类相关的函数" alt="" coords="137,5,199,32"/>
+<area shape="rect" id="node3" href="$class_cdk_form.html" title="一键输入cdk窗口类 一键输入cdk窗口这个类相关的函数" alt="" coords="131,56,205,83"/>
+<area shape="rect" id="node4" href="$class_changesp.html" title="一键换背包窗口类 一键换背包窗口这个类相关的函数" alt="" coords="128,107,208,133"/>
+<area shape="rect" id="node5" href="$class_form.html" title="脚本主窗口类 本类记载了所有的脚本" alt="" coords="142,157,194,184"/>
+<area shape="rect" id="node6" href="$class_nono.html" title="nono窗口类 这个类跟nono相关" alt="" coords="142,208,194,235"/>
+<area shape="rect" id="node7" href="$class_pettip.html" title="精灵技能快查窗口类 这个类写了整整一天，格式化精灵技能真难" alt="" coords="140,259,196,285"/>
+<area shape="rect" id="node8" href="$class_speed.html" title=" " alt="" coords="139,309,197,336"/>
+</map>

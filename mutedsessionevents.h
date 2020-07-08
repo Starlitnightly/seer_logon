@@ -1,3 +1,12 @@
+/**
+ * @file mutedsessionevents.h
+ * @brief 静音功能依赖头文件
+ * @author starlitnightly
+ * @email Starlitnightly@163.com
+ * @version 1.0.0
+ * @date 2020-07-09
+ * @license GPL
+ */
 #ifndef MUTEDSESSIONEVENTS_H
 #define MUTEDSESSIONEVENTS_H
 

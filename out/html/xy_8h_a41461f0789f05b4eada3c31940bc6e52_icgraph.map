@@ -1,0 +1,7 @@
+<map id="xy_shibiejifangjingling" name="xy_shibiejifangjingling">
+<area shape="rect" id="node1" title="星夜_识别己方精灵（战斗中）" alt="" coords="352,56,499,83"/>
+<area shape="rect" id="node2" href="$class_sixworld.html#ae04b87558d8f5c5b41d3a69079eef987" title="六界脚本&#45;对战出战设置" alt="" coords="153,5,303,32"/>
+<area shape="rect" id="node4" href="$class_fw.html#a2336962e1178af8b6fe6dbf349cd1a8e" title="飞王脚本&#45;线程启动函数" alt="" coords="195,56,261,83"/>
+<area shape="rect" id="node5" href="$class_top.html#ae9f4ac4d51bf31effd9f028f940dbbaf" title="巅峰脚本&#45;线程启动函数" alt="" coords="193,107,263,133"/>
+<area shape="rect" id="node3" href="$class_sixworld.html#a5363d5ae5c05203784eaf6d95b7b0d9e" title="六界脚本&#45;线程启动函数" alt="" coords="6,5,103,32"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="MainWindow::Mute" name="MainWindow::Mute">
+<area shape="rect" id="node1" title="游戏静音" alt="" coords="5,5,139,32"/>
+<area shape="rect" id="node2" href="$class_media_mute.html#a1fbc35448a7f866b4b4ca0e374ee4164" title="设置静音状态" alt="" coords="187,5,330,32"/>
+</map>

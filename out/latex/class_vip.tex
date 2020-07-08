@@ -1,0 +1,200 @@
+\hypertarget{class_vip}{}\doxysection{Vip类 参考}
+\label{class_vip}\index{Vip@{Vip}}
+
+
+一键vip礼包脚本-\/多线程类 脚本相关的配置  
+
+
+
+
+{\ttfamily \#include $<$form.\+h$>$}
+
+
+
+类 Vip 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_vip__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Vip 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_vip__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{信号}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_vip_a0da6718066e6a1fedfb6c3c9a3f9d172}{done}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vip_a0f0ddc851650314a47be48ef5832a8d9}{Vip}} (Q\+Object $\ast$parent=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_vip_a4e779d9997bd0ff4fee0b9116a33ce7c}{status}}
+\item 
+int \mbox{\hyperlink{class_vip_a1af7f2a4ac4de40fed3ab2c83e21cd8f}{now}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_vip_ae970b8413ff5e8003715e274339fc5a2}{run}} ()
+\begin{DoxyCompactList}\small\item\em vip礼包领取脚本-\/线程启动函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+一键vip礼包脚本-\/多线程类 脚本相关的配置 
+
+在文件 form.\+h 第 242 行定义.
+
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_vip_a0f0ddc851650314a47be48ef5832a8d9}\label{class_vip_a0f0ddc851650314a47be48ef5832a8d9}} 
+\index{Vip@{Vip}!Vip@{Vip}}
+\index{Vip@{Vip}!Vip@{Vip}}
+\doxysubsubsection{\texorpdfstring{Vip()}{Vip()}}
+{\footnotesize\ttfamily Vip\+::\+Vip (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+在文件 form.\+h 第 249 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{250         : QThread(parent)}
+\DoxyCodeLine{251     \{}
+\DoxyCodeLine{252         \mbox{\hyperlink{class_vip_a4e779d9997bd0ff4fee0b9116a33ce7c}{status}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{253     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_vip_a0da6718066e6a1fedfb6c3c9a3f9d172}\label{class_vip_a0da6718066e6a1fedfb6c3c9a3f9d172}} 
+\index{Vip@{Vip}!done@{done}}
+\index{done@{done}!Vip@{Vip}}
+\doxysubsubsection{\texorpdfstring{done}{done}}
+{\footnotesize\ttfamily void Vip\+::done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_vip_ae970b8413ff5e8003715e274339fc5a2}\label{class_vip_ae970b8413ff5e8003715e274339fc5a2}} 
+\index{Vip@{Vip}!run@{run}}
+\index{run@{run}!Vip@{Vip}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Vip\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+vip礼包领取脚本-\/线程启动函数 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 form.\+cpp 第 1023 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1023              \{}
+\DoxyCodeLine{1024     QVariant x,y;}
+\DoxyCodeLine{1025     \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_vip_a4e779d9997bd0ff4fee0b9116a33ce7c}{status}}==\textcolor{keyword}{true})\{}
+\DoxyCodeLine{1026         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_vip_a1af7f2a4ac4de40fed3ab2c83e21cd8f}{now}}==1)\{}
+\DoxyCodeLine{1027             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,481,134,596,\textcolor{stringliteral}{"rc-\/1-\/1.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1028                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(56,510);}
+\DoxyCodeLine{1029                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1030             \}}
+\DoxyCodeLine{1031             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"rc-\/1-\/2.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1032                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{1033                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1034             \}}
+\DoxyCodeLine{1035             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"rc-\/1-\/3.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1036                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(713,59);}
+\DoxyCodeLine{1037                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1038             \}}
+\DoxyCodeLine{1039             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"rc-\/1-\/4.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1040                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{1041                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1042             \}}
+\DoxyCodeLine{1043             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"rc-\/1-\/5.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1044                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(483,359);}
+\DoxyCodeLine{1045                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1046                 \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(300);}
+\DoxyCodeLine{1047                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(855,70);}
+\DoxyCodeLine{1048                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1049                 \mbox{\hyperlink{class_vip_a1af7f2a4ac4de40fed3ab2c83e21cd8f}{now}}=2;}
+\DoxyCodeLine{1050             \}}
+\DoxyCodeLine{1051             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"rc-\/1-\/6.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1052                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(938,33);}
+\DoxyCodeLine{1053                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1054             \}}
+\DoxyCodeLine{1055         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_vip_a1af7f2a4ac4de40fed3ab2c83e21cd8f}{now}}==2)\{}
+\DoxyCodeLine{1056             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"rc-\/2-\/1.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1057                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(909,527);}
+\DoxyCodeLine{1058                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1059             \}}
+\DoxyCodeLine{1060             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"rc-\/2-\/2.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1061                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(598,447);}
+\DoxyCodeLine{1062                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1063             \}}
+\DoxyCodeLine{1064             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"rc-\/2-\/3.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1065                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(941,29);}
+\DoxyCodeLine{1066                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1067                 \textcolor{comment}{//QMessageBox::information(NULL,"this","礼包领取完毕");}}
+\DoxyCodeLine{1068                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{1069             \}}
+\DoxyCodeLine{1070         \}}
+\DoxyCodeLine{1071         \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(500);}
+\DoxyCodeLine{1072 }
+\DoxyCodeLine{1073     \}}
+\DoxyCodeLine{1074 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{class_vip_ae970b8413ff5e8003715e274339fc5a2_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_vip_a1af7f2a4ac4de40fed3ab2c83e21cd8f}\label{class_vip_a1af7f2a4ac4de40fed3ab2c83e21cd8f}} 
+\index{Vip@{Vip}!now@{now}}
+\index{now@{now}!Vip@{Vip}}
+\doxysubsubsection{\texorpdfstring{now}{now}}
+{\footnotesize\ttfamily int Vip\+::now}
+
+
+
+在文件 form.\+h 第 248 行定义.
+
+\mbox{\Hypertarget{class_vip_a4e779d9997bd0ff4fee0b9116a33ce7c}\label{class_vip_a4e779d9997bd0ff4fee0b9116a33ce7c}} 
+\index{Vip@{Vip}!status@{status}}
+\index{status@{status}!Vip@{Vip}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily bool Vip\+::status}
+
+
+
+在文件 form.\+h 第 247 行定义.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{form_8h}{form.\+h}}\item 
+\mbox{\hyperlink{form_8cpp}{form.\+cpp}}\end{DoxyCompactItemize}

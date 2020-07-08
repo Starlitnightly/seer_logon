@@ -1,0 +1,112 @@
+\hypertarget{main_8cpp}{}\doxysection{main.\+cpp 文件参考}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+应用程序入口主文件  
+
+
+{\ttfamily \#include \char`\"{}mainwindow.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$Q\+File$>$}\newline
+{\ttfamily \#include $<$Q\+Application$>$}\newline
+{\ttfamily \#include $<$Q\+Library$>$}\newline
+{\ttfamily \#include $<$Q\+Debug$>$}\newline
+{\ttfamily \#include $<$qmessagebox.\+h$>$}\newline
+{\ttfamily \#include $<$Q\+File\+Info$>$}\newline
+{\ttfamily \#include $<$Qdir$>$}\newline
+main.\+cpp 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_c_load_q_s_s}{C\+Load\+Q\+SS}}
+\begin{DoxyCompactList}\small\item\em 加载qss样式类 加载皮肤样式-\/待用 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em 主进程入口 主进程 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{main_8cpp_a22843e705abf853b4bcd059ccd795f5f}{g\+\_\+b\+Muted}}
+\begin{DoxyCompactList}\small\item\em 全局静音标志 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+应用程序入口主文件 
+
+\begin{DoxyAuthor}{作者}
+starlitnightly @email \href{mailto:Starlitnightly@163.com}{\texttt{ Starlitnightly@163.\+com}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{版本}
+1.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{日期}
+2020-\/07-\/09 license G\+PL 
+\end{DoxyDate}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+主进程入口 主进程 
+
+
+
+在文件 main.\+cpp 第 45 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46 \{}
+\DoxyCodeLine{47     \textcolor{comment}{//raisePrivilege();}}
+\DoxyCodeLine{48     QApplication a(argc, argv);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{comment}{/*}}
+\DoxyCodeLine{51 \textcolor{comment}{    QFile qss(":style.qss");}}
+\DoxyCodeLine{52 \textcolor{comment}{    if( qss.open(QFile::ReadOnly))\{}}
+\DoxyCodeLine{53 \textcolor{comment}{        qDebug("open success");}}
+\DoxyCodeLine{54 \textcolor{comment}{        QString style = QLatin1String(qss.readAll());}}
+\DoxyCodeLine{55 \textcolor{comment}{        a.setStyleSheet(style);}}
+\DoxyCodeLine{56 \textcolor{comment}{        qss.close();}}
+\DoxyCodeLine{57 \textcolor{comment}{    \}}}
+\DoxyCodeLine{58 \textcolor{comment}{    else\{}}
+\DoxyCodeLine{59 \textcolor{comment}{        qDebug("Open failed");}}
+\DoxyCodeLine{60 \textcolor{comment}{    \}}}
+\DoxyCodeLine{61 \textcolor{comment}{    */}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     \mbox{\hyperlink{class_main_window}{MainWindow}} w;}
+\DoxyCodeLine{64     w.show();}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66     \textcolor{keywordflow}{return} a.exec();}
+\DoxyCodeLine{67 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{变量说明}
+\mbox{\Hypertarget{main_8cpp_a22843e705abf853b4bcd059ccd795f5f}\label{main_8cpp_a22843e705abf853b4bcd059ccd795f5f}} 
+\index{main.cpp@{main.cpp}!g\_bMuted@{g\_bMuted}}
+\index{g\_bMuted@{g\_bMuted}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_bMuted}{g\_bMuted}}
+{\footnotesize\ttfamily bool g\+\_\+b\+Muted}
+
+
+
+全局静音标志 
+
+
+
+在文件 main.\+cpp 第 22 行定义.
+

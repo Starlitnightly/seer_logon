@@ -1,20 +1,42 @@
+/**
+ * @file xy.h
+ * @brief 星夜特色函数
+ * @author starlitnightly
+ * @email Starlitnightly@163.com
+ * @version 1.0.0
+ * @date 2020-07-09
+ * @license GPL
+ */
 #include "xy.h"
 #include <Tlhelp32.h>
 #include <Psapi.h>
 #pragma comment(lib, "Psapi.lib")
 
+/**
+ * @brief 星夜_识别己方精灵（战斗中）
+ * @return 己方精灵名
+ */
 
-//星夜_识别己方精灵（战斗中）
 QString xy_shibiejifangjingling(){
     return dm.Ocr(16,91,101,106,"ffffff-111111",1.0);
 }
 
-//星夜_识别对方精灵（战斗中）
+/**
+ * @brief 星夜_识别对方精灵（战斗中）
+ * @return 己方精灵名
+ */
 QString xy_shibieduifangjingling(){
     return dm.Ocr(877, 89, 961, 107, "ffffff-111111",1.0);
 }
 
-//释放技能
+/**
+ * @brief 精灵释放技能
+ * @note 可设置当前要释放的技能与即将释放的技能，配合智能脚本使用
+ * @param jn 当前要释放的技能
+ * @param jnbmp 当前要释放的技能识别的图片
+ * @param nextjn 接下来要释放的技能
+ * @return 无
+ */
 void xy_skill(QString jn,QString jnbmp,QString nextjn){
     QVariant x,y;
     if(jn=="第五" || jn=="第五1" || jn=="第五2"){
@@ -44,8 +66,10 @@ void xy_skill(QString jn,QString jnbmp,QString nextjn){
         }
     }
 }
-
-//自动克制系出战（战斗中）
+/**
+ * @brief 自动克制系出战（战斗中）
+ * @return 无
+ */
 void xy_autofight(){
     QVariant x,y;
     if(dm.FindPic(0,0,1000,600,"克制图片.bmp","000000",0.8,2,x,y)!=-1){
@@ -80,8 +104,10 @@ void xy_autofight(){
         }
     }
 }
-
-//混布脚本出战设置
+/**
+ * @brief 混布脚本出战设置
+ * @return 无
+ */
 void hdblk_scriptset(){
     QVariant x,y;
     /*
@@ -161,11 +187,17 @@ void hdblk_scriptset(){
     }else
         dangqianjingling="";
 }
-
+/**
+ * @brief 星夜_识别当前所在的地图
+ * @return 当前地图
+ */
 QString xy_shibiemap(){
     return dm.Ocr( 419, 6, 556, 96, "ffff00-111111", 1);
 }
-
+/**
+ * @brief 打开精灵王大乱斗装置
+ * @return 无
+ */
 void OpenKingSpirit(){
     QVariant x,y;
     if(dm.FindPic(0,0,1000,600,"jlwzz.bmp","000000",0.8,0,x,y)!=-1){
@@ -177,12 +209,21 @@ void OpenKingSpirit(){
         dm.LeftClick();
     }
 }
+/**
+ * @brief 延迟线程（非阻塞）
+ * @param time 延迟时间（毫秒）
+ * @return 无
+ */
 void Delay(int time){
     QEventLoop loop;
     QTimer::singleShot(time, &loop, SLOT(quit()));
     loop.exec();
 }
-
+/**
+ * @brief 读取程序使用内存
+ * @param pid 当前进程pid
+ * @return 程序使用的内存大小
+ */
 double xy_memory(DWORD pid){
     /*
     MEMORYSTATUSEX memoryInfo;

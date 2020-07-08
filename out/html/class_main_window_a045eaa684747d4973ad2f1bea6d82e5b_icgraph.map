@@ -1,0 +1,21 @@
+<map id="MainWindow::Binddm" name="MainWindow::Binddm">
+<area shape="rect" id="node1" title="绑定大漠插件到游戏窗口" alt="" coords="473,411,621,437"/>
+<area shape="rect" id="node2" href="$class_main_window.html#ad39f71eb2e8f6e363c7c24f1e7b9270e" title="一键换装备&#45;毒液" alt="" coords="233,5,423,32"/>
+<area shape="rect" id="node4" href="$class_main_window.html#a0698988cb169afaba82b543f9f06e3c2" title="一键换装备&#45;腐蚀者" alt="" coords="235,56,421,83"/>
+<area shape="rect" id="node5" href="$class_main_window.html#a8d1d66a77c1cc0f2a464d2aefa7adf32" title="一键换装备&#45;皇帝" alt="" coords="233,107,423,133"/>
+<area shape="rect" id="node6" href="$class_main_window.html#a4904d7f222f79f6592a765f182e7f7f1" title="一键换装备&#45;零度" alt="" coords="235,157,421,184"/>
+<area shape="rect" id="node7" href="$class_main_window.html#a4aee5e17419866a9e5db98de199c9570" title="一键换装备&#45;时空" alt="" coords="233,208,423,235"/>
+<area shape="rect" id="node8" href="$class_main_window.html#a21b53de7c272ee93ce95145774e1665a" title="一键换装备&#45;天启" alt="" coords="235,259,421,285"/>
+<area shape="rect" id="node9" href="$class_main_window.html#aa8647a92042c41b85e869af0f384c9b6" title="一键换装备&#45;天尊" alt="" coords="235,309,421,336"/>
+<area shape="rect" id="node10" href="$class_main_window.html#a0184bce95af5551ddf6ebd2c04b34dcb" title="一键换装备&#45;未来" alt="" coords="234,360,422,387"/>
+<area shape="rect" id="node11" href="$class_main_window.html#a7d0091787103e42169b0fe52cbc752bc" title="一键换装备&#45;笑傲" alt="" coords="233,411,423,437"/>
+<area shape="rect" id="node12" href="$class_main_window.html#a02d0ec9daa3e9aec30eae11f7c4ca967" title="一键换装备&#45;浴火" alt="" coords="233,461,423,488"/>
+<area shape="rect" id="node13" href="$class_main_window.html#ae94a0b4e90637692bdd691b82d401e71" title="一键换装备&#45;元神" alt="" coords="233,512,423,539"/>
+<area shape="rect" id="node14" href="$class_main_window.html#ab42f0ca52f7699f40bb2f71dafd8f830" title="一键换装备&#45;银翼骑士" alt="" coords="233,563,423,589"/>
+<area shape="rect" id="node15" href="$class_main_window.html#a71a1c39801845c7cf65222cd8520f5db" title="截取对面阵容函数&#45;巅峰" alt="" coords="252,613,404,640"/>
+<area shape="rect" id="node16" href="$class_main_window.html#a3f6c4bc7d3ced016538567c42c84a235" title="一键输入cdk" alt="" coords="251,664,405,691"/>
+<area shape="rect" id="node17" href="$class_main_window.html#a2ac29e8dcb6a3b8645220ae56caac82b" title="打开脚本窗口" alt="" coords="243,715,413,741"/>
+<area shape="rect" id="node18" href="$class_main_window.html#ad5ee26b9f160e460a4328ac94c5aeba4" title="打开一键换背包窗口" alt="" coords="247,765,409,792"/>
+<area shape="rect" id="node19" href="$class_main_window.html#ac9e3ed4672eb29a4586923b2b8e1693f" title="绑定大漠插件函数" alt="" coords="255,816,401,843"/>
+<area shape="rect" id="node3" href="$class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db" title="游戏主窗口构造函数" alt="" coords="5,411,184,437"/>
+</map>

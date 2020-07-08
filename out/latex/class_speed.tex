@@ -1,0 +1,246 @@
+\hypertarget{class_speed}{}\doxysection{Speed类 参考}
+\label{class_speed}\index{Speed@{Speed}}
+
+
+{\ttfamily \#include $<$speed.\+h$>$}
+
+
+
+类 Speed 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{class_speed__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Speed 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{class_speed__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 槽}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_speed_a641459f7eac4c11c75b1ad29d4f477f5}{Changespeed}} ()
+\begin{DoxyCompactList}\small\item\em 自定义速度 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_speed_ad09165a60932e620fb11e1a7be6e7681}{sliderspeed}} ()
+\begin{DoxyCompactList}\small\item\em 滑块条更改速度 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_speed_a580bf315d22e747a28e8f60e07756d1e}{Speed}} (Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em 变速窗口构造函数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_speed_a47ac1336c636f4dc4fb1d288dea76e3c}{$\sim$\+Speed}} ()
+\begin{DoxyCompactList}\small\item\em 变速窗口析构函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_speed_afbcebd05e052e3021dc743fe58e1dbdf}{game\+\_\+speed}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Speed $\ast$ \mbox{\hyperlink{class_speed_ae9c1eedd3a3f54eccc2f7520e1c2f9ad}{ui}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+
+
+在文件 speed.\+h 第 22 行定义.
+
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_speed_a580bf315d22e747a28e8f60e07756d1e}\label{class_speed_a580bf315d22e747a28e8f60e07756d1e}} 
+\index{Speed@{Speed}!Speed@{Speed}}
+\index{Speed@{Speed}!Speed@{Speed}}
+\doxysubsubsection{\texorpdfstring{Speed()}{Speed()}}
+{\footnotesize\ttfamily Speed\+::\+Speed (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+变速窗口构造函数 
+
+
+\begin{DoxyParams}{参数}
+{\em parent} & 父类指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 speed.\+cpp 第 45 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45                             :}
+\DoxyCodeLine{46     QWidget(parent),}
+\DoxyCodeLine{47     \mbox{\hyperlink{class_speed_ae9c1eedd3a3f54eccc2f7520e1c2f9ad}{ui}}(\textcolor{keyword}{new} Ui::Speed)}
+\DoxyCodeLine{48 \{}
+\DoxyCodeLine{49     \mbox{\hyperlink{class_speed_ae9c1eedd3a3f54eccc2f7520e1c2f9ad}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{50     setAttribute(Qt::WA\_QuitOnClose,\textcolor{keyword}{false});}
+\DoxyCodeLine{51     \mbox{\hyperlink{class_speed_afbcebd05e052e3021dc743fe58e1dbdf}{game\_speed}}=1.0;}
+\DoxyCodeLine{52     \mbox{\hyperlink{speed_8cpp_a20bab1bc02a96c64b4b752adbf1b04d5}{Setrange}}=(\mbox{\hyperlink{speed_8cpp_a1ed44dedcb82cd1269a5e81380bb6f66}{Fun}})\mbox{\hyperlink{speed_8cpp_a1ec116a24fe8e812825a81e33dbe92a3}{lib}}.resolve(\textcolor{stringliteral}{"SetRange"});}
+\DoxyCodeLine{53     connect(\mbox{\hyperlink{class_speed_ae9c1eedd3a3f54eccc2f7520e1c2f9ad}{ui}}-\/>pushButton, SIGNAL(clicked()), \textcolor{keyword}{this}, SLOT(\mbox{\hyperlink{class_speed_a641459f7eac4c11c75b1ad29d4f477f5}{Changespeed}}()));}
+\DoxyCodeLine{54     \textcolor{comment}{//connect(ui-\/>speedslider,SIGNAL(sliderMoved(int)),this,SLOT(sliderspeed()));}}
+\DoxyCodeLine{55     connect(\mbox{\hyperlink{class_speed_ae9c1eedd3a3f54eccc2f7520e1c2f9ad}{ui}}-\/>speedslider,SIGNAL(valueChanged(\textcolor{keywordtype}{int})),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_speed_ad09165a60932e620fb11e1a7be6e7681}{sliderspeed}}()));}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_speed_a580bf315d22e747a28e8f60e07756d1e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_speed_a47ac1336c636f4dc4fb1d288dea76e3c}\label{class_speed_a47ac1336c636f4dc4fb1d288dea76e3c}} 
+\index{Speed@{Speed}!````~Speed@{$\sim$Speed}}
+\index{````~Speed@{$\sim$Speed}!Speed@{Speed}}
+\doxysubsubsection{\texorpdfstring{$\sim$Speed()}{~Speed()}}
+{\footnotesize\ttfamily Speed\+::$\sim$\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+变速窗口析构函数 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 speed.\+cpp 第 62 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63 \{}
+\DoxyCodeLine{64     \textcolor{keyword}{delete} \mbox{\hyperlink{class_speed_ae9c1eedd3a3f54eccc2f7520e1c2f9ad}{ui}};}
+\DoxyCodeLine{65 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_speed_a641459f7eac4c11c75b1ad29d4f477f5}\label{class_speed_a641459f7eac4c11c75b1ad29d4f477f5}} 
+\index{Speed@{Speed}!Changespeed@{Changespeed}}
+\index{Changespeed@{Changespeed}!Speed@{Speed}}
+\doxysubsubsection{\texorpdfstring{Changespeed}{Changespeed}}
+{\footnotesize\ttfamily void Speed\+::\+Changespeed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+自定义速度 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 speed.\+cpp 第 70 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{70                        \{}
+\DoxyCodeLine{71     QString text = \mbox{\hyperlink{class_speed_ae9c1eedd3a3f54eccc2f7520e1c2f9ad}{ui}}-\/>speedtext-\/>toPlainText();}
+\DoxyCodeLine{72     \mbox{\hyperlink{speed_8cpp_a964a4806b4107e8b30fb4a5e067d7e40}{setspeed}}(text.toFloat());}
+\DoxyCodeLine{73 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_speed_a641459f7eac4c11c75b1ad29d4f477f5_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{class_speed_a641459f7eac4c11c75b1ad29d4f477f5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_speed_ad09165a60932e620fb11e1a7be6e7681}\label{class_speed_ad09165a60932e620fb11e1a7be6e7681}} 
+\index{Speed@{Speed}!sliderspeed@{sliderspeed}}
+\index{sliderspeed@{sliderspeed}!Speed@{Speed}}
+\doxysubsubsection{\texorpdfstring{sliderspeed}{sliderspeed}}
+{\footnotesize\ttfamily void Speed\+::sliderspeed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+滑块条更改速度 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 speed.\+cpp 第 78 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{78                        \{}
+\DoxyCodeLine{79     \textcolor{keywordtype}{int} a=\mbox{\hyperlink{class_speed_ae9c1eedd3a3f54eccc2f7520e1c2f9ad}{ui}}-\/>speedslider-\/>sliderPosition();}
+\DoxyCodeLine{80     \textcolor{keywordtype}{float} speed=qPow(2,a);}
+\DoxyCodeLine{81     \mbox{\hyperlink{speed_8cpp_a964a4806b4107e8b30fb4a5e067d7e40}{setspeed}}(speed);}
+\DoxyCodeLine{82 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{class_speed_ad09165a60932e620fb11e1a7be6e7681_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{class_speed_ad09165a60932e620fb11e1a7be6e7681_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_speed_afbcebd05e052e3021dc743fe58e1dbdf}\label{class_speed_afbcebd05e052e3021dc743fe58e1dbdf}} 
+\index{Speed@{Speed}!game\_speed@{game\_speed}}
+\index{game\_speed@{game\_speed}!Speed@{Speed}}
+\doxysubsubsection{\texorpdfstring{game\_speed}{game\_speed}}
+{\footnotesize\ttfamily float Speed\+::game\+\_\+speed}
+
+
+
+在文件 speed.\+h 第 30 行定义.
+
+\mbox{\Hypertarget{class_speed_ae9c1eedd3a3f54eccc2f7520e1c2f9ad}\label{class_speed_ae9c1eedd3a3f54eccc2f7520e1c2f9ad}} 
+\index{Speed@{Speed}!ui@{ui}}
+\index{ui@{ui}!Speed@{Speed}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Speed$\ast$ Speed\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 speed.\+h 第 33 行定义.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{speed_8h}{speed.\+h}}\item 
+\mbox{\hyperlink{speed_8cpp}{speed.\+cpp}}\end{DoxyCompactItemize}

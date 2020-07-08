@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>星小夜的登录器: atoken.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">星小夜的登录器
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">atoken.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="atoken_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef ATOKEN_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define ATOKEN_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="nono_8h.html">nono.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="namespace_ui.html">   17</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ui.html">Ui</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">class </span><a class="code" href="class_atoken.html">Atoken</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_atoken.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_atoken.html">Atoken</a> : <span class="keyword">public</span> QWidget</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_atoken.html#aadd0736364d1ff22bc2d78f6416d0e6c">Atoken</a>(QWidget *parent = 0);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_atoken.html#a2c50e5b20366695582dc559ad1bf864d">~Atoken</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_atoken.html#a49bf8467cbdeaaa7fa018b87f695a761">   34</a></span>&#160;    QTime *<a class="code" href="class_atoken.html#a49bf8467cbdeaaa7fa018b87f695a761">time</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_atoken.html#a8fce27116d6fb0677957e0ff62b89d4f">   35</a></span>&#160;    QTimer *<a class="code" href="class_atoken.html#a8fce27116d6fb0677957e0ff62b89d4f">timer</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_atoken.html#ad6c6ef72c0e5dc3e73b0a0e91955719b">closeEvent</a>(QCloseEvent *event);</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_atoken.html#a6d7942c9f7b8efce33ed2be37a1b50f9">   37</a></span>&#160;    QString <a class="code" href="class_atoken.html#a6d7942c9f7b8efce33ed2be37a1b50f9">uu</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_atoken.html#a360158303dd20c7601f8c19c5801318f">slot_timer_timeout</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_atoken.html#a2cd286a76a3af55ad5594af6131a0f3a">slot_agree</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_atoken.html#a64cd0dfae1f0920f15808455ade0a22d">   43</a></span>&#160;    Ui::Atoken *<a class="code" href="class_atoken.html#a64cd0dfae1f0920f15808455ade0a22d">ui</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif // ATOKEN_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_atoken_html_a360158303dd20c7601f8c19c5801318f"><div class="ttname"><a href="class_atoken.html#a360158303dd20c7601f8c19c5801318f">Atoken::slot_timer_timeout</a></div><div class="ttdeci">void slot_timer_timeout()</div><div class="ttdoc">免责协议窗口槽函数-定时器处理内容</div><div class="ttdef"><b>Definition:</b> <a href="atoken_8cpp_source.html#l00072">atoken.cpp:72</a></div></div>
+<div class="ttc" id="aclass_atoken_html_a49bf8467cbdeaaa7fa018b87f695a761"><div class="ttname"><a href="class_atoken.html#a49bf8467cbdeaaa7fa018b87f695a761">Atoken::time</a></div><div class="ttdeci">QTime * time</div><div class="ttdef"><b>Definition:</b> <a href="atoken_8h_source.html#l00034">atoken.h:34</a></div></div>
+<div class="ttc" id="aclass_atoken_html_a2c50e5b20366695582dc559ad1bf864d"><div class="ttname"><a href="class_atoken.html#a2c50e5b20366695582dc559ad1bf864d">Atoken::~Atoken</a></div><div class="ttdeci">~Atoken()</div><div class="ttdoc">免责协议窗口析构函数</div><div class="ttdef"><b>Definition:</b> <a href="atoken_8cpp_source.html#l00050">atoken.cpp:50</a></div></div>
+<div class="ttc" id="aclass_atoken_html_aadd0736364d1ff22bc2d78f6416d0e6c"><div class="ttname"><a href="class_atoken.html#aadd0736364d1ff22bc2d78f6416d0e6c">Atoken::Atoken</a></div><div class="ttdeci">Atoken(QWidget *parent=0)</div><div class="ttdoc">免责协议窗口构造函数</div><div class="ttdef"><b>Definition:</b> <a href="atoken_8cpp_source.html#l00018">atoken.cpp:18</a></div></div>
+<div class="ttc" id="aclass_atoken_html_a8fce27116d6fb0677957e0ff62b89d4f"><div class="ttname"><a href="class_atoken.html#a8fce27116d6fb0677957e0ff62b89d4f">Atoken::timer</a></div><div class="ttdeci">QTimer * timer</div><div class="ttdef"><b>Definition:</b> <a href="atoken_8h_source.html#l00035">atoken.h:35</a></div></div>
+<div class="ttc" id="aclass_atoken_html_ad6c6ef72c0e5dc3e73b0a0e91955719b"><div class="ttname"><a href="class_atoken.html#ad6c6ef72c0e5dc3e73b0a0e91955719b">Atoken::closeEvent</a></div><div class="ttdeci">void closeEvent(QCloseEvent *event)</div><div class="ttdoc">免责协议窗口关闭重载函数</div><div class="ttdef"><b>Definition:</b> <a href="atoken_8cpp_source.html#l00061">atoken.cpp:61</a></div></div>
+<div class="ttc" id="anono_8h_html"><div class="ttname"><a href="nono_8h.html">nono.h</a></div><div class="ttdoc">nono主窗口头文件</div></div>
+<div class="ttc" id="aclass_atoken_html_a6d7942c9f7b8efce33ed2be37a1b50f9"><div class="ttname"><a href="class_atoken.html#a6d7942c9f7b8efce33ed2be37a1b50f9">Atoken::uu</a></div><div class="ttdeci">QString uu</div><div class="ttdef"><b>Definition:</b> <a href="atoken_8h_source.html#l00037">atoken.h:37</a></div></div>
+<div class="ttc" id="aclass_atoken_html_a2cd286a76a3af55ad5594af6131a0f3a"><div class="ttname"><a href="class_atoken.html#a2cd286a76a3af55ad5594af6131a0f3a">Atoken::slot_agree</a></div><div class="ttdeci">void slot_agree()</div><div class="ttdoc">免责协议窗口槽函数-同意按钮按下处理内容</div><div class="ttdef"><b>Definition:</b> <a href="atoken_8cpp_source.html#l00093">atoken.cpp:93</a></div></div>
+<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> <a href="atoken_8h_source.html#l00017">atoken.h:17</a></div></div>
+<div class="ttc" id="aclass_atoken_html"><div class="ttname"><a href="class_atoken.html">Atoken</a></div><div class="ttdoc">免责协议窗口类 免责协议窗口这个类相关的函数</div><div class="ttdef"><b>Definition:</b> <a href="atoken_8h_source.html#l00025">atoken.h:26</a></div></div>
+<div class="ttc" id="aclass_atoken_html_a64cd0dfae1f0920f15808455ade0a22d"><div class="ttname"><a href="class_atoken.html#a64cd0dfae1f0920f15808455ade0a22d">Atoken::ui</a></div><div class="ttdeci">Ui::Atoken * ui</div><div class="ttdef"><b>Definition:</b> <a href="atoken_8h_source.html#l00043">atoken.h:43</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

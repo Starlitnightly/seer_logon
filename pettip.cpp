@@ -1,8 +1,21 @@
+/**
+ * @file pettip.cpp
+ * @brief 精灵技能快查窗口及其相关
+ * @author starlitnightly
+ * @email Starlitnightly@163.com
+ * @version 1.0.0
+ * @date 2020-07-09
+ * @license GPL
+ */
 #include "pettip.h"
 #include "ui_pettip.h"
 #include <QString>
 #include "ext.h"
-
+/**
+ * @brief 精灵技能快查窗口构造函数
+ * @param parent 父类指针
+ * @return 无
+ */
 Pettip::Pettip(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Pettip)
@@ -28,7 +41,10 @@ Pettip::Pettip(QWidget *parent) :
 
 
 }
-
+/**
+ * @brief 精灵技能查询
+ * @return 无
+ */
 void Pettip::slot_buttonget(){
     petname=ui->textEdit->toPlainText();
     qDebug()<<jsonObject[petname];
@@ -43,7 +59,11 @@ void Pettip::slot_buttonget(){
     m_manager->get(QNetworkRequest(QUrl(jsonObject[petname].toString())));//发送请求
     }
 }
-
+/**
+ * @brief 读取json中精灵名称对应的图鉴地址
+ * @param name 精灵名称
+ * @return 无
+ */
 void Pettip::slot_getname(QString name){
 
     petname=name;
@@ -58,13 +78,20 @@ void Pettip::slot_getname(QString name){
         m_manager->get(QNetworkRequest(QUrl(jsonObject[petname].toString())));//发送请求
     }
 }
-
+/**
+ * @brief 精灵技能快查窗口析构函数
+ * @return 无
+ */
 Pettip::~Pettip()
 {
     delete ui;
     delete m_manager;
 }
-
+/**
+ * @brief 展示查询内容（ie控件模式）
+ * @return 无
+ * 已作废，换用table来展示
+ */
 void Pettip::slot_tip(){
     //ui->axWidget->setControl(QString::fromUtf8("{d27cdb6e-ae6d-11cf-96b8-444553540000}"));
     //ui->axWidget->setControl(QString::fromUtf8("{8856F961-340A-11D0-A96B-00C04FD705A2}"));//注册组件ID
@@ -73,6 +100,11 @@ void Pettip::slot_tip(){
 
 
 }
+/**
+ * @brief 读取精灵技能
+ * @param reply 网页返回内容
+ * @return 无
+ */
 void Pettip::slot_replayFinished(QNetworkReply *reply)
 {
     QTextCodec *codec = QTextCodec::codecForName("GBK");

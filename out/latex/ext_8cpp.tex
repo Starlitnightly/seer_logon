@@ -1,0 +1,516 @@
+\hypertarget{ext_8cpp}{}\doxysection{ext.\+cpp 文件参考}
+\label{ext_8cpp}\index{ext.cpp@{ext.cpp}}
+
+
+全局变量定义文件  
+
+
+{\ttfamily \#include \char`\"{}ext.\+h\char`\"{}}\newline
+ext.\+cpp 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ext_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \mbox{\hyperlink{ext_8cpp_afeda04438e838e6b9ff952b898e49e35}{current\+\_\+version}} =\char`\"{}6.\+0.\+0\char`\"{}
+\begin{DoxyCompactList}\small\item\em 当前登录器版本 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_dm_1_1_idmsoft}{Dm\+::\+Idmsoft}} \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}
+\begin{DoxyCompactList}\small\item\em 大漠插件相关的对象（唯一） \end{DoxyCompactList}\item 
+H\+W\+ND \mbox{\hyperlink{ext_8cpp_a14599d7d3f033ca76bf7e06523ac8bdd}{Pid}}
+\begin{DoxyCompactList}\small\item\em 游戏界面窗口句柄 \end{DoxyCompactList}\item 
+H\+W\+ND \mbox{\hyperlink{ext_8cpp_aea2cdb21f696d42253637bd01243b357}{w\+Pid}}
+\begin{DoxyCompactList}\small\item\em 游戏界面窗口句柄（备用） \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{ext_8cpp_a19d708634ad960dbce1fb4aa19fbd9a7}{new\+\_\+version}}
+\begin{DoxyCompactList}\small\item\em 检测更新-\/版本号 \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{ext_8cpp_a50b9c558e892720ddc4242873b17b5e1}{new\+\_\+content}}
+\begin{DoxyCompactList}\small\item\em 检测更新-\/更新内容 \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{ext_8cpp_ab5f11b6ce43976fe2e0e0019c325fda9}{new\+\_\+error}}
+\begin{DoxyCompactList}\small\item\em 检测更新-\/软件自动销毁 \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{ext_8cpp_a5e936c2dd07887f9a33ef2ff30f849c6}{new\+\_\+upurl}}
+\begin{DoxyCompactList}\small\item\em 检测更新-\/更新地址 \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{ext_8cpp_ab18bc0bf3b61de8b1e392066071248cf}{new\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em 检测更新-\/活动通知开启标志 \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{ext_8cpp_a5dd1956b67fca4895ec42f4c15307b13}{new\+\_\+news}}
+\begin{DoxyCompactList}\small\item\em 检测更新-\/活动通知内容 \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{ext_8cpp_a5821828024a8c713153bebe1a0bd3459}{new\+\_\+guanggao}}
+\begin{DoxyCompactList}\small\item\em 检测更新-\/活动地址 \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}
+\begin{DoxyCompactList}\small\item\em 当前首发精灵 \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}
+\begin{DoxyCompactList}\small\item\em 当前对战精灵 \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{ext_8cpp_a77f100ccfb5a76cf7077eca85eda6643}{jinglingjineng}}
+\begin{DoxyCompactList}\small\item\em 当前对战精灵要释放的技能 \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{ext_8cpp_a0ebc870549cd34802dc2cd1f5e66992a}{jfjl}}
+\begin{DoxyCompactList}\small\item\em 己方精灵 \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{ext_8cpp_af8bb17c6290ba4839b363e31955a926b}{dmjl}}
+\begin{DoxyCompactList}\small\item\em 对面精灵 \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}{allpath}}
+\begin{DoxyCompactList}\small\item\em 登录器运行目录 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ext_8cpp_a5561be898305c4b40cf9b218a9407583}{fw\+\_\+allactive}}
+\begin{DoxyCompactList}\small\item\em 飞王-\/全部激活标志 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ext_8cpp_a395a7992015450933dac4492565ad55a}{fw\+\_\+lqactive}}
+\begin{DoxyCompactList}\small\item\em 飞王灵巧激活 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ext_8cpp_a7339b67042185a9e72b1b9ba1ca648c9}{fw\+\_\+llactive}}
+\begin{DoxyCompactList}\small\item\em 飞王凌厉激活 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ext_8cpp_a1c0b0e4f03d9cde71fe369d5cdeec786}{fw\+\_\+cxactive}}
+\begin{DoxyCompactList}\small\item\em 飞王持续激活 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ext_8cpp_ae498a9bffa16c29faa9b4580f90ea270}{fw\+\_\+trueactive}}
+\begin{DoxyCompactList}\small\item\em 飞王正确激活 \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{ext_8cpp_a7fb78f5bc261d2f34aae351dc13c28cc}{fw\+\_\+goal}}
+\begin{DoxyCompactList}\small\item\em 飞王战斗目标 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ext_8cpp_a8486028e47404bc2cd75fd08ff103b12}{friend\+\_\+click}}
+\begin{DoxyCompactList}\small\item\em 好友已按下标志 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ext_8cpp_ac67b6752be3aca5bd92793f01ad7a064}{panel\+\_\+open}}
+\begin{DoxyCompactList}\small\item\em 战队贡献面板已开标志 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ext_8cpp_a6457286fc60081c281d79c411c7dfab7}{panel\+\_\+wish}}
+\begin{DoxyCompactList}\small\item\em 许愿面板开启 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ext_8cpp_a6d19e3085ae9e531ea2ae5307b87116f}{searles\+\_\+lose}}
+\begin{DoxyCompactList}\small\item\em 圣瑞战败次数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ext_8cpp_a95856a3d190896bb03c1d287a61da242}{searles\+\_\+fight}}
+\begin{DoxyCompactList}\small\item\em 圣瑞挑战次数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ext_8cpp_a014812ac2fcff704722e8be782233904}{searles\+\_\+reset}}
+\begin{DoxyCompactList}\small\item\em 圣瑞重置次数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ext_8cpp_a00dcd3bc120c73dd6fb9bd97ffc08680}{explode\+\_\+death}}
+\begin{DoxyCompactList}\small\item\em 六界脚本-\/神王\+\_\+自爆死 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+全局变量定义文件 
+
+\begin{DoxyAuthor}{作者}
+starlitnightly @email \href{mailto:Starlitnightly@163.com}{\texttt{ Starlitnightly@163.\+com}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{版本}
+1.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{日期}
+2020-\/07-\/09 @license G\+PL 
+\end{DoxyDate}
+
+
+\doxysubsection{变量说明}
+\mbox{\Hypertarget{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}\label{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}} 
+\index{ext.cpp@{ext.cpp}!allpath@{allpath}}
+\index{allpath@{allpath}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{allpath}{allpath}}
+{\footnotesize\ttfamily Q\+String allpath}
+
+
+
+登录器运行目录 
+
+
+
+在文件 ext.\+cpp 第 45 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_afeda04438e838e6b9ff952b898e49e35}\label{ext_8cpp_afeda04438e838e6b9ff952b898e49e35}} 
+\index{ext.cpp@{ext.cpp}!current\_version@{current\_version}}
+\index{current\_version@{current\_version}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{current\_version}{current\_version}}
+{\footnotesize\ttfamily Q\+String current\+\_\+version =\char`\"{}6.\+0.\+0\char`\"{}}
+
+
+
+当前登录器版本 
+
+
+
+在文件 ext.\+cpp 第 13 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}\label{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}} 
+\index{ext.cpp@{ext.cpp}!dangqianjingling@{dangqianjingling}}
+\index{dangqianjingling@{dangqianjingling}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{dangqianjingling}{dangqianjingling}}
+{\footnotesize\ttfamily Q\+String dangqianjingling}
+
+
+
+当前对战精灵 
+
+
+
+在文件 ext.\+cpp 第 37 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}\label{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}} 
+\index{ext.cpp@{ext.cpp}!dangqianshoufa@{dangqianshoufa}}
+\index{dangqianshoufa@{dangqianshoufa}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{dangqianshoufa}{dangqianshoufa}}
+{\footnotesize\ttfamily Q\+String dangqianshoufa}
+
+
+
+当前首发精灵 
+
+
+
+在文件 ext.\+cpp 第 35 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}\label{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}} 
+\index{ext.cpp@{ext.cpp}!dm@{dm}}
+\index{dm@{dm}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{dm}{dm}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dm_1_1_idmsoft}{Dm\+::\+Idmsoft}} dm}
+
+
+
+大漠插件相关的对象（唯一） 
+
+
+
+在文件 ext.\+cpp 第 15 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_af8bb17c6290ba4839b363e31955a926b}\label{ext_8cpp_af8bb17c6290ba4839b363e31955a926b}} 
+\index{ext.cpp@{ext.cpp}!dmjl@{dmjl}}
+\index{dmjl@{dmjl}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{dmjl}{dmjl}}
+{\footnotesize\ttfamily Q\+String dmjl}
+
+
+
+对面精灵 
+
+
+
+在文件 ext.\+cpp 第 43 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_a00dcd3bc120c73dd6fb9bd97ffc08680}\label{ext_8cpp_a00dcd3bc120c73dd6fb9bd97ffc08680}} 
+\index{ext.cpp@{ext.cpp}!explode\_death@{explode\_death}}
+\index{explode\_death@{explode\_death}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{explode\_death}{explode\_death}}
+{\footnotesize\ttfamily bool explode\+\_\+death}
+
+
+
+六界脚本-\/神王\+\_\+自爆死 
+
+
+
+在文件 ext.\+cpp 第 71 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_a8486028e47404bc2cd75fd08ff103b12}\label{ext_8cpp_a8486028e47404bc2cd75fd08ff103b12}} 
+\index{ext.cpp@{ext.cpp}!friend\_click@{friend\_click}}
+\index{friend\_click@{friend\_click}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{friend\_click}{friend\_click}}
+{\footnotesize\ttfamily bool friend\+\_\+click}
+
+
+
+好友已按下标志 
+
+
+
+在文件 ext.\+cpp 第 59 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_a5561be898305c4b40cf9b218a9407583}\label{ext_8cpp_a5561be898305c4b40cf9b218a9407583}} 
+\index{ext.cpp@{ext.cpp}!fw\_allactive@{fw\_allactive}}
+\index{fw\_allactive@{fw\_allactive}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{fw\_allactive}{fw\_allactive}}
+{\footnotesize\ttfamily bool fw\+\_\+allactive}
+
+
+
+飞王-\/全部激活标志 
+
+
+
+在文件 ext.\+cpp 第 47 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_a1c0b0e4f03d9cde71fe369d5cdeec786}\label{ext_8cpp_a1c0b0e4f03d9cde71fe369d5cdeec786}} 
+\index{ext.cpp@{ext.cpp}!fw\_cxactive@{fw\_cxactive}}
+\index{fw\_cxactive@{fw\_cxactive}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{fw\_cxactive}{fw\_cxactive}}
+{\footnotesize\ttfamily bool fw\+\_\+cxactive}
+
+
+
+飞王持续激活 
+
+
+
+在文件 ext.\+cpp 第 53 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_a7fb78f5bc261d2f34aae351dc13c28cc}\label{ext_8cpp_a7fb78f5bc261d2f34aae351dc13c28cc}} 
+\index{ext.cpp@{ext.cpp}!fw\_goal@{fw\_goal}}
+\index{fw\_goal@{fw\_goal}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{fw\_goal}{fw\_goal}}
+{\footnotesize\ttfamily Q\+String fw\+\_\+goal}
+
+
+
+飞王战斗目标 
+
+
+
+在文件 ext.\+cpp 第 57 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_a7339b67042185a9e72b1b9ba1ca648c9}\label{ext_8cpp_a7339b67042185a9e72b1b9ba1ca648c9}} 
+\index{ext.cpp@{ext.cpp}!fw\_llactive@{fw\_llactive}}
+\index{fw\_llactive@{fw\_llactive}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{fw\_llactive}{fw\_llactive}}
+{\footnotesize\ttfamily bool fw\+\_\+llactive}
+
+
+
+飞王凌厉激活 
+
+
+
+在文件 ext.\+cpp 第 51 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_a395a7992015450933dac4492565ad55a}\label{ext_8cpp_a395a7992015450933dac4492565ad55a}} 
+\index{ext.cpp@{ext.cpp}!fw\_lqactive@{fw\_lqactive}}
+\index{fw\_lqactive@{fw\_lqactive}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{fw\_lqactive}{fw\_lqactive}}
+{\footnotesize\ttfamily bool fw\+\_\+lqactive}
+
+
+
+飞王灵巧激活 
+
+
+
+在文件 ext.\+cpp 第 49 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_ae498a9bffa16c29faa9b4580f90ea270}\label{ext_8cpp_ae498a9bffa16c29faa9b4580f90ea270}} 
+\index{ext.cpp@{ext.cpp}!fw\_trueactive@{fw\_trueactive}}
+\index{fw\_trueactive@{fw\_trueactive}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{fw\_trueactive}{fw\_trueactive}}
+{\footnotesize\ttfamily bool fw\+\_\+trueactive}
+
+
+
+飞王正确激活 
+
+
+
+在文件 ext.\+cpp 第 55 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_a0ebc870549cd34802dc2cd1f5e66992a}\label{ext_8cpp_a0ebc870549cd34802dc2cd1f5e66992a}} 
+\index{ext.cpp@{ext.cpp}!jfjl@{jfjl}}
+\index{jfjl@{jfjl}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{jfjl}{jfjl}}
+{\footnotesize\ttfamily Q\+String jfjl}
+
+
+
+己方精灵 
+
+
+
+在文件 ext.\+cpp 第 41 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_a77f100ccfb5a76cf7077eca85eda6643}\label{ext_8cpp_a77f100ccfb5a76cf7077eca85eda6643}} 
+\index{ext.cpp@{ext.cpp}!jinglingjineng@{jinglingjineng}}
+\index{jinglingjineng@{jinglingjineng}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{jinglingjineng}{jinglingjineng}}
+{\footnotesize\ttfamily Q\+String jinglingjineng}
+
+
+
+当前对战精灵要释放的技能 
+
+
+
+在文件 ext.\+cpp 第 39 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_a50b9c558e892720ddc4242873b17b5e1}\label{ext_8cpp_a50b9c558e892720ddc4242873b17b5e1}} 
+\index{ext.cpp@{ext.cpp}!new\_content@{new\_content}}
+\index{new\_content@{new\_content}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{new\_content}{new\_content}}
+{\footnotesize\ttfamily Q\+String new\+\_\+content}
+
+
+
+检测更新-\/更新内容 
+
+
+
+在文件 ext.\+cpp 第 23 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_ab5f11b6ce43976fe2e0e0019c325fda9}\label{ext_8cpp_ab5f11b6ce43976fe2e0e0019c325fda9}} 
+\index{ext.cpp@{ext.cpp}!new\_error@{new\_error}}
+\index{new\_error@{new\_error}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{new\_error}{new\_error}}
+{\footnotesize\ttfamily Q\+String new\+\_\+error}
+
+
+
+检测更新-\/软件自动销毁 
+
+
+
+在文件 ext.\+cpp 第 25 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_a5821828024a8c713153bebe1a0bd3459}\label{ext_8cpp_a5821828024a8c713153bebe1a0bd3459}} 
+\index{ext.cpp@{ext.cpp}!new\_guanggao@{new\_guanggao}}
+\index{new\_guanggao@{new\_guanggao}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{new\_guanggao}{new\_guanggao}}
+{\footnotesize\ttfamily Q\+String new\+\_\+guanggao}
+
+
+
+检测更新-\/活动地址 
+
+
+
+在文件 ext.\+cpp 第 33 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_a5dd1956b67fca4895ec42f4c15307b13}\label{ext_8cpp_a5dd1956b67fca4895ec42f4c15307b13}} 
+\index{ext.cpp@{ext.cpp}!new\_news@{new\_news}}
+\index{new\_news@{new\_news}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{new\_news}{new\_news}}
+{\footnotesize\ttfamily Q\+String new\+\_\+news}
+
+
+
+检测更新-\/活动通知内容 
+
+
+
+在文件 ext.\+cpp 第 31 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_ab18bc0bf3b61de8b1e392066071248cf}\label{ext_8cpp_ab18bc0bf3b61de8b1e392066071248cf}} 
+\index{ext.cpp@{ext.cpp}!new\_time@{new\_time}}
+\index{new\_time@{new\_time}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{new\_time}{new\_time}}
+{\footnotesize\ttfamily Q\+String new\+\_\+time}
+
+
+
+检测更新-\/活动通知开启标志 
+
+
+
+在文件 ext.\+cpp 第 29 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_a5e936c2dd07887f9a33ef2ff30f849c6}\label{ext_8cpp_a5e936c2dd07887f9a33ef2ff30f849c6}} 
+\index{ext.cpp@{ext.cpp}!new\_upurl@{new\_upurl}}
+\index{new\_upurl@{new\_upurl}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{new\_upurl}{new\_upurl}}
+{\footnotesize\ttfamily Q\+String new\+\_\+upurl}
+
+
+
+检测更新-\/更新地址 
+
+
+
+在文件 ext.\+cpp 第 27 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_a19d708634ad960dbce1fb4aa19fbd9a7}\label{ext_8cpp_a19d708634ad960dbce1fb4aa19fbd9a7}} 
+\index{ext.cpp@{ext.cpp}!new\_version@{new\_version}}
+\index{new\_version@{new\_version}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{new\_version}{new\_version}}
+{\footnotesize\ttfamily Q\+String new\+\_\+version}
+
+
+
+检测更新-\/版本号 
+
+
+
+在文件 ext.\+cpp 第 21 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_ac67b6752be3aca5bd92793f01ad7a064}\label{ext_8cpp_ac67b6752be3aca5bd92793f01ad7a064}} 
+\index{ext.cpp@{ext.cpp}!panel\_open@{panel\_open}}
+\index{panel\_open@{panel\_open}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{panel\_open}{panel\_open}}
+{\footnotesize\ttfamily bool panel\+\_\+open}
+
+
+
+战队贡献面板已开标志 
+
+
+
+在文件 ext.\+cpp 第 61 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_a6457286fc60081c281d79c411c7dfab7}\label{ext_8cpp_a6457286fc60081c281d79c411c7dfab7}} 
+\index{ext.cpp@{ext.cpp}!panel\_wish@{panel\_wish}}
+\index{panel\_wish@{panel\_wish}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{panel\_wish}{panel\_wish}}
+{\footnotesize\ttfamily int panel\+\_\+wish}
+
+
+
+许愿面板开启 
+
+
+
+在文件 ext.\+cpp 第 63 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_a14599d7d3f033ca76bf7e06523ac8bdd}\label{ext_8cpp_a14599d7d3f033ca76bf7e06523ac8bdd}} 
+\index{ext.cpp@{ext.cpp}!Pid@{Pid}}
+\index{Pid@{Pid}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{Pid}{Pid}}
+{\footnotesize\ttfamily H\+W\+ND Pid}
+
+
+
+游戏界面窗口句柄 
+
+
+
+在文件 ext.\+cpp 第 17 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_a95856a3d190896bb03c1d287a61da242}\label{ext_8cpp_a95856a3d190896bb03c1d287a61da242}} 
+\index{ext.cpp@{ext.cpp}!searles\_fight@{searles\_fight}}
+\index{searles\_fight@{searles\_fight}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{searles\_fight}{searles\_fight}}
+{\footnotesize\ttfamily int searles\+\_\+fight}
+
+
+
+圣瑞挑战次数 
+
+
+
+在文件 ext.\+cpp 第 67 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_a6d19e3085ae9e531ea2ae5307b87116f}\label{ext_8cpp_a6d19e3085ae9e531ea2ae5307b87116f}} 
+\index{ext.cpp@{ext.cpp}!searles\_lose@{searles\_lose}}
+\index{searles\_lose@{searles\_lose}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{searles\_lose}{searles\_lose}}
+{\footnotesize\ttfamily int searles\+\_\+lose}
+
+
+
+圣瑞战败次数 
+
+
+
+在文件 ext.\+cpp 第 65 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_a014812ac2fcff704722e8be782233904}\label{ext_8cpp_a014812ac2fcff704722e8be782233904}} 
+\index{ext.cpp@{ext.cpp}!searles\_reset@{searles\_reset}}
+\index{searles\_reset@{searles\_reset}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{searles\_reset}{searles\_reset}}
+{\footnotesize\ttfamily int searles\+\_\+reset}
+
+
+
+圣瑞重置次数 
+
+
+
+在文件 ext.\+cpp 第 69 行定义.
+
+\mbox{\Hypertarget{ext_8cpp_aea2cdb21f696d42253637bd01243b357}\label{ext_8cpp_aea2cdb21f696d42253637bd01243b357}} 
+\index{ext.cpp@{ext.cpp}!wPid@{wPid}}
+\index{wPid@{wPid}!ext.cpp@{ext.cpp}}
+\doxysubsubsection{\texorpdfstring{wPid}{wPid}}
+{\footnotesize\ttfamily H\+W\+ND w\+Pid}
+
+
+
+游戏界面窗口句柄（备用） 
+
+
+
+在文件 ext.\+cpp 第 19 行定义.
+

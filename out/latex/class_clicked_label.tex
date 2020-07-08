@@ -1,0 +1,144 @@
+\hypertarget{class_clicked_label}{}\doxysection{Clicked\+Label类 参考}
+\label{class_clicked_label}\index{ClickedLabel@{ClickedLabel}}
+
+
+重载标签（可点击） 重载了标签，造了一个带有点击信号的标签类  
+
+
+
+
+{\ttfamily \#include $<$nono.\+h$>$}
+
+
+
+类 Clicked\+Label 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{class_clicked_label__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Clicked\+Label 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{class_clicked_label__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{信号}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_clicked_label_ae4099461098205ddff452c8b3d0e4d3c}{Clicked}} (\mbox{\hyperlink{class_clicked_label}{Clicked\+Label}} $\ast$clicked)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_clicked_label_a3ea97c09116cb48a202c717c1f4f4a65}{Clicked\+Label}} (Q\+Widget $\ast$parent=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_clicked_label_a9221edc65ff7f65435bd3fdb9f092651}{mouse\+Release\+Event}} (Q\+Mouse\+Event $\ast$)
+\begin{DoxyCompactList}\small\item\em 鼠标释放重载-\/带点击事件label类 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \mbox{\hyperlink{class_clicked_label_aa32404b2afbee944dd1145f49ddc1f8e}{m\+\_\+str}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+重载标签（可点击） 重载了标签，造了一个带有点击信号的标签类 
+
+在文件 nono.\+h 第 48 行定义.
+
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_clicked_label_a3ea97c09116cb48a202c717c1f4f4a65}\label{class_clicked_label_a3ea97c09116cb48a202c717c1f4f4a65}} 
+\index{ClickedLabel@{ClickedLabel}!ClickedLabel@{ClickedLabel}}
+\index{ClickedLabel@{ClickedLabel}!ClickedLabel@{ClickedLabel}}
+\doxysubsubsection{\texorpdfstring{ClickedLabel()}{ClickedLabel()}}
+{\footnotesize\ttfamily Clicked\+Label\+::\+Clicked\+Label (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+在文件 nono.\+h 第 54 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54                                    : QLabel(parent),\mbox{\hyperlink{class_clicked_label_aa32404b2afbee944dd1145f49ddc1f8e}{m\_str}}(\textcolor{stringliteral}{""})}
+\DoxyCodeLine{55     \{}
+\DoxyCodeLine{56         setText(\mbox{\hyperlink{class_clicked_label_aa32404b2afbee944dd1145f49ddc1f8e}{m\_str}});}
+\DoxyCodeLine{57     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_clicked_label_ae4099461098205ddff452c8b3d0e4d3c}\label{class_clicked_label_ae4099461098205ddff452c8b3d0e4d3c}} 
+\index{ClickedLabel@{ClickedLabel}!Clicked@{Clicked}}
+\index{Clicked@{Clicked}!ClickedLabel@{ClickedLabel}}
+\doxysubsubsection{\texorpdfstring{Clicked}{Clicked}}
+{\footnotesize\ttfamily void Clicked\+Label\+::\+Clicked (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_clicked_label}{Clicked\+Label}} $\ast$}]{clicked }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_clicked_label_ae4099461098205ddff452c8b3d0e4d3c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_clicked_label_a9221edc65ff7f65435bd3fdb9f092651}\label{class_clicked_label_a9221edc65ff7f65435bd3fdb9f092651}} 
+\index{ClickedLabel@{ClickedLabel}!mouseReleaseEvent@{mouseReleaseEvent}}
+\index{mouseReleaseEvent@{mouseReleaseEvent}!ClickedLabel@{ClickedLabel}}
+\doxysubsubsection{\texorpdfstring{mouseReleaseEvent()}{mouseReleaseEvent()}}
+{\footnotesize\ttfamily void Clicked\+Label\+::mouse\+Release\+Event (\begin{DoxyParamCaption}\item[{Q\+Mouse\+Event $\ast$}]{evt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+鼠标释放重载-\/带点击事件label类 
+
+
+\begin{DoxyParams}{参数}
+{\em evt} & 鼠标活动 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 nono.\+cpp 第 319 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{320 \{}
+\DoxyCodeLine{321     emit \mbox{\hyperlink{class_clicked_label_ae4099461098205ddff452c8b3d0e4d3c}{Clicked}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{322 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_clicked_label_aa32404b2afbee944dd1145f49ddc1f8e}\label{class_clicked_label_aa32404b2afbee944dd1145f49ddc1f8e}} 
+\index{ClickedLabel@{ClickedLabel}!m\_str@{m\_str}}
+\index{m\_str@{m\_str}!ClickedLabel@{ClickedLabel}}
+\doxysubsubsection{\texorpdfstring{m\_str}{m\_str}}
+{\footnotesize\ttfamily Q\+String Clicked\+Label\+::m\+\_\+str\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 nono.\+h 第 62 行定义.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{nono_8h}{nono.\+h}}\item 
+\mbox{\hyperlink{nono_8cpp}{nono.\+cpp}}\end{DoxyCompactItemize}

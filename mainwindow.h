@@ -1,3 +1,12 @@
+/**
+ * @file mainwindow.h
+ * @brief 游戏主窗口头文件
+ * @author starlitnightly
+ * @email Starlitnightly@163.com
+ * @version 1.0.0
+ * @date 2020-07-09
+ * @license GPL
+ */
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
@@ -24,7 +33,10 @@ namespace Ui {
 class MainWindow;
 }
 
-
+/**
+ * @brief 游戏主窗口类
+ * 加载项较多可能会卡一秒
+ */
 class MainWindow : public QMainWindow
 {
     Q_OBJECT

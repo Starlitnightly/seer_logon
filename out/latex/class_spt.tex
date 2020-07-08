@@ -1,0 +1,186 @@
+\hypertarget{class_spt}{}\doxysection{Spt类 参考}
+\label{class_spt}\index{Spt@{Spt}}
+
+
+spt徽章相关脚本-\/多线程类 脚本相关的配置  
+
+
+
+
+{\ttfamily \#include $<$form.\+h$>$}
+
+
+
+类 Spt 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_spt__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Spt 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{class_spt__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{信号}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_spt_aca61931d3ffefe0105eac80e20992dd7}{done}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_spt_aaff3a886fcd15d44c71696092b20d418}{Spt}} (Q\+Object $\ast$parent=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_spt_a85befaa5b7cf0d54401985856c29f594}{status}}
+\item 
+int \mbox{\hyperlink{class_spt_a861f20fef462a2c25784ed7fcfeb0fbb}{now}}
+\item 
+\mbox{\hyperlink{class_repp}{Repp}} $\ast$ \mbox{\hyperlink{class_spt_a71a9819edeb47983aeda0d5feaa11718}{script\+\_\+repp}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_spt_a3a6dd7e2fa4422857925bd76381be961}{run}} ()
+\begin{DoxyCompactList}\small\item\em spt徽章脚本-\/线程启动函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+spt徽章相关脚本-\/多线程类 脚本相关的配置 
+
+在文件 form.\+h 第 177 行定义.
+
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_spt_aaff3a886fcd15d44c71696092b20d418}\label{class_spt_aaff3a886fcd15d44c71696092b20d418}} 
+\index{Spt@{Spt}!Spt@{Spt}}
+\index{Spt@{Spt}!Spt@{Spt}}
+\doxysubsubsection{\texorpdfstring{Spt()}{Spt()}}
+{\footnotesize\ttfamily Spt\+::\+Spt (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+在文件 form.\+h 第 185 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{186         : QThread(parent)}
+\DoxyCodeLine{187     \{}
+\DoxyCodeLine{188         \mbox{\hyperlink{class_spt_a85befaa5b7cf0d54401985856c29f594}{status}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{189         \mbox{\hyperlink{class_spt_a71a9819edeb47983aeda0d5feaa11718}{script\_repp}}=NULL;}
+\DoxyCodeLine{190     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_spt_aca61931d3ffefe0105eac80e20992dd7}\label{class_spt_aca61931d3ffefe0105eac80e20992dd7}} 
+\index{Spt@{Spt}!done@{done}}
+\index{done@{done}!Spt@{Spt}}
+\doxysubsubsection{\texorpdfstring{done}{done}}
+{\footnotesize\ttfamily void Spt\+::done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_spt_a3a6dd7e2fa4422857925bd76381be961}\label{class_spt_a3a6dd7e2fa4422857925bd76381be961}} 
+\index{Spt@{Spt}!run@{run}}
+\index{run@{run}!Spt@{Spt}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Spt\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+spt徽章脚本-\/线程启动函数 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 form.\+cpp 第 894 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{894              \{}
+\DoxyCodeLine{895     QVariant x,y;}
+\DoxyCodeLine{896     \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_spt_a85befaa5b7cf0d54401985856c29f594}{status}}==\textcolor{keyword}{true})\{}
+\DoxyCodeLine{897         \textcolor{keywordtype}{bool} replenishpp=\textcolor{keyword}{false};}
+\DoxyCodeLine{898         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"sptrespd.bmp|spt-\/jlbl.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{899             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(420,116);}
+\DoxyCodeLine{900             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{901         \}}
+\DoxyCodeLine{902         \mbox{\hyperlink{xy_8cpp_afc5a3afd15ea1c25148483bd1df95ebf}{xy\_autofight}}();}
+\DoxyCodeLine{903         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a0fa1bf4e28dad69a39dd0c63183d9a25}{FindColorE}}( 13, 440, 76, 462, \textcolor{stringliteral}{"93c1ca-\/000000"}, 1, 0)!=\textcolor{stringliteral}{"-\/1|-\/1"} || \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(14, 327, 971, 570, \textcolor{stringliteral}{"0.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{904             replenishpp=\textcolor{keyword}{true};}
+\DoxyCodeLine{905             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_spt_a71a9819edeb47983aeda0d5feaa11718}{script\_repp}}==NULL)}
+\DoxyCodeLine{906                 \mbox{\hyperlink{class_spt_a71a9819edeb47983aeda0d5feaa11718}{script\_repp}}=\textcolor{keyword}{new} \mbox{\hyperlink{class_repp}{Repp}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{907             \mbox{\hyperlink{class_spt_a71a9819edeb47983aeda0d5feaa11718}{script\_repp}}-\/>start();}
+\DoxyCodeLine{908         \}}
+\DoxyCodeLine{909         \textcolor{keywordflow}{if}(replenishpp==\textcolor{keyword}{false})\{}
+\DoxyCodeLine{910             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(18,476,89,493,\textcolor{stringliteral}{"fffad4-\/000000"},1,0,x,y)!=0)\{}
+\DoxyCodeLine{911                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(40,506);}
+\DoxyCodeLine{912                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{913             \}}
+\DoxyCodeLine{914         \}}
+\DoxyCodeLine{915         \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(1000);}
+\DoxyCodeLine{916 }
+\DoxyCodeLine{917     \}}
+\DoxyCodeLine{918 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_spt_a3a6dd7e2fa4422857925bd76381be961_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_spt_a861f20fef462a2c25784ed7fcfeb0fbb}\label{class_spt_a861f20fef462a2c25784ed7fcfeb0fbb}} 
+\index{Spt@{Spt}!now@{now}}
+\index{now@{now}!Spt@{Spt}}
+\doxysubsubsection{\texorpdfstring{now}{now}}
+{\footnotesize\ttfamily int Spt\+::now}
+
+
+
+在文件 form.\+h 第 183 行定义.
+
+\mbox{\Hypertarget{class_spt_a71a9819edeb47983aeda0d5feaa11718}\label{class_spt_a71a9819edeb47983aeda0d5feaa11718}} 
+\index{Spt@{Spt}!script\_repp@{script\_repp}}
+\index{script\_repp@{script\_repp}!Spt@{Spt}}
+\doxysubsubsection{\texorpdfstring{script\_repp}{script\_repp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_repp}{Repp}}$\ast$ Spt\+::script\+\_\+repp}
+
+
+
+在文件 form.\+h 第 184 行定义.
+
+\mbox{\Hypertarget{class_spt_a85befaa5b7cf0d54401985856c29f594}\label{class_spt_a85befaa5b7cf0d54401985856c29f594}} 
+\index{Spt@{Spt}!status@{status}}
+\index{status@{status}!Spt@{Spt}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily bool Spt\+::status}
+
+
+
+在文件 form.\+h 第 182 行定义.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{form_8h}{form.\+h}}\item 
+\mbox{\hyperlink{form_8cpp}{form.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,22 @@
+<map id="类继承关系图" name="类继承关系图">
+<area shape="rect" id="node1" title=" " alt="" coords="6,461,77,488"/>
+<area shape="rect" id="node2" href="$class_auto_c.html" title="自动确认&#45;多线程类 用于自动按下赛尔号的确认按钮的多线程" alt="" coords="132,5,191,32"/>
+<area shape="rect" id="node3" href="$class_ban3.html" title="禁用黑屋精灵&#45;多线程类 禁用黑屋精灵以及无黑屋精灵相关的ban操作" alt="" coords="135,56,187,83"/>
+<area shape="rect" id="node4" href="$class_explode.html" title="首发与出战&#45;多线程类 巅峰脚本自动选择首发与自动选择出战精灵" alt="" coords="127,107,196,133"/>
+<area shape="rect" id="node5" href="$classff_auto_c.html" title="自动非法确认&#45;多线程类 用于自动按下赛尔号的确认按钮的多线程" alt="" coords="129,157,193,184"/>
+<area shape="rect" id="node6" href="$class_fw.html" title="飞王脚本&#45;多线程类 飞王脚本相关的函数配置" alt="" coords="142,208,181,235"/>
+<area shape="rect" id="node7" href="$class_gem.html" title="一键刻印/宝石抽奖脚本&#45;多线程类 脚本相关的配置" alt="" coords="136,259,187,285"/>
+<area shape="rect" id="node8" href="$class_hdblk.html" title="混沌布莱克脚本&#45;多线程类 脚本相关的配置" alt="" coords="134,309,189,336"/>
+<area shape="rect" id="node9" href="$class_jlw.html" title="精灵王大乱斗脚本&#45;多线程类 脚本相关的配置" alt="" coords="141,360,181,387"/>
+<area shape="rect" id="node10" href="$class_pdtop.html" title="判断进入巅峰&#45;多线程类 用于巅峰脚本判断要进入哪个巅峰以及当前所处的位置" alt="" coords="133,411,189,437"/>
+<area shape="rect" id="node11" href="$class_repp.html" title="补pp&#45;多线程类 对战中0pp时启动此线程可以自动补pp，（bug）如果网速过慢可能点不到药" alt="" coords="135,461,187,488"/>
+<area shape="rect" id="node12" href="$class_searles.html" title="圣瑞儿子脚本&#45;多线程类 脚本相关的配置" alt="" coords="128,512,195,539"/>
+<area shape="rect" id="node13" href="$class_sixworld.html" title="六界神王殿脚本&#45;多线程类 脚本相关的配置" alt="" coords="126,563,197,589"/>
+<area shape="rect" id="node14" href="$class_spt.html" title="spt徽章相关脚本&#45;多线程类 脚本相关的配置" alt="" coords="140,613,183,640"/>
+<area shape="rect" id="node15" href="$class_team.html" title="一键战队贡献脚本&#45;多线程类 脚本相关的配置" alt="" coords="134,664,189,691"/>
+<area shape="rect" id="node16" href="$class_top.html" title="巅峰主脚本&#45;多线程类 脚本相关的配置" alt="" coords="140,715,183,741"/>
+<area shape="rect" id="node17" href="$class_tower.html" title="一键勇者之塔脚本&#45;多线程类 脚本相关的配置" alt="" coords="133,765,189,792"/>
+<area shape="rect" id="node18" href="$class_vip.html" title="一键vip礼包脚本&#45;多线程类 脚本相关的配置" alt="" coords="141,816,182,843"/>
+<area shape="rect" id="node19" href="$class_wish.html" title="一键许愿脚本&#45;多线程类 脚本相关的配置" alt="" coords="135,867,187,893"/>
+<area shape="rect" id="node20" href="$class_xxlzc.html" title="一键学习力战场脚本&#45;多线程类 脚本相关的配置" alt="" coords="135,917,188,944"/>
+</map>

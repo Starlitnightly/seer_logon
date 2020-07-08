@@ -1,3 +1,12 @@
+/**
+ * @file nono.h
+ * @brief nono主窗口头文件
+ * @author starlitnightly
+ * @email Starlitnightly@163.com
+ * @version 1.0.0
+ * @date 2020-07-09
+ * @license GPL
+ */
 #ifndef NONO_H
 #define NONO_H
 
@@ -32,6 +41,10 @@
 namespace Ui {
 class Nono;
 }
+/**
+ * @brief 重载标签（可点击）
+ * 重载了标签，造了一个带有点击信号的标签类
+ */
 class ClickedLabel : public QLabel
 {
     Q_OBJECT
@@ -48,7 +61,10 @@ protected:
 private:
     QString m_str;
 };
-
+/**
+ * @brief nono窗口类
+ * 这个类跟nono相关
+ */
 class Nono : public QWidget
 {
     Q_OBJECT

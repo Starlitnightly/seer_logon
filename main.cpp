@@ -1,3 +1,12 @@
+/**
+ * @file main.cpp
+ * @brief 应用程序入口主文件
+ * @author starlitnightly
+ * @email Starlitnightly@163.com
+ * @version 1.0.0
+ * @date 2020-07-09
+ * license GPL
+ */
 #include "mainwindow.h"
 #include <QFile>
 #include <QApplication>
@@ -9,26 +18,13 @@
 #include<QFile>
 
 
-
+/// 全局静音标志
 bool g_bMuted;
-/*
-static void raisePrivilege()
-{
-    // to read memory of some processes, we need this
-    HANDLE hToken;
-    TOKEN_PRIVILEGES tp;
-    tp.PrivilegeCount = 1;
-    tp.Privileges[0].Attributes = SE_PRIVILEGE_ENABLED;
-    if(OpenProcessToken(GetCurrentProcess(), TOKEN_ALL_ACCESS, &hToken)) {
-        if(LookupPrivilegeValue(NULL, SE_DEBUG_NAME, &tp.Privileges[0].Luid)) {
-            AdjustTokenPrivileges(hToken, FALSE, &tp, NULL, NULL, 0);
-        }
-    }
-    if(hToken) {
-        CloseHandle(hToken);
-    }
-}*/
 
+/**
+ * @brief 加载qss样式类
+ * 加载皮肤样式-待用
+ */
 class CLoadQSS
 {
 public:
@@ -42,7 +38,10 @@ public:
 };
 
 
-
+/**
+ * @brief 主进程入口
+ * 主进程
+ */
 int main(int argc, char *argv[])
 {
     //raisePrivilege();

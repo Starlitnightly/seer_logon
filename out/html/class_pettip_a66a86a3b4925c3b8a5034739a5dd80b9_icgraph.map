@@ -1,0 +1,6 @@
+<map id="Pettip::sendmes" name="Pettip::sendmes">
+<area shape="rect" id="node1" title=" " alt="" coords="347,31,464,57"/>
+<area shape="rect" id="node2" href="$class_pettip.html#a586e47bc92f4b71f8a0b7eef1cae4fe5" title="精灵技能查询" alt="" coords="152,5,299,32"/>
+<area shape="rect" id="node4" href="$class_pettip.html#ab7db62eecc28f6628081bb7b50920bd2" title="读取json中精灵名称对应的图鉴地址" alt="" coords="154,56,297,83"/>
+<area shape="rect" id="node3" href="$class_pettip.html#a334c039991cc749c36d87ea74c6d28dd" title="精灵技能快查窗口构造函数" alt="" coords="5,5,104,32"/>
+</map>

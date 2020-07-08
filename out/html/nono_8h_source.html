@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>星小夜的登录器: nono.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">星小夜的登录器
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">nono.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="nono_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef NONO_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define NONO_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;QMovie&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;QMouseEvent&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;QPixmap&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;QTime&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;QTimer&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;Qdir&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;QFontDatabase&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;QLabel&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;QtGlobal&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;QNetworkReply&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;QNetworkRequest&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;QJsonParseError&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;QJsonDocument&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;QJsonObject&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;QTextCodec&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;QJsonArray&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;QClipboard&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;QSettings&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;QMessageBox&gt;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;QBuffer&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ext_8h.html">ext.h</a>&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="xy_8h.html">xy.h</a>&quot;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pettip_8h.html">pettip.h</a>&quot;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ui.html">Ui</a> {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">class </span><a class="code" href="class_nono.html">Nono</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_clicked_label.html">   48</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_clicked_label.html">ClickedLabel</a> : <span class="keyword">public</span> QLabel</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;signals:</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_clicked_label.html#ae4099461098205ddff452c8b3d0e4d3c">   52</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_clicked_label.html#ae4099461098205ddff452c8b3d0e4d3c">Clicked</a>(<a class="code" href="class_clicked_label.html">ClickedLabel</a>* clicked);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_clicked_label.html#a3ea97c09116cb48a202c717c1f4f4a65">   54</a></span>&#160;    <a class="code" href="class_clicked_label.html#a3ea97c09116cb48a202c717c1f4f4a65">ClickedLabel</a>(QWidget *parent=0): QLabel(parent),<a class="code" href="class_clicked_label.html#aa32404b2afbee944dd1145f49ddc1f8e">m_str</a>(<span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        setText(<a class="code" href="class_clicked_label.html#aa32404b2afbee944dd1145f49ddc1f8e">m_str</a>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_clicked_label.html#a9221edc65ff7f65435bd3fdb9f092651">mouseReleaseEvent</a>( QMouseEvent* );</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_clicked_label.html#aa32404b2afbee944dd1145f49ddc1f8e">   62</a></span>&#160;    QString <a class="code" href="class_clicked_label.html#aa32404b2afbee944dd1145f49ddc1f8e">m_str</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_nono.html">   68</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_nono.html">Nono</a> : <span class="keyword">public</span> QWidget</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_nono.html#a3a59dc5f43458df16fc2dd5cd4aace99">Nono</a>(QWidget *parent = 0);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="class_nono.html#a04710b270c58c6e8a31df42612a05ca0">~Nono</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_nono.html#a0f6a6b37c5e7363fe380e1efc2ef830b">   76</a></span>&#160;    QPoint <a class="code" href="class_nono.html#a0f6a6b37c5e7363fe380e1efc2ef830b">mouseMovePos</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_nono.html#afbbc90840a38cd93a9e5691740337638">mouseMoveEvent</a>(QMouseEvent *event);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_nono.html#af3b68cea1469d0f7932b0fea39b3f9e3">mousePressEvent</a>(QMouseEvent *event);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_nono.html#a3a75e697e056964af18a080d8e1e9a38">mouseReleaseEvent</a>(QMouseEvent *event);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_nono.html#a459d1532f21b30ff4698a712efed91f1">   81</a></span>&#160;    QMovie *<a class="code" href="class_nono.html#a459d1532f21b30ff4698a712efed91f1">movie</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_nono.html#ace77e3a52e41ea5686761723484401a3">   82</a></span>&#160;    QMovie *<a class="code" href="class_nono.html#ace77e3a52e41ea5686761723484401a3">movie1</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_nono.html#a92f74b6e013f2ffcde22667dcebb2f6c">   83</a></span>&#160;    QMovie *<a class="code" href="class_nono.html#a92f74b6e013f2ffcde22667dcebb2f6c">movie2</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_nono.html#aa93d475cac641b6de87ea7045e164c43">   84</a></span>&#160;    QMovie *<a class="code" href="class_nono.html#aa93d475cac641b6de87ea7045e164c43">movie3</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_nono.html#a80134b6a3277fe2e3d2c01c9902365ce">   85</a></span>&#160;    QMovie *<a class="code" href="class_nono.html#a80134b6a3277fe2e3d2c01c9902365ce">movie4</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_nono.html#ad59e12150488b6dcc0b113f0dc2d044a">getAccessToken</a>(QString key, QString secret);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_nono.html#a103f87a55f9ec70d34f7c219b6343761">recognition</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_nono.html#a8b681996961bd36763731b4177d9a87f">   92</a></span>&#160;    Ui::Nono *<a class="code" href="class_nono.html#a8b681996961bd36763731b4177d9a87f">ui</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_nono.html#a52f5304b64b796cb44aaae7989ecb8fc">   93</a></span>&#160;    DWORD <a class="code" href="class_nono.html#a52f5304b64b796cb44aaae7989ecb8fc">tmp1</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_nono.html#a8496d9c60cfcd201b419a3c7f45cee27">   95</a></span>&#160;    QTime *<a class="code" href="class_nono.html#a8496d9c60cfcd201b419a3c7f45cee27">time</a>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_nono.html#ae1766b9b3038c6ebd7c0dae156fd82bd">   96</a></span>&#160;    QTimer *<a class="code" href="class_nono.html#ae1766b9b3038c6ebd7c0dae156fd82bd">timer</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="class_nono.html#a074bef3e57bed55a5883a0287950bfba">   98</a></span>&#160;    QTime *<a class="code" href="class_nono.html#a074bef3e57bed55a5883a0287950bfba">time1</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="class_nono.html#af2afe93076ef58d563ff655f1e2213d9">   99</a></span>&#160;    QTimer *<a class="code" href="class_nono.html#af2afe93076ef58d563ff655f1e2213d9">timer1</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_nono.html#ad65958b9cfa8b724b1a87dd697845616">  101</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_nono.html#ad65958b9cfa8b724b1a87dd697845616">firetime</a>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="class_nono.html#a88bef14846384cd23beb8e017f720938">  102</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_nono.html#a88bef14846384cd23beb8e017f720938">firetime_min</a>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="class_nono.html#a5b1249d45fac2b3031aad5ed4742d18b">  103</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_nono.html#a5b1249d45fac2b3031aad5ed4742d18b">firetime_sec</a>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="class_nono.html#acb752049da1d787724c508f6fc469001">  104</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_nono.html#acb752049da1d787724c508f6fc469001">hidecap</a>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="class_nono.html#a6d4ed13ee71824916804628a078b6a4a">  105</a></span>&#160;    <a class="code" href="class_clicked_label.html">ClickedLabel</a> *<a class="code" href="class_nono.html#a6d4ed13ee71824916804628a078b6a4a">clabel</a>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="class_nono.html#aa8bdc7a3711472b9ff71d94ff9a3b2df">  106</a></span>&#160;    <a class="code" href="class_clicked_label.html">ClickedLabel</a> *<a class="code" href="class_nono.html#aa8bdc7a3711472b9ff71d94ff9a3b2df">freshlabel</a>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="class_nono.html#a035b3ef6c8f9b155fc78c7800f34c73d">  107</a></span>&#160;    <a class="code" href="class_clicked_label.html">ClickedLabel</a> *<a class="code" href="class_nono.html#a035b3ef6c8f9b155fc78c7800f34c73d">shibielabel</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="class_nono.html#aa25080152c56a00ceabda207ebb894b5">  109</a></span>&#160;    QString <a class="code" href="class_nono.html#aa25080152c56a00ceabda207ebb894b5">accessToken</a>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="class_nono.html#a08b20e005d1133261da47f8cc88239e5">  110</a></span>&#160;    QNetworkAccessManager *<a class="code" href="class_nono.html#a08b20e005d1133261da47f8cc88239e5">nam</a>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="class_nono.html#a89410be6331188052b654763d3ab199c">  111</a></span>&#160;    <a class="code" href="class_pettip.html">Pettip</a> *<a class="code" href="class_nono.html#a89410be6331188052b654763d3ab199c">pt</a>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_nono.html#a2a04d7f62992081bbf68f547a82ac263">slot_startedTimer_clicked</a>(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_nono.html#ab18539270a140dbfccf7c0f48865dbe6">slot_stopedTimer_clicked</a>(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_nono.html#a13b9700b7d23739b3a13350460c0d7e8">slot_timer_timeout</a>();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_nono.html#ace86157f9ea4aac8893036fe1553e0a2">slot_capture</a>(<span class="keywordtype">bool</span> tmp);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_nono.html#a4cce37537ea1b3c71e05ed92a52570f2">slot_nono_change</a>();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_nono.html#aa793569399f3e07fb9513129a6df55ac">slot_tip</a>(QString content);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_nono.html#a104f8a6ea5b1404eb1b2a21708354491">slot_hidecap</a>();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_nono.html#ab754e1ac200a41a51f6d90b5d537fcea">slot_shibie</a>();</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_nono.html#a92cf5ab9ed5949e1bba165c80034cd54">slot_Fresh</a>();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_nono.html#a2248710774a77c06dd7977bba561e716">getAccessTokenRequestFinished</a>(QNetworkReply* reply);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_nono.html#ae6ae4d7add2cd4d6ffc0bfc62ba5351b">recognitionRequestFinished</a>(QNetworkReply* reply);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_nono.html#a4795edd08eb19afc8b2e1f37ac9c041f">showskill</a>();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;signals:</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="class_nono.html#aa5b7d240ee11551a3e62241949c4d3ad">  130</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_nono.html#aa5b7d240ee11551a3e62241949c4d3ad">signal_fresh</a>();</div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="class_nono.html#a78243d01059eb7cc0956b4147ad9b0e5">  131</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_nono.html#a78243d01059eb7cc0956b4147ad9b0e5">signal_sb</a>();</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="class_nono.html#ae94ec0447bca413a93a92c08a1b65970">  132</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_nono.html#ae94ec0447bca413a93a92c08a1b65970">signal_pet</a>(QString name);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;};</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#endif // NONO_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_nono_html_a08b20e005d1133261da47f8cc88239e5"><div class="ttname"><a href="class_nono.html#a08b20e005d1133261da47f8cc88239e5">Nono::nam</a></div><div class="ttdeci">QNetworkAccessManager * nam</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00110">nono.h:110</a></div></div>
+<div class="ttc" id="aclass_nono_html_a035b3ef6c8f9b155fc78c7800f34c73d"><div class="ttname"><a href="class_nono.html#a035b3ef6c8f9b155fc78c7800f34c73d">Nono::shibielabel</a></div><div class="ttdeci">ClickedLabel * shibielabel</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00107">nono.h:107</a></div></div>
+<div class="ttc" id="aclass_nono_html_ace77e3a52e41ea5686761723484401a3"><div class="ttname"><a href="class_nono.html#ace77e3a52e41ea5686761723484401a3">Nono::movie1</a></div><div class="ttdeci">QMovie * movie1</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00082">nono.h:82</a></div></div>
+<div class="ttc" id="aclass_nono_html_a88bef14846384cd23beb8e017f720938"><div class="ttname"><a href="class_nono.html#a88bef14846384cd23beb8e017f720938">Nono::firetime_min</a></div><div class="ttdeci">int firetime_min</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00102">nono.h:102</a></div></div>
+<div class="ttc" id="apettip_8h_html"><div class="ttname"><a href="pettip_8h.html">pettip.h</a></div><div class="ttdoc">精灵技能快查窗口头文件</div></div>
+<div class="ttc" id="aclass_nono_html_a52f5304b64b796cb44aaae7989ecb8fc"><div class="ttname"><a href="class_nono.html#a52f5304b64b796cb44aaae7989ecb8fc">Nono::tmp1</a></div><div class="ttdeci">DWORD tmp1</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00093">nono.h:93</a></div></div>
+<div class="ttc" id="aclass_clicked_label_html_aa32404b2afbee944dd1145f49ddc1f8e"><div class="ttname"><a href="class_clicked_label.html#aa32404b2afbee944dd1145f49ddc1f8e">ClickedLabel::m_str</a></div><div class="ttdeci">QString m_str</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00062">nono.h:62</a></div></div>
+<div class="ttc" id="aclass_nono_html_a3a59dc5f43458df16fc2dd5cd4aace99"><div class="ttname"><a href="class_nono.html#a3a59dc5f43458df16fc2dd5cd4aace99">Nono::Nono</a></div><div class="ttdeci">Nono(QWidget *parent=0)</div><div class="ttdoc">nono窗口构造函数</div><div class="ttdef"><b>Definition:</b> <a href="nono_8cpp_source.html#l00017">nono.cpp:17</a></div></div>
+<div class="ttc" id="aclass_nono_html_a2248710774a77c06dd7977bba561e716"><div class="ttname"><a href="class_nono.html#a2248710774a77c06dd7977bba561e716">Nono::getAccessTokenRequestFinished</a></div><div class="ttdeci">void getAccessTokenRequestFinished(QNetworkReply *reply)</div><div class="ttdoc">获取accesstoken网页返回内容处理</div><div class="ttdef"><b>Definition:</b> <a href="nono_8cpp_source.html#l00405">nono.cpp:405</a></div></div>
+<div class="ttc" id="aclass_clicked_label_html"><div class="ttname"><a href="class_clicked_label.html">ClickedLabel</a></div><div class="ttdoc">重载标签（可点击） 重载了标签，造了一个带有点击信号的标签类</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00048">nono.h:49</a></div></div>
+<div class="ttc" id="aclass_nono_html_a2a04d7f62992081bbf68f547a82ac263"><div class="ttname"><a href="class_nono.html#a2a04d7f62992081bbf68f547a82ac263">Nono::slot_startedTimer_clicked</a></div><div class="ttdeci">void slot_startedTimer_clicked(bool)</div><div class="ttdoc">绿火计时器开启函数</div><div class="ttdef"><b>Definition:</b> <a href="nono_8cpp_source.html#l00108">nono.cpp:108</a></div></div>
+<div class="ttc" id="aclass_nono_html_a04710b270c58c6e8a31df42612a05ca0"><div class="ttname"><a href="class_nono.html#a04710b270c58c6e8a31df42612a05ca0">Nono::~Nono</a></div><div class="ttdeci">~Nono()</div><div class="ttdoc">nono窗口析构函数</div><div class="ttdef"><b>Definition:</b> <a href="nono_8cpp_source.html#l00212">nono.cpp:212</a></div></div>
+<div class="ttc" id="aclass_clicked_label_html_ae4099461098205ddff452c8b3d0e4d3c"><div class="ttname"><a href="class_clicked_label.html#ae4099461098205ddff452c8b3d0e4d3c">ClickedLabel::Clicked</a></div><div class="ttdeci">void Clicked(ClickedLabel *clicked)</div></div>
+<div class="ttc" id="aclass_nono_html_ae6ae4d7add2cd4d6ffc0bfc62ba5351b"><div class="ttname"><a href="class_nono.html#ae6ae4d7add2cd4d6ffc0bfc62ba5351b">Nono::recognitionRequestFinished</a></div><div class="ttdeci">void recognitionRequestFinished(QNetworkReply *reply)</div><div class="ttdoc">Nono::recognitionRequestFinished</div><div class="ttdef"><b>Definition:</b> <a href="nono_8cpp_source.html#l00434">nono.cpp:434</a></div></div>
+<div class="ttc" id="aclass_nono_html_af3b68cea1469d0f7932b0fea39b3f9e3"><div class="ttname"><a href="class_nono.html#af3b68cea1469d0f7932b0fea39b3f9e3">Nono::mousePressEvent</a></div><div class="ttdeci">void mousePressEvent(QMouseEvent *event)</div><div class="ttdoc">鼠标按下nono窗口重载</div><div class="ttdef"><b>Definition:</b> <a href="nono_8cpp_source.html#l00274">nono.cpp:274</a></div></div>
+<div class="ttc" id="aclass_nono_html_a3a75e697e056964af18a080d8e1e9a38"><div class="ttname"><a href="class_nono.html#a3a75e697e056964af18a080d8e1e9a38">Nono::mouseReleaseEvent</a></div><div class="ttdeci">void mouseReleaseEvent(QMouseEvent *event)</div><div class="ttdoc">鼠标离开nono窗口重载</div><div class="ttdef"><b>Definition:</b> <a href="nono_8cpp_source.html#l00283">nono.cpp:283</a></div></div>
+<div class="ttc" id="axy_8h_html"><div class="ttname"><a href="xy_8h.html">xy.h</a></div><div class="ttdoc">星夜特色函数</div></div>
+<div class="ttc" id="aclass_nono_html_a8b681996961bd36763731b4177d9a87f"><div class="ttname"><a href="class_nono.html#a8b681996961bd36763731b4177d9a87f">Nono::ui</a></div><div class="ttdeci">Ui::Nono * ui</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00092">nono.h:92</a></div></div>
+<div class="ttc" id="aclass_nono_html_a6d4ed13ee71824916804628a078b6a4a"><div class="ttname"><a href="class_nono.html#a6d4ed13ee71824916804628a078b6a4a">Nono::clabel</a></div><div class="ttdeci">ClickedLabel * clabel</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00105">nono.h:105</a></div></div>
+<div class="ttc" id="aclass_nono_html_a104f8a6ea5b1404eb1b2a21708354491"><div class="ttname"><a href="class_nono.html#a104f8a6ea5b1404eb1b2a21708354491">Nono::slot_hidecap</a></div><div class="ttdeci">void slot_hidecap()</div><div class="ttdoc">巅峰阵容截图隐藏</div><div class="ttdef"><b>Definition:</b> <a href="nono_8cpp_source.html#l00305">nono.cpp:305</a></div></div>
+<div class="ttc" id="aclass_nono_html"><div class="ttname"><a href="class_nono.html">Nono</a></div><div class="ttdoc">nono窗口类 这个类跟nono相关</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00068">nono.h:69</a></div></div>
+<div class="ttc" id="aclass_nono_html_aa5b7d240ee11551a3e62241949c4d3ad"><div class="ttname"><a href="class_nono.html#aa5b7d240ee11551a3e62241949c4d3ad">Nono::signal_fresh</a></div><div class="ttdeci">void signal_fresh()</div></div>
+<div class="ttc" id="aclass_nono_html_ae94ec0447bca413a93a92c08a1b65970"><div class="ttname"><a href="class_nono.html#ae94ec0447bca413a93a92c08a1b65970">Nono::signal_pet</a></div><div class="ttdeci">void signal_pet(QString name)</div></div>
+<div class="ttc" id="aclass_nono_html_a80134b6a3277fe2e3d2c01c9902365ce"><div class="ttname"><a href="class_nono.html#a80134b6a3277fe2e3d2c01c9902365ce">Nono::movie4</a></div><div class="ttdeci">QMovie * movie4</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00085">nono.h:85</a></div></div>
+<div class="ttc" id="aclass_nono_html_a4cce37537ea1b3c71e05ed92a52570f2"><div class="ttname"><a href="class_nono.html#a4cce37537ea1b3c71e05ed92a52570f2">Nono::slot_nono_change</a></div><div class="ttdeci">void slot_nono_change()</div><div class="ttdoc">nono状态改变</div><div class="ttdef"><b>Definition:</b> <a href="nono_8cpp_source.html#l00131">nono.cpp:131</a></div></div>
+<div class="ttc" id="aclass_nono_html_af2afe93076ef58d563ff655f1e2213d9"><div class="ttname"><a href="class_nono.html#af2afe93076ef58d563ff655f1e2213d9">Nono::timer1</a></div><div class="ttdeci">QTimer * timer1</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00099">nono.h:99</a></div></div>
+<div class="ttc" id="aclass_nono_html_a92cf5ab9ed5949e1bba165c80034cd54"><div class="ttname"><a href="class_nono.html#a92cf5ab9ed5949e1bba165c80034cd54">Nono::slot_Fresh</a></div><div class="ttdeci">void slot_Fresh()</div><div class="ttdoc">刷新按钮按下</div><div class="ttdef"><b>Definition:</b> <a href="nono_8cpp_source.html#l00328">nono.cpp:328</a></div></div>
+<div class="ttc" id="aclass_nono_html_afbbc90840a38cd93a9e5691740337638"><div class="ttname"><a href="class_nono.html#afbbc90840a38cd93a9e5691740337638">Nono::mouseMoveEvent</a></div><div class="ttdeci">void mouseMoveEvent(QMouseEvent *event)</div><div class="ttdoc">鼠标按下nono窗口并移动重载</div><div class="ttdef"><b>Definition:</b> <a href="nono_8cpp_source.html#l00253">nono.cpp:253</a></div></div>
+<div class="ttc" id="aclass_clicked_label_html_a3ea97c09116cb48a202c717c1f4f4a65"><div class="ttname"><a href="class_clicked_label.html#a3ea97c09116cb48a202c717c1f4f4a65">ClickedLabel::ClickedLabel</a></div><div class="ttdeci">ClickedLabel(QWidget *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00054">nono.h:54</a></div></div>
+<div class="ttc" id="aclass_nono_html_ad59e12150488b6dcc0b113f0dc2d044a"><div class="ttname"><a href="class_nono.html#ad59e12150488b6dcc0b113f0dc2d044a">Nono::getAccessToken</a></div><div class="ttdeci">void getAccessToken(QString key, QString secret)</div><div class="ttdoc">获取百度ocr的accesstoken</div><div class="ttdef"><b>Definition:</b> <a href="nono_8cpp_source.html#l00349">nono.cpp:349</a></div></div>
+<div class="ttc" id="aclass_nono_html_a103f87a55f9ec70d34f7c219b6343761"><div class="ttname"><a href="class_nono.html#a103f87a55f9ec70d34f7c219b6343761">Nono::recognition</a></div><div class="ttdeci">void recognition()</div><div class="ttdoc">识别对面精灵的名字</div><div class="ttdef"><b>Definition:</b> <a href="nono_8cpp_source.html#l00372">nono.cpp:372</a></div></div>
+<div class="ttc" id="aclass_nono_html_aa8bdc7a3711472b9ff71d94ff9a3b2df"><div class="ttname"><a href="class_nono.html#aa8bdc7a3711472b9ff71d94ff9a3b2df">Nono::freshlabel</a></div><div class="ttdeci">ClickedLabel * freshlabel</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00106">nono.h:106</a></div></div>
+<div class="ttc" id="aclass_nono_html_acb752049da1d787724c508f6fc469001"><div class="ttname"><a href="class_nono.html#acb752049da1d787724c508f6fc469001">Nono::hidecap</a></div><div class="ttdeci">bool hidecap</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00104">nono.h:104</a></div></div>
+<div class="ttc" id="aclass_nono_html_ad65958b9cfa8b724b1a87dd697845616"><div class="ttname"><a href="class_nono.html#ad65958b9cfa8b724b1a87dd697845616">Nono::firetime</a></div><div class="ttdeci">int firetime</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00101">nono.h:101</a></div></div>
+<div class="ttc" id="aclass_nono_html_a89410be6331188052b654763d3ab199c"><div class="ttname"><a href="class_nono.html#a89410be6331188052b654763d3ab199c">Nono::pt</a></div><div class="ttdeci">Pettip * pt</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00111">nono.h:111</a></div></div>
+<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> <a href="atoken_8h_source.html#l00017">atoken.h:17</a></div></div>
+<div class="ttc" id="aclass_nono_html_ab18539270a140dbfccf7c0f48865dbe6"><div class="ttname"><a href="class_nono.html#ab18539270a140dbfccf7c0f48865dbe6">Nono::slot_stopedTimer_clicked</a></div><div class="ttdeci">void slot_stopedTimer_clicked(bool)</div><div class="ttdoc">绿火计时器停止函数</div><div class="ttdef"><b>Definition:</b> <a href="nono_8cpp_source.html#l00121">nono.cpp:121</a></div></div>
+<div class="ttc" id="aclass_nono_html_a78243d01059eb7cc0956b4147ad9b0e5"><div class="ttname"><a href="class_nono.html#a78243d01059eb7cc0956b4147ad9b0e5">Nono::signal_sb</a></div><div class="ttdeci">void signal_sb()</div></div>
+<div class="ttc" id="aclass_nono_html_aa25080152c56a00ceabda207ebb894b5"><div class="ttname"><a href="class_nono.html#aa25080152c56a00ceabda207ebb894b5">Nono::accessToken</a></div><div class="ttdeci">QString accessToken</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00109">nono.h:109</a></div></div>
+<div class="ttc" id="aclass_nono_html_a13b9700b7d23739b3a13350460c0d7e8"><div class="ttname"><a href="class_nono.html#a13b9700b7d23739b3a13350460c0d7e8">Nono::slot_timer_timeout</a></div><div class="ttdeci">void slot_timer_timeout()</div><div class="ttdoc">绿火计时器每秒处理动作</div><div class="ttdef"><b>Definition:</b> <a href="nono_8cpp_source.html#l00193">nono.cpp:193</a></div></div>
+<div class="ttc" id="aclass_pettip_html"><div class="ttname"><a href="class_pettip.html">Pettip</a></div><div class="ttdoc">精灵技能快查窗口类 这个类写了整整一天，格式化精灵技能真难</div><div class="ttdef"><b>Definition:</b> <a href="pettip_8h_source.html#l00036">pettip.h:37</a></div></div>
+<div class="ttc" id="aclass_nono_html_aa93d475cac641b6de87ea7045e164c43"><div class="ttname"><a href="class_nono.html#aa93d475cac641b6de87ea7045e164c43">Nono::movie3</a></div><div class="ttdeci">QMovie * movie3</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00084">nono.h:84</a></div></div>
+<div class="ttc" id="aclass_nono_html_a5b1249d45fac2b3031aad5ed4742d18b"><div class="ttname"><a href="class_nono.html#a5b1249d45fac2b3031aad5ed4742d18b">Nono::firetime_sec</a></div><div class="ttdeci">int firetime_sec</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00103">nono.h:103</a></div></div>
+<div class="ttc" id="aclass_nono_html_a8496d9c60cfcd201b419a3c7f45cee27"><div class="ttname"><a href="class_nono.html#a8496d9c60cfcd201b419a3c7f45cee27">Nono::time</a></div><div class="ttdeci">QTime * time</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00095">nono.h:95</a></div></div>
+<div class="ttc" id="aclass_nono_html_a459d1532f21b30ff4698a712efed91f1"><div class="ttname"><a href="class_nono.html#a459d1532f21b30ff4698a712efed91f1">Nono::movie</a></div><div class="ttdeci">QMovie * movie</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00081">nono.h:81</a></div></div>
+<div class="ttc" id="aclass_clicked_label_html_a9221edc65ff7f65435bd3fdb9f092651"><div class="ttname"><a href="class_clicked_label.html#a9221edc65ff7f65435bd3fdb9f092651">ClickedLabel::mouseReleaseEvent</a></div><div class="ttdeci">void mouseReleaseEvent(QMouseEvent *)</div><div class="ttdoc">鼠标释放重载-带点击事件label类</div><div class="ttdef"><b>Definition:</b> <a href="nono_8cpp_source.html#l00319">nono.cpp:319</a></div></div>
+<div class="ttc" id="aclass_nono_html_a92f74b6e013f2ffcde22667dcebb2f6c"><div class="ttname"><a href="class_nono.html#a92f74b6e013f2ffcde22667dcebb2f6c">Nono::movie2</a></div><div class="ttdeci">QMovie * movie2</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00083">nono.h:83</a></div></div>
+<div class="ttc" id="aclass_nono_html_ae1766b9b3038c6ebd7c0dae156fd82bd"><div class="ttname"><a href="class_nono.html#ae1766b9b3038c6ebd7c0dae156fd82bd">Nono::timer</a></div><div class="ttdeci">QTimer * timer</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00096">nono.h:96</a></div></div>
+<div class="ttc" id="aclass_nono_html_aa793569399f3e07fb9513129a6df55ac"><div class="ttname"><a href="class_nono.html#aa793569399f3e07fb9513129a6df55ac">Nono::slot_tip</a></div><div class="ttdeci">void slot_tip(QString content)</div><div class="ttdoc">nono窗口提示信息</div><div class="ttdef"><b>Definition:</b> <a href="nono_8cpp_source.html#l00292">nono.cpp:292</a></div></div>
+<div class="ttc" id="aclass_nono_html_a074bef3e57bed55a5883a0287950bfba"><div class="ttname"><a href="class_nono.html#a074bef3e57bed55a5883a0287950bfba">Nono::time1</a></div><div class="ttdeci">QTime * time1</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00098">nono.h:98</a></div></div>
+<div class="ttc" id="aclass_nono_html_a4795edd08eb19afc8b2e1f37ac9c041f"><div class="ttname"><a href="class_nono.html#a4795edd08eb19afc8b2e1f37ac9c041f">Nono::showskill</a></div><div class="ttdeci">void showskill()</div><div class="ttdoc">打开精灵技能快查窗口</div><div class="ttdef"><b>Definition:</b> <a href="nono_8cpp_source.html#l00469">nono.cpp:469</a></div></div>
+<div class="ttc" id="aclass_nono_html_ab754e1ac200a41a51f6d90b5d537fcea"><div class="ttname"><a href="class_nono.html#ab754e1ac200a41a51f6d90b5d537fcea">Nono::slot_shibie</a></div><div class="ttdeci">void slot_shibie()</div><div class="ttdoc">识别对战精灵</div><div class="ttdef"><b>Definition:</b> <a href="nono_8cpp_source.html#l00336">nono.cpp:336</a></div></div>
+<div class="ttc" id="aclass_nono_html_a0f6a6b37c5e7363fe380e1efc2ef830b"><div class="ttname"><a href="class_nono.html#a0f6a6b37c5e7363fe380e1efc2ef830b">Nono::mouseMovePos</a></div><div class="ttdeci">QPoint mouseMovePos</div><div class="ttdef"><b>Definition:</b> <a href="nono_8h_source.html#l00076">nono.h:76</a></div></div>
+<div class="ttc" id="aclass_nono_html_ace86157f9ea4aac8893036fe1553e0a2"><div class="ttname"><a href="class_nono.html#ace86157f9ea4aac8893036fe1553e0a2">Nono::slot_capture</a></div><div class="ttdeci">void slot_capture(bool tmp)</div><div class="ttdoc">显示对面巅峰阵容-nono举牌</div><div class="ttdef"><b>Definition:</b> <a href="nono_8cpp_source.html#l00238">nono.cpp:238</a></div></div>
+<div class="ttc" id="aext_8h_html"><div class="ttname"><a href="ext_8h.html">ext.h</a></div><div class="ttdoc">全局变量声明头文件</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

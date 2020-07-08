@@ -1,0 +1,7 @@
+<map id="xy_autofight" name="xy_autofight">
+<area shape="rect" id="node1" title="自动克制系出战（战斗中）" alt="" coords="137,81,229,108"/>
+<area shape="rect" id="node2" href="$class_hdblk.html#aaf03ee62b81c598e11019cd87a0c3455" title="混沌布莱克脚本&#45;线程启动函数" alt="" coords="6,5,87,32"/>
+<area shape="rect" id="node3" href="$class_jlw.html#a145a21cdc00244f97d9f91aa52d1a556" title="精灵王大乱斗脚本&#45;线程启动函数" alt="" coords="13,56,80,83"/>
+<area shape="rect" id="node4" href="$class_spt.html#a3a6dd7e2fa4422857925bd76381be961" title="spt徽章脚本&#45;线程启动函数" alt="" coords="13,107,81,133"/>
+<area shape="rect" id="node5" href="$class_top.html#ae9f4ac4d51bf31effd9f028f940dbbaf" title="巅峰脚本&#45;线程启动函数" alt="" coords="12,157,81,184"/>
+</map>

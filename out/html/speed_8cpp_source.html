@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>星小夜的登录器: speed.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">星小夜的登录器
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">speed.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="speed_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="speed_8h.html">speed.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;ui_speed.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="speed_8cpp.html#a1ec116a24fe8e812825a81e33dbe92a3">   13</a></span>&#160;QLibrary <a class="code" href="speed_8cpp.html#a1ec116a24fe8e812825a81e33dbe92a3">lib</a>(<span class="stringliteral">&quot;SpeedControl.dll&quot;</span>);</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="speed_8cpp.html#a1ed44dedcb82cd1269a5e81380bb6f66">   14</a></span>&#160;<span class="keyword">typedef</span> void(*<a class="code" href="speed_8cpp.html#a1ed44dedcb82cd1269a5e81380bb6f66">Fun</a>)(<span class="keywordtype">float</span> a);</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="speed_8cpp.html#a20bab1bc02a96c64b4b752adbf1b04d5">   15</a></span>&#160;<a class="code" href="speed_8cpp.html#a1ed44dedcb82cd1269a5e81380bb6f66">Fun</a> <a class="code" href="speed_8cpp.html#a20bab1bc02a96c64b4b752adbf1b04d5">Setrange</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="speed_8cpp.html#a964a4806b4107e8b30fb4a5e067d7e40">   21</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="speed_8cpp.html#a964a4806b4107e8b30fb4a5e067d7e40">setspeed</a>(<span class="keywordtype">float</span> speed){</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="speed_8cpp.html#a1ec116a24fe8e812825a81e33dbe92a3">lib</a>.load())</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="speed_8cpp.html#a20bab1bc02a96c64b4b752adbf1b04d5">Setrange</a>)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            qDebug()&lt;&lt;<span class="stringliteral">&quot;failed&quot;</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <a class="code" href="speed_8cpp.html#a20bab1bc02a96c64b4b752adbf1b04d5">Setrange</a>(speed);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            qDebug()&lt;&lt;<span class="stringliteral">&quot;变速成功&quot;</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        qDebug()&lt;&lt;<span class="stringliteral">&quot;failed&quot;</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_speed.html#a580bf315d22e747a28e8f60e07756d1e">   45</a></span>&#160;<a class="code" href="class_speed.html#a580bf315d22e747a28e8f60e07756d1e">Speed::Speed</a>(QWidget *parent) :</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    QWidget(parent),</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    ui(new <a class="code" href="namespace_ui.html">Ui</a>::<a class="code" href="class_speed.html">Speed</a>)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="class_speed.html#ae9c1eedd3a3f54eccc2f7520e1c2f9ad">ui</a>-&gt;setupUi(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    setAttribute(Qt::WA_QuitOnClose,<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="class_speed.html#afbcebd05e052e3021dc743fe58e1dbdf">game_speed</a>=1.0;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="speed_8cpp.html#a20bab1bc02a96c64b4b752adbf1b04d5">Setrange</a>=(<a class="code" href="speed_8cpp.html#a1ed44dedcb82cd1269a5e81380bb6f66">Fun</a>)<a class="code" href="speed_8cpp.html#a1ec116a24fe8e812825a81e33dbe92a3">lib</a>.resolve(<span class="stringliteral">&quot;SetRange&quot;</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    connect(<a class="code" href="class_speed.html#ae9c1eedd3a3f54eccc2f7520e1c2f9ad">ui</a>-&gt;pushButton, SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="class_speed.html#a641459f7eac4c11c75b1ad29d4f477f5">Changespeed</a>()));</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">//connect(ui-&gt;speedslider,SIGNAL(sliderMoved(int)),this,SLOT(sliderspeed()));</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    connect(<a class="code" href="class_speed.html#ae9c1eedd3a3f54eccc2f7520e1c2f9ad">ui</a>-&gt;speedslider,SIGNAL(valueChanged(<span class="keywordtype">int</span>)),<span class="keyword">this</span>,SLOT(<a class="code" href="class_speed.html#ad09165a60932e620fb11e1a7be6e7681">sliderspeed</a>()));</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_speed.html#a47ac1336c636f4dc4fb1d288dea76e3c">   62</a></span>&#160;<a class="code" href="class_speed.html#a47ac1336c636f4dc4fb1d288dea76e3c">Speed::~Speed</a>()</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">delete</span> <a class="code" href="class_speed.html#ae9c1eedd3a3f54eccc2f7520e1c2f9ad">ui</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_speed.html#a641459f7eac4c11c75b1ad29d4f477f5">   70</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_speed.html#a641459f7eac4c11c75b1ad29d4f477f5">Speed::Changespeed</a>(){</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    QString text = <a class="code" href="class_speed.html#ae9c1eedd3a3f54eccc2f7520e1c2f9ad">ui</a>-&gt;speedtext-&gt;toPlainText();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="speed_8cpp.html#a964a4806b4107e8b30fb4a5e067d7e40">setspeed</a>(text.toFloat());</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_speed.html#ad09165a60932e620fb11e1a7be6e7681">   78</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_speed.html#ad09165a60932e620fb11e1a7be6e7681">Speed::sliderspeed</a>(){</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">int</span> a=<a class="code" href="class_speed.html#ae9c1eedd3a3f54eccc2f7520e1c2f9ad">ui</a>-&gt;speedslider-&gt;sliderPosition();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">float</span> speed=qPow(2,a);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="speed_8cpp.html#a964a4806b4107e8b30fb4a5e067d7e40">setspeed</a>(speed);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_speed_html_ae9c1eedd3a3f54eccc2f7520e1c2f9ad"><div class="ttname"><a href="class_speed.html#ae9c1eedd3a3f54eccc2f7520e1c2f9ad">Speed::ui</a></div><div class="ttdeci">Ui::Speed * ui</div><div class="ttdef"><b>Definition:</b> <a href="speed_8h_source.html#l00033">speed.h:33</a></div></div>
+<div class="ttc" id="aspeed_8cpp_html_a1ec116a24fe8e812825a81e33dbe92a3"><div class="ttname"><a href="speed_8cpp.html#a1ec116a24fe8e812825a81e33dbe92a3">lib</a></div><div class="ttdeci">QLibrary lib(&quot;SpeedControl.dll&quot;)</div></div>
+<div class="ttc" id="aspeed_8cpp_html_a20bab1bc02a96c64b4b752adbf1b04d5"><div class="ttname"><a href="speed_8cpp.html#a20bab1bc02a96c64b4b752adbf1b04d5">Setrange</a></div><div class="ttdeci">Fun Setrange</div><div class="ttdef"><b>Definition:</b> <a href="speed_8cpp_source.html#l00015">speed.cpp:15</a></div></div>
+<div class="ttc" id="aclass_speed_html_ad09165a60932e620fb11e1a7be6e7681"><div class="ttname"><a href="class_speed.html#ad09165a60932e620fb11e1a7be6e7681">Speed::sliderspeed</a></div><div class="ttdeci">void sliderspeed()</div><div class="ttdoc">滑块条更改速度</div><div class="ttdef"><b>Definition:</b> <a href="speed_8cpp_source.html#l00078">speed.cpp:78</a></div></div>
+<div class="ttc" id="aclass_speed_html_afbcebd05e052e3021dc743fe58e1dbdf"><div class="ttname"><a href="class_speed.html#afbcebd05e052e3021dc743fe58e1dbdf">Speed::game_speed</a></div><div class="ttdeci">float game_speed</div><div class="ttdef"><b>Definition:</b> <a href="speed_8h_source.html#l00030">speed.h:30</a></div></div>
+<div class="ttc" id="aspeed_8cpp_html_a964a4806b4107e8b30fb4a5e067d7e40"><div class="ttname"><a href="speed_8cpp.html#a964a4806b4107e8b30fb4a5e067d7e40">setspeed</a></div><div class="ttdeci">void setspeed(float speed)</div><div class="ttdoc">设置游戏速度</div><div class="ttdef"><b>Definition:</b> <a href="speed_8cpp_source.html#l00021">speed.cpp:21</a></div></div>
+<div class="ttc" id="aclass_speed_html_a47ac1336c636f4dc4fb1d288dea76e3c"><div class="ttname"><a href="class_speed.html#a47ac1336c636f4dc4fb1d288dea76e3c">Speed::~Speed</a></div><div class="ttdeci">~Speed()</div><div class="ttdoc">变速窗口析构函数</div><div class="ttdef"><b>Definition:</b> <a href="speed_8cpp_source.html#l00062">speed.cpp:62</a></div></div>
+<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> <a href="atoken_8h_source.html#l00017">atoken.h:17</a></div></div>
+<div class="ttc" id="aclass_speed_html"><div class="ttname"><a href="class_speed.html">Speed</a></div><div class="ttdef"><b>Definition:</b> <a href="speed_8h_source.html#l00022">speed.h:23</a></div></div>
+<div class="ttc" id="aclass_speed_html_a580bf315d22e747a28e8f60e07756d1e"><div class="ttname"><a href="class_speed.html#a580bf315d22e747a28e8f60e07756d1e">Speed::Speed</a></div><div class="ttdeci">Speed(QWidget *parent=0)</div><div class="ttdoc">变速窗口构造函数</div><div class="ttdef"><b>Definition:</b> <a href="speed_8cpp_source.html#l00045">speed.cpp:45</a></div></div>
+<div class="ttc" id="aspeed_8h_html"><div class="ttname"><a href="speed_8h.html">speed.h</a></div><div class="ttdoc">变速窗口头文件</div></div>
+<div class="ttc" id="aclass_speed_html_a641459f7eac4c11c75b1ad29d4f477f5"><div class="ttname"><a href="class_speed.html#a641459f7eac4c11c75b1ad29d4f477f5">Speed::Changespeed</a></div><div class="ttdeci">void Changespeed()</div><div class="ttdoc">自定义速度</div><div class="ttdef"><b>Definition:</b> <a href="speed_8cpp_source.html#l00070">speed.cpp:70</a></div></div>
+<div class="ttc" id="aspeed_8cpp_html_a1ed44dedcb82cd1269a5e81380bb6f66"><div class="ttname"><a href="speed_8cpp.html#a1ed44dedcb82cd1269a5e81380bb6f66">Fun</a></div><div class="ttdeci">void(* Fun)(float a)</div><div class="ttdef"><b>Definition:</b> <a href="speed_8cpp_source.html#l00014">speed.cpp:14</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

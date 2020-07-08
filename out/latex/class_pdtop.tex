@@ -1,0 +1,301 @@
+\hypertarget{class_pdtop}{}\doxysection{Pdtop类 参考}
+\label{class_pdtop}\index{Pdtop@{Pdtop}}
+
+
+判断进入巅峰-\/多线程类 用于巅峰脚本判断要进入哪个巅峰以及当前所处的位置  
+
+
+
+
+{\ttfamily \#include $<$form.\+h$>$}
+
+
+
+类 Pdtop 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_pdtop__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Pdtop 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_pdtop__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{信号}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pdtop_aa25898e1eb8c769282371d5be28c4214}{done}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pdtop_a4471d94cc21a6893b3c169222ef91df0}{Pdtop}} (Q\+Object $\ast$parent=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_pdtop_add84a4f1d745ba8caf21e74e92a27fbc}{status}}
+\item 
+int \mbox{\hyperlink{class_pdtop_ab421c8ddd62fdd16dfee1e15f9e72971}{now}}
+\item 
+Q\+String \mbox{\hyperlink{class_pdtop_a0cc6fe8cdbbab3c472b45c6e5e4d01d6}{mode}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pdtop_a651e0babbb70430654baf8472594f479}{run}} ()
+\begin{DoxyCompactList}\small\item\em 进入巅峰-\/线程启动函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+判断进入巅峰-\/多线程类 用于巅峰脚本判断要进入哪个巅峰以及当前所处的位置 
+
+在文件 form.\+h 第 307 行定义.
+
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_pdtop_a4471d94cc21a6893b3c169222ef91df0}\label{class_pdtop_a4471d94cc21a6893b3c169222ef91df0}} 
+\index{Pdtop@{Pdtop}!Pdtop@{Pdtop}}
+\index{Pdtop@{Pdtop}!Pdtop@{Pdtop}}
+\doxysubsubsection{\texorpdfstring{Pdtop()}{Pdtop()}}
+{\footnotesize\ttfamily Pdtop\+::\+Pdtop (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+在文件 form.\+h 第 315 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{316         : QThread(parent)}
+\DoxyCodeLine{317     \{}
+\DoxyCodeLine{318         \mbox{\hyperlink{class_pdtop_add84a4f1d745ba8caf21e74e92a27fbc}{status}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{319     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_pdtop_aa25898e1eb8c769282371d5be28c4214}\label{class_pdtop_aa25898e1eb8c769282371d5be28c4214}} 
+\index{Pdtop@{Pdtop}!done@{done}}
+\index{done@{done}!Pdtop@{Pdtop}}
+\doxysubsubsection{\texorpdfstring{done}{done}}
+{\footnotesize\ttfamily void Pdtop\+::done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_pdtop_a651e0babbb70430654baf8472594f479}\label{class_pdtop_a651e0babbb70430654baf8472594f479}} 
+\index{Pdtop@{Pdtop}!run@{run}}
+\index{run@{run}!Pdtop@{Pdtop}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Pdtop\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+进入巅峰-\/线程启动函数 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 form.\+cpp 第 1407 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1407                \{}
+\DoxyCodeLine{1408     QVariant x,y;}
+\DoxyCodeLine{1409     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_pdtop_a0cc6fe8cdbbab3c472b45c6e5e4d01d6}{mode}}==\textcolor{stringliteral}{"top\_jj"} || \mbox{\hyperlink{class_pdtop_a0cc6fe8cdbbab3c472b45c6e5e4d01d6}{mode}}==\textcolor{stringliteral}{"top\_ky"})\{}
+\DoxyCodeLine{1410         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"巅峰.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1411             qDebug()<<\textcolor{stringliteral}{"巅峰"};}
+\DoxyCodeLine{1412             \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(200);}
+\DoxyCodeLine{1413             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"巅峰.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1414                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{1415                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1416                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<30;i++)\{}
+\DoxyCodeLine{1417                     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_pdtop_a0cc6fe8cdbbab3c472b45c6e5e4d01d6}{mode}}==\textcolor{stringliteral}{"top\_jj"})\{}
+\DoxyCodeLine{1418                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"竞技.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1419                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{1420                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1421                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{1422                         \}}
+\DoxyCodeLine{1423                     \}}
+\DoxyCodeLine{1424                     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_pdtop_a0cc6fe8cdbbab3c472b45c6e5e4d01d6}{mode}}==\textcolor{stringliteral}{"top\_ky"})\{}
+\DoxyCodeLine{1425                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"狂野.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1426                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{1427                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1428                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{1429                         \}}
+\DoxyCodeLine{1430                     \}}
+\DoxyCodeLine{1431                     \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(100);}
+\DoxyCodeLine{1432                 \}}
+\DoxyCodeLine{1433                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<30;i++)\{}
+\DoxyCodeLine{1434                     \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"注意.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1435                         \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(500);}
+\DoxyCodeLine{1436                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(826,488);}
+\DoxyCodeLine{1437                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1438                         qDebug()<<\textcolor{stringliteral}{"已点击"};}
+\DoxyCodeLine{1439                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{1440                     \}\textcolor{keywordflow}{else}}
+\DoxyCodeLine{1441                         qDebug()<<\textcolor{stringliteral}{"找不到"};}
+\DoxyCodeLine{1442                     \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(100);}
+\DoxyCodeLine{1443                 \}}
+\DoxyCodeLine{1444             \}}
+\DoxyCodeLine{1445         \}\textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{1446             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_pdtop_a0cc6fe8cdbbab3c472b45c6e5e4d01d6}{mode}}==\textcolor{stringliteral}{"top\_ky"})\{}
+\DoxyCodeLine{1447                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"狂野.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1448                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{1449                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1450                     qDebug()<<\textcolor{stringliteral}{"狂野"};}
+\DoxyCodeLine{1451                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<30;i++)\{}
+\DoxyCodeLine{1452                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"注意.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1453                             \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(500);}
+\DoxyCodeLine{1454                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(826,488);}
+\DoxyCodeLine{1455                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1456                             qDebug()<<\textcolor{stringliteral}{"已点击"};}
+\DoxyCodeLine{1457                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{1458                         \}\textcolor{keywordflow}{else}}
+\DoxyCodeLine{1459                             qDebug()<<\textcolor{stringliteral}{"找不到"};}
+\DoxyCodeLine{1460                         \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(100);}
+\DoxyCodeLine{1461                     \}}
+\DoxyCodeLine{1462                 \}}
+\DoxyCodeLine{1463             \}}
+\DoxyCodeLine{1464             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_pdtop_a0cc6fe8cdbbab3c472b45c6e5e4d01d6}{mode}}==\textcolor{stringliteral}{"top\_jj"})\{}
+\DoxyCodeLine{1465                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"竞技.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1466                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{1467                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1468                     qDebug()<<\textcolor{stringliteral}{"竞技"};}
+\DoxyCodeLine{1469                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<30;i++)\{}
+\DoxyCodeLine{1470                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"注意.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1471                             \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(500);}
+\DoxyCodeLine{1472                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(826,488);}
+\DoxyCodeLine{1473                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1474                             qDebug()<<\textcolor{stringliteral}{"已点击"};}
+\DoxyCodeLine{1475                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{1476                         \}\textcolor{keywordflow}{else}}
+\DoxyCodeLine{1477                             qDebug()<<\textcolor{stringliteral}{"找不到"};}
+\DoxyCodeLine{1478                         \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(100);}
+\DoxyCodeLine{1479                     \}}
+\DoxyCodeLine{1480                 \}}
+\DoxyCodeLine{1481             \}}
+\DoxyCodeLine{1482             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"注意.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1483                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(826,488);}
+\DoxyCodeLine{1484                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1485             \}}
+\DoxyCodeLine{1486 }
+\DoxyCodeLine{1487         \}}
+\DoxyCodeLine{1488 }
+\DoxyCodeLine{1489     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_pdtop_a0cc6fe8cdbbab3c472b45c6e5e4d01d6}{mode}}==\textcolor{stringliteral}{"top\_33"})\{}
+\DoxyCodeLine{1490         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"进入33-\/1.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1491             qDebug()<<\textcolor{stringliteral}{"巅峰"};}
+\DoxyCodeLine{1492             \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(200);}
+\DoxyCodeLine{1493             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"进入33-\/1.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1494                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{1495                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1496                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<30;i++)\{}
+\DoxyCodeLine{1497                     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_pdtop_a0cc6fe8cdbbab3c472b45c6e5e4d01d6}{mode}}==\textcolor{stringliteral}{"top\_33"})\{}
+\DoxyCodeLine{1498                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"进入33-\/2.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1499                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{1500                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1501                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{1502                         \}}
+\DoxyCodeLine{1503                     \}}
+\DoxyCodeLine{1504 }
+\DoxyCodeLine{1505                     \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(100);}
+\DoxyCodeLine{1506                 \}}
+\DoxyCodeLine{1507                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<30;i++)\{}
+\DoxyCodeLine{1508                     \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"注意.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1509                         \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(500);}
+\DoxyCodeLine{1510                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(826,488);}
+\DoxyCodeLine{1511                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1512                         qDebug()<<\textcolor{stringliteral}{"已点击"};}
+\DoxyCodeLine{1513                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{1514                     \}\textcolor{keywordflow}{else}}
+\DoxyCodeLine{1515                         qDebug()<<\textcolor{stringliteral}{"找不到"};}
+\DoxyCodeLine{1516                     \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(100);}
+\DoxyCodeLine{1517                 \}}
+\DoxyCodeLine{1518             \}}
+\DoxyCodeLine{1519         \}\textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{1520             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_pdtop_a0cc6fe8cdbbab3c472b45c6e5e4d01d6}{mode}}==\textcolor{stringliteral}{"top\_33"})\{}
+\DoxyCodeLine{1521                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"进入33-\/2.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1522                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{1523                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1524                     qDebug()<<\textcolor{stringliteral}{"狂野"};}
+\DoxyCodeLine{1525                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<30;i++)\{}
+\DoxyCodeLine{1526                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"注意.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1527                             \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(500);}
+\DoxyCodeLine{1528                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(826,488);}
+\DoxyCodeLine{1529                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1530                             qDebug()<<\textcolor{stringliteral}{"已点击"};}
+\DoxyCodeLine{1531                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{1532                         \}\textcolor{keywordflow}{else}}
+\DoxyCodeLine{1533                             qDebug()<<\textcolor{stringliteral}{"找不到"};}
+\DoxyCodeLine{1534                         \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(100);}
+\DoxyCodeLine{1535                     \}}
+\DoxyCodeLine{1536                 \}}
+\DoxyCodeLine{1537             \}}
+\DoxyCodeLine{1538 }
+\DoxyCodeLine{1539             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"注意.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1540                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(826,488);}
+\DoxyCodeLine{1541                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1542             \}}
+\DoxyCodeLine{1543 }
+\DoxyCodeLine{1544         \}}
+\DoxyCodeLine{1545     \}}
+\DoxyCodeLine{1546 }
+\DoxyCodeLine{1547 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{class_pdtop_a651e0babbb70430654baf8472594f479_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_pdtop_a0cc6fe8cdbbab3c472b45c6e5e4d01d6}\label{class_pdtop_a0cc6fe8cdbbab3c472b45c6e5e4d01d6}} 
+\index{Pdtop@{Pdtop}!mode@{mode}}
+\index{mode@{mode}!Pdtop@{Pdtop}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily Q\+String Pdtop\+::mode}
+
+
+
+在文件 form.\+h 第 314 行定义.
+
+\mbox{\Hypertarget{class_pdtop_ab421c8ddd62fdd16dfee1e15f9e72971}\label{class_pdtop_ab421c8ddd62fdd16dfee1e15f9e72971}} 
+\index{Pdtop@{Pdtop}!now@{now}}
+\index{now@{now}!Pdtop@{Pdtop}}
+\doxysubsubsection{\texorpdfstring{now}{now}}
+{\footnotesize\ttfamily int Pdtop\+::now}
+
+
+
+在文件 form.\+h 第 313 行定义.
+
+\mbox{\Hypertarget{class_pdtop_add84a4f1d745ba8caf21e74e92a27fbc}\label{class_pdtop_add84a4f1d745ba8caf21e74e92a27fbc}} 
+\index{Pdtop@{Pdtop}!status@{status}}
+\index{status@{status}!Pdtop@{Pdtop}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily bool Pdtop\+::status}
+
+
+
+在文件 form.\+h 第 312 行定义.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{form_8h}{form.\+h}}\item 
+\mbox{\hyperlink{form_8cpp}{form.\+cpp}}\end{DoxyCompactItemize}

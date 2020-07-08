@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>星小夜的登录器: changesp.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">星小夜的登录器
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">changesp.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="changesp_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="changesp_8h.html">changesp.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;ui_changesp.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="changesp_8cpp.html#ace027d7f55316b060518c8ae4325a927">   18</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="changesp_8cpp.html#ace027d7f55316b060518c8ae4325a927">change_init</a>(QAxWidget *tmp){</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    tmp-&gt;setControl(QString::fromUtf8(<span class="stringliteral">&quot;{8856F961-340A-11D0-A96B-00C04FD705A2}&quot;</span>));<span class="comment">//注册组件ID</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="changesp_8cpp.html#a0a74bf8e75953bc39ea0af1dc884ea03">   26</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="changesp_8cpp.html#a0a74bf8e75953bc39ea0af1dc884ea03">deletesp</a>(QAxWidget *tmp){</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    tmp-&gt;setControl(QString::fromUtf8(<span class="stringliteral">&quot;{d27cdb6e-ae6d-11cf-96b8-444553540000}&quot;</span>));</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="changesp_8cpp.html#a010bb55b0086a6a09517c1b7ff1993b6">   35</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="changesp_8cpp.html#a010bb55b0086a6a09517c1b7ff1993b6">change_sp</a>(QAxWidget *tmp,QString url){</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="changesp_8cpp.html#a0a74bf8e75953bc39ea0af1dc884ea03">deletesp</a>(tmp);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    tmp-&gt;setControl(QString::fromUtf8(<span class="stringliteral">&quot;{8856F961-340A-11D0-A96B-00C04FD705A2}&quot;</span>));<span class="comment">//注册组件ID</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    tmp-&gt;dynamicCall(<span class="stringliteral">&quot;Navigate(QString)&quot;</span>,url);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_changesp.html#a70138fd9c5b0929a2c32a6700ed410af">   46</a></span>&#160;<a class="code" href="class_changesp.html#a70138fd9c5b0929a2c32a6700ed410af">Changesp::Changesp</a>(QWidget *parent) :</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    QWidget(parent),</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    ui(new <a class="code" href="namespace_ui.html">Ui</a>::<a class="code" href="class_changesp.html">Changesp</a>)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;setupUi(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    setAttribute(Qt::WA_QuitOnClose,<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="class_changesp.html#a4c97711ebbc2ec950a271695aa3c16f0">sp</a>=<span class="keyword">new</span> QAxWidget*[12];</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;12;i++)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="class_changesp.html#a4c97711ebbc2ec950a271695aa3c16f0">sp</a>[i]=NULL;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="class_changesp.html#a4c97711ebbc2ec950a271695aa3c16f0">sp</a>[0]=<a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;axWidget;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="class_changesp.html#a4c97711ebbc2ec950a271695aa3c16f0">sp</a>[1]=<a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;axWidget_2;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="class_changesp.html#a4c97711ebbc2ec950a271695aa3c16f0">sp</a>[2]=<a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;axWidget_3;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="class_changesp.html#a4c97711ebbc2ec950a271695aa3c16f0">sp</a>[3]=<a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;axWidget_4;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="class_changesp.html#a4c97711ebbc2ec950a271695aa3c16f0">sp</a>[4]=<a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;axWidget_5;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="class_changesp.html#a4c97711ebbc2ec950a271695aa3c16f0">sp</a>[5]=<a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;axWidget_6;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="class_changesp.html#a4c97711ebbc2ec950a271695aa3c16f0">sp</a>[6]=<a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;axWidget_7;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="class_changesp.html#a4c97711ebbc2ec950a271695aa3c16f0">sp</a>[7]=<a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;axWidget_8;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="class_changesp.html#a4c97711ebbc2ec950a271695aa3c16f0">sp</a>[8]=<a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;axWidget_9;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="class_changesp.html#a4c97711ebbc2ec950a271695aa3c16f0">sp</a>[9]=<a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;axWidget_10;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="class_changesp.html#a4c97711ebbc2ec950a271695aa3c16f0">sp</a>[10]=<a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;axWidget_11;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="class_changesp.html#a4c97711ebbc2ec950a271695aa3c16f0">sp</a>[11]=<a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;axWidget_12;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;12;i++)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="changesp_8cpp.html#ace027d7f55316b060518c8ae4325a927">change_init</a>(<a class="code" href="class_changesp.html#a4c97711ebbc2ec950a271695aa3c16f0">sp</a>[i]);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="class_changesp.html#a3747b1098b5c29ca081a91e548d0e446">model</a> = <span class="keyword">new</span> QDirModel;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;treeView-&gt;setModel(<a class="code" href="class_changesp.html#a3747b1098b5c29ca081a91e548d0e446">model</a>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="class_changesp.html#abe78729eae19b2310031904099a1128e">path</a>=<a class="code" href="ext_8cpp.html#a7e6d0f0a8d52069a12b6caa36f38bfa6">allpath</a>+<span class="stringliteral">&quot;/薄荷味的seer背包&quot;</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;treeView-&gt;setRootIndex(<a class="code" href="class_changesp.html#a3747b1098b5c29ca081a91e548d0e446">model</a>-&gt;index(<a class="code" href="class_changesp.html#abe78729eae19b2310031904099a1128e">path</a>));</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    connect(<a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;treeView,SIGNAL(pressed(QModelIndex)),<span class="keyword">this</span>,SLOT(<a class="code" href="class_changesp.html#a5aad823e7fc31ea7c684213905276379">slot_treeView_pressed</a>(QModelIndex)));</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    connect(<a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;pushButton_3,SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_changesp.html#aec09653420b9c8f115f548c624ee1419">slot_pre_bag</a>()));</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    connect(<a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;pushButton,SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_changesp.html#a7bacc71fdb2dd63c16e1c32e16426517">slot_savebag</a>()));</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    connect(<a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;pushButton_2,SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_changesp.html#a94ce8e3a047a1b40319a51efed195f42">slot_auto_bag</a>()));</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_changesp.html#aec09653420b9c8f115f548c624ee1419">   84</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_changesp.html#aec09653420b9c8f115f548c624ee1419">Changesp::slot_pre_bag</a>(){</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    QString tmp=<a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;textEdit-&gt;toPlainText();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    QStringList sections = tmp.split(QRegExp(<span class="stringliteral">&quot;[|]&quot;</span>));</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    QString webstr=QString(<span class="stringliteral">&quot;http://seer.61.com/resource/pet/head/&quot;</span>+sections[1]+<span class="stringliteral">&quot;.swf&quot;</span>);<span class="comment">//设置要打开的网页</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;12;i++)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <a class="code" href="changesp_8cpp.html#a0a74bf8e75953bc39ea0af1dc884ea03">deletesp</a>(<a class="code" href="class_changesp.html#a4c97711ebbc2ec950a271695aa3c16f0">sp</a>[i]);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;sections.length();i++){</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        qDebug()&lt;&lt;sections[i];</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        webstr=QString(<span class="stringliteral">&quot;http://seer.61.com/resource/pet/head/&quot;</span>+sections[i]+<span class="stringliteral">&quot;.swf&quot;</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <a class="code" href="class_changesp.html#af941f120c3b970f7639225efa0152803">bag</a>&lt;&lt;sections[i];</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        qDebug()&lt;&lt;<a class="code" href="class_changesp.html#af941f120c3b970f7639225efa0152803">bag</a>[i];</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="changesp_8cpp.html#a010bb55b0086a6a09517c1b7ff1993b6">change_sp</a>(<a class="code" href="class_changesp.html#a4c97711ebbc2ec950a271695aa3c16f0">sp</a>[i],webstr);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="class_changesp.html#af941f120c3b970f7639225efa0152803">bag</a>&lt;&lt;sections[i];</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    qDebug()&lt;&lt;webstr;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="class_changesp.html#a7bacc71fdb2dd63c16e1c32e16426517">  105</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_changesp.html#a7bacc71fdb2dd63c16e1c32e16426517">Changesp::slot_savebag</a>(){</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    QFileDialog saveDialog;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">//设置对话框打开的模式，是打开文件还是保存文件</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    saveDialog.setAcceptMode(QFileDialog::AcceptSave);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="comment">//设置对话框的标题</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    saveDialog.setWindowTitle(<span class="stringliteral">&quot;0.0&quot;</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="comment">//设置对话框的打开路径(只是路径，加上文件名失效)</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    saveDialog.setDirectory(<a class="code" href="ext_8cpp.html#a7e6d0f0a8d52069a12b6caa36f38bfa6">allpath</a>+<span class="stringliteral">&quot;/seer背包&quot;</span>);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="comment">//设置对话框默认显示文件名</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    saveDialog.selectFile(<span class="stringliteral">&quot;1&quot;</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="comment">//设置文件过滤器</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    saveDialog.setNameFilter(<span class="stringliteral">&quot;*.txt&quot;</span>);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="comment">//设置默认选中文件保存类型</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    saveDialog.selectNameFilter(<span class="stringliteral">&quot;*.txt&quot;</span>);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">if</span> (saveDialog.exec() == QFileDialog::AcceptSave) {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;         <span class="comment">//保存文件的路径(包含文件名)</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        QString saveFile = saveDialog.selectedFiles().first();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="comment">//保存文件的路径</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        QString savePath = saveDialog.directory().path();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="comment">//获得文件过滤器类型</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        QString filter = saveDialog.selectedNameFilter();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        QFile file(saveFile);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordflow">if</span>(!file.open(QIODevice::WriteOnly|QIODevice::Text|QIODevice::Append))</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            QMessageBox::warning(<span class="keyword">this</span>,<span class="stringliteral">&quot;sdf&quot;</span>,<span class="stringliteral">&quot;can&#39;t open&quot;</span>,QMessageBox::Yes);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        QTextStream stream(&amp;file);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        stream&lt;&lt;<a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;textEdit-&gt;toPlainText();</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        file.close();</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="class_changesp.html#a5aad823e7fc31ea7c684213905276379">  146</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_changesp.html#a5aad823e7fc31ea7c684213905276379">Changesp::slot_treeView_pressed</a>(QModelIndex modeIndex)</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;{</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;treeView-&gt;resizeColumnToContents(modeIndex.row());</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    QString selectedRowTxt = <a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;treeView-&gt;model()-&gt;itemData(modeIndex).values()[0].toString();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    QFile file(<a class="code" href="class_changesp.html#abe78729eae19b2310031904099a1128e">path</a>+<span class="stringliteral">&quot;/&quot;</span>+selectedRowTxt);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    file.open(QIODevice::ReadOnly | QIODevice::Text);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    QString value = file.readAll();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;textEdit-&gt;setText(value);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="class_changesp.html#afb41f4d2e005337209b9fd1048a6f21f">  159</a></span>&#160;<a class="code" href="class_changesp.html#afb41f4d2e005337209b9fd1048a6f21f">Changesp::~Changesp</a>()</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;{</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keyword">delete</span> <a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keyword">delete</span> []<a class="code" href="class_changesp.html#a4c97711ebbc2ec950a271695aa3c16f0">sp</a>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keyword">delete</span> <a class="code" href="class_changesp.html#a3747b1098b5c29ca081a91e548d0e446">model</a>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;}</div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="class_changesp.html#a6bc2e14cefa3f8fecf72f1a0b80e243e">  169</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_changesp.html#a6bc2e14cefa3f8fecf72f1a0b80e243e">Changesp::Putsp_home</a>(){</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    QVariant x,y;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">while</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(0,0,1000,600,<span class="stringliteral">&quot;黑色入库.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,0,x,y)==-1){</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(633,268);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(0,0,1000,600,<span class="stringliteral">&quot;识别仓库.bmp|识别仓库2.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,0,x,y)!=-1)</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <a class="code" href="xy_8cpp.html#a925196a6417535216cfd7ea936e4ca50">Delay</a>(500);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;}</div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="class_changesp.html#a28916b4d95f4e648255c9ce3d8722785">  183</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_changesp.html#a28916b4d95f4e648255c9ce3d8722785">Changesp::Opensphome</a>(){</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    QVariant x,y;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">while</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(0,0,1000,600,<span class="stringliteral">&quot;识别仓库.bmp|识别仓库2.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,0,x,y)==-1){</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(849,470);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <a class="code" href="xy_8cpp.html#a925196a6417535216cfd7ea936e4ca50">Delay</a>(500);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;}</div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="class_changesp.html#a274ef8d0e7c4eb624d2b2a3d8138f516">  195</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_changesp.html#a274ef8d0e7c4eb624d2b2a3d8138f516">Changesp::Searchsp</a>(HWND pid, QString name){</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    QVariant x,y;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(901,103);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a22a1a36e3bcf2736676b67ebf5f0578a">LeftDown</a>();</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(839,103);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    QString s=name;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">foreach</span>(QChar c, s)</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        PostMessage(pid, WM_CHAR, c.unicode(), 0);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#adbd6730eda805481cc312c0ce743c2e2">LeftUp</a>();</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">while</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(620, 115, 794, 186, <span class="stringliteral">&quot;搜索结果.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,0,x,y)==-1){</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(925,108);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <a class="code" href="xy_8cpp.html#a925196a6417535216cfd7ea936e4ca50">Delay</a>(100);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;}</div>
+<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="class_changesp.html#aaafbea9fea0c62585ad940f3e1b6ca7d">  214</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_changesp.html#aaafbea9fea0c62585ad940f3e1b6ca7d">Changesp::Putsp_bag</a>(){</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;15;i++){</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(216,489);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <a class="code" href="xy_8cpp.html#a925196a6417535216cfd7ea936e4ca50">Delay</a>(100);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;15;i++){</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(925,137);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <a class="code" href="xy_8cpp.html#a925196a6417535216cfd7ea936e4ca50">Delay</a>(100);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;}</div>
+<div class="line"><a name="l00230"></a><span class="lineno"><a class="line" href="classff_auto_c.html#a47e3627ad87c9951dd0138a59b8a062e">  230</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classff_auto_c.html#a47e3627ad87c9951dd0138a59b8a062e">ffAutoC::run</a>(){</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    QVariant x,y;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordflow">while</span>(<a class="code" href="classff_auto_c.html#a5a6eb3bdef2fe445ec3315fc57bfea7c">status</a>==<span class="keyword">true</span>){</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(406, 322, 562, 402,<span class="stringliteral">&quot;放入背包确认.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,0,x,y)!=-1){</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(x.toInt(),y.toInt());</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(400, 200, 600, 300, <span class="stringliteral">&quot;数据非法.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,0,x,y)!=-1){</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(x.toInt(),y.toInt());</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">FindPic</a>(0,0,1000,600,<span class="stringliteral">&quot;消息盒子x.bmp&quot;</span>,<span class="stringliteral">&quot;000000&quot;</span>,0.8,0,x,y)!=-1){</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">MoveTo</a>(x.toInt(),y.toInt());</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <a class="code" href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a>.<a class="code" href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">LeftClick</a>();</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <a class="code" href="xy_8cpp.html#a925196a6417535216cfd7ea936e4ca50">Delay</a>(1000);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;}</div>
+<div class="line"><a name="l00253"></a><span class="lineno"><a class="line" href="class_changesp.html#a94ce8e3a047a1b40319a51efed195f42">  253</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_changesp.html#a94ce8e3a047a1b40319a51efed195f42">Changesp::slot_auto_bag</a>(){</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <a class="code" href="xy_8cpp.html#a925196a6417535216cfd7ea936e4ca50">Delay</a>(100);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <a class="code" href="classff_auto_c.html">ffAutoC</a> *tmp=<span class="keyword">new</span> <a class="code" href="classff_auto_c.html">ffAutoC</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    tmp-&gt;<a class="code" href="classff_auto_c.html#a5a6eb3bdef2fe445ec3315fc57bfea7c">status</a>=<span class="keyword">true</span>;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    tmp-&gt;start();</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <a class="code" href="class_changesp.html#a6bc2e14cefa3f8fecf72f1a0b80e243e">Putsp_home</a>();</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <a class="code" href="class_changesp.html#a28916b4d95f4e648255c9ce3d8722785">Opensphome</a>();</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    QString tmp1=<a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>-&gt;textEdit-&gt;toPlainText();</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    QStringList sections = tmp1.split(QRegExp(<span class="stringliteral">&quot;[|]&quot;</span>));</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <a class="code" href="class_changesp.html#af941f120c3b970f7639225efa0152803">bag</a>.clear();</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;sections.length();i++){</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <a class="code" href="class_changesp.html#af941f120c3b970f7639225efa0152803">bag</a>&lt;&lt;sections[i];</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="class_changesp.html#af941f120c3b970f7639225efa0152803">bag</a>.length();i++){</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <a class="code" href="class_changesp.html#a274ef8d0e7c4eb624d2b2a3d8138f516">Searchsp</a>(<a class="code" href="ext_8cpp.html#a14599d7d3f033ca76bf7e06523ac8bdd">Pid</a>,<a class="code" href="class_changesp.html#af941f120c3b970f7639225efa0152803">bag</a>[i]);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <a class="code" href="class_changesp.html#aaafbea9fea0c62585ad940f3e1b6ca7d">Putsp_bag</a>();</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <a class="code" href="xy_8cpp.html#a925196a6417535216cfd7ea936e4ca50">Delay</a>(200);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    }</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    tmp-&gt;<a class="code" href="classff_auto_c.html#a5a6eb3bdef2fe445ec3315fc57bfea7c">status</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <a class="code" href="xy_8cpp.html#a925196a6417535216cfd7ea936e4ca50">Delay</a>(1000);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keyword">delete</span> tmp;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    qDebug()&lt;&lt;<span class="stringliteral">&quot;success bag&quot;</span>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_changesp_html_a28916b4d95f4e648255c9ce3d8722785"><div class="ttname"><a href="class_changesp.html#a28916b4d95f4e648255c9ce3d8722785">Changesp::Opensphome</a></div><div class="ttdeci">void Opensphome()</div><div class="ttdoc">打开精灵仓库函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00183">changesp.cpp:183</a></div></div>
+<div class="ttc" id="aclass_changesp_html_a6bc2e14cefa3f8fecf72f1a0b80e243e"><div class="ttname"><a href="class_changesp.html#a6bc2e14cefa3f8fecf72f1a0b80e243e">Changesp::Putsp_home</a></div><div class="ttdeci">void Putsp_home()</div><div class="ttdoc">背包精灵全部入库函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00169">changesp.cpp:169</a></div></div>
+<div class="ttc" id="aclassff_auto_c_html_a47e3627ad87c9951dd0138a59b8a062e"><div class="ttname"><a href="classff_auto_c.html#a47e3627ad87c9951dd0138a59b8a062e">ffAutoC::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">自动非法确认-线程启动函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00230">changesp.cpp:230</a></div></div>
+<div class="ttc" id="aclass_changesp_html_a70138fd9c5b0929a2c32a6700ed410af"><div class="ttname"><a href="class_changesp.html#a70138fd9c5b0929a2c32a6700ed410af">Changesp::Changesp</a></div><div class="ttdeci">Changesp(QWidget *parent=0)</div><div class="ttdoc">一键换背包窗口构造函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00046">changesp.cpp:46</a></div></div>
+<div class="ttc" id="aclass_dm_1_1_idmsoft_html_a1fde0da7b0ec5c141bdb8b38bc809ea0"><div class="ttname"><a href="class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0">Dm::Idmsoft::FindPic</a></div><div class="ttdeci">int FindPic(int x1, int y1, int x2, int y2, const QString &amp;pic_name, const QString &amp;delta_color, double sim, int dir, QVariant &amp;x, QVariant &amp;y)</div><div class="ttdef"><b>Definition:</b> <a href="dm_8h_source.html#l08311">dm.h:8311</a></div></div>
+<div class="ttc" id="axy_8cpp_html_a925196a6417535216cfd7ea936e4ca50"><div class="ttname"><a href="xy_8cpp.html#a925196a6417535216cfd7ea936e4ca50">Delay</a></div><div class="ttdeci">void Delay(int time)</div><div class="ttdoc">延迟线程（非阻塞）</div><div class="ttdef"><b>Definition:</b> <a href="xy_8cpp_source.html#l00217">xy.cpp:217</a></div></div>
+<div class="ttc" id="aclass_changesp_html_afb41f4d2e005337209b9fd1048a6f21f"><div class="ttname"><a href="class_changesp.html#afb41f4d2e005337209b9fd1048a6f21f">Changesp::~Changesp</a></div><div class="ttdeci">~Changesp()</div><div class="ttdoc">一键换背包窗口析构函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00159">changesp.cpp:159</a></div></div>
+<div class="ttc" id="aclassff_auto_c_html"><div class="ttname"><a href="classff_auto_c.html">ffAutoC</a></div><div class="ttdoc">自动非法确认-多线程类 用于自动按下赛尔号的确认按钮的多线程</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8h_source.html#l00035">changesp.h:36</a></div></div>
+<div class="ttc" id="aclass_changesp_html_a3747b1098b5c29ca081a91e548d0e446"><div class="ttname"><a href="class_changesp.html#a3747b1098b5c29ca081a91e548d0e446">Changesp::model</a></div><div class="ttdeci">QDirModel * model</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8h_source.html#l00065">changesp.h:65</a></div></div>
+<div class="ttc" id="aclass_changesp_html_a274ef8d0e7c4eb624d2b2a3d8138f516"><div class="ttname"><a href="class_changesp.html#a274ef8d0e7c4eb624d2b2a3d8138f516">Changesp::Searchsp</a></div><div class="ttdeci">void Searchsp(HWND pid, QString name)</div><div class="ttdoc">精灵仓库搜索精灵函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00195">changesp.cpp:195</a></div></div>
+<div class="ttc" id="aclass_changesp_html_a7bacc71fdb2dd63c16e1c32e16426517"><div class="ttname"><a href="class_changesp.html#a7bacc71fdb2dd63c16e1c32e16426517">Changesp::slot_savebag</a></div><div class="ttdeci">void slot_savebag()</div><div class="ttdoc">保存已输入背包函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00105">changesp.cpp:105</a></div></div>
+<div class="ttc" id="achangesp_8cpp_html_a010bb55b0086a6a09517c1b7ff1993b6"><div class="ttname"><a href="changesp_8cpp.html#a010bb55b0086a6a09517c1b7ff1993b6">change_sp</a></div><div class="ttdeci">void change_sp(QAxWidget *tmp, QString url)</div><div class="ttdoc">换背包精灵头像预览函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00035">changesp.cpp:35</a></div></div>
+<div class="ttc" id="aclass_dm_1_1_idmsoft_html_adbd6730eda805481cc312c0ce743c2e2"><div class="ttname"><a href="class_dm_1_1_idmsoft.html#adbd6730eda805481cc312c0ce743c2e2">Dm::Idmsoft::LeftUp</a></div><div class="ttdeci">int LeftUp()</div><div class="ttdef"><b>Definition:</b> <a href="dm_8h_source.html#l09327">dm.h:9327</a></div></div>
+<div class="ttc" id="achangesp_8cpp_html_ace027d7f55316b060518c8ae4325a927"><div class="ttname"><a href="changesp_8cpp.html#ace027d7f55316b060518c8ae4325a927">change_init</a></div><div class="ttdeci">void change_init(QAxWidget *tmp)</div><div class="ttdoc">换背包精灵头像预览控件初始化函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00018">changesp.cpp:18</a></div></div>
+<div class="ttc" id="aclass_changesp_html_aec09653420b9c8f115f548c624ee1419"><div class="ttname"><a href="class_changesp.html#aec09653420b9c8f115f548c624ee1419">Changesp::slot_pre_bag</a></div><div class="ttdeci">void slot_pre_bag()</div><div class="ttdoc">预览输入背包函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00084">changesp.cpp:84</a></div></div>
+<div class="ttc" id="aclass_changesp_html"><div class="ttname"><a href="class_changesp.html">Changesp</a></div><div class="ttdoc">一键换背包窗口类 一键换背包窗口这个类相关的函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8h_source.html#l00056">changesp.h:57</a></div></div>
+<div class="ttc" id="aclass_changesp_html_aaafbea9fea0c62585ad940f3e1b6ca7d"><div class="ttname"><a href="class_changesp.html#aaafbea9fea0c62585ad940f3e1b6ca7d">Changesp::Putsp_bag</a></div><div class="ttdeci">void Putsp_bag()</div><div class="ttdoc">仓库精灵放入背包函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00214">changesp.cpp:214</a></div></div>
+<div class="ttc" id="aclass_changesp_html_abe78729eae19b2310031904099a1128e"><div class="ttname"><a href="class_changesp.html#abe78729eae19b2310031904099a1128e">Changesp::path</a></div><div class="ttdeci">QString path</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8h_source.html#l00066">changesp.h:66</a></div></div>
+<div class="ttc" id="aext_8cpp_html_a7e6d0f0a8d52069a12b6caa36f38bfa6"><div class="ttname"><a href="ext_8cpp.html#a7e6d0f0a8d52069a12b6caa36f38bfa6">allpath</a></div><div class="ttdeci">QString allpath</div><div class="ttdoc">登录器运行目录</div><div class="ttdef"><b>Definition:</b> <a href="ext_8cpp_source.html#l00045">ext.cpp:45</a></div></div>
+<div class="ttc" id="aclass_dm_1_1_idmsoft_html_a49c9f38bed76689957f7218c265b7c49"><div class="ttname"><a href="class_dm_1_1_idmsoft.html#a49c9f38bed76689957f7218c265b7c49">Dm::Idmsoft::MoveTo</a></div><div class="ttdeci">int MoveTo(int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="dm_8h_source.html#l09423">dm.h:9423</a></div></div>
+<div class="ttc" id="achangesp_8cpp_html_a0a74bf8e75953bc39ea0af1dc884ea03"><div class="ttname"><a href="changesp_8cpp.html#a0a74bf8e75953bc39ea0af1dc884ea03">deletesp</a></div><div class="ttdeci">void deletesp(QAxWidget *tmp)</div><div class="ttdoc">换背包精灵头像预览控件关闭函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00026">changesp.cpp:26</a></div></div>
+<div class="ttc" id="aclassff_auto_c_html_a5a6eb3bdef2fe445ec3315fc57bfea7c"><div class="ttname"><a href="classff_auto_c.html#a5a6eb3bdef2fe445ec3315fc57bfea7c">ffAutoC::status</a></div><div class="ttdeci">bool status</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8h_source.html#l00040">changesp.h:40</a></div></div>
+<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> <a href="atoken_8h_source.html#l00017">atoken.h:17</a></div></div>
+<div class="ttc" id="aclass_changesp_html_ac62d95089ccda997257bf1dd13c225f8"><div class="ttname"><a href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">Changesp::ui</a></div><div class="ttdeci">Ui::Changesp * ui</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8h_source.html#l00078">changesp.h:78</a></div></div>
+<div class="ttc" id="achangesp_8h_html"><div class="ttname"><a href="changesp_8h.html">changesp.h</a></div><div class="ttdoc">一键换背包窗口头文件</div></div>
+<div class="ttc" id="aclass_dm_1_1_idmsoft_html_a22a1a36e3bcf2736676b67ebf5f0578a"><div class="ttname"><a href="class_dm_1_1_idmsoft.html#a22a1a36e3bcf2736676b67ebf5f0578a">Dm::Idmsoft::LeftDown</a></div><div class="ttdeci">int LeftDown()</div><div class="ttdef"><b>Definition:</b> <a href="dm_8h_source.html#l09319">dm.h:9319</a></div></div>
+<div class="ttc" id="aext_8cpp_html_a02a7230d0f93f7aa4a80065a9e032ae1"><div class="ttname"><a href="ext_8cpp.html#a02a7230d0f93f7aa4a80065a9e032ae1">dm</a></div><div class="ttdeci">Dm::Idmsoft dm</div><div class="ttdoc">大漠插件相关的对象（唯一）</div><div class="ttdef"><b>Definition:</b> <a href="ext_8cpp_source.html#l00015">ext.cpp:15</a></div></div>
+<div class="ttc" id="aext_8cpp_html_a14599d7d3f033ca76bf7e06523ac8bdd"><div class="ttname"><a href="ext_8cpp.html#a14599d7d3f033ca76bf7e06523ac8bdd">Pid</a></div><div class="ttdeci">HWND Pid</div><div class="ttdoc">游戏界面窗口句柄</div><div class="ttdef"><b>Definition:</b> <a href="ext_8cpp_source.html#l00017">ext.cpp:17</a></div></div>
+<div class="ttc" id="aclass_changesp_html_a4c97711ebbc2ec950a271695aa3c16f0"><div class="ttname"><a href="class_changesp.html#a4c97711ebbc2ec950a271695aa3c16f0">Changesp::sp</a></div><div class="ttdeci">QAxWidget ** sp</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8h_source.html#l00064">changesp.h:64</a></div></div>
+<div class="ttc" id="aclass_changesp_html_a5aad823e7fc31ea7c684213905276379"><div class="ttname"><a href="class_changesp.html#a5aad823e7fc31ea7c684213905276379">Changesp::slot_treeView_pressed</a></div><div class="ttdeci">void slot_treeView_pressed(QModelIndex modeIndex)</div><div class="ttdoc">背包txt选中函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00146">changesp.cpp:146</a></div></div>
+<div class="ttc" id="aclass_dm_1_1_idmsoft_html_ad28afe0a9d51358420621d7db04fce5a"><div class="ttname"><a href="class_dm_1_1_idmsoft.html#ad28afe0a9d51358420621d7db04fce5a">Dm::Idmsoft::LeftClick</a></div><div class="ttdeci">int LeftClick()</div><div class="ttdef"><b>Definition:</b> <a href="dm_8h_source.html#l09303">dm.h:9303</a></div></div>
+<div class="ttc" id="aclass_changesp_html_af941f120c3b970f7639225efa0152803"><div class="ttname"><a href="class_changesp.html#af941f120c3b970f7639225efa0152803">Changesp::bag</a></div><div class="ttdeci">QStringList bag</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8h_source.html#l00069">changesp.h:69</a></div></div>
+<div class="ttc" id="aclass_changesp_html_a94ce8e3a047a1b40319a51efed195f42"><div class="ttname"><a href="class_changesp.html#a94ce8e3a047a1b40319a51efed195f42">Changesp::slot_auto_bag</a></div><div class="ttdeci">void slot_auto_bag()</div><div class="ttdoc">一键换背包主函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00253">changesp.cpp:253</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

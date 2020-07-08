@@ -1,3 +1,12 @@
+/**
+ * @file mainwindow.cpp
+ * @brief 游戏主窗口及其相关
+ * @author starlitnightly
+ * @email Starlitnightly@163.com
+ * @version 1.0.0
+ * @date 2020-07-09
+ * @license GPL
+ */
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "mediamute.h"
@@ -22,7 +31,10 @@
 
 
 
-
+/**
+ * @brief 自动注册大漠插件函数
+ * @return 无
+ */
 void AutoRegDm()
 {
     QString path;
@@ -34,7 +46,10 @@ void AutoRegDm()
     process.waitForFinished();
 }
 
-
+/**
+ * @brief 获取程序pid
+ * @return 返回程序pid（由于窗口名可变所以此函数作废）
+ */
 HWND Getpid(){
     HWND test;
     HWND hq=FindWindow(L"Qt5QWindowIcon",L"seer");
@@ -49,7 +64,21 @@ HWND Getpid(){
     test=GetWindow(test,5);
     return test;
 }
-
+/**
+ * @brief 脚本窗口析构函数
+ * @return 无
+ */
+MainWindow::~MainWindow()
+{
+    delete ui;
+    delete n;
+    delete csp;
+}
+/**
+ * @brief 游戏主窗口构造函数
+ * @param parent 父类指针
+ * @return 无
+ */
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -59,8 +88,11 @@ MainWindow::MainWindow(QWidget *parent) :
       //  this->setStyleSheet("QDialog{border:2px solid green;}");
     //setWindowFlags(Qt::FramelessWindowHint);//无边框
     //setAttribute(Qt::WA_TranslucentBackground);//背景透明
+    allpath=QCoreApplication::applicationDirPath();
+    qDebug()<<allpath;
     ato=NULL;
-    QSettings *configIniWrite = new QSettings("set.ini", QSettings::IniFormat);
+
+    QSettings *configIniWrite = new QSettings(allpath+"/set.ini", QSettings::IniFormat);
     //向ini文件中写入内容,setValue函数的两个参数是键值对
     qDebug()<<"agree"<<configIniWrite->value("agree").toString();
     if(configIniWrite->value("agree").toString()!="true")
@@ -70,7 +102,9 @@ MainWindow::MainWindow(QWidget *parent) :
         ato->show();
     }
     delete configIniWrite;
+
     ui->setupUi(this);
+    qDebug()<<"atosuccess";
 
     //setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint | Qt::CustomizeWindowHint);
     //qDebug()<<"test"<<this->winId();
@@ -89,6 +123,8 @@ MainWindow::MainWindow(QWidget *parent) :
     cd=NULL;
 
     Mute();
+
+    qDebug()<<"载入无问题";
 
 
     //信号连接
@@ -135,11 +171,13 @@ MainWindow::MainWindow(QWidget *parent) :
 
     //一键换精灵窗口信号
     connect(ui->actionyijian,SIGNAL(triggered()),this,SLOT(show_csp()));
+
+    qDebug()<<"信号连接无问题";
     //f.show();
 
     //nono窗口
     //巅峰模式
-    allpath=QDir::currentPath();
+
     n=new Nono();
     connect(ui->action_13,SIGNAL(triggered(bool)),n,SLOT(slot_startedTimer_clicked(bool)));
     connect(ui->action_14,SIGNAL(triggered()),this,SLOT(dianfeng()));
@@ -148,6 +186,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(n,SIGNAL(signal_fresh()),this,SLOT(FreshSeer()));
     connect(n,SIGNAL(signal_sb()),this,SLOT(slot_sb()));
     connect(this,SIGNAL(signal_openskill()),n,SLOT(showskill()));
+    qDebug()<<"nono信号无问题";
     n->show();
     //QDesktopWidget* desktopWidget = QApplication::desktop();
     QScreen *screen=QGuiApplication::primaryScreen ();
@@ -195,9 +234,14 @@ MainWindow::MainWindow(QWidget *parent) :
     request.setUrl(url);
     request.setHeader(QNetworkRequest::ContentTypeHeader,QVariant("application/x-www-form-urlencoded"));
     QNetworkReply* reply = nam->get(request);
+    qDebug()<<"此处无问题";
 
+    QFile::link(allpath+"/星小夜的seer登录器.exe", QStandardPaths::writableLocation(QStandardPaths::DesktopLocation).append("/").append("星小夜的seer登录器.lnk"));
 }
-
+/**
+ * @brief 检测更新-返回槽函数
+ * @param reply 网页返回内容
+ */
 void MainWindow::slot_new(QNetworkReply *reply){
     QNetworkReply::NetworkError err = reply->error();
     //qDebug()<<reply->readAll();
@@ -235,7 +279,10 @@ void MainWindow::slot_new(QNetworkReply *reply){
     }
 
 }
-
+/**
+ * @brief 打开一键换背包窗口
+ * @return 无
+ */
 void MainWindow::show_csp(){
     if(bind_status==false)
         Binddm();
@@ -243,12 +290,18 @@ void MainWindow::show_csp(){
     csp->show();
 
 }
+/**
+ * @brief 绑定大漠插件函数
+ * @return 无
+ */
 void MainWindow::slot_sb(){
     if(bind_status==false)
         Binddm();
 }
-
-
+/**
+ * @brief 截取对面阵容函数-巅峰
+ * @return 无
+ */
 void MainWindow::dianfeng(){
     if(bind_status==false)
         Binddm();
@@ -256,13 +309,10 @@ void MainWindow::dianfeng(){
     emit sendtip("精灵阵容已截图完毕");
 }
 
-MainWindow::~MainWindow()
-{
-    delete ui;
-    delete n;
-    delete csp;
-}
-
+/**
+ * @brief 绑定大漠插件到游戏窗口
+ * @return 无
+ */
 void MainWindow::Binddm(){
     //获取游戏窗口pid
     int pid;
@@ -295,7 +345,7 @@ void MainWindow::Binddm(){
         }
     }
     //设置识图目录
-    QString path=QDir::currentPath()+"/pic";
+    QString path=allpath+"/pic";
     dm.SetPath(path);
     //测试识图效果
     QVariant x,y;
@@ -305,38 +355,56 @@ void MainWindow::Binddm(){
     dm.SetDict(0,path+"/ziku.txt");
     bind_status=true;
 }
-
+/**
+ * @brief 刷新游戏
+ * @return 无
+ */
 void MainWindow::FreshSeer()//刷新游戏
 {
     qDebug()<<"通信无异常";
     //QString webstr=QString("http://seer.61.com/play.shtml");//设置要打开的网页
     ui->axWidget->dynamicCall("Refresh(void)");//显示网页
 }
-
+/**
+ * @brief 游戏静音
+ * @return 无
+ */
 void MainWindow::Mute()//静音
 {
     Cmute.SetMute(true);
     emit sendtip("小赛尔，游戏静音成功啦，如果没有成功再按一次");
 }
-
+/**
+ * @brief 游戏接触静音
+ * @return 无
+ */
 void MainWindow::unMute()//解除静音
 {
     Cmute.SetMute(false);
     emit sendtip("小赛尔，游戏成功解除静音了");
 }
-
+/**
+ * @brief 内存优化
+ * @return 无
+ */
 void MainWindow::OptimizingMemory()//内存优化
 {
     SetProcessWorkingSetSize(GetCurrentProcess(),-1,-1);
     emit sendtip("内存优化成功，如果还是卡顿建议刷新");
 }
-
+/**
+ * @brief 内存释放
+ * @return 无
+ */
 void MainWindow::ReleaseMemory(){
     //内存释放(之后有空再写，暂时用内存优化代替下)
     SetProcessWorkingSetSize(GetCurrentProcess(),-1,-1);
     emit sendtip("内存释放成功，如果还是卡顿建议刷新");
 }
-
+/**
+ * @brief 清理ie缓存
+ * @return 无
+ */
 void MainWindow::ClearCache(){
     //清理ie缓存
     QProcess process(0);
@@ -346,45 +414,63 @@ void MainWindow::ClearCache(){
     emit sendtip("ie缓存清理成功，如果还是卡顿建议刷新");
 
 }
-
+/**
+ * @brief 打开ce
+ * @return 无
+ */
 void MainWindow::Opence(){
     //打开ce
     QProcess pro;
-    QString strPath = QDir::currentPath()+"/工具/ce6.8.exe";
+    QString strPath = allpath+"/工具/ce6.8.exe";
     pro.startDetached(strPath);
     emit sendtip("Cheatengine正在加载中，请不要用此工具做出不允许的事情哦");
 }
-
+/**
+ * @brief 打开fd
+ * @return 无
+ */
 void MainWindow::Openfd(){
     //打开fd
     QProcess pro;
-    QString strPath = QDir::currentPath()+"/工具/Fiddler/Fiddlerh.exe";
+    QString strPath = allpath+"/工具/Fiddler/Fiddlerh.exe";
     pro.startDetached(strPath);
     emit sendtip("fiddler正在加载中，请不要用此工具做出不允许的事情哦");
 }
-
+/**
+ * @brief 打开鼠标录制工具
+ * @return 无
+ */
 void MainWindow::OpenKeyandMouse(){
     //打开键鼠录制器
     QProcess pro;
-    QString strPath = QDir::currentPath()+"/工具/录制/星小夜的键鼠录制工具.exe";
+    QString strPath = allpath+"/工具/录制/星小夜的键鼠录制工具.exe";
     pro.startDetached(strPath);
     emit sendtip("鼠标录制器启动中，可以开始做你的脚本啦");
 }
-
+/**
+ * @brief 打开鼠标连点器
+ * @return 无
+ */
 void MainWindow::OpenMousepoint(){
     //打开鼠标连点器
     QMessageBox::information(NULL,"this","开发中");
     emit sendtip("此功能还在开发中，敬请期待");
 }
 
-
+/**
+ * @brief 宝石合成
+ * @return 无
+ */
 void MainWindow::Gemsynthesis(){
     //宝石合成
     emit sendtip("此功能还在开发中，敬请期待");
 }
 
 
-
+/**
+ * @brief 打开脚本窗口
+ * @return 无
+ */
 void MainWindow::script_open()
 {
     if(bind_status==false)
@@ -393,7 +479,10 @@ void MainWindow::script_open()
     emit sendtip("脚本已打开，本功能搜集自网络，星夜对本功能带来的一切后果概不负责");
 
 }
-
+/**
+ * @brief 打开变速窗口
+ * @return 无
+ */
 void MainWindow::speedopen()
 {
     s.show();
@@ -401,79 +490,131 @@ void MainWindow::speedopen()
     emit sendtip("变速功能已开启，请正确合理地使用该功能哦");
 
 }
+/**
+ * @brief 一键换装备-时空
+ * @return 无
+ */
 void MainWindow::Changebag_sk(){
     if(bind_status==false)
         Binddm();
     Changebag("时空");
     emit sendtip("一键更换时空成功啦，快看看换好的套装吧");
 }
+/**
+ * @brief 一键换装备-腐蚀者
+ * @return 无
+ */
 void MainWindow::Changebag_fs(){
     if(bind_status==false)
         Binddm();
     Changebag("腐蚀者");
     emit sendtip("一键更换腐蚀者成功啦，快看看换好的套装吧");
 }
+/**
+ * @brief 一键换装备-零度
+ * @return 无
+ */
 void MainWindow::Changebag_ld(){
     if(bind_status==false)
         Binddm();
     Changebag("零度");
     emit sendtip("一键更换零度成功啦，快看看换好的套装吧");
 }
+/**
+ * @brief 一键换装备-皇帝
+ * @return 无
+ */
 void MainWindow::Changebag_hd(){
     if(bind_status==false)
         Binddm();
     Changebag("皇帝");
     emit sendtip("一键更换皇帝成功啦，快看看换好的套装吧");
 }
+/**
+ * @brief 一键换装备-毒液
+ * @return 无
+ */
 void MainWindow::Changebag_dy(){
     if(bind_status==false)
         Binddm();
     Changebag("毒液");
     emit sendtip("一键更换毒液成功啦，快看看换好的套装吧");
 }
+/**
+ * @brief 一键换装备-笑傲
+ * @return 无
+ */
 void MainWindow::Changebag_xa(){
     if(bind_status==false)
         Binddm();
     Changebag("笑傲");
     emit sendtip("一键更换笑傲成功啦，快看看换好的套装吧");
 }
+/**
+ * @brief 一键换装备-未来
+ * @return 无
+ */
 void MainWindow::Changebag_wl(){
     if(bind_status==false)
         Binddm();
     Changebag("未来");
     emit sendtip("一键更换未来成功啦，快看看换好的套装吧");
 }
+/**
+ * @brief 一键换装备-元神
+ * @return 无
+ */
 void MainWindow::Changebag_ys(){
     if(bind_status==false)
         Binddm();
     Changebag("元神");
     emit sendtip("一键更换元神成功啦，快看看换好的套装吧");
 }
+/**
+ * @brief 一键换装备-天尊
+ * @return 无
+ */
 void MainWindow::Changebag_tz(){
     if(bind_status==false)
         Binddm();
     Changebag("天尊");
     emit sendtip("一键更换天尊成功啦，快看看换好的套装吧");
 }
+/**
+ * @brief 一键换装备-银翼骑士
+ * @return 无
+ */
 void MainWindow::Changebag_yy(){
     if(bind_status==false)
         Binddm();
     Changebag("银翼骑士");
     emit sendtip("一键更换银翼成功啦，快看看换好的套装吧");
 }
+/**
+ * @brief 一键换装备-天启
+ * @return 无
+ */
 void MainWindow::Changebag_tq(){
     if(bind_status==false)
         Binddm();
     Changebag("天启");
     emit sendtip("一键更换天启成功啦，快看看换好的套装吧");
 }
+/**
+ * @brief 一键换装备-浴火
+ * @return 无
+ */
 void MainWindow::Changebag_yh(){
     if(bind_status==false)
         Binddm();
     Changebag("浴火");
     emit sendtip("一键更换浴火成功啦，快看看换好的套装吧");
 }
-
+/**
+ * @brief 一键换装备-主函数
+ * @param name 要换的装备名
+ * @return 无
+ */
 void MainWindow::Changebag(QString name){
     Delay(100);
     //非法确认按钮
@@ -490,7 +631,10 @@ void MainWindow::Changebag(QString name){
     delete tmp;
     //QMessageBox::information(NULL,"this","小铁皮换装成功");
 }
-
+/**
+ * @brief 一键换装备-打开装备背包
+ * @return 无
+ */
 void Openbag(){
     QVariant x,y;
     while(dm.FindPic(18,11,526,316,"查看个人信息.bmp","000000",0.8,0,x,y)==-1){
@@ -499,7 +643,12 @@ void Openbag(){
         Delay(500);
     }
 }
-
+/**
+ * @brief 一键换装备-搜索装备
+ * @param pid 窗口id
+ * @param name 要换的装备名
+ * @return 无
+ */
 void Searchbag(HWND pid,QString name){
     dm.MoveTo(736,382);
     dm.LeftClick();
@@ -510,7 +659,10 @@ void Searchbag(HWND pid,QString name){
     dm.MoveTo(797,380);
     dm.LeftClick();
 }
-
+/**
+ * @brief 一键换装备-穿上装备
+ * @return 无
+ */
 void Wearbag(){
     QVariant x,y;
     while(dm.FindPic(0,0,1000,600,"装备选完.bmp","000000",0.8,0,x,y)==-1){
@@ -524,17 +676,22 @@ void Wearbag(){
     dm.LeftClick();
     Delay(100);
 }
-
+/**
+ * @brief 打开自定义脚本
+ * @return 无
+ */
 void MainWindow::Openscript(){
     //打开脚本
     QProcess pro;
-    QString strPath = QDir::currentPath()+"/工具/自定义脚本工具.exe";
+    QString strPath = allpath+"/工具/自定义脚本工具.exe";
     pro.startDetached(strPath);
     emit sendtip("自定义脚本工具加载中，发挥你的创意吧");
 }
 
-
-/*以下函数作废*/
+/**
+ * @brief 一键输入cdk
+ * @return 无
+ */
 void MainWindow::Inputcdk(){
     //一键输入cdk
     if(cd==NULL)
@@ -542,61 +699,53 @@ void MainWindow::Inputcdk(){
     if(bind_status==false)
         Binddm();
     cd->show();
-
-
 }
-
+/**
+ * @brief 打开橙汁赛尔数值计算器
+ * @return 无
+ */
 void MainWindow::seer_cal(){
     QProcess pro;
-    QString strPath = QDir::currentPath()+"/工具/赛尔数据计算器/赛尔数据计算器.exe";
+    QString strPath = allpath+"/工具/赛尔数据计算器/赛尔数据计算器.exe";
     pro.startDetached(strPath);
     emit sendtip("赛尔数值计算器正在加载中（by橙汁）");
 }
-
-void MainWindow::GreenfireTimer(){
-    //绿火计时器
-}
-
+/**
+ * @brief 打开精灵技能快查窗口
+ * @return 无
+ */
 void MainWindow::PeakMode(){
     //精灵技能快查
     emit signal_openskill();
 }
-
-
-
-void MainWindow::ChangeSpirit(){
-    //一键换精灵窗口
-}
-
-void MainWindow::ChangeBag(){
-    //一键换背包
-}
-
-void MainWindow::ChangeSpeedPrepare()
-{
-}
-
-void MainWindow::ChangeSpeed()
-{
-
-
-}
-
+/**
+ * @brief 打开登录器使用说明介绍
+ * @return 无
+ */
 void MainWindow::slot_shiyongshuoming(){
     QDesktopServices::openUrl(QUrl("https://www.bilibili.com/video/BV1qz411B7En"));
 }
-
+/**
+ * @brief 打开项目源码仓库
+ * @return 无
+ */
 void MainWindow::slot_xiangmuyuanma(){
     QDesktopServices::openUrl(QUrl("https://github.com/Starlitnightly/seer_logon"));
 }
-
+/**
+ * @brief 查看免责协议
+ * @return 无
+ */
 void MainWindow::slot_mianzexieyi(){
     if(ato==NULL)
         ato=new Atoken();
     ato->show();
 
 }
-
+/**
+ * @brief 查看作者与鸣谢信息
+ * @return 无
+ */
 void MainWindow::slot_author(){
     QMessageBox::about(NULL,"help","作者：星夜\n"
                                          "联系QQ：2681686121\n"
@@ -610,6 +759,26 @@ void MainWindow::slot_author(){
                                          "\n-\n"
                                          );
 }
+/*以下函数作废*/
+void MainWindow::GreenfireTimer(){
+    //绿火计时器
+}
+void MainWindow::ChangeSpirit(){
+    //一键换精灵窗口
+}
+void MainWindow::ChangeBag(){
+    //一键换背包
+}
+void MainWindow::ChangeSpeedPrepare()
+{
+}
+void MainWindow::ChangeSpeed()
+{
+
+
+}
+
+
 
 
 

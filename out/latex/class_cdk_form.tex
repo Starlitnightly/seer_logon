@@ -1,0 +1,268 @@
+\hypertarget{class_cdk_form}{}\doxysection{Cdk\+Form类 参考}
+\label{class_cdk_form}\index{CdkForm@{CdkForm}}
+
+
+一键输入cdk窗口类 一键输入cdk窗口这个类相关的函数  
+
+
+
+
+{\ttfamily \#include $<$cdkform.\+h$>$}
+
+
+
+类 Cdk\+Form 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{class_cdk_form__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Cdk\+Form 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{class_cdk_form__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 槽}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_cdk_form_ab3ebc679e724c763ac1e165b41cb7c18}{autocdk}} ()
+\begin{DoxyCompactList}\small\item\em 自动输入cdk函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cdk_form_a50e3eef262efc3573ed6244e3a5adeda}{clearcdk}} ()
+\begin{DoxyCompactList}\small\item\em cdk输入框清空函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cdk_form_a543a538eb975b5035d2651c8f2c2acec}{Cdk\+Form}} (Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em 一键输入cdk窗口构造函数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cdk_form_a92d0932ff43223a229dfa6c263fe4a83}{$\sim$\+Cdk\+Form}} ()
+\begin{DoxyCompactList}\small\item\em 一键输入cdk窗口析构函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Cdk\+Form $\ast$ \mbox{\hyperlink{class_cdk_form_a4b90d796c1f27445d4190187db9753bc}{ui}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+一键输入cdk窗口类 一键输入cdk窗口这个类相关的函数 
+
+在文件 cdkform.\+h 第 25 行定义.
+
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_cdk_form_a543a538eb975b5035d2651c8f2c2acec}\label{class_cdk_form_a543a538eb975b5035d2651c8f2c2acec}} 
+\index{CdkForm@{CdkForm}!CdkForm@{CdkForm}}
+\index{CdkForm@{CdkForm}!CdkForm@{CdkForm}}
+\doxysubsubsection{\texorpdfstring{CdkForm()}{CdkForm()}}
+{\footnotesize\ttfamily Cdk\+Form\+::\+Cdk\+Form (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+一键输入cdk窗口构造函数 
+
+
+\begin{DoxyParams}{参数}
+{\em parent} & 父类指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 cdkform.\+cpp 第 17 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17                                 :}
+\DoxyCodeLine{18     QWidget(parent),}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_cdk_form_a4b90d796c1f27445d4190187db9753bc}{ui}}(\textcolor{keyword}{new} Ui::CdkForm)}
+\DoxyCodeLine{20 \{}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_cdk_form_a4b90d796c1f27445d4190187db9753bc}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{22     setAttribute(Qt::WA\_QuitOnClose,\textcolor{keyword}{false});}
+\DoxyCodeLine{23     \textcolor{keywordtype}{int} fontId = QFontDatabase::addApplicationFont(\mbox{\hyperlink{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}{allpath}} + \textcolor{stringliteral}{"/font/RuiZiZhenYanTiMianFeiShangYong-\/2.ttf"});}
+\DoxyCodeLine{24     \textcolor{comment}{//qDebug() << "fontId = "<< fontId;}}
+\DoxyCodeLine{25     QString nonot = QFontDatabase::applicationFontFamilies(fontId).at(0);}
+\DoxyCodeLine{26     \textcolor{comment}{//qDebug() <<"fontname = " <<nonot;}}
+\DoxyCodeLine{27     QFont font1(nonot,12);}
+\DoxyCodeLine{28     \mbox{\hyperlink{class_cdk_form_a4b90d796c1f27445d4190187db9753bc}{ui}}-\/>label-\/>setFont(font1);\textcolor{comment}{//设置控件自定义字体}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     connect(\mbox{\hyperlink{class_cdk_form_a4b90d796c1f27445d4190187db9753bc}{ui}}-\/>pushButton,SIGNAL(clicked(\textcolor{keywordtype}{bool})),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_cdk_form_ab3ebc679e724c763ac1e165b41cb7c18}{autocdk}}()));}
+\DoxyCodeLine{31     connect(\mbox{\hyperlink{class_cdk_form_a4b90d796c1f27445d4190187db9753bc}{ui}}-\/>pushButton\_2,SIGNAL(clicked(\textcolor{keywordtype}{bool})),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_cdk_form_a50e3eef262efc3573ed6244e3a5adeda}{clearcdk}}()));}
+\DoxyCodeLine{32 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_cdk_form_a543a538eb975b5035d2651c8f2c2acec_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_cdk_form_a92d0932ff43223a229dfa6c263fe4a83}\label{class_cdk_form_a92d0932ff43223a229dfa6c263fe4a83}} 
+\index{CdkForm@{CdkForm}!````~CdkForm@{$\sim$CdkForm}}
+\index{````~CdkForm@{$\sim$CdkForm}!CdkForm@{CdkForm}}
+\doxysubsubsection{\texorpdfstring{$\sim$CdkForm()}{~CdkForm()}}
+{\footnotesize\ttfamily Cdk\+Form\+::$\sim$\+Cdk\+Form (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+一键输入cdk窗口析构函数 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 cdkform.\+cpp 第 37 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38 \{}
+\DoxyCodeLine{39     \textcolor{keyword}{delete} \mbox{\hyperlink{class_cdk_form_a4b90d796c1f27445d4190187db9753bc}{ui}};}
+\DoxyCodeLine{40 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_cdk_form_ab3ebc679e724c763ac1e165b41cb7c18}\label{class_cdk_form_ab3ebc679e724c763ac1e165b41cb7c18}} 
+\index{CdkForm@{CdkForm}!autocdk@{autocdk}}
+\index{autocdk@{autocdk}!CdkForm@{CdkForm}}
+\doxysubsubsection{\texorpdfstring{autocdk}{autocdk}}
+{\footnotesize\ttfamily void Cdk\+Form\+::autocdk (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+自动输入cdk函数 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 cdkform.\+cpp 第 52 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52                      \{}
+\DoxyCodeLine{53     QString c,c1,c2,c3,c4;}
+\DoxyCodeLine{54     c=\mbox{\hyperlink{class_cdk_form_a4b90d796c1f27445d4190187db9753bc}{ui}}-\/>textEdit-\/>toPlainText();}
+\DoxyCodeLine{55     c1=c.mid(0,4);}
+\DoxyCodeLine{56     c2=c.mid(4,8);}
+\DoxyCodeLine{57     c3=c.mid(8,12);}
+\DoxyCodeLine{58     c4=c.mid(12,16);}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(297,112);}
+\DoxyCodeLine{61     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a22a1a36e3bcf2736676b67ebf5f0578a}{LeftDown}}();}
+\DoxyCodeLine{62     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(335,112);}
+\DoxyCodeLine{63     \textcolor{keywordflow}{foreach}(QChar k, c1)}
+\DoxyCodeLine{64         PostMessage(\mbox{\hyperlink{ext_8cpp_a14599d7d3f033ca76bf7e06523ac8bdd}{Pid}}, WM\_CHAR, k.unicode(), 0);}
+\DoxyCodeLine{65     \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(100);}
+\DoxyCodeLine{66     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_adbd6730eda805481cc312c0ce743c2e2}{LeftUp}}();}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(412,112);}
+\DoxyCodeLine{69     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a22a1a36e3bcf2736676b67ebf5f0578a}{LeftDown}}();}
+\DoxyCodeLine{70     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(449,112);}
+\DoxyCodeLine{71     \textcolor{keywordflow}{foreach}(QChar k, c2)}
+\DoxyCodeLine{72         PostMessage(\mbox{\hyperlink{ext_8cpp_a14599d7d3f033ca76bf7e06523ac8bdd}{Pid}}, WM\_CHAR, k.unicode(), 0);}
+\DoxyCodeLine{73     \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(100);}
+\DoxyCodeLine{74     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_adbd6730eda805481cc312c0ce743c2e2}{LeftUp}}();}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(526,112);}
+\DoxyCodeLine{77     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a22a1a36e3bcf2736676b67ebf5f0578a}{LeftDown}}();}
+\DoxyCodeLine{78     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(560,112);}
+\DoxyCodeLine{79     \textcolor{keywordflow}{foreach}(QChar k, c3)}
+\DoxyCodeLine{80         PostMessage(\mbox{\hyperlink{ext_8cpp_a14599d7d3f033ca76bf7e06523ac8bdd}{Pid}}, WM\_CHAR, k.unicode(), 0);}
+\DoxyCodeLine{81     \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(100);}
+\DoxyCodeLine{82     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_adbd6730eda805481cc312c0ce743c2e2}{LeftUp}}();}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(642,112);}
+\DoxyCodeLine{85     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a22a1a36e3bcf2736676b67ebf5f0578a}{LeftDown}}();}
+\DoxyCodeLine{86     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(674,112);}
+\DoxyCodeLine{87     \textcolor{keywordflow}{foreach}(QChar k, c4)}
+\DoxyCodeLine{88         PostMessage(\mbox{\hyperlink{ext_8cpp_a14599d7d3f033ca76bf7e06523ac8bdd}{Pid}}, WM\_CHAR, k.unicode(), 0);}
+\DoxyCodeLine{89     \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(100);}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(485,159);}
+\DoxyCodeLine{92     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{93     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_adbd6730eda805481cc312c0ce743c2e2}{LeftUp}}();}
+\DoxyCodeLine{94 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{class_cdk_form_ab3ebc679e724c763ac1e165b41cb7c18_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{class_cdk_form_ab3ebc679e724c763ac1e165b41cb7c18_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_cdk_form_a50e3eef262efc3573ed6244e3a5adeda}\label{class_cdk_form_a50e3eef262efc3573ed6244e3a5adeda}} 
+\index{CdkForm@{CdkForm}!clearcdk@{clearcdk}}
+\index{clearcdk@{clearcdk}!CdkForm@{CdkForm}}
+\doxysubsubsection{\texorpdfstring{clearcdk}{clearcdk}}
+{\footnotesize\ttfamily void Cdk\+Form\+::clearcdk (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+cdk输入框清空函数 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 cdkform.\+cpp 第 45 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45                       \{}
+\DoxyCodeLine{46     \mbox{\hyperlink{class_cdk_form_a4b90d796c1f27445d4190187db9753bc}{ui}}-\/>textEdit-\/>clear();}
+\DoxyCodeLine{47 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{class_cdk_form_a50e3eef262efc3573ed6244e3a5adeda_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_cdk_form_a4b90d796c1f27445d4190187db9753bc}\label{class_cdk_form_a4b90d796c1f27445d4190187db9753bc}} 
+\index{CdkForm@{CdkForm}!ui@{ui}}
+\index{ui@{ui}!CdkForm@{CdkForm}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Cdk\+Form$\ast$ Cdk\+Form\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 cdkform.\+h 第 37 行定义.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cdkform_8h}{cdkform.\+h}}\item 
+\mbox{\hyperlink{cdkform_8cpp}{cdkform.\+cpp}}\end{DoxyCompactItemize}

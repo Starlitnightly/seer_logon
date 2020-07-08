@@ -1,0 +1,7 @@
+<map id="speed.h" name="speed.h">
+<area shape="rect" id="node1" title="变速窗口头文件" alt="" coords="127,5,195,32"/>
+<area shape="rect" id="node2" href="$mainwindow_8h.html" title="游戏主窗口头文件" alt="" coords="51,80,153,107"/>
+<area shape="rect" id="node5" href="$speed_8cpp.html" title="变速窗口及其相关" alt="" coords="179,80,261,107"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title="应用程序入口主文件" alt="" coords="5,155,80,181"/>
+<area shape="rect" id="node4" href="$mainwindow_8cpp.html" title="游戏主窗口及其相关" alt="" coords="104,155,221,181"/>
+</map>

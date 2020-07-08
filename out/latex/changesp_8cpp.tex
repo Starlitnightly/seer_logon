@@ -1,0 +1,166 @@
+\hypertarget{changesp_8cpp}{}\doxysection{changesp.\+cpp 文件参考}
+\label{changesp_8cpp}\index{changesp.cpp@{changesp.cpp}}
+
+
+一键换背包窗口及其相关  
+
+
+{\ttfamily \#include \char`\"{}changesp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ui\+\_\+changesp.\+h\char`\"{}}\newline
+changesp.\+cpp 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{changesp_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{changesp_8cpp_ace027d7f55316b060518c8ae4325a927}{change\+\_\+init}} (Q\+Ax\+Widget $\ast$tmp)
+\begin{DoxyCompactList}\small\item\em 换背包精灵头像预览控件初始化函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{changesp_8cpp_a0a74bf8e75953bc39ea0af1dc884ea03}{deletesp}} (Q\+Ax\+Widget $\ast$tmp)
+\begin{DoxyCompactList}\small\item\em 换背包精灵头像预览控件关闭函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{changesp_8cpp_a010bb55b0086a6a09517c1b7ff1993b6}{change\+\_\+sp}} (Q\+Ax\+Widget $\ast$tmp, Q\+String url)
+\begin{DoxyCompactList}\small\item\em 换背包精灵头像预览函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+一键换背包窗口及其相关 
+
+\begin{DoxyAuthor}{作者}
+starlitnightly @email \href{mailto:Starlitnightly@163.com}{\texttt{ Starlitnightly@163.\+com}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{版本}
+1.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{日期}
+2020-\/07-\/09 @license G\+PL 
+\end{DoxyDate}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{changesp_8cpp_ace027d7f55316b060518c8ae4325a927}\label{changesp_8cpp_ace027d7f55316b060518c8ae4325a927}} 
+\index{changesp.cpp@{changesp.cpp}!change\_init@{change\_init}}
+\index{change\_init@{change\_init}!changesp.cpp@{changesp.cpp}}
+\doxysubsubsection{\texorpdfstring{change\_init()}{change\_init()}}
+{\footnotesize\ttfamily void change\+\_\+init (\begin{DoxyParamCaption}\item[{Q\+Ax\+Widget $\ast$}]{tmp }\end{DoxyParamCaption})}
+
+
+
+换背包精灵头像预览控件初始化函数 
+
+
+\begin{DoxyParams}{参数}
+{\em tmp} & 控件相关的指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 changesp.\+cpp 第 18 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18                                 \{}
+\DoxyCodeLine{19     tmp-\/>setControl(QString::fromUtf8(\textcolor{stringliteral}{"\{8856F961-\/340A-\/11D0-\/A96B-\/00C04FD705A2\}"}));\textcolor{comment}{//注册组件ID}}
+\DoxyCodeLine{20 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{changesp_8cpp_ace027d7f55316b060518c8ae4325a927_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{changesp_8cpp_a010bb55b0086a6a09517c1b7ff1993b6}\label{changesp_8cpp_a010bb55b0086a6a09517c1b7ff1993b6}} 
+\index{changesp.cpp@{changesp.cpp}!change\_sp@{change\_sp}}
+\index{change\_sp@{change\_sp}!changesp.cpp@{changesp.cpp}}
+\doxysubsubsection{\texorpdfstring{change\_sp()}{change\_sp()}}
+{\footnotesize\ttfamily void change\+\_\+sp (\begin{DoxyParamCaption}\item[{Q\+Ax\+Widget $\ast$}]{tmp,  }\item[{Q\+String}]{url }\end{DoxyParamCaption})}
+
+
+
+换背包精灵头像预览函数 
+
+
+\begin{DoxyParams}{参数}
+{\em tmp} & 控件相关的指针 \\
+\hline
+{\em url} & 精灵预览的地址 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 changesp.\+cpp 第 35 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35                                           \{}
+\DoxyCodeLine{36     \mbox{\hyperlink{changesp_8cpp_a0a74bf8e75953bc39ea0af1dc884ea03}{deletesp}}(tmp);}
+\DoxyCodeLine{37     tmp-\/>setControl(QString::fromUtf8(\textcolor{stringliteral}{"\{8856F961-\/340A-\/11D0-\/A96B-\/00C04FD705A2\}"}));\textcolor{comment}{//注册组件ID}}
+\DoxyCodeLine{38     tmp-\/>dynamicCall(\textcolor{stringliteral}{"Navigate(QString)"},url);}
+\DoxyCodeLine{39 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{changesp_8cpp_a010bb55b0086a6a09517c1b7ff1993b6_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{changesp_8cpp_a010bb55b0086a6a09517c1b7ff1993b6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{changesp_8cpp_a0a74bf8e75953bc39ea0af1dc884ea03}\label{changesp_8cpp_a0a74bf8e75953bc39ea0af1dc884ea03}} 
+\index{changesp.cpp@{changesp.cpp}!deletesp@{deletesp}}
+\index{deletesp@{deletesp}!changesp.cpp@{changesp.cpp}}
+\doxysubsubsection{\texorpdfstring{deletesp()}{deletesp()}}
+{\footnotesize\ttfamily void deletesp (\begin{DoxyParamCaption}\item[{Q\+Ax\+Widget $\ast$}]{tmp }\end{DoxyParamCaption})}
+
+
+
+换背包精灵头像预览控件关闭函数 
+
+
+\begin{DoxyParams}{参数}
+{\em tmp} & 控件相关的指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 changesp.\+cpp 第 26 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26                              \{}
+\DoxyCodeLine{27     tmp-\/>setControl(QString::fromUtf8(\textcolor{stringliteral}{"\{d27cdb6e-\/ae6d-\/11cf-\/96b8-\/444553540000\}"}));}
+\DoxyCodeLine{28 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{changesp_8cpp_a0a74bf8e75953bc39ea0af1dc884ea03_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,5 @@
+<map id="mainwindow.h" name="mainwindow.h">
+<area shape="rect" id="node1" title="游戏主窗口头文件" alt="" coords="51,5,153,32"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="应用程序入口主文件" alt="" coords="5,80,80,107"/>
+<area shape="rect" id="node3" href="$mainwindow_8cpp.html" title="游戏主窗口及其相关" alt="" coords="104,80,221,107"/>
+</map>

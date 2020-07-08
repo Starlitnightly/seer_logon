@@ -1,6 +1,19 @@
+/**
+ * @file nono.cpp
+ * @brief nono主窗口及其相关
+ * @author starlitnightly
+ * @email Starlitnightly@163.com
+ * @version 1.0.0
+ * @date 2020-07-09
+ * @license GPL
+ */
 #include "nono.h"
 #include "ui_nono.h"
-
+/**
+ * @brief nono窗口构造函数
+ * @param parent 父类指针
+ * @return 无
+ */
 Nono::Nono(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Nono)
@@ -15,18 +28,20 @@ Nono::Nono(QWidget *parent) :
     QPixmap pixmap(allpath+"/gif/buff_VIP_5.png");
     ui->label_2->setPixmap(pixmap);
     ui->label_2->show();
-
+    qDebug()<<"绿火初始化无问题";
     QFont font ( "Microsoft YaHei", 10, 75); //第一个属性是字体（微软雅黑），第二个是大小，第三个是加粗（权重是75）
     //QFont font1("Microsoft YaHei", 15,75);
     ui->label_3->setFont(font);
     //ui->label_6->setFont(font1);
 
-    int fontId = QFontDatabase::addApplicationFont(QDir::currentPath() + "/font/RuiZiZhenYanTiMianFeiShangYong-2.ttf");
-    //qDebug() << "fontId = "<< fontId;
+    int fontId = QFontDatabase::addApplicationFont(allpath + "/font/RuiZiZhenYanTiMianFeiShangYong-2.ttf");
+    qDebug()<<allpath + "/font/RuiZiZhenYanTiMianFeiShangYong-2.ttf";
+    qDebug() << "fontId = "<< fontId;
     QString nonot = QFontDatabase::applicationFontFamilies(fontId).at(0);
-    //qDebug() <<"fontname = " <<nonot;
+    qDebug() <<"fontname = " <<nonot;
     QFont font1(nonot,12);
     ui->label_6->setFont(font1);//设置控件自定义字体
+    qDebug()<<"nono字体无问题";
 
 
     ui->label_2->setVisible(false);
@@ -57,7 +72,7 @@ Nono::Nono(QWidget *parent) :
     shibielabel->setGeometry(120,530,50,50);
     connect(shibielabel,SIGNAL(Clicked(ClickedLabel*)),this,SLOT(slot_shibie()));
     //connect(ui->pushButton,SIGNAL(clicked(bool)),this,SLOT(slot_startedTimer_clicked(bool)));
-
+    qDebug()<<"nono时间无问题";
     //nonogif
     mouseMovePos = QPoint(0, 0);
     movie = new QMovie(allpath+"/gif/nono3.gif");
@@ -68,7 +83,7 @@ Nono::Nono(QWidget *parent) :
     ui->label->setMovie(movie); // 1. 设置要显示的 GIF 动画图片
     movie->start(); // 2. 启动动画
     ui->label->show();
-
+    qDebug()<<"nonogif无问题";
     //cap
     clabel =new ClickedLabel(this);
     clabel->setGeometry(50,0,396,345);
@@ -85,7 +100,11 @@ Nono::Nono(QWidget *parent) :
     connect(this,SIGNAL(signal_pet(QString)),pt,SLOT(slot_getname(QString)));
 }
 
-
+/**
+ * @brief 绿火计时器开启函数
+ * @param bool 信号传递
+ * @return 无
+ */
 void Nono::slot_startedTimer_clicked(bool)
 {
     qDebug()<<tr("开启计时器");
@@ -94,13 +113,21 @@ void Nono::slot_startedTimer_clicked(bool)
     ui->label_2->setVisible(true);
     ui->label_3->setVisible(true);
 }
-
+/**
+ * @brief 绿火计时器停止函数
+ * @param bool 信号传递
+ * @return 无
+ */
 void Nono::slot_stopedTimer_clicked(bool)
 {
     qDebug()<<tr("停止计时器");
     timer->stop();
 }
-
+/**
+ * @brief nono状态改变
+ * @note 此函数控制nono的自动提示、自动动作
+ * @return 无
+ */
 void Nono::slot_nono_change(){
 
 
@@ -159,7 +186,10 @@ void Nono::slot_nono_change(){
     }
 
 }
-
+/**
+ * @brief 绿火计时器每秒处理动作
+ * @return 无
+ */
 void Nono::slot_timer_timeout(){
     firetime=1800-(time->elapsed()/1000);
     //qDebug()<<firetime;
@@ -175,7 +205,10 @@ void Nono::slot_timer_timeout(){
     ui->label_3->setText(tmp);
 }
 
-
+/**
+ * @brief nono窗口析构函数
+ * @return 无
+ */
 Nono::~Nono()
 {
     delete ui;
@@ -197,7 +230,11 @@ Nono::~Nono()
     delete nam;
     delete pt;
 }
-
+/**
+ * @brief 显示对面巅峰阵容-nono举牌
+ * @param tmp 信号传递
+ * @return 无
+ */
 void Nono::slot_capture(bool tmp){
     dm.Capture( 564, 223, 960, 568,QDir::currentPath()+"/screen.bmp");
     QPixmap pixmap(QDir::currentPath()+"/screen.bmp");
@@ -208,7 +245,11 @@ void Nono::slot_capture(bool tmp){
 
 }
 
-//鼠标按下并移动则移动不规则窗体
+/**
+ * @brief 鼠标按下nono窗口并移动重载
+ * @param event 鼠标活动
+ * @return 无
+ */
 void  Nono::mouseMoveEvent(QMouseEvent *event)
 {
 
@@ -225,16 +266,29 @@ void  Nono::mouseMoveEvent(QMouseEvent *event)
 }
 
 
-
+/**
+ * @brief 鼠标按下nono窗口重载
+ * @param event 鼠标活动
+ * @return 无
+ */
 void  Nono::mousePressEvent(QMouseEvent *event)
 {
     mouseMovePos = event->globalPos();
 }
+/**
+ * @brief 鼠标离开nono窗口重载
+ * @param event 鼠标活动
+ * @return 无
+ */
 void  Nono::mouseReleaseEvent(QMouseEvent *event)
 {
     mouseMovePos = QPoint(0, 0);
 }
-
+/**
+ * @brief nono窗口提示信息
+ * @param content nono提示内容
+ * @return 无
+ */
 void Nono::slot_tip(QString content){
     ui->label_5->setVisible(true);
     ui->label_6->setVisible(true);
@@ -244,7 +298,10 @@ void Nono::slot_tip(QString content){
     ui->label_6->setVisible(false);
 
 }
-
+/**
+ * @brief 巅峰阵容截图隐藏
+ * @return 无
+ */
 void Nono::slot_hidecap(){
     if(hidecap==true){
         hidecap=false;
@@ -254,23 +311,41 @@ void Nono::slot_hidecap(){
         ui->label_4->setVisible(false);
     }
 }
-
+/**
+ * @brief 鼠标释放重载-带点击事件label类
+ * @param evt 鼠标活动
+ * @return 无
+ */
 void ClickedLabel::mouseReleaseEvent(QMouseEvent *evt)
 {
     emit Clicked(this);
 }
-
+/**
+ * @brief 刷新按钮按下
+ * @note 向主窗口发送刷新信号
+ * @return 无
+ */
 void Nono::slot_Fresh(){
     emit signal_fresh();
 }
-
+/**
+ * @brief 识别对战精灵
+ * @note 调用了百度ocr的ai，每日50000次，按理说是无问题的，毕竟登录器使用量没那么大
+ * @return 无
+ */
 void Nono::slot_shibie(){
     emit signal_sb();
     Delay(100);
     getAccessToken("RwoxBEWTWXq1rKhiWGQT3UD3","X1TGKuGKClEmP6MAMg5Nw61G2yTBHtMt");
     recognition();
 }
-
+/**
+ * @brief 获取百度ocr的accesstoken
+ * @note 每30天获取一次
+ * @param key 百度ocr的key
+ * @param secret 百度ocr的secret
+ * @return 无
+ */
 void Nono::getAccessToken(QString key, QString secret)
 {
 
@@ -289,6 +364,11 @@ void Nono::getAccessToken(QString key, QString secret)
     }
     qDebug()<<"access"<<accessToken;
 }
+/**
+ * @brief 识别对面精灵的名字
+ * @note 带点的精灵识别不一定成功
+ * @return 无
+ */
 void Nono::recognition(){
     dm.Capture(893,90,965,108,QDir::currentPath()+"/shi.bmp");
     QImage image(QDir::currentPath()+"/shi.bmp");
@@ -317,7 +397,11 @@ void Nono::recognition(){
     connect(nam, &QNetworkAccessManager::finished,this, &Nono::recognitionRequestFinished);
     QNetworkReply* reply = nam->post(request,byteArr);
 }
-
+/**
+ * @brief 获取accesstoken网页返回内容处理
+ * @param reply 网页返回内容指针
+ * @return 无
+ */
 void Nono::getAccessTokenRequestFinished(QNetworkReply* reply) {
     QNetworkReply::NetworkError err = reply->error();
     if(err != QNetworkReply::NoError) {
@@ -343,7 +427,7 @@ void Nono::getAccessTokenRequestFinished(QNetworkReply* reply) {
 }
 
 /**
- * @brief MainWindow::recognitionRequestFinished
+ * @brief Nono::recognitionRequestFinished
  * @param reply
  * 文字识别的信号槽
  */
@@ -378,9 +462,11 @@ void Nono::recognitionRequestFinished(QNetworkReply* reply){
     }
     nam->deleteLater();
 }
-
+/**
+ * @brief 打开精灵技能快查窗口
+ * @return 无
+ */
 void Nono::showskill(){
-    qDebug()<<"信号到位";
     pt->show();
 
 }

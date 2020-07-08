@@ -1,0 +1,14 @@
+<map id="Dm::Idmsoft::FindColor" name="Dm::Idmsoft::FindColor">
+<area shape="rect" id="node1" title=" " alt="" coords="512,183,667,209"/>
+<area shape="rect" id="node2" href="$class_sixworld.html#ae04b87558d8f5c5b41d3a69079eef987" title="六界脚本&#45;对战出战设置" alt="" coords="153,233,303,260"/>
+<area shape="rect" id="node4" href="$xy_8h.html#a719182cdae3e46550dffed25970ee9e0" title="混布脚本出战设置" alt="" coords="353,5,463,32"/>
+<area shape="rect" id="node6" href="$class_top.html#aa1e3e0aa1a814b66dc1e4c78b622e3d2" title="巅峰脚本&#45;精灵智能出招函数" alt="" coords="353,56,463,83"/>
+<area shape="rect" id="node7" href="$class_top.html#ae9f4ac4d51bf31effd9f028f940dbbaf" title="巅峰脚本&#45;线程启动函数" alt="" coords="193,81,263,108"/>
+<area shape="rect" id="node8" href="$class_jlw.html#a145a21cdc00244f97d9f91aa52d1a556" title="精灵王大乱斗脚本&#45;线程启动函数" alt="" coords="375,208,441,235"/>
+<area shape="rect" id="node9" href="$class_spt.html#a3a6dd7e2fa4422857925bd76381be961" title="spt徽章脚本&#45;线程启动函数" alt="" coords="374,259,442,285"/>
+<area shape="rect" id="node10" href="$class_xxlzc.html#a1da799628e7ee157db11b31e4c745245" title="学习力战场脚本&#45;线程启动函数" alt="" coords="369,309,447,336"/>
+<area shape="rect" id="node11" href="$xy_8h.html#ac42138cfdbe6de4a997a561ae8d4b0c0" title="精灵释放技能" alt="" coords="375,360,441,387"/>
+<area shape="rect" id="node3" href="$class_sixworld.html#a5363d5ae5c05203784eaf6d95b7b0d9e" title="六界脚本&#45;线程启动函数" alt="" coords="6,233,103,260"/>
+<area shape="rect" id="node5" href="$class_hdblk.html#aaf03ee62b81c598e11019cd87a0c3455" title="混沌布莱克脚本&#45;线程启动函数" alt="" coords="187,5,269,32"/>
+<area shape="rect" id="node12" href="$class_fw.html#a2336962e1178af8b6fe6dbf349cd1a8e" title="飞王脚本&#45;线程启动函数" alt="" coords="195,360,261,387"/>
+</map>

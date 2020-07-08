@@ -1,3 +1,12 @@
+/**
+ * @file mediamute.cpp
+ * @brief 静音功能
+ * @author starlitnightly
+ * @email Starlitnightly@163.com
+ * @version 1.0.0
+ * @date 2020-07-09
+ * @license GPL
+ */
 #include "mediamute.h"
 #include "mutedsessionevents.h"
 
@@ -8,7 +17,10 @@ static IMMDevice*                        m_pDeviceOut                    = NULL;
 static IAudioSessionManager*        m_AudioSessionManager = NULL;
 static IAudioSessionControl*        m_AudioSessionControl    = NULL;
 static CMutedSessionEvents *        m_pMutedSessionEvents    = NULL;
-
+/**
+ * @brief 媒体静音类构造函数
+ * @return 无
+ */
 MediaMute::MediaMute()
 {
     CoInitializeEx( NULL , COINIT_MULTITHREADED );
@@ -37,6 +49,10 @@ MediaMute::MediaMute()
 
 
 }
+/**
+ * @brief 解除静音
+ * @return 只有true，因为指针释放失败会直接进程结束
+ */
 bool MediaMute::UnMute()
 {
     // ---- 解注册声音改变参数通知
@@ -76,6 +92,13 @@ bool MediaMute::UnMute()
 
         return true;
 }
+/**
+ * @brief 设置静音状态
+ * @param mute true为静音/false为解除静音
+ * @return 设置是否成功
+ *   @retval true 设置成功
+ *   @retval false 设置失败
+ */
 bool MediaMute::SetMute(bool mute)
 {
     HRESULT hr = S_FALSE;

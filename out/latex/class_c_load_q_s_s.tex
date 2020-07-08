@@ -1,0 +1,47 @@
+\hypertarget{class_c_load_q_s_s}{}\doxysection{C\+Load\+Q\+S\+S类 参考}
+\label{class_c_load_q_s_s}\index{CLoadQSS@{CLoadQSS}}
+
+
+加载qss样式类 加载皮肤样式-\/待用  
+
+
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_c_load_q_s_s_afbb2ee9057355e0e964d1eb0d753dd64}{set\+Style}} (const Q\+String \&style)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+加载qss样式类 加载皮肤样式-\/待用 
+
+在文件 main.\+cpp 第 28 行定义.
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_c_load_q_s_s_afbb2ee9057355e0e964d1eb0d753dd64}\label{class_c_load_q_s_s_afbb2ee9057355e0e964d1eb0d753dd64}} 
+\index{CLoadQSS@{CLoadQSS}!setStyle@{setStyle}}
+\index{setStyle@{setStyle}!CLoadQSS@{CLoadQSS}}
+\doxysubsubsection{\texorpdfstring{setStyle()}{setStyle()}}
+{\footnotesize\ttfamily static void C\+Load\+Q\+S\+S\+::set\+Style (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{style }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+在文件 main.\+cpp 第 31 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32     \{}
+\DoxyCodeLine{33         QFile qss(style);}
+\DoxyCodeLine{34         qss.open(QFile::ReadOnly);}
+\DoxyCodeLine{35         qApp-\/>setStyleSheet(qss.readAll());}
+\DoxyCodeLine{36         qss.close();}
+\DoxyCodeLine{37     \}}
+
+\end{DoxyCode}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8cpp}{main.\+cpp}}\end{DoxyCompactItemize}

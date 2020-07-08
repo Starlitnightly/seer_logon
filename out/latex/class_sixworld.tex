@@ -1,0 +1,922 @@
+\hypertarget{class_sixworld}{}\doxysection{Sixworld类 参考}
+\label{class_sixworld}\index{Sixworld@{Sixworld}}
+
+
+六界神王殿脚本-\/多线程类 脚本相关的配置  
+
+
+
+
+{\ttfamily \#include $<$form.\+h$>$}
+
+
+
+类 Sixworld 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_sixworld__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Sixworld 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_sixworld__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_sixworld_abab0eba831e529ddec2fd1283197cab7}{god\+\_\+condition}} ()
+\begin{DoxyCompactList}\small\item\em 六界脚本-\/判断当前界王要求 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\+\_\+changesp}} (Q\+String sp)
+\begin{DoxyCompactList}\small\item\em 六界脚本-\/对战中更换精灵 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sixworld_ae04b87558d8f5c5b41d3a69079eef987}{god\+\_\+method}} (int method)
+\begin{DoxyCompactList}\small\item\em 六界脚本-\/对战出战设置 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}} (Q\+String shoufajingling)
+\begin{DoxyCompactList}\small\item\em 六界脚本-\/检查首发 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sixworld_af16334711ab5245bfa051f9b5005aec4}{shezhishoufa}} (Q\+String shoufajingling)
+\begin{DoxyCompactList}\small\item\em 六界脚本-\/设置首发 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sixworld_a2b48fb8e029844d726df794e2dfcc7c1}{Sixworld}} (Q\+Object $\ast$parent=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_sixworld_ab4e68bfbeec26c954e9d481caf1ff7b9}{status}}
+\item 
+int \mbox{\hyperlink{class_sixworld_a03bb985e13097450d68c3614a290acf5}{now}}
+\item 
+int \mbox{\hyperlink{class_sixworld_a4b3bed5f7a556c1c96f704e3d4df5452}{god}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_sixworld_a5363d5ae5c05203784eaf6d95b7b0d9e}{run}} ()
+\begin{DoxyCompactList}\small\item\em 六界脚本-\/线程启动函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+六界神王殿脚本-\/多线程类 脚本相关的配置 
+
+在文件 form.\+h 第 440 行定义.
+
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_sixworld_a2b48fb8e029844d726df794e2dfcc7c1}\label{class_sixworld_a2b48fb8e029844d726df794e2dfcc7c1}} 
+\index{Sixworld@{Sixworld}!Sixworld@{Sixworld}}
+\index{Sixworld@{Sixworld}!Sixworld@{Sixworld}}
+\doxysubsubsection{\texorpdfstring{Sixworld()}{Sixworld()}}
+{\footnotesize\ttfamily Sixworld\+::\+Sixworld (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+在文件 form.\+h 第 453 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{454         : QThread(parent)}
+\DoxyCodeLine{455     \{}
+\DoxyCodeLine{456         \mbox{\hyperlink{class_sixworld_ab4e68bfbeec26c954e9d481caf1ff7b9}{status}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{457     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}\label{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}} 
+\index{Sixworld@{Sixworld}!god\_changesp@{god\_changesp}}
+\index{god\_changesp@{god\_changesp}!Sixworld@{Sixworld}}
+\doxysubsubsection{\texorpdfstring{god\_changesp()}{god\_changesp()}}
+{\footnotesize\ttfamily void Sixworld\+::god\+\_\+changesp (\begin{DoxyParamCaption}\item[{Q\+String}]{sp }\end{DoxyParamCaption})}
+
+
+
+六界脚本-\/对战中更换精灵 
+
+
+\begin{DoxyParams}{参数}
+{\em sp} & 要更换出战的精灵 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 form.\+cpp 第 2090 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{2090                                      \{}
+\DoxyCodeLine{2091     QVariant x,y;}
+\DoxyCodeLine{2092     \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(7,340,968,569,sp,\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2093         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2094         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2095         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<30;i++)\{}
+\DoxyCodeLine{2096             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"出战按钮.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2097                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2098                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2099                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{2100             \}}
+\DoxyCodeLine{2101         \}}
+\DoxyCodeLine{2102     \}}
+\DoxyCodeLine{2103 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_sixworld_abab0eba831e529ddec2fd1283197cab7}\label{class_sixworld_abab0eba831e529ddec2fd1283197cab7}} 
+\index{Sixworld@{Sixworld}!god\_condition@{god\_condition}}
+\index{god\_condition@{god\_condition}!Sixworld@{Sixworld}}
+\doxysubsubsection{\texorpdfstring{god\_condition()}{god\_condition()}}
+{\footnotesize\ttfamily void Sixworld\+::god\+\_\+condition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+六界脚本-\/判断当前界王要求 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 form.\+cpp 第 2060 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{2060                             \{}
+\DoxyCodeLine{2061     \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a7abfd21911d9917bad69f48e54c22eed}{Ocr}}(343, 538, 542, 563, \textcolor{stringliteral}{"ffffff-\/111111"},1).contains(\textcolor{stringliteral}{"最后一击使用致命一击战胜"}))}
+\DoxyCodeLine{2062         \mbox{\hyperlink{class_sixworld_a4b3bed5f7a556c1c96f704e3d4df5452}{god}}=1;}
+\DoxyCodeLine{2063     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a7abfd21911d9917bad69f48e54c22eed}{Ocr}}(343, 538, 542, 563, \textcolor{stringliteral}{"ffffff-\/111111"},1).contains(\textcolor{stringliteral}{"处于满体力时战胜"}))}
+\DoxyCodeLine{2064         \mbox{\hyperlink{class_sixworld_a4b3bed5f7a556c1c96f704e3d4df5452}{god}}=2;}
+\DoxyCodeLine{2065     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a7abfd21911d9917bad69f48e54c22eed}{Ocr}}(343, 538, 542, 563, \textcolor{stringliteral}{"ffffff-\/111111"},1).contains(\textcolor{stringliteral}{"最后一击使用物理攻击战胜"}))}
+\DoxyCodeLine{2066         \mbox{\hyperlink{class_sixworld_a4b3bed5f7a556c1c96f704e3d4df5452}{god}}=3;}
+\DoxyCodeLine{2067     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a7abfd21911d9917bad69f48e54c22eed}{Ocr}}(343, 538, 542, 563, \textcolor{stringliteral}{"ffffff-\/111111"},1).contains(\textcolor{stringliteral}{"最后一击使用先制攻击战胜"}))}
+\DoxyCodeLine{2068         \mbox{\hyperlink{class_sixworld_a4b3bed5f7a556c1c96f704e3d4df5452}{god}}=4;}
+\DoxyCodeLine{2069     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a7abfd21911d9917bad69f48e54c22eed}{Ocr}}(343, 538, 542, 563, \textcolor{stringliteral}{"ffffff-\/111111"},1).contains(\textcolor{stringliteral}{"6个回合以后战胜"}))\{}
+\DoxyCodeLine{2070         \mbox{\hyperlink{class_sixworld_a4b3bed5f7a556c1c96f704e3d4df5452}{god}}=5;}
+\DoxyCodeLine{2071         \mbox{\hyperlink{ext_8cpp_a00dcd3bc120c73dd6fb9bd97ffc08680}{explode\_death}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{2072     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a7abfd21911d9917bad69f48e54c22eed}{Ocr}}(343, 538, 542, 563, \textcolor{stringliteral}{"ffffff-\/111111"},1).contains(\textcolor{stringliteral}{"3个回合以内战胜"}))}
+\DoxyCodeLine{2073         \mbox{\hyperlink{class_sixworld_a4b3bed5f7a556c1c96f704e3d4df5452}{god}}=6;}
+\DoxyCodeLine{2074     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a7abfd21911d9917bad69f48e54c22eed}{Ocr}}(343, 538, 542, 563, \textcolor{stringliteral}{"ffffff-\/111111"},1).contains(\textcolor{stringliteral}{"处于能力提升状态下战胜"}))\{}
+\DoxyCodeLine{2075         \mbox{\hyperlink{class_sixworld_a4b3bed5f7a556c1c96f704e3d4df5452}{god}}=7;}
+\DoxyCodeLine{2076         \mbox{\hyperlink{ext_8cpp_a77f100ccfb5a76cf7077eca85eda6643}{jinglingjineng}}=\textcolor{stringliteral}{"王哈-\/强化"};}
+\DoxyCodeLine{2077     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a7abfd21911d9917bad69f48e54c22eed}{Ocr}}(343, 538, 542, 563, \textcolor{stringliteral}{"ffffff-\/111111"},1).contains(\textcolor{stringliteral}{"最后一击使用特殊攻击战胜"}))}
+\DoxyCodeLine{2078         \mbox{\hyperlink{class_sixworld_a4b3bed5f7a556c1c96f704e3d4df5452}{god}}=8;}
+\DoxyCodeLine{2079     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a7abfd21911d9917bad69f48e54c22eed}{Ocr}}(343, 538, 542, 563, \textcolor{stringliteral}{"ffffff-\/111111"},1).contains(\textcolor{stringliteral}{"使用<3个精灵战胜"}))}
+\DoxyCodeLine{2080         \mbox{\hyperlink{class_sixworld_a4b3bed5f7a556c1c96f704e3d4df5452}{god}}=9;}
+\DoxyCodeLine{2081     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a7abfd21911d9917bad69f48e54c22eed}{Ocr}}(343, 538, 542, 563, \textcolor{stringliteral}{"ffffff-\/111111"},1).contains(\textcolor{stringliteral}{"最后一击使用必中攻击战胜"}))}
+\DoxyCodeLine{2082         \mbox{\hyperlink{class_sixworld_a4b3bed5f7a556c1c96f704e3d4df5452}{god}}=10;}
+\DoxyCodeLine{2083 }
+\DoxyCodeLine{2084 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{class_sixworld_abab0eba831e529ddec2fd1283197cab7_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{class_sixworld_abab0eba831e529ddec2fd1283197cab7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_sixworld_ae04b87558d8f5c5b41d3a69079eef987}\label{class_sixworld_ae04b87558d8f5c5b41d3a69079eef987}} 
+\index{Sixworld@{Sixworld}!god\_method@{god\_method}}
+\index{god\_method@{god\_method}!Sixworld@{Sixworld}}
+\doxysubsubsection{\texorpdfstring{god\_method()}{god\_method()}}
+{\footnotesize\ttfamily void Sixworld\+::god\+\_\+method (\begin{DoxyParamCaption}\item[{int}]{method }\end{DoxyParamCaption})}
+
+
+
+六界脚本-\/对战出战设置 
+
+
+\begin{DoxyParams}{参数}
+{\em method} & 界王条件 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 form.\+cpp 第 2158 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{2158                                    \{}
+\DoxyCodeLine{2159     QVariant x,y;}
+\DoxyCodeLine{2160     \mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}=\mbox{\hyperlink{xy_8cpp_a41461f0789f05b4eada3c31940bc6e52}{xy\_shibiejifangjingling}}();}
+\DoxyCodeLine{2161     \textcolor{keywordflow}{if}(method==1 || method==2 || method==3 || method==6 || method==9 || method==10)\{}
+\DoxyCodeLine{2162         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}!=\textcolor{stringliteral}{"幻影蝶"} \&\& \mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}!=\textcolor{stringliteral}{"帝皇之御"})\{}
+\DoxyCodeLine{2163             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(25, 497, 208, 572, \textcolor{stringliteral}{"六界-\/bb.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2164                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2165                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2166             \}}
+\DoxyCodeLine{2167             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"幻影蝶"})==\textcolor{keyword}{false} \&\& \mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"帝皇之御"})==\textcolor{keyword}{false})\{}
+\DoxyCodeLine{2168                 qDebug()<<\textcolor{stringliteral}{"进入循环"};}
+\DoxyCodeLine{2169                 \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"幻影蝶"})==\textcolor{keyword}{false} \&\& \mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"帝皇之御"})==\textcolor{keyword}{false})\{}
+\DoxyCodeLine{2170                     \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_abb23c0c5cb164e723889392930b6b12e}{FindStr}}(192, 377, 791, 476, \textcolor{stringliteral}{"幻影蝶|帝皇之御"},\textcolor{stringliteral}{"ffffff-\/111111"},0.9,x,y)!=-\/1)\{}
+\DoxyCodeLine{2171                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt()+5,y.toInt()+20);}
+\DoxyCodeLine{2172                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2173                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2174                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2175                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600, \textcolor{stringliteral}{"fw-\/sf.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2176                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2177                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2178                         \}}
+\DoxyCodeLine{2179                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"幻影蝶"}))\{}
+\DoxyCodeLine{2180                             \mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}=\textcolor{stringliteral}{"幻影蝶"};}
+\DoxyCodeLine{2181                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{2182                         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"帝皇之御"}))\{}
+\DoxyCodeLine{2183                             \mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}=\textcolor{stringliteral}{"帝皇之御"};}
+\DoxyCodeLine{2184                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{2185                         \}}
+\DoxyCodeLine{2186                     \}}
+\DoxyCodeLine{2187                 \}}
+\DoxyCodeLine{2188             \}}
+\DoxyCodeLine{2189         \}}
+\DoxyCodeLine{2190         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"幻影蝶"}))\{}
+\DoxyCodeLine{2191             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(149, 473, 305, 560, \textcolor{stringliteral}{"技能-\/自爆.bmp|jn-\/jxcd1.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2192                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2193                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2194             \}}
+\DoxyCodeLine{2195         \}}
+\DoxyCodeLine{2196         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"帝皇之御"}))\{}
+\DoxyCodeLine{2197             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2198                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2199                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2200             \}}
+\DoxyCodeLine{2201         \}}
+\DoxyCodeLine{2202         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/埃尔尼亚.bmp"});}
+\DoxyCodeLine{2203         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/六界.bmp"});}
+\DoxyCodeLine{2204         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/六界1.bmp"});}
+\DoxyCodeLine{2205         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/张飞.bmp"});}
+\DoxyCodeLine{2206         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"六界-\/切龙妈.bmp|六界-\/切龙妈1.bmp"});}
+\DoxyCodeLine{2207         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/王哈.bmp"});}
+\DoxyCodeLine{2208         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"埃尔尼亚"}))\{}
+\DoxyCodeLine{2209             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2210                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2211                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2212             \}}
+\DoxyCodeLine{2213         \}}
+\DoxyCodeLine{2214         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"六界神王"}))\{}
+\DoxyCodeLine{2215             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2216                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2217                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2218             \}}
+\DoxyCodeLine{2219         \}}
+\DoxyCodeLine{2220         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"六界帝神"}))\{}
+\DoxyCodeLine{2221             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2222                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2223                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2224             \}}
+\DoxyCodeLine{2225         \}}
+\DoxyCodeLine{2226         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"万人敌"}))\{}
+\DoxyCodeLine{2227             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2228                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2229                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2230             \}}
+\DoxyCodeLine{2231         \}}
+\DoxyCodeLine{2232         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"乔特鲁德"}) || \mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"乔德"}))\{}
+\DoxyCodeLine{2233             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2234                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2235                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2236             \}}
+\DoxyCodeLine{2237         \}}
+\DoxyCodeLine{2238         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"王之哈莫"}))\{}
+\DoxyCodeLine{2239             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(18, 476, 89, 493, \textcolor{stringliteral}{"fffad4-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2240                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(40,506);}
+\DoxyCodeLine{2241                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2242             \}}
+\DoxyCodeLine{2243         \}}
+\DoxyCodeLine{2244     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(method==4)\{}
+\DoxyCodeLine{2245         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}!=\textcolor{stringliteral}{"幻影蝶"} \&\& \mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}!=\textcolor{stringliteral}{"帝皇之御"})\{}
+\DoxyCodeLine{2246             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(25, 497, 208, 572, \textcolor{stringliteral}{"六界-\/bb.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2247                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2248                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2249             \}}
+\DoxyCodeLine{2250             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"幻影蝶"})==\textcolor{keyword}{false} \&\& \mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"帝皇之御"})==\textcolor{keyword}{false})\{}
+\DoxyCodeLine{2251                 qDebug()<<\textcolor{stringliteral}{"进入循环"};}
+\DoxyCodeLine{2252                 \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"幻影蝶"})==\textcolor{keyword}{false} \&\& \mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"帝皇之御"})==\textcolor{keyword}{false})\{}
+\DoxyCodeLine{2253                     \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_abb23c0c5cb164e723889392930b6b12e}{FindStr}}(192, 377, 791, 476, \textcolor{stringliteral}{"幻影蝶|帝皇之御"},\textcolor{stringliteral}{"ffffff-\/111111"},0.9,x,y)!=-\/1)\{}
+\DoxyCodeLine{2254                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt()+5,y.toInt()+20);}
+\DoxyCodeLine{2255                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2256                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2257                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2258                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600, \textcolor{stringliteral}{"fw-\/sf.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2259                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2260                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2261                         \}}
+\DoxyCodeLine{2262                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"幻影蝶"}))\{}
+\DoxyCodeLine{2263                             \mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}=\textcolor{stringliteral}{"幻影蝶"};}
+\DoxyCodeLine{2264                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{2265                         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"帝皇之御"}))\{}
+\DoxyCodeLine{2266                             \mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}=\textcolor{stringliteral}{"帝皇之御"};}
+\DoxyCodeLine{2267                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{2268                         \}}
+\DoxyCodeLine{2269                     \}}
+\DoxyCodeLine{2270                 \}}
+\DoxyCodeLine{2271             \}}
+\DoxyCodeLine{2272         \}}
+\DoxyCodeLine{2273         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"幻影蝶"}))\{}
+\DoxyCodeLine{2274             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(149, 473, 305, 560, \textcolor{stringliteral}{"技能-\/自爆.bmp|jn-\/jxcd1.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2275                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2276                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2277             \}}
+\DoxyCodeLine{2278         \}}
+\DoxyCodeLine{2279         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"帝皇之御"}))\{}
+\DoxyCodeLine{2280             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2281                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2282                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2283             \}}
+\DoxyCodeLine{2284         \}}
+\DoxyCodeLine{2285         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/埃尔尼亚.bmp"});}
+\DoxyCodeLine{2286         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/六界.bmp"});}
+\DoxyCodeLine{2287         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/六界1.bmp"});}
+\DoxyCodeLine{2288         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/张飞.bmp"});}
+\DoxyCodeLine{2289         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"六界-\/切龙妈.bmp|六界-\/切龙妈1.bmp"});}
+\DoxyCodeLine{2290         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/王哈.bmp"});}
+\DoxyCodeLine{2291         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"埃尔尼亚"}))\{}
+\DoxyCodeLine{2292             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2293                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2294                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2295             \}}
+\DoxyCodeLine{2296         \}}
+\DoxyCodeLine{2297         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"六界神王"}))\{}
+\DoxyCodeLine{2298             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2299                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2300                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2301             \}}
+\DoxyCodeLine{2302         \}}
+\DoxyCodeLine{2303         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"六界帝神"}))\{}
+\DoxyCodeLine{2304             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2305                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2306                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2307             \}}
+\DoxyCodeLine{2308         \}}
+\DoxyCodeLine{2309         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"万人敌"}))\{}
+\DoxyCodeLine{2310             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2311                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2312                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2313             \}}
+\DoxyCodeLine{2314         \}}
+\DoxyCodeLine{2315         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"乔特鲁德"}) || \mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"乔德"}))\{}
+\DoxyCodeLine{2316             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2317                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2318                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2319             \}}
+\DoxyCodeLine{2320         \}}
+\DoxyCodeLine{2321         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"王之哈莫"}))\{}
+\DoxyCodeLine{2322             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0, 0, 1000, 600, \textcolor{stringliteral}{"王哈-\/先手.bmp"}, \textcolor{stringliteral}{"000000"}, 0.8, 0, x, y)!=-\/1)\{}
+\DoxyCodeLine{2323                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2324                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2325             \}}
+\DoxyCodeLine{2326         \}}
+\DoxyCodeLine{2327     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(method==5)\{}
+\DoxyCodeLine{2328         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}!=\textcolor{stringliteral}{"王之哈莫"})\{}
+\DoxyCodeLine{2329             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(25, 497, 208, 572, \textcolor{stringliteral}{"六界-\/bb.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2330                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2331                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2332             \}}
+\DoxyCodeLine{2333             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"王之哈莫"})==\textcolor{keyword}{false})\{}
+\DoxyCodeLine{2334                 \mbox{\hyperlink{class_sixworld_af16334711ab5245bfa051f9b5005aec4}{shezhishoufa}}(\textcolor{stringliteral}{"王之哈莫"});}
+\DoxyCodeLine{2335             \}}
+\DoxyCodeLine{2336         \}}
+\DoxyCodeLine{2337         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"幻影蝶"}) \&\& \mbox{\hyperlink{ext_8cpp_a00dcd3bc120c73dd6fb9bd97ffc08680}{explode\_death}}==\textcolor{keyword}{true})\{}
+\DoxyCodeLine{2338             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(149, 473, 305, 560, \textcolor{stringliteral}{"技能-\/自爆.bmp|jn-\/jxcd1.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2339                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2340                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2341             \}}
+\DoxyCodeLine{2342         \}}
+\DoxyCodeLine{2343         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"帝皇之御"}) \&\& \mbox{\hyperlink{ext_8cpp_a00dcd3bc120c73dd6fb9bd97ffc08680}{explode\_death}}==\textcolor{keyword}{true})\{}
+\DoxyCodeLine{2344             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2345                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2346                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2347             \}}
+\DoxyCodeLine{2348         \}}
+\DoxyCodeLine{2349         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"王之哈莫"}))\{}
+\DoxyCodeLine{2350             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(149, 473, 1000, 600, \textcolor{stringliteral}{"王哈-\/强化.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2351                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2352                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2353             \}}
+\DoxyCodeLine{2354             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(149, 473, 1000, 600, \textcolor{stringliteral}{"王哈-\/强化次数0.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2355                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(819,533);}
+\DoxyCodeLine{2356                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2357                 \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(1000);}
+\DoxyCodeLine{2358                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(7, 340, 968, 569, \textcolor{stringliteral}{"切精灵-\/幻影蝶.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2359                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2360                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2361                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<30;i++)\{}
+\DoxyCodeLine{2362                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0, 1000, 600, \textcolor{stringliteral}{"出战按钮.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2363                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2364                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2365                             \mbox{\hyperlink{ext_8cpp_a00dcd3bc120c73dd6fb9bd97ffc08680}{explode\_death}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{2366                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{2367                         \}}
+\DoxyCodeLine{2368                     \}}
+\DoxyCodeLine{2369                 \}}
+\DoxyCodeLine{2370                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(7, 340, 968, 569, \textcolor{stringliteral}{"切精灵-\/表姐.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2371                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2372                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2373                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<30;i++)\{}
+\DoxyCodeLine{2374                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0, 1000, 600, \textcolor{stringliteral}{"出战按钮.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2375                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2376                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2377                             \mbox{\hyperlink{ext_8cpp_a00dcd3bc120c73dd6fb9bd97ffc08680}{explode\_death}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{2378                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{2379                         \}}
+\DoxyCodeLine{2380                     \}}
+\DoxyCodeLine{2381                 \}}
+\DoxyCodeLine{2382             \}}
+\DoxyCodeLine{2383         \}}
+\DoxyCodeLine{2384         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a00dcd3bc120c73dd6fb9bd97ffc08680}{explode\_death}}==\textcolor{keyword}{true})\{}
+\DoxyCodeLine{2385             \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/埃尔尼亚.bmp"});}
+\DoxyCodeLine{2386             \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/六界.bmp"});}
+\DoxyCodeLine{2387             \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/六界1.bmp"});}
+\DoxyCodeLine{2388             \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/张飞.bmp"});}
+\DoxyCodeLine{2389             \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"六界-\/切龙妈.bmp|六界-\/切龙妈1.bmp"});}
+\DoxyCodeLine{2390             \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/幻境.bmp"});}
+\DoxyCodeLine{2391             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"埃尔尼亚"}))\{}
+\DoxyCodeLine{2392                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2393                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2394                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2395                 \}}
+\DoxyCodeLine{2396             \}}
+\DoxyCodeLine{2397             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"六界神王"}))\{}
+\DoxyCodeLine{2398                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2399                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2400                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2401                 \}}
+\DoxyCodeLine{2402             \}}
+\DoxyCodeLine{2403             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"六界帝神"}))\{}
+\DoxyCodeLine{2404                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2405                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2406                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2407                 \}}
+\DoxyCodeLine{2408             \}}
+\DoxyCodeLine{2409             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"万人敌"}))\{}
+\DoxyCodeLine{2410                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2411                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2412                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2413                 \}}
+\DoxyCodeLine{2414             \}}
+\DoxyCodeLine{2415             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"乔特鲁德"}) || \mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"乔德"}))\{}
+\DoxyCodeLine{2416                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2417                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2418                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2419                 \}}
+\DoxyCodeLine{2420             \}}
+\DoxyCodeLine{2421             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"幻境界皇"}))\{}
+\DoxyCodeLine{2422                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2423                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2424                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2425                 \}}
+\DoxyCodeLine{2426             \}}
+\DoxyCodeLine{2427         \}}
+\DoxyCodeLine{2428     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(method==7)\{}
+\DoxyCodeLine{2429         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}!=\textcolor{stringliteral}{"幻影蝶"} \&\& \mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}!=\textcolor{stringliteral}{"帝皇之御"})\{}
+\DoxyCodeLine{2430             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(25, 497, 208, 572, \textcolor{stringliteral}{"六界-\/bb.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2431                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2432                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2433             \}}
+\DoxyCodeLine{2434             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"幻影蝶"})==\textcolor{keyword}{false} \&\& \mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"帝皇之御"})==\textcolor{keyword}{false})\{}
+\DoxyCodeLine{2435                 qDebug()<<\textcolor{stringliteral}{"进入循环"};}
+\DoxyCodeLine{2436                 \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"幻影蝶"})==\textcolor{keyword}{false} \&\& \mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"帝皇之御"})==\textcolor{keyword}{false})\{}
+\DoxyCodeLine{2437                     \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_abb23c0c5cb164e723889392930b6b12e}{FindStr}}(192, 377, 791, 476, \textcolor{stringliteral}{"幻影蝶|帝皇之御"},\textcolor{stringliteral}{"ffffff-\/111111"},0.9,x,y)!=-\/1)\{}
+\DoxyCodeLine{2438                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt()+5,y.toInt()+20);}
+\DoxyCodeLine{2439                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2440                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2441                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2442                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600, \textcolor{stringliteral}{"fw-\/sf.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2443                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2444                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2445                         \}}
+\DoxyCodeLine{2446                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"幻影蝶"}))\{}
+\DoxyCodeLine{2447                             \mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}=\textcolor{stringliteral}{"幻影蝶"};}
+\DoxyCodeLine{2448                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{2449                         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"帝皇之御"}))\{}
+\DoxyCodeLine{2450                             \mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}=\textcolor{stringliteral}{"帝皇之御"};}
+\DoxyCodeLine{2451                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{2452                         \}}
+\DoxyCodeLine{2453                     \}}
+\DoxyCodeLine{2454                 \}}
+\DoxyCodeLine{2455             \}}
+\DoxyCodeLine{2456         \}}
+\DoxyCodeLine{2457         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"幻影蝶"}))\{}
+\DoxyCodeLine{2458             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(149, 473, 305, 560, \textcolor{stringliteral}{"技能-\/自爆.bmp|jn-\/jxcd1.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2459                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2460                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2461             \}}
+\DoxyCodeLine{2462         \}}
+\DoxyCodeLine{2463         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"帝皇之御"}))\{}
+\DoxyCodeLine{2464             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2465                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2466                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2467             \}}
+\DoxyCodeLine{2468         \}}
+\DoxyCodeLine{2469         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/埃尔尼亚.bmp"});}
+\DoxyCodeLine{2470         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/六界.bmp"});}
+\DoxyCodeLine{2471         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/六界1.bmp"});}
+\DoxyCodeLine{2472         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/张飞.bmp"});}
+\DoxyCodeLine{2473         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"六界-\/切龙妈.bmp|六界-\/切龙妈1.bmp"});}
+\DoxyCodeLine{2474         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/王哈.bmp"});}
+\DoxyCodeLine{2475         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"埃尔尼亚"}))\{}
+\DoxyCodeLine{2476             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2477                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2478                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2479             \}}
+\DoxyCodeLine{2480         \}}
+\DoxyCodeLine{2481         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"六界神王"}))\{}
+\DoxyCodeLine{2482             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2483                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2484                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2485             \}}
+\DoxyCodeLine{2486         \}}
+\DoxyCodeLine{2487         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"六界帝神"}))\{}
+\DoxyCodeLine{2488             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2489                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2490                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2491             \}}
+\DoxyCodeLine{2492         \}}
+\DoxyCodeLine{2493         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"万人敌"}))\{}
+\DoxyCodeLine{2494             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2495                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2496                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2497             \}}
+\DoxyCodeLine{2498         \}}
+\DoxyCodeLine{2499         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"乔特鲁德"}) || \mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"乔德"}))\{}
+\DoxyCodeLine{2500             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2501                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2502                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2503             \}}
+\DoxyCodeLine{2504         \}}
+\DoxyCodeLine{2505         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"王之哈莫"}))\{}
+\DoxyCodeLine{2506             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a77f100ccfb5a76cf7077eca85eda6643}{jinglingjineng}}==\textcolor{stringliteral}{"王哈-\/强化"})}
+\DoxyCodeLine{2507                 \mbox{\hyperlink{xy_8cpp_ac42138cfdbe6de4a997a561ae8d4b0c0}{xy\_skill}}(\textcolor{stringliteral}{"王哈-\/强化"},\textcolor{stringliteral}{"王哈-\/强化.bmp"},\textcolor{stringliteral}{"第五"});}
+\DoxyCodeLine{2508             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a77f100ccfb5a76cf7077eca85eda6643}{jinglingjineng}}==\textcolor{stringliteral}{"第五"})}
+\DoxyCodeLine{2509                 \mbox{\hyperlink{xy_8cpp_ac42138cfdbe6de4a997a561ae8d4b0c0}{xy\_skill}}(\textcolor{stringliteral}{"第五"},\textcolor{stringliteral}{""},\textcolor{stringliteral}{"王哈-\/强化"});}
+\DoxyCodeLine{2510         \}}
+\DoxyCodeLine{2511 }
+\DoxyCodeLine{2512     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(method==8)\{}
+\DoxyCodeLine{2513         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}!=\textcolor{stringliteral}{"幻影蝶"} \&\& \mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}!=\textcolor{stringliteral}{"帝皇之御"})\{}
+\DoxyCodeLine{2514             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(25, 497, 208, 572, \textcolor{stringliteral}{"六界-\/bb.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2515                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2516                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2517             \}}
+\DoxyCodeLine{2518             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"幻影蝶"})==\textcolor{keyword}{false} \&\& \mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"帝皇之御"})==\textcolor{keyword}{false})\{}
+\DoxyCodeLine{2519                 qDebug()<<\textcolor{stringliteral}{"进入循环"};}
+\DoxyCodeLine{2520                 \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"幻影蝶"})==\textcolor{keyword}{false} \&\& \mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"帝皇之御"})==\textcolor{keyword}{false})\{}
+\DoxyCodeLine{2521                     \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_abb23c0c5cb164e723889392930b6b12e}{FindStr}}(192, 377, 791, 476, \textcolor{stringliteral}{"幻影蝶|帝皇之御"},\textcolor{stringliteral}{"ffffff-\/111111"},0.9,x,y)!=-\/1)\{}
+\DoxyCodeLine{2522                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt()+5,y.toInt()+20);}
+\DoxyCodeLine{2523                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2524                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2525                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2526                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600, \textcolor{stringliteral}{"fw-\/sf.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2527                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2528                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2529                         \}}
+\DoxyCodeLine{2530                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"幻影蝶"}))\{}
+\DoxyCodeLine{2531                             \mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}=\textcolor{stringliteral}{"幻影蝶"};}
+\DoxyCodeLine{2532                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{2533                         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(\textcolor{stringliteral}{"帝皇之御"}))\{}
+\DoxyCodeLine{2534                             \mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}=\textcolor{stringliteral}{"帝皇之御"};}
+\DoxyCodeLine{2535                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{2536                         \}}
+\DoxyCodeLine{2537                     \}}
+\DoxyCodeLine{2538                 \}}
+\DoxyCodeLine{2539             \}}
+\DoxyCodeLine{2540         \}}
+\DoxyCodeLine{2541         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"幻影蝶"}))\{}
+\DoxyCodeLine{2542             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(149, 473, 305, 560, \textcolor{stringliteral}{"技能-\/自爆.bmp|jn-\/jxcd1.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2543                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2544                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2545             \}}
+\DoxyCodeLine{2546         \}}
+\DoxyCodeLine{2547         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"帝皇之御"}))\{}
+\DoxyCodeLine{2548             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2549                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2550                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2551             \}}
+\DoxyCodeLine{2552         \}}
+\DoxyCodeLine{2553         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/埃尔尼亚.bmp"});}
+\DoxyCodeLine{2554         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/六界.bmp"});}
+\DoxyCodeLine{2555         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/六界1.bmp"});}
+\DoxyCodeLine{2556         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/张飞.bmp"});}
+\DoxyCodeLine{2557         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"六界-\/切龙妈.bmp|六界-\/切龙妈1.bmp"});}
+\DoxyCodeLine{2558         \mbox{\hyperlink{class_sixworld_abf5733e91df0f5d3d5bd50f8efef335d}{god\_changesp}}(\textcolor{stringliteral}{"切精灵-\/幻境.bmp"});}
+\DoxyCodeLine{2559         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"埃尔尼亚"}))\{}
+\DoxyCodeLine{2560             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2561                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2562                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2563             \}}
+\DoxyCodeLine{2564         \}}
+\DoxyCodeLine{2565         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"六界神王"}))\{}
+\DoxyCodeLine{2566             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2567                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2568                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2569             \}}
+\DoxyCodeLine{2570         \}}
+\DoxyCodeLine{2571         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"六界帝神"}))\{}
+\DoxyCodeLine{2572             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2573                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2574                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2575             \}}
+\DoxyCodeLine{2576         \}}
+\DoxyCodeLine{2577         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"万人敌"}))\{}
+\DoxyCodeLine{2578             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2579                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2580                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2581             \}}
+\DoxyCodeLine{2582         \}}
+\DoxyCodeLine{2583         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"乔特鲁德"}) || \mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"乔德"}))\{}
+\DoxyCodeLine{2584             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(284, 509, 297, 518, \textcolor{stringliteral}{"0388ec-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2585                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(245,516);}
+\DoxyCodeLine{2586                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2587             \}}
+\DoxyCodeLine{2588         \}}
+\DoxyCodeLine{2589         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}.contains(\textcolor{stringliteral}{"幻境界皇"}))\{}
+\DoxyCodeLine{2590             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(18, 476, 89, 493, \textcolor{stringliteral}{"fffad4-\/000000"}, 1, 0, x, y)!=0)\{}
+\DoxyCodeLine{2591                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(40,506);}
+\DoxyCodeLine{2592                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2593             \}}
+\DoxyCodeLine{2594         \}}
+\DoxyCodeLine{2595     \}}
+\DoxyCodeLine{2596 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sixworld_ae04b87558d8f5c5b41d3a69079eef987_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{class_sixworld_ae04b87558d8f5c5b41d3a69079eef987_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}\label{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}} 
+\index{Sixworld@{Sixworld}!jianchashoufa@{jianchashoufa}}
+\index{jianchashoufa@{jianchashoufa}!Sixworld@{Sixworld}}
+\doxysubsubsection{\texorpdfstring{jianchashoufa()}{jianchashoufa()}}
+{\footnotesize\ttfamily bool Sixworld\+::jianchashoufa (\begin{DoxyParamCaption}\item[{Q\+String}]{shoufajingling }\end{DoxyParamCaption})}
+
+
+
+六界脚本-\/检查首发 
+
+
+\begin{DoxyParams}{参数}
+{\em shoufajingling} & 要检查的精灵 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+返回当前首发是否与检查相同 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{返回值}
+{\em true} & 当前首发与检查相同 \\
+\hline
+{\em false} & 当前首发与检查不同 \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 form.\+cpp 第 2111 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{2111                                                   \{}
+\DoxyCodeLine{2112     \textcolor{comment}{//QVariant x,y;}}
+\DoxyCodeLine{2113     \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(1000);}
+\DoxyCodeLine{2114     QString tmp=\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a7abfd21911d9917bad69f48e54c22eed}{Ocr}}(194,376,293,477,\textcolor{stringliteral}{"ffffff-\/111111"},1.0);}
+\DoxyCodeLine{2115     \textcolor{keywordflow}{if}(tmp.contains(shoufajingling))\{}
+\DoxyCodeLine{2116         qDebug()<<shoufajingling;}
+\DoxyCodeLine{2117         qDebug()<<tmp;}
+\DoxyCodeLine{2118         \mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}=shoufajingling;}
+\DoxyCodeLine{2119         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(940,28);}
+\DoxyCodeLine{2120         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2121         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{2122     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{2123         qDebug()<<shoufajingling;}
+\DoxyCodeLine{2124         qDebug()<<tmp;}
+\DoxyCodeLine{2125         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{2126     \}}
+\DoxyCodeLine{2127 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_sixworld_a5363d5ae5c05203784eaf6d95b7b0d9e}\label{class_sixworld_a5363d5ae5c05203784eaf6d95b7b0d9e}} 
+\index{Sixworld@{Sixworld}!run@{run}}
+\index{run@{run}!Sixworld@{Sixworld}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Sixworld\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+六界脚本-\/线程启动函数 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 form.\+cpp 第 2020 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{2020                   \{}
+\DoxyCodeLine{2021     QVariant x,y;}
+\DoxyCodeLine{2022     \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_sixworld_ab4e68bfbeec26c954e9d481caf1ff7b9}{status}}==\textcolor{keyword}{true})\{}
+\DoxyCodeLine{2023         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"六界-\/天玄.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2024             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2025             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2026         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"六界-\/瀚海.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2027             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2028             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2029         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"六界-\/地葬.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2030             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2031             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2032         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"六界-\/混沌.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2033             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2034             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2035         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"六界-\/时空.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2036             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2037             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2038         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"六界-\/幻境.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2039             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2040             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2041         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"六界-\/六界.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2042             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2043             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2044         \}}
+\DoxyCodeLine{2045         \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(500);}
+\DoxyCodeLine{2046         \mbox{\hyperlink{class_sixworld_abab0eba831e529ddec2fd1283197cab7}{god\_condition}}();}
+\DoxyCodeLine{2047         \mbox{\hyperlink{class_sixworld_abab0eba831e529ddec2fd1283197cab7}{god\_condition}}();}
+\DoxyCodeLine{2048         \mbox{\hyperlink{class_sixworld_abab0eba831e529ddec2fd1283197cab7}{god\_condition}}();}
+\DoxyCodeLine{2049         \mbox{\hyperlink{class_sixworld_ae04b87558d8f5c5b41d3a69079eef987}{god\_method}}(\mbox{\hyperlink{class_sixworld_a4b3bed5f7a556c1c96f704e3d4df5452}{god}});}
+\DoxyCodeLine{2050         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"六界-\/开启认可.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{2051             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2052             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2053         \}}
+\DoxyCodeLine{2054     \}}
+\DoxyCodeLine{2055 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sixworld_a5363d5ae5c05203784eaf6d95b7b0d9e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_sixworld_af16334711ab5245bfa051f9b5005aec4}\label{class_sixworld_af16334711ab5245bfa051f9b5005aec4}} 
+\index{Sixworld@{Sixworld}!shezhishoufa@{shezhishoufa}}
+\index{shezhishoufa@{shezhishoufa}!Sixworld@{Sixworld}}
+\doxysubsubsection{\texorpdfstring{shezhishoufa()}{shezhishoufa()}}
+{\footnotesize\ttfamily void Sixworld\+::shezhishoufa (\begin{DoxyParamCaption}\item[{Q\+String}]{shoufajingling }\end{DoxyParamCaption})}
+
+
+
+六界脚本-\/设置首发 
+
+
+\begin{DoxyParams}{参数}
+{\em shoufajingling} & 要设置的精灵 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 form.\+cpp 第 2133 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{2133                                                  \{}
+\DoxyCodeLine{2134     QVariant x,y;}
+\DoxyCodeLine{2135     \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(shoufajingling)==\textcolor{keyword}{false})\{}
+\DoxyCodeLine{2136         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_abb23c0c5cb164e723889392930b6b12e}{FindStr}}(192,377,791,476,shoufajingling,\textcolor{stringliteral}{"ffffff-\/111111"},0.9,x,y)!=-\/1)\{}
+\DoxyCodeLine{2137             qDebug()<<x.toInt()<<y.toInt();}
+\DoxyCodeLine{2138             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt()+5,y.toInt()+20);}
+\DoxyCodeLine{2139             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2140             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2141             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2142             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_abb23c0c5cb164e723889392930b6b12e}{FindStr}}(0,0,1000,600,\textcolor{stringliteral}{"fw-\/sf.bmp"},\textcolor{stringliteral}{"000000"},0.9,x,y)!=-\/1)\{}
+\DoxyCodeLine{2143                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{2144                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{2145             \}}
+\DoxyCodeLine{2146             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_sixworld_adb299e28d0900c6800a5cd5c61bc8cc3}{jianchashoufa}}(shoufajingling))\{}
+\DoxyCodeLine{2147                 \mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}=shoufajingling;}
+\DoxyCodeLine{2148                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{2149             \}}
+\DoxyCodeLine{2150         \}}
+\DoxyCodeLine{2151     \}}
+\DoxyCodeLine{2152 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sixworld_af16334711ab5245bfa051f9b5005aec4_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sixworld_af16334711ab5245bfa051f9b5005aec4_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_sixworld_a4b3bed5f7a556c1c96f704e3d4df5452}\label{class_sixworld_a4b3bed5f7a556c1c96f704e3d4df5452}} 
+\index{Sixworld@{Sixworld}!god@{god}}
+\index{god@{god}!Sixworld@{Sixworld}}
+\doxysubsubsection{\texorpdfstring{god}{god}}
+{\footnotesize\ttfamily int Sixworld\+::god}
+
+
+
+在文件 form.\+h 第 447 行定义.
+
+\mbox{\Hypertarget{class_sixworld_a03bb985e13097450d68c3614a290acf5}\label{class_sixworld_a03bb985e13097450d68c3614a290acf5}} 
+\index{Sixworld@{Sixworld}!now@{now}}
+\index{now@{now}!Sixworld@{Sixworld}}
+\doxysubsubsection{\texorpdfstring{now}{now}}
+{\footnotesize\ttfamily int Sixworld\+::now}
+
+
+
+在文件 form.\+h 第 446 行定义.
+
+\mbox{\Hypertarget{class_sixworld_ab4e68bfbeec26c954e9d481caf1ff7b9}\label{class_sixworld_ab4e68bfbeec26c954e9d481caf1ff7b9}} 
+\index{Sixworld@{Sixworld}!status@{status}}
+\index{status@{status}!Sixworld@{Sixworld}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily bool Sixworld\+::status}
+
+
+
+在文件 form.\+h 第 445 行定义.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{form_8h}{form.\+h}}\item 
+\mbox{\hyperlink{form_8cpp}{form.\+cpp}}\end{DoxyCompactItemize}

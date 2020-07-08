@@ -1,0 +1,4 @@
+<map id="Pettip::slot_buttonget" name="Pettip::slot_buttonget">
+<area shape="rect" id="node1" title="精灵技能查询" alt="" coords="152,5,299,32"/>
+<area shape="rect" id="node2" href="$class_pettip.html#a334c039991cc749c36d87ea74c6d28dd" title="精灵技能快查窗口构造函数" alt="" coords="5,5,104,32"/>
+</map>

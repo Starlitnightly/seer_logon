@@ -1,3 +1,12 @@
+/**
+ * @file mutedsessionevents.cpp
+ * @brief 静音功能依赖
+ * @author starlitnightly
+ * @email Starlitnightly@163.com
+ * @version 1.0.0
+ * @date 2020-07-09
+ * @license GPL
+ */
 #include "mutedsessionevents.h"
 
 extern volatile bool g_bMuted;

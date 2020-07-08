@@ -1,0 +1,181 @@
+\hypertarget{class_repp}{}\doxysection{Repp类 参考}
+\label{class_repp}\index{Repp@{Repp}}
+
+
+补pp-\/多线程类 对战中0pp时启动此线程可以自动补pp，（bug）如果网速过慢可能点不到药  
+
+
+
+
+{\ttfamily \#include $<$form.\+h$>$}
+
+
+
+类 Repp 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_repp__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Repp 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_repp__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{信号}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_repp_a21cd78947ab59570507e6fc8aa3022b7}{done}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_repp_afde76f54e4d72156591c971dd5056e2c}{Repp}} (Q\+Object $\ast$parent=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_repp_a82986b1f73cd92993d4c52fa10197ee8}{status}}
+\item 
+int \mbox{\hyperlink{class_repp_a5b3cae9ca704d154394810a8e18ab6f9}{now}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_repp_a155e9490b29f7ac04ed42f14ae78eb1f}{run}} ()
+\begin{DoxyCompactList}\small\item\em 补pp-\/线程启动函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+补pp-\/多线程类 对战中0pp时启动此线程可以自动补pp，（bug）如果网速过慢可能点不到药 
+
+在文件 form.\+h 第 46 行定义.
+
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_repp_afde76f54e4d72156591c971dd5056e2c}\label{class_repp_afde76f54e4d72156591c971dd5056e2c}} 
+\index{Repp@{Repp}!Repp@{Repp}}
+\index{Repp@{Repp}!Repp@{Repp}}
+\doxysubsubsection{\texorpdfstring{Repp()}{Repp()}}
+{\footnotesize\ttfamily Repp\+::\+Repp (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+在文件 form.\+h 第 53 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54         : QThread(parent)}
+\DoxyCodeLine{55     \{}
+\DoxyCodeLine{56         \mbox{\hyperlink{class_repp_a82986b1f73cd92993d4c52fa10197ee8}{status}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{57     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_repp_a21cd78947ab59570507e6fc8aa3022b7}\label{class_repp_a21cd78947ab59570507e6fc8aa3022b7}} 
+\index{Repp@{Repp}!done@{done}}
+\index{done@{done}!Repp@{Repp}}
+\doxysubsubsection{\texorpdfstring{done}{done}}
+{\footnotesize\ttfamily void Repp\+::done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_repp_a155e9490b29f7ac04ed42f14ae78eb1f}\label{class_repp_a155e9490b29f7ac04ed42f14ae78eb1f}} 
+\index{Repp@{Repp}!run@{run}}
+\index{run@{run}!Repp@{Repp}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Repp\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+补pp-\/线程启动函数 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 form.\+cpp 第 1192 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1192               \{}
+\DoxyCodeLine{1193     QVariant x,y;}
+\DoxyCodeLine{1194     \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"道具.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1195         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a0fa1bf4e28dad69a39dd0c63183d9a25}{FindColorE}}(13,440,76,462,\textcolor{stringliteral}{"93c1ca-\/000000"},1,0)!=\textcolor{stringliteral}{"-\/1|-\/1"})\{}
+\DoxyCodeLine{1196             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(923,450);}
+\DoxyCodeLine{1197             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1198             \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(500);}
+\DoxyCodeLine{1199             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(206,450);}
+\DoxyCodeLine{1200             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1201             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<30;i++)\{}
+\DoxyCodeLine{1202                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"10PP药.bmp|5PP药.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1203                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt()+5,y.toInt()+5);}
+\DoxyCodeLine{1204                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1205                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{1206                 \}}
+\DoxyCodeLine{1207             \}}
+\DoxyCodeLine{1208         \}}
+\DoxyCodeLine{1209         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(14,327,971,570,\textcolor{stringliteral}{"0.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1210             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(923,450);}
+\DoxyCodeLine{1211             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1212             \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(500);}
+\DoxyCodeLine{1213             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(206,450);}
+\DoxyCodeLine{1214             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1215             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<30;i++)\{}
+\DoxyCodeLine{1216                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"10PP药.bmp|5PP药.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1217                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt()+5,y.toInt()+5);}
+\DoxyCodeLine{1218                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1219                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{1220                 \}}
+\DoxyCodeLine{1221             \}}
+\DoxyCodeLine{1222         \}}
+\DoxyCodeLine{1223     \}}
+\DoxyCodeLine{1224 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{class_repp_a155e9490b29f7ac04ed42f14ae78eb1f_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_repp_a5b3cae9ca704d154394810a8e18ab6f9}\label{class_repp_a5b3cae9ca704d154394810a8e18ab6f9}} 
+\index{Repp@{Repp}!now@{now}}
+\index{now@{now}!Repp@{Repp}}
+\doxysubsubsection{\texorpdfstring{now}{now}}
+{\footnotesize\ttfamily int Repp\+::now}
+
+
+
+在文件 form.\+h 第 52 行定义.
+
+\mbox{\Hypertarget{class_repp_a82986b1f73cd92993d4c52fa10197ee8}\label{class_repp_a82986b1f73cd92993d4c52fa10197ee8}} 
+\index{Repp@{Repp}!status@{status}}
+\index{status@{status}!Repp@{Repp}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily bool Repp\+::status}
+
+
+
+在文件 form.\+h 第 51 行定义.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{form_8h}{form.\+h}}\item 
+\mbox{\hyperlink{form_8cpp}{form.\+cpp}}\end{DoxyCompactItemize}

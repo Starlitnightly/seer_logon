@@ -1,0 +1,152 @@
+\hypertarget{speed_8cpp}{}\doxysection{speed.\+cpp 文件参考}
+\label{speed_8cpp}\index{speed.cpp@{speed.cpp}}
+
+
+变速窗口及其相关  
+
+
+{\ttfamily \#include \char`\"{}speed.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ui\+\_\+speed.\+h\char`\"{}}\newline
+speed.\+cpp 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{speed_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{类型定义}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{speed_8cpp_a1ed44dedcb82cd1269a5e81380bb6f66}{Fun}}) (float a)
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Library \mbox{\hyperlink{speed_8cpp_a1ec116a24fe8e812825a81e33dbe92a3}{lib}} (\char`\"{}Speed\+Control.\+dll\char`\"{})
+\item 
+void \mbox{\hyperlink{speed_8cpp_a964a4806b4107e8b30fb4a5e067d7e40}{setspeed}} (float speed)
+\begin{DoxyCompactList}\small\item\em 设置游戏速度 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{speed_8cpp_a1ed44dedcb82cd1269a5e81380bb6f66}{Fun}} \mbox{\hyperlink{speed_8cpp_a20bab1bc02a96c64b4b752adbf1b04d5}{Setrange}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+变速窗口及其相关 
+
+\begin{DoxyAuthor}{作者}
+starlitnightly @email \href{mailto:Starlitnightly@163.com}{\texttt{ Starlitnightly@163.\+com}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{版本}
+1.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{日期}
+2020-\/07-\/09 @license G\+PL 
+\end{DoxyDate}
+
+
+\doxysubsection{类型定义说明}
+\mbox{\Hypertarget{speed_8cpp_a1ed44dedcb82cd1269a5e81380bb6f66}\label{speed_8cpp_a1ed44dedcb82cd1269a5e81380bb6f66}} 
+\index{speed.cpp@{speed.cpp}!Fun@{Fun}}
+\index{Fun@{Fun}!speed.cpp@{speed.cpp}}
+\doxysubsubsection{\texorpdfstring{Fun}{Fun}}
+{\footnotesize\ttfamily typedef void($\ast$ Fun) (float a)}
+
+
+
+在文件 speed.\+cpp 第 14 行定义.
+
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{speed_8cpp_a1ec116a24fe8e812825a81e33dbe92a3}\label{speed_8cpp_a1ec116a24fe8e812825a81e33dbe92a3}} 
+\index{speed.cpp@{speed.cpp}!lib@{lib}}
+\index{lib@{lib}!speed.cpp@{speed.cpp}}
+\doxysubsubsection{\texorpdfstring{lib()}{lib()}}
+{\footnotesize\ttfamily Q\+Library lib (\begin{DoxyParamCaption}\item[{\char`\"{}Speed\+Control.\+dll\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{speed_8cpp_a1ec116a24fe8e812825a81e33dbe92a3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{speed_8cpp_a964a4806b4107e8b30fb4a5e067d7e40}\label{speed_8cpp_a964a4806b4107e8b30fb4a5e067d7e40}} 
+\index{speed.cpp@{speed.cpp}!setspeed@{setspeed}}
+\index{setspeed@{setspeed}!speed.cpp@{speed.cpp}}
+\doxysubsubsection{\texorpdfstring{setspeed()}{setspeed()}}
+{\footnotesize\ttfamily void setspeed (\begin{DoxyParamCaption}\item[{float}]{speed }\end{DoxyParamCaption})}
+
+
+
+设置游戏速度 
+
+
+\begin{DoxyParams}{参数}
+{\em speed} & 游戏速度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 speed.\+cpp 第 21 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21                           \{}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keywordflow}{if} (\mbox{\hyperlink{speed_8cpp_a1ec116a24fe8e812825a81e33dbe92a3}{lib}}.load())}
+\DoxyCodeLine{24     \{}
+\DoxyCodeLine{25         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{speed_8cpp_a20bab1bc02a96c64b4b752adbf1b04d5}{Setrange}})}
+\DoxyCodeLine{26         \{}
+\DoxyCodeLine{27             qDebug()<<\textcolor{stringliteral}{"failed"};}
+\DoxyCodeLine{28         \}}
+\DoxyCodeLine{29         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{30         \{}
+\DoxyCodeLine{31             \mbox{\hyperlink{speed_8cpp_a20bab1bc02a96c64b4b752adbf1b04d5}{Setrange}}(speed);}
+\DoxyCodeLine{32             qDebug()<<\textcolor{stringliteral}{"变速成功"};}
+\DoxyCodeLine{33         \}}
+\DoxyCodeLine{34     \}}
+\DoxyCodeLine{35     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{36     \{}
+\DoxyCodeLine{37         qDebug()<<\textcolor{stringliteral}{"failed"};}
+\DoxyCodeLine{38     \}}
+\DoxyCodeLine{39 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{speed_8cpp_a964a4806b4107e8b30fb4a5e067d7e40_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{speed_8cpp_a964a4806b4107e8b30fb4a5e067d7e40_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{变量说明}
+\mbox{\Hypertarget{speed_8cpp_a20bab1bc02a96c64b4b752adbf1b04d5}\label{speed_8cpp_a20bab1bc02a96c64b4b752adbf1b04d5}} 
+\index{speed.cpp@{speed.cpp}!Setrange@{Setrange}}
+\index{Setrange@{Setrange}!speed.cpp@{speed.cpp}}
+\doxysubsubsection{\texorpdfstring{Setrange}{Setrange}}
+{\footnotesize\ttfamily \mbox{\hyperlink{speed_8cpp_a1ed44dedcb82cd1269a5e81380bb6f66}{Fun}} Setrange}
+
+
+
+在文件 speed.\+cpp 第 15 行定义.
+

@@ -1,0 +1,173 @@
+\hypertarget{class_wish}{}\doxysection{Wish类 参考}
+\label{class_wish}\index{Wish@{Wish}}
+
+
+一键许愿脚本-\/多线程类 脚本相关的配置  
+
+
+
+
+{\ttfamily \#include $<$form.\+h$>$}
+
+
+
+类 Wish 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_wish__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Wish 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_wish__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{信号}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_wish_a2f46bf520facac9e6734a7e0e8f6f7ab}{done}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_wish_a479e1b09c43aabf0fb57f090a88b7a61}{Wish}} (Q\+Object $\ast$parent=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_wish_a544d1f0f5ac89e43f9f72ab933a99f74}{status}}
+\item 
+int \mbox{\hyperlink{class_wish_aa37bc537d9dd30f49ab5aa9e664f4f3d}{now}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_wish_a437a750262b0ae55e0a76f38b308aa7a}{run}} ()
+\begin{DoxyCompactList}\small\item\em 一键许愿脚本-\/线程启动函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+一键许愿脚本-\/多线程类 脚本相关的配置 
+
+在文件 form.\+h 第 263 行定义.
+
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_wish_a479e1b09c43aabf0fb57f090a88b7a61}\label{class_wish_a479e1b09c43aabf0fb57f090a88b7a61}} 
+\index{Wish@{Wish}!Wish@{Wish}}
+\index{Wish@{Wish}!Wish@{Wish}}
+\doxysubsubsection{\texorpdfstring{Wish()}{Wish()}}
+{\footnotesize\ttfamily Wish\+::\+Wish (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+在文件 form.\+h 第 270 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{271         : QThread(parent)}
+\DoxyCodeLine{272     \{}
+\DoxyCodeLine{273         \mbox{\hyperlink{class_wish_a544d1f0f5ac89e43f9f72ab933a99f74}{status}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{274     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_wish_a2f46bf520facac9e6734a7e0e8f6f7ab}\label{class_wish_a2f46bf520facac9e6734a7e0e8f6f7ab}} 
+\index{Wish@{Wish}!done@{done}}
+\index{done@{done}!Wish@{Wish}}
+\doxysubsubsection{\texorpdfstring{done}{done}}
+{\footnotesize\ttfamily void Wish\+::done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_wish_a437a750262b0ae55e0a76f38b308aa7a}\label{class_wish_a437a750262b0ae55e0a76f38b308aa7a}} 
+\index{Wish@{Wish}!run@{run}}
+\index{run@{run}!Wish@{Wish}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Wish\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+一键许愿脚本-\/线程启动函数 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 form.\+cpp 第 1079 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1079               \{}
+\DoxyCodeLine{1080     QVariant x,y;}
+\DoxyCodeLine{1081     \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_wish_a544d1f0f5ac89e43f9f72ab933a99f74}{status}}==\textcolor{keyword}{true})\{}
+\DoxyCodeLine{1082         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(677,12,750,82,\textcolor{stringliteral}{"rc-\/xy.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1083             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{1084             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1085         \}}
+\DoxyCodeLine{1086         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(583,108,949,391,\textcolor{stringliteral}{"rc-\/xy1.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1087             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{1088             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1089             \mbox{\hyperlink{ext_8cpp_a6457286fc60081c281d79c411c7dfab7}{panel\_wish}}=1;}
+\DoxyCodeLine{1090         \}}
+\DoxyCodeLine{1091         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(434,95,633,352,\textcolor{stringliteral}{"rc-\/xy2.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{1092             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{1093             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1094         \}}
+\DoxyCodeLine{1095         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(611,202,800,382,\textcolor{stringliteral}{"rc-\/xyk.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)==-\/1 \&\& \mbox{\hyperlink{ext_8cpp_a6457286fc60081c281d79c411c7dfab7}{panel\_wish}}==1)\{}
+\DoxyCodeLine{1096             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(703,476);}
+\DoxyCodeLine{1097             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{1098         \}}
+\DoxyCodeLine{1099         \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(500);}
+\DoxyCodeLine{1100 }
+\DoxyCodeLine{1101 }
+\DoxyCodeLine{1102     \}}
+\DoxyCodeLine{1103 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{class_wish_a437a750262b0ae55e0a76f38b308aa7a_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_wish_aa37bc537d9dd30f49ab5aa9e664f4f3d}\label{class_wish_aa37bc537d9dd30f49ab5aa9e664f4f3d}} 
+\index{Wish@{Wish}!now@{now}}
+\index{now@{now}!Wish@{Wish}}
+\doxysubsubsection{\texorpdfstring{now}{now}}
+{\footnotesize\ttfamily int Wish\+::now}
+
+
+
+在文件 form.\+h 第 269 行定义.
+
+\mbox{\Hypertarget{class_wish_a544d1f0f5ac89e43f9f72ab933a99f74}\label{class_wish_a544d1f0f5ac89e43f9f72ab933a99f74}} 
+\index{Wish@{Wish}!status@{status}}
+\index{status@{status}!Wish@{Wish}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily bool Wish\+::status}
+
+
+
+在文件 form.\+h 第 268 行定义.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{form_8h}{form.\+h}}\item 
+\mbox{\hyperlink{form_8cpp}{form.\+cpp}}\end{DoxyCompactItemize}

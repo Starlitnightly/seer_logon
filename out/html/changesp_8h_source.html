@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>星小夜的登录器: changesp.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">星小夜的登录器
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">changesp.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="changesp_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef CHANGESP_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define CHANGESP_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;QModelIndex&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;QDirModel&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;QAxWidget&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;QFileDialog&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;QMessageBox&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;QThread&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;QVariant&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ext_8h.html">ext.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="xy_8h.html">xy.h</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ui.html">Ui</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">class </span><a class="code" href="class_changesp.html">Changesp</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classff_auto_c.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="classff_auto_c.html">ffAutoC</a>: <span class="keyword">public</span> QThread</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classff_auto_c.html#a5a6eb3bdef2fe445ec3315fc57bfea7c">   40</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classff_auto_c.html#a5a6eb3bdef2fe445ec3315fc57bfea7c">status</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classff_auto_c.html#a9f47fc33cdabcb07d30e2e226f9f5c34">   41</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classff_auto_c.html#a9f47fc33cdabcb07d30e2e226f9f5c34">now</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classff_auto_c.html#a1a2db6539c9ad5024173403b45e34d88">   42</a></span>&#160;    <a class="code" href="classff_auto_c.html#a1a2db6539c9ad5024173403b45e34d88">ffAutoC</a>(QObject *parent = 0)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        : QThread(parent)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="classff_auto_c.html#a5a6eb3bdef2fe445ec3315fc57bfea7c">status</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classff_auto_c.html#a47e3627ad87c9951dd0138a59b8a062e">run</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;signals:</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classff_auto_c.html#abec5f3db10cb5042ae2066a6ed426a8f">   50</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classff_auto_c.html#abec5f3db10cb5042ae2066a6ed426a8f">done</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_changesp.html">   56</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_changesp.html">Changesp</a> : <span class="keyword">public</span> QWidget</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_changesp.html#a70138fd9c5b0929a2c32a6700ed410af">Changesp</a>(QWidget *parent = 0);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="class_changesp.html#afb41f4d2e005337209b9fd1048a6f21f">~Changesp</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_changesp.html#a4c97711ebbc2ec950a271695aa3c16f0">   64</a></span>&#160;    QAxWidget **<a class="code" href="class_changesp.html#a4c97711ebbc2ec950a271695aa3c16f0">sp</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_changesp.html#a3747b1098b5c29ca081a91e548d0e446">   65</a></span>&#160;    QDirModel *<a class="code" href="class_changesp.html#a3747b1098b5c29ca081a91e548d0e446">model</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_changesp.html#abe78729eae19b2310031904099a1128e">   66</a></span>&#160;    QString <a class="code" href="class_changesp.html#abe78729eae19b2310031904099a1128e">path</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_changesp.html#ac91241dcadcab9e23d2dae42c067e029">   68</a></span>&#160;    QString <a class="code" href="class_changesp.html#ac91241dcadcab9e23d2dae42c067e029">bag_status</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_changesp.html#af941f120c3b970f7639225efa0152803">   69</a></span>&#160;    QStringList <a class="code" href="class_changesp.html#af941f120c3b970f7639225efa0152803">bag</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_changesp.html#a6bc2e14cefa3f8fecf72f1a0b80e243e">Putsp_home</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_changesp.html#a28916b4d95f4e648255c9ce3d8722785">Opensphome</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_changesp.html#a274ef8d0e7c4eb624d2b2a3d8138f516">Searchsp</a>(HWND pid,QString name);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_changesp.html#aaafbea9fea0c62585ad940f3e1b6ca7d">Putsp_bag</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">   78</a></span>&#160;    Ui::Changesp *<a class="code" href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">ui</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_changesp.html#a5aad823e7fc31ea7c684213905276379">slot_treeView_pressed</a>(QModelIndex modeIndex);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_changesp.html#aec09653420b9c8f115f548c624ee1419">slot_pre_bag</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_changesp.html#a7bacc71fdb2dd63c16e1c32e16426517">slot_savebag</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_changesp.html#a94ce8e3a047a1b40319a51efed195f42">slot_auto_bag</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif // CHANGESP_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_changesp_html_a28916b4d95f4e648255c9ce3d8722785"><div class="ttname"><a href="class_changesp.html#a28916b4d95f4e648255c9ce3d8722785">Changesp::Opensphome</a></div><div class="ttdeci">void Opensphome()</div><div class="ttdoc">打开精灵仓库函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00183">changesp.cpp:183</a></div></div>
+<div class="ttc" id="aclass_changesp_html_a6bc2e14cefa3f8fecf72f1a0b80e243e"><div class="ttname"><a href="class_changesp.html#a6bc2e14cefa3f8fecf72f1a0b80e243e">Changesp::Putsp_home</a></div><div class="ttdeci">void Putsp_home()</div><div class="ttdoc">背包精灵全部入库函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00169">changesp.cpp:169</a></div></div>
+<div class="ttc" id="aclassff_auto_c_html_a47e3627ad87c9951dd0138a59b8a062e"><div class="ttname"><a href="classff_auto_c.html#a47e3627ad87c9951dd0138a59b8a062e">ffAutoC::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">自动非法确认-线程启动函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00230">changesp.cpp:230</a></div></div>
+<div class="ttc" id="aclass_changesp_html_a70138fd9c5b0929a2c32a6700ed410af"><div class="ttname"><a href="class_changesp.html#a70138fd9c5b0929a2c32a6700ed410af">Changesp::Changesp</a></div><div class="ttdeci">Changesp(QWidget *parent=0)</div><div class="ttdoc">一键换背包窗口构造函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00046">changesp.cpp:46</a></div></div>
+<div class="ttc" id="aclassff_auto_c_html_a9f47fc33cdabcb07d30e2e226f9f5c34"><div class="ttname"><a href="classff_auto_c.html#a9f47fc33cdabcb07d30e2e226f9f5c34">ffAutoC::now</a></div><div class="ttdeci">int now</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8h_source.html#l00041">changesp.h:41</a></div></div>
+<div class="ttc" id="aclass_changesp_html_afb41f4d2e005337209b9fd1048a6f21f"><div class="ttname"><a href="class_changesp.html#afb41f4d2e005337209b9fd1048a6f21f">Changesp::~Changesp</a></div><div class="ttdeci">~Changesp()</div><div class="ttdoc">一键换背包窗口析构函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00159">changesp.cpp:159</a></div></div>
+<div class="ttc" id="aclassff_auto_c_html"><div class="ttname"><a href="classff_auto_c.html">ffAutoC</a></div><div class="ttdoc">自动非法确认-多线程类 用于自动按下赛尔号的确认按钮的多线程</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8h_source.html#l00035">changesp.h:36</a></div></div>
+<div class="ttc" id="aclass_changesp_html_a3747b1098b5c29ca081a91e548d0e446"><div class="ttname"><a href="class_changesp.html#a3747b1098b5c29ca081a91e548d0e446">Changesp::model</a></div><div class="ttdeci">QDirModel * model</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8h_source.html#l00065">changesp.h:65</a></div></div>
+<div class="ttc" id="aclass_changesp_html_a274ef8d0e7c4eb624d2b2a3d8138f516"><div class="ttname"><a href="class_changesp.html#a274ef8d0e7c4eb624d2b2a3d8138f516">Changesp::Searchsp</a></div><div class="ttdeci">void Searchsp(HWND pid, QString name)</div><div class="ttdoc">精灵仓库搜索精灵函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00195">changesp.cpp:195</a></div></div>
+<div class="ttc" id="aclass_changesp_html_a7bacc71fdb2dd63c16e1c32e16426517"><div class="ttname"><a href="class_changesp.html#a7bacc71fdb2dd63c16e1c32e16426517">Changesp::slot_savebag</a></div><div class="ttdeci">void slot_savebag()</div><div class="ttdoc">保存已输入背包函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00105">changesp.cpp:105</a></div></div>
+<div class="ttc" id="aclassff_auto_c_html_abec5f3db10cb5042ae2066a6ed426a8f"><div class="ttname"><a href="classff_auto_c.html#abec5f3db10cb5042ae2066a6ed426a8f">ffAutoC::done</a></div><div class="ttdeci">void done()</div></div>
+<div class="ttc" id="axy_8h_html"><div class="ttname"><a href="xy_8h.html">xy.h</a></div><div class="ttdoc">星夜特色函数</div></div>
+<div class="ttc" id="aclass_changesp_html_aec09653420b9c8f115f548c624ee1419"><div class="ttname"><a href="class_changesp.html#aec09653420b9c8f115f548c624ee1419">Changesp::slot_pre_bag</a></div><div class="ttdeci">void slot_pre_bag()</div><div class="ttdoc">预览输入背包函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00084">changesp.cpp:84</a></div></div>
+<div class="ttc" id="aclass_changesp_html"><div class="ttname"><a href="class_changesp.html">Changesp</a></div><div class="ttdoc">一键换背包窗口类 一键换背包窗口这个类相关的函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8h_source.html#l00056">changesp.h:57</a></div></div>
+<div class="ttc" id="aclass_changesp_html_ac91241dcadcab9e23d2dae42c067e029"><div class="ttname"><a href="class_changesp.html#ac91241dcadcab9e23d2dae42c067e029">Changesp::bag_status</a></div><div class="ttdeci">QString bag_status</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8h_source.html#l00068">changesp.h:68</a></div></div>
+<div class="ttc" id="aclass_changesp_html_aaafbea9fea0c62585ad940f3e1b6ca7d"><div class="ttname"><a href="class_changesp.html#aaafbea9fea0c62585ad940f3e1b6ca7d">Changesp::Putsp_bag</a></div><div class="ttdeci">void Putsp_bag()</div><div class="ttdoc">仓库精灵放入背包函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00214">changesp.cpp:214</a></div></div>
+<div class="ttc" id="aclass_changesp_html_abe78729eae19b2310031904099a1128e"><div class="ttname"><a href="class_changesp.html#abe78729eae19b2310031904099a1128e">Changesp::path</a></div><div class="ttdeci">QString path</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8h_source.html#l00066">changesp.h:66</a></div></div>
+<div class="ttc" id="aclassff_auto_c_html_a5a6eb3bdef2fe445ec3315fc57bfea7c"><div class="ttname"><a href="classff_auto_c.html#a5a6eb3bdef2fe445ec3315fc57bfea7c">ffAutoC::status</a></div><div class="ttdeci">bool status</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8h_source.html#l00040">changesp.h:40</a></div></div>
+<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> <a href="atoken_8h_source.html#l00017">atoken.h:17</a></div></div>
+<div class="ttc" id="aclass_changesp_html_ac62d95089ccda997257bf1dd13c225f8"><div class="ttname"><a href="class_changesp.html#ac62d95089ccda997257bf1dd13c225f8">Changesp::ui</a></div><div class="ttdeci">Ui::Changesp * ui</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8h_source.html#l00078">changesp.h:78</a></div></div>
+<div class="ttc" id="aclassff_auto_c_html_a1a2db6539c9ad5024173403b45e34d88"><div class="ttname"><a href="classff_auto_c.html#a1a2db6539c9ad5024173403b45e34d88">ffAutoC::ffAutoC</a></div><div class="ttdeci">ffAutoC(QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8h_source.html#l00042">changesp.h:42</a></div></div>
+<div class="ttc" id="aclass_changesp_html_a4c97711ebbc2ec950a271695aa3c16f0"><div class="ttname"><a href="class_changesp.html#a4c97711ebbc2ec950a271695aa3c16f0">Changesp::sp</a></div><div class="ttdeci">QAxWidget ** sp</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8h_source.html#l00064">changesp.h:64</a></div></div>
+<div class="ttc" id="aclass_changesp_html_a5aad823e7fc31ea7c684213905276379"><div class="ttname"><a href="class_changesp.html#a5aad823e7fc31ea7c684213905276379">Changesp::slot_treeView_pressed</a></div><div class="ttdeci">void slot_treeView_pressed(QModelIndex modeIndex)</div><div class="ttdoc">背包txt选中函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00146">changesp.cpp:146</a></div></div>
+<div class="ttc" id="aext_8h_html"><div class="ttname"><a href="ext_8h.html">ext.h</a></div><div class="ttdoc">全局变量声明头文件</div></div>
+<div class="ttc" id="aclass_changesp_html_af941f120c3b970f7639225efa0152803"><div class="ttname"><a href="class_changesp.html#af941f120c3b970f7639225efa0152803">Changesp::bag</a></div><div class="ttdeci">QStringList bag</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8h_source.html#l00069">changesp.h:69</a></div></div>
+<div class="ttc" id="aclass_changesp_html_a94ce8e3a047a1b40319a51efed195f42"><div class="ttname"><a href="class_changesp.html#a94ce8e3a047a1b40319a51efed195f42">Changesp::slot_auto_bag</a></div><div class="ttdeci">void slot_auto_bag()</div><div class="ttdoc">一键换背包主函数</div><div class="ttdef"><b>Definition:</b> <a href="changesp_8cpp_source.html#l00253">changesp.cpp:253</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

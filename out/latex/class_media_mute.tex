@@ -1,0 +1,218 @@
+\hypertarget{class_media_mute}{}\doxysection{Media\+Mute类 参考}
+\label{class_media_mute}\index{MediaMute@{MediaMute}}
+
+
+媒体静音类 用于媒体静音  
+
+
+
+
+{\ttfamily \#include $<$mediamute.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_media_mute_a06e3ba203cd6377b715f8c3a70e9aa8e}{Media\+Mute}} ()
+\begin{DoxyCompactList}\small\item\em 媒体静音类构造函数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_media_mute_a1fbc35448a7f866b4b4ca0e374ee4164}{Set\+Mute}} (bool mute)
+\begin{DoxyCompactList}\small\item\em 设置静音状态 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_media_mute_abfbec8d4d4c52244c4b8d92a3ceaff81}{Un\+Mute}} ()
+\begin{DoxyCompactList}\small\item\em 解除静音 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+媒体静音类 用于媒体静音 
+
+在文件 mediamute.\+h 第 20 行定义.
+
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_media_mute_a06e3ba203cd6377b715f8c3a70e9aa8e}\label{class_media_mute_a06e3ba203cd6377b715f8c3a70e9aa8e}} 
+\index{MediaMute@{MediaMute}!MediaMute@{MediaMute}}
+\index{MediaMute@{MediaMute}!MediaMute@{MediaMute}}
+\doxysubsubsection{\texorpdfstring{MediaMute()}{MediaMute()}}
+{\footnotesize\ttfamily Media\+Mute\+::\+Media\+Mute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+媒体静音类构造函数 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mediamute.\+cpp 第 24 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26     CoInitializeEx( NULL , COINIT\_MULTITHREADED );}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28         HRESULT hr;}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30         \textcolor{comment}{//实例化 MMDeviceEnumerator 枚举器}}
+\DoxyCodeLine{31         hr = CoCreateInstance(\_\_uuidof(MMDeviceEnumerator), NULL,CLSCTX\_ALL, \_\_uuidof(IMMDeviceEnumerator),(\textcolor{keywordtype}{void}**)\&\mbox{\hyperlink{mediamute_8cpp_a040637e5e143bf8504bbe1042e201173}{m\_pEnumerator}});}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34         \textcolor{comment}{// 默认设备的IMMDevice接口}}
+\DoxyCodeLine{35         hr = \mbox{\hyperlink{mediamute_8cpp_a040637e5e143bf8504bbe1042e201173}{m\_pEnumerator}}-\/>GetDefaultAudioEndpoint(eRender, eMultimedia, \&\mbox{\hyperlink{mediamute_8cpp_a932ce44fa554310d6a615caa6094f50b}{m\_pDeviceOut}});}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38         \textcolor{comment}{// 得到音频会话接口IAudioSessionManager}}
+\DoxyCodeLine{39         hr = \mbox{\hyperlink{mediamute_8cpp_a932ce44fa554310d6a615caa6094f50b}{m\_pDeviceOut}}-\/>Activate(\_\_uuidof(\mbox{\hyperlink{mediamute_8cpp_aa46a1aefe61841df4291394e26040b33}{m\_AudioSessionManager}}), CLSCTX\_ALL, NULL, (\textcolor{keywordtype}{void}**)\&\mbox{\hyperlink{mediamute_8cpp_aa46a1aefe61841df4291394e26040b33}{m\_AudioSessionManager}});}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42         \textcolor{comment}{// 设置会话(Session)参数}}
+\DoxyCodeLine{43         hr = \mbox{\hyperlink{mediamute_8cpp_aa46a1aefe61841df4291394e26040b33}{m\_AudioSessionManager}}-\/>GetAudioSessionControl(NULL,0,\&\mbox{\hyperlink{mediamute_8cpp_aa146c86a9872e3498e823e45e9d51b14}{m\_AudioSessionControl}});}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46         \textcolor{comment}{// 设置声音改变参数通知}}
+\DoxyCodeLine{47         \mbox{\hyperlink{mediamute_8cpp_a7cf8b324145acdda0c2528de886d0dac}{m\_pMutedSessionEvents}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_c_muted_session_events}{CMutedSessionEvents}}(\mbox{\hyperlink{mediamute_8cpp_aa46a1aefe61841df4291394e26040b33}{m\_AudioSessionManager}});}
+\DoxyCodeLine{48         hr = \mbox{\hyperlink{mediamute_8cpp_aa146c86a9872e3498e823e45e9d51b14}{m\_AudioSessionControl}}-\/>RegisterAudioSessionNotification(\mbox{\hyperlink{mediamute_8cpp_a7cf8b324145acdda0c2528de886d0dac}{m\_pMutedSessionEvents}});}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_media_mute_a1fbc35448a7f866b4b4ca0e374ee4164}\label{class_media_mute_a1fbc35448a7f866b4b4ca0e374ee4164}} 
+\index{MediaMute@{MediaMute}!SetMute@{SetMute}}
+\index{SetMute@{SetMute}!MediaMute@{MediaMute}}
+\doxysubsubsection{\texorpdfstring{SetMute()}{SetMute()}}
+{\footnotesize\ttfamily bool Media\+Mute\+::\+Set\+Mute (\begin{DoxyParamCaption}\item[{bool}]{mute }\end{DoxyParamCaption})}
+
+
+
+设置静音状态 
+
+
+\begin{DoxyParams}{参数}
+{\em mute} & true为静音/false为解除静音 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+设置是否成功 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{返回值}
+{\em true} & 设置成功 \\
+\hline
+{\em false} & 设置失败 \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 mediamute.\+cpp 第 102 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{103 \{}
+\DoxyCodeLine{104     HRESULT hr = S\_FALSE;}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106         \textcolor{comment}{// 获得音量、静音控制接口}}
+\DoxyCodeLine{107         ISimpleAudioVolume   *pAudioVolume = NULL;}
+\DoxyCodeLine{108         hr = \mbox{\hyperlink{mediamute_8cpp_aa46a1aefe61841df4291394e26040b33}{m\_AudioSessionManager}}-\/>GetSimpleAudioVolume(NULL,0,\&pAudioVolume);}
+\DoxyCodeLine{109         \textcolor{keywordflow}{if} (FAILED(hr)) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111         \textcolor{keywordflow}{if}(SUCCEEDED(hr))}
+\DoxyCodeLine{112         \{}
+\DoxyCodeLine{113             pAudioVolume-\/>SetMute(mute, \&GUID\_NULL);}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115             \textcolor{comment}{// 更改全局静音状态}}
+\DoxyCodeLine{116             \mbox{\hyperlink{mediamute_8cpp_a1550983623bd1da5d8ba206daaab475a}{g\_bMuted}} = mute;}
+\DoxyCodeLine{117         \}}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119         \textcolor{keywordflow}{if} (pAudioVolume != NULL)}
+\DoxyCodeLine{120         \{}
+\DoxyCodeLine{121             pAudioVolume-\/>Release();}
+\DoxyCodeLine{122             pAudioVolume = NULL;}
+\DoxyCodeLine{123         \}}
+\DoxyCodeLine{124         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{125 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_media_mute_a1fbc35448a7f866b4b4ca0e374ee4164_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_media_mute_abfbec8d4d4c52244c4b8d92a3ceaff81}\label{class_media_mute_abfbec8d4d4c52244c4b8d92a3ceaff81}} 
+\index{MediaMute@{MediaMute}!UnMute@{UnMute}}
+\index{UnMute@{UnMute}!MediaMute@{MediaMute}}
+\doxysubsubsection{\texorpdfstring{UnMute()}{UnMute()}}
+{\footnotesize\ttfamily bool Media\+Mute\+::\+Un\+Mute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+解除静音 
+
+\begin{DoxyReturn}{返回}
+只有true，因为指针释放失败会直接进程结束 
+\end{DoxyReturn}
+
+
+在文件 mediamute.\+cpp 第 56 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57 \{}
+\DoxyCodeLine{58     \textcolor{comment}{// -\/-\/-\/-\/ 解注册声音改变参数通知}}
+\DoxyCodeLine{59         \textcolor{keywordflow}{if} (\mbox{\hyperlink{mediamute_8cpp_aa146c86a9872e3498e823e45e9d51b14}{m\_AudioSessionControl}}!=NULL\&\&\mbox{\hyperlink{mediamute_8cpp_a7cf8b324145acdda0c2528de886d0dac}{m\_pMutedSessionEvents}}!=NULL)}
+\DoxyCodeLine{60         \{}
+\DoxyCodeLine{61             \mbox{\hyperlink{mediamute_8cpp_aa146c86a9872e3498e823e45e9d51b14}{m\_AudioSessionControl}}-\/>UnregisterAudioSessionNotification(\mbox{\hyperlink{mediamute_8cpp_a7cf8b324145acdda0c2528de886d0dac}{m\_pMutedSessionEvents}});}
+\DoxyCodeLine{62         \}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64         \textcolor{comment}{// -\/-\/-\/-\/ 释放内存空间}}
+\DoxyCodeLine{65         \textcolor{keywordflow}{if} (\mbox{\hyperlink{mediamute_8cpp_aa146c86a9872e3498e823e45e9d51b14}{m\_AudioSessionControl}} != NULL)}
+\DoxyCodeLine{66         \{}
+\DoxyCodeLine{67             \mbox{\hyperlink{mediamute_8cpp_aa146c86a9872e3498e823e45e9d51b14}{m\_AudioSessionControl}}-\/>Release();}
+\DoxyCodeLine{68             \mbox{\hyperlink{mediamute_8cpp_aa146c86a9872e3498e823e45e9d51b14}{m\_AudioSessionControl}} = NULL;}
+\DoxyCodeLine{69         \}}
+\DoxyCodeLine{70         \textcolor{keywordflow}{if} (\mbox{\hyperlink{mediamute_8cpp_a7cf8b324145acdda0c2528de886d0dac}{m\_pMutedSessionEvents}} != NULL)}
+\DoxyCodeLine{71         \{}
+\DoxyCodeLine{72             \mbox{\hyperlink{mediamute_8cpp_a7cf8b324145acdda0c2528de886d0dac}{m\_pMutedSessionEvents}}-\/>\mbox{\hyperlink{class_c_muted_session_events_a10c7f85eca91e1ddb87a714deb928e05}{Release}}();}
+\DoxyCodeLine{73             \mbox{\hyperlink{mediamute_8cpp_a7cf8b324145acdda0c2528de886d0dac}{m\_pMutedSessionEvents}} = NULL;}
+\DoxyCodeLine{74         \}}
+\DoxyCodeLine{75         \textcolor{keywordflow}{if} (\mbox{\hyperlink{mediamute_8cpp_a932ce44fa554310d6a615caa6094f50b}{m\_pDeviceOut}} != NULL)}
+\DoxyCodeLine{76         \{}
+\DoxyCodeLine{77             \mbox{\hyperlink{mediamute_8cpp_a932ce44fa554310d6a615caa6094f50b}{m\_pDeviceOut}}-\/>Release();}
+\DoxyCodeLine{78             \mbox{\hyperlink{mediamute_8cpp_a932ce44fa554310d6a615caa6094f50b}{m\_pDeviceOut}} = NULL;}
+\DoxyCodeLine{79         \}}
+\DoxyCodeLine{80         \textcolor{keywordflow}{if}(\mbox{\hyperlink{mediamute_8cpp_aa46a1aefe61841df4291394e26040b33}{m\_AudioSessionManager}} != NULL)}
+\DoxyCodeLine{81         \{}
+\DoxyCodeLine{82             \mbox{\hyperlink{mediamute_8cpp_aa46a1aefe61841df4291394e26040b33}{m\_AudioSessionManager}}-\/>Release();}
+\DoxyCodeLine{83             \mbox{\hyperlink{mediamute_8cpp_aa46a1aefe61841df4291394e26040b33}{m\_AudioSessionManager}} = NULL;}
+\DoxyCodeLine{84         \}}
+\DoxyCodeLine{85         \textcolor{keywordflow}{if} (\mbox{\hyperlink{mediamute_8cpp_a040637e5e143bf8504bbe1042e201173}{m\_pEnumerator}} != NULL)}
+\DoxyCodeLine{86         \{}
+\DoxyCodeLine{87             \mbox{\hyperlink{mediamute_8cpp_a040637e5e143bf8504bbe1042e201173}{m\_pEnumerator}}-\/>Release();}
+\DoxyCodeLine{88             \mbox{\hyperlink{mediamute_8cpp_a040637e5e143bf8504bbe1042e201173}{m\_pEnumerator}} = NULL;}
+\DoxyCodeLine{89         \}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91         CoUninitialize();}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{94 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{class_media_mute_abfbec8d4d4c52244c4b8d92a3ceaff81_cgraph}
+\end{center}
+\end{figure}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mediamute_8h}{mediamute.\+h}}\item 
+\mbox{\hyperlink{mediamute_8cpp}{mediamute.\+cpp}}\end{DoxyCompactItemize}

@@ -1,3 +1,12 @@
+/**
+ * @file ext.h
+ * @brief 全局变量声明头文件
+ * @author starlitnightly
+ * @email Starlitnightly@163.com
+ * @version 1.0.0
+ * @date 2020-07-09
+ * @license GPL
+ */
 #ifndef EXT_H
 #define EXT_H
 

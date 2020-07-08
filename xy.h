@@ -1,3 +1,12 @@
+/**
+ * @file xy.h
+ * @brief 星夜特色函数头文件
+ * @author starlitnightly
+ * @email Starlitnightly@163.com
+ * @version 1.0.0
+ * @date 2020-07-09
+ * @license GPL
+ */
 #ifndef XY_H
 #define XY_H
 

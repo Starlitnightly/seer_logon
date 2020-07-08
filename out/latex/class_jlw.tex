@@ -1,0 +1,198 @@
+\hypertarget{class_jlw}{}\doxysection{Jlw类 参考}
+\label{class_jlw}\index{Jlw@{Jlw}}
+
+
+精灵王大乱斗脚本-\/多线程类 脚本相关的配置  
+
+
+
+
+{\ttfamily \#include $<$form.\+h$>$}
+
+
+
+类 Jlw 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_jlw__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Jlw 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{class_jlw__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{信号}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_jlw_a4b353bde5f335f7a885d18f5f226992a}{done}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_jlw_ab9b5c6d97d114fc5add5cef3ecfd1820}{Jlw}} (Q\+Object $\ast$parent=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_jlw_ad5aae79d255dd8f6a01770f870895e78}{status}}
+\item 
+int \mbox{\hyperlink{class_jlw_a86656c30312c2310a7153d4cd7009419}{now}}
+\item 
+\mbox{\hyperlink{class_repp}{Repp}} $\ast$ \mbox{\hyperlink{class_jlw_a39b89586932907594d7f795ec698c9dc}{script\+\_\+repp}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_jlw_a145a21cdc00244f97d9f91aa52d1a556}{run}} ()
+\begin{DoxyCompactList}\small\item\em 精灵王大乱斗脚本-\/线程启动函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+精灵王大乱斗脚本-\/多线程类 脚本相关的配置 
+
+在文件 form.\+h 第 153 行定义.
+
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_jlw_ab9b5c6d97d114fc5add5cef3ecfd1820}\label{class_jlw_ab9b5c6d97d114fc5add5cef3ecfd1820}} 
+\index{Jlw@{Jlw}!Jlw@{Jlw}}
+\index{Jlw@{Jlw}!Jlw@{Jlw}}
+\doxysubsubsection{\texorpdfstring{Jlw()}{Jlw()}}
+{\footnotesize\ttfamily Jlw\+::\+Jlw (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+在文件 form.\+h 第 161 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{162         : QThread(parent)}
+\DoxyCodeLine{163     \{}
+\DoxyCodeLine{164         \mbox{\hyperlink{class_jlw_ad5aae79d255dd8f6a01770f870895e78}{status}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{165         \mbox{\hyperlink{class_jlw_a39b89586932907594d7f795ec698c9dc}{script\_repp}}=NULL;}
+\DoxyCodeLine{166     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_jlw_a4b353bde5f335f7a885d18f5f226992a}\label{class_jlw_a4b353bde5f335f7a885d18f5f226992a}} 
+\index{Jlw@{Jlw}!done@{done}}
+\index{done@{done}!Jlw@{Jlw}}
+\doxysubsubsection{\texorpdfstring{done}{done}}
+{\footnotesize\ttfamily void Jlw\+::done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_jlw_a145a21cdc00244f97d9f91aa52d1a556}\label{class_jlw_a145a21cdc00244f97d9f91aa52d1a556}} 
+\index{Jlw@{Jlw}!run@{run}}
+\index{run@{run}!Jlw@{Jlw}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Jlw\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+精灵王大乱斗脚本-\/线程启动函数 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 form.\+cpp 第 853 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{853              \{}
+\DoxyCodeLine{854     QVariant x,y;}
+\DoxyCodeLine{855     qDebug()<<\textcolor{stringliteral}{"进入精灵王脚本"};}
+\DoxyCodeLine{856     \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_jlw_ad5aae79d255dd8f6a01770f870895e78}{status}}==\textcolor{keyword}{true})\{}
+\DoxyCodeLine{857         \textcolor{comment}{//qDebug()<<"开始精灵王脚本";}}
+\DoxyCodeLine{858         \textcolor{keywordtype}{bool} replenishpp=\textcolor{keyword}{false};}
+\DoxyCodeLine{859         \textcolor{keywordflow}{if}(\mbox{\hyperlink{xy_8cpp_a9ea2c896fa964f516cd5d85b10aad31f}{xy\_shibiemap}}()!=\textcolor{stringliteral}{"竞技天堂"} \&\& \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"dfpd11.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{860             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"rc-\/6-\/1.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{861                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(489,546);}
+\DoxyCodeLine{862                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{863             \}}
+\DoxyCodeLine{864             \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(300);}
+\DoxyCodeLine{865         \}}
+\DoxyCodeLine{866         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"rc-\/6-\/2.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{867             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(454,148);}
+\DoxyCodeLine{868             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{869         \}}
+\DoxyCodeLine{870         \mbox{\hyperlink{xy_8cpp_ac1f716a1ace435f62910f610ed1cbf81}{OpenKingSpirit}}();}
+\DoxyCodeLine{871         \mbox{\hyperlink{xy_8cpp_afc5a3afd15ea1c25148483bd1df95ebf}{xy\_autofight}}();}
+\DoxyCodeLine{872         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"道具.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{873             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a0fa1bf4e28dad69a39dd0c63183d9a25}{FindColorE}}( 13, 440, 76, 462, \textcolor{stringliteral}{"93c1ca-\/000000"}, 1, 0)!=\textcolor{stringliteral}{"-\/1|-\/1"} || \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(14, 327, 971, 570, \textcolor{stringliteral}{"0.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{874                 replenishpp=\textcolor{keyword}{true};}
+\DoxyCodeLine{875                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_jlw_a39b89586932907594d7f795ec698c9dc}{script\_repp}}==NULL)}
+\DoxyCodeLine{876                     \mbox{\hyperlink{class_jlw_a39b89586932907594d7f795ec698c9dc}{script\_repp}}=\textcolor{keyword}{new} \mbox{\hyperlink{class_repp}{Repp}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{877                 \mbox{\hyperlink{class_jlw_a39b89586932907594d7f795ec698c9dc}{script\_repp}}-\/>start();}
+\DoxyCodeLine{878             \}}
+\DoxyCodeLine{879             \textcolor{keywordflow}{if}(replenishpp==\textcolor{keyword}{false})\{}
+\DoxyCodeLine{880                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a33b66b7e95ff6e7e90e159b67273dd8a}{FindColor}}(18,476,89,493,\textcolor{stringliteral}{"fffad4-\/000000"},1,0,x,y)!=0)\{}
+\DoxyCodeLine{881                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(40,506);}
+\DoxyCodeLine{882                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{883                 \}}
+\DoxyCodeLine{884             \}}
+\DoxyCodeLine{885         \}}
+\DoxyCodeLine{886 }
+\DoxyCodeLine{887         \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(1000);}
+\DoxyCodeLine{888     \}}
+\DoxyCodeLine{889 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_jlw_a145a21cdc00244f97d9f91aa52d1a556_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_jlw_a86656c30312c2310a7153d4cd7009419}\label{class_jlw_a86656c30312c2310a7153d4cd7009419}} 
+\index{Jlw@{Jlw}!now@{now}}
+\index{now@{now}!Jlw@{Jlw}}
+\doxysubsubsection{\texorpdfstring{now}{now}}
+{\footnotesize\ttfamily int Jlw\+::now}
+
+
+
+在文件 form.\+h 第 159 行定义.
+
+\mbox{\Hypertarget{class_jlw_a39b89586932907594d7f795ec698c9dc}\label{class_jlw_a39b89586932907594d7f795ec698c9dc}} 
+\index{Jlw@{Jlw}!script\_repp@{script\_repp}}
+\index{script\_repp@{script\_repp}!Jlw@{Jlw}}
+\doxysubsubsection{\texorpdfstring{script\_repp}{script\_repp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_repp}{Repp}}$\ast$ Jlw\+::script\+\_\+repp}
+
+
+
+在文件 form.\+h 第 160 行定义.
+
+\mbox{\Hypertarget{class_jlw_ad5aae79d255dd8f6a01770f870895e78}\label{class_jlw_ad5aae79d255dd8f6a01770f870895e78}} 
+\index{Jlw@{Jlw}!status@{status}}
+\index{status@{status}!Jlw@{Jlw}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily bool Jlw\+::status}
+
+
+
+在文件 form.\+h 第 158 行定义.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{form_8h}{form.\+h}}\item 
+\mbox{\hyperlink{form_8cpp}{form.\+cpp}}\end{DoxyCompactItemize}

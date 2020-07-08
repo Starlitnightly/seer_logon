@@ -1,0 +1,7 @@
+<map id="Nono::signal_pet" name="Nono::signal_pet">
+<area shape="rect" id="node1" title=" " alt="" coords="705,7,823,33"/>
+<area shape="rect" id="node2" href="$class_nono.html#a3a59dc5f43458df16fc2dd5cd4aace99" title="nono窗口构造函数" alt="" coords="5,5,96,32"/>
+<area shape="rect" id="node3" href="$class_nono.html#ae6ae4d7add2cd4d6ffc0bfc62ba5351b" title="Nono::recognitionRequestFinished" alt="" coords="485,29,656,70"/>
+<area shape="rect" id="node4" href="$class_nono.html#a103f87a55f9ec70d34f7c219b6343761" title="识别对面精灵的名字" alt="" coords="315,33,437,60"/>
+<area shape="rect" id="node5" href="$class_nono.html#ab754e1ac200a41a51f6d90b5d537fcea" title="识别对战精灵" alt="" coords="144,32,267,59"/>
+</map>

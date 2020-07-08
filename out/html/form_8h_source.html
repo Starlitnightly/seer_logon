@@ -1,0 +1,692 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>星小夜的登录器: form.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">星小夜的登录器
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">form.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="form_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef FORM_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define FORM_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;QThread&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;QMessageBox&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;QSettings&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;QDir&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ext_8h.html">ext.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="xy_8h.html">xy.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ui.html">Ui</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">class </span><a class="code" href="class_form.html">Form</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">class </span><a class="code" href="class_fw.html">Fw</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">class </span><a class="code" href="class_gem.html">Gem</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">class </span><a class="code" href="class_hdblk.html">Hdblk</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">class </span><a class="code" href="class_jlw.html">Jlw</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">class </span><a class="code" href="class_spt.html">Spt</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">class </span><a class="code" href="class_team.html">Team</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">class </span><a class="code" href="class_tower.html">Tower</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">class </span><a class="code" href="class_vip.html">Vip</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">class </span><a class="code" href="class_wish.html">Wish</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">class </span><a class="code" href="class_xxlzc.html">Xxlzc</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">class </span><a class="code" href="class_auto_c.html">AutoC</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">class </span><a class="code" href="class_repp.html">Repp</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">class </span><a class="code" href="class_top.html">Top</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_repp.html">   46</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_repp.html">Repp</a>: <span class="keyword">public</span> QThread</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_repp.html#a82986b1f73cd92993d4c52fa10197ee8">   51</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_repp.html#a82986b1f73cd92993d4c52fa10197ee8">status</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_repp.html#a5b3cae9ca704d154394810a8e18ab6f9">   52</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_repp.html#a5b3cae9ca704d154394810a8e18ab6f9">now</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_repp.html#afde76f54e4d72156591c971dd5056e2c">   53</a></span>&#160;    <a class="code" href="class_repp.html#afde76f54e4d72156591c971dd5056e2c">Repp</a>(QObject *parent = 0)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        : QThread(parent)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="class_repp.html#a82986b1f73cd92993d4c52fa10197ee8">status</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_repp.html#a155e9490b29f7ac04ed42f14ae78eb1f">run</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;signals:</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_repp.html#a21cd78947ab59570507e6fc8aa3022b7">   61</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_repp.html#a21cd78947ab59570507e6fc8aa3022b7">done</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_auto_c.html">   67</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_auto_c.html">AutoC</a>: <span class="keyword">public</span> QThread</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_auto_c.html#aa6c2f6cdd80b2014a8a02e004af65880">   72</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_auto_c.html#aa6c2f6cdd80b2014a8a02e004af65880">status</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_auto_c.html#a251f76d25bd745b19810cdc0451e4aac">   73</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_auto_c.html#a251f76d25bd745b19810cdc0451e4aac">now</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_auto_c.html#ab98d19d8be569a03654240cfd6eaf54f">   74</a></span>&#160;    <a class="code" href="class_auto_c.html#ab98d19d8be569a03654240cfd6eaf54f">AutoC</a>(QObject *parent = 0)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        : QThread(parent)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="class_auto_c.html#aa6c2f6cdd80b2014a8a02e004af65880">status</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_auto_c.html#af53bbcd67d17396788bf86da94b5e372">run</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;signals:</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_auto_c.html#a73b7732669ae629ddc91d696fe5b1d45">   82</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_auto_c.html#a73b7732669ae629ddc91d696fe5b1d45">done</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;};</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_fw.html">   88</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_fw.html">Fw</a>: <span class="keyword">public</span> QThread</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_fw.html#a48c154e57e82cd89d34e2c5127b8a9b7">   93</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_fw.html#a48c154e57e82cd89d34e2c5127b8a9b7">status</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_fw.html#a7d75a90497e4060c766cbfdcb43a7771">   94</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_fw.html#a7d75a90497e4060c766cbfdcb43a7771">now</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_fw.html#a1f390f178d2cbdf1e9798f2274c2821e">   95</a></span>&#160;    <a class="code" href="class_fw.html#a1f390f178d2cbdf1e9798f2274c2821e">Fw</a>(QObject *parent = 0)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        : QThread(parent)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="class_fw.html#a48c154e57e82cd89d34e2c5127b8a9b7">status</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_fw.html#a6c3d8a44da9fcead8c3b3d30638e4495">jianchashoufa</a>(QString shoufajingling);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_fw.html#a2d9c75f21fed335adcb107d2853355cf">shezhishoufa</a>(QString shoufajingling);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_fw.html#a2336962e1178af8b6fe6dbf349cd1a8e">run</a>();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;signals:</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="class_fw.html#a9064128a17e30a08a88472b130620da0">  105</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_fw.html#a9064128a17e30a08a88472b130620da0">done</a>();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;};</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="class_gem.html">  111</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_gem.html">Gem</a>: <span class="keyword">public</span> QThread</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;{</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_gem.html#ab97ed444348d6390bd73c527593b9eb5">  116</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_gem.html#ab97ed444348d6390bd73c527593b9eb5">status</a>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="class_gem.html#acd43a26fe25e877da6dc903d51883d48">  117</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_gem.html#acd43a26fe25e877da6dc903d51883d48">now</a>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="class_gem.html#a624b0f8b71f7008582b1299801f5820f">  118</a></span>&#160;    <a class="code" href="class_gem.html#a624b0f8b71f7008582b1299801f5820f">Gem</a>(QObject *parent = 0)</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        : QThread(parent)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <a class="code" href="class_gem.html#ab97ed444348d6390bd73c527593b9eb5">status</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gem.html#af6f23b8ce868e2185f204b72937f9d12">run</a>();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;signals:</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="class_gem.html#a238bf65926a182a1304d2bb962a6d2aa">  126</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gem.html#a238bf65926a182a1304d2bb962a6d2aa">done</a>();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;};</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="class_hdblk.html">  132</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_hdblk.html">Hdblk</a>: <span class="keyword">public</span> QThread</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;{</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="class_hdblk.html#a0030084a9add1e811f3cca372dc83d80">  137</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_hdblk.html#a0030084a9add1e811f3cca372dc83d80">status</a>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="class_hdblk.html#a0da03c6e79cdeb0ec518274fe6295b2f">  138</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_hdblk.html#a0da03c6e79cdeb0ec518274fe6295b2f">now</a>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="class_hdblk.html#acd0af7f2b6c0a4947ecad098568a6cd9">  139</a></span>&#160;    <a class="code" href="class_hdblk.html#acd0af7f2b6c0a4947ecad098568a6cd9">Hdblk</a>(QObject *parent = 0)</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        : QThread(parent)</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <a class="code" href="class_hdblk.html#a0030084a9add1e811f3cca372dc83d80">status</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hdblk.html#aaf03ee62b81c598e11019cd87a0c3455">run</a>();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;signals:</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="class_hdblk.html#a52a0aec33480af6d0f0baca5f0775c39">  147</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hdblk.html#a52a0aec33480af6d0f0baca5f0775c39">done</a>();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;};</div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="class_jlw.html">  153</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_jlw.html">Jlw</a>: <span class="keyword">public</span> QThread</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;{</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="class_jlw.html#ad5aae79d255dd8f6a01770f870895e78">  158</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_jlw.html#ad5aae79d255dd8f6a01770f870895e78">status</a>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="class_jlw.html#a86656c30312c2310a7153d4cd7009419">  159</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_jlw.html#a86656c30312c2310a7153d4cd7009419">now</a>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="class_jlw.html#a39b89586932907594d7f795ec698c9dc">  160</a></span>&#160;    <a class="code" href="class_repp.html">Repp</a> *<a class="code" href="class_jlw.html#a39b89586932907594d7f795ec698c9dc">script_repp</a>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="class_jlw.html#ab9b5c6d97d114fc5add5cef3ecfd1820">  161</a></span>&#160;    <a class="code" href="class_jlw.html#ab9b5c6d97d114fc5add5cef3ecfd1820">Jlw</a>(QObject *parent = 0)</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        : QThread(parent)</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <a class="code" href="class_jlw.html#ad5aae79d255dd8f6a01770f870895e78">status</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <a class="code" href="class_jlw.html#a39b89586932907594d7f795ec698c9dc">script_repp</a>=NULL;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_jlw.html#a145a21cdc00244f97d9f91aa52d1a556">run</a>();</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;signals:</div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="class_jlw.html#a4b353bde5f335f7a885d18f5f226992a">  171</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_jlw.html#a4b353bde5f335f7a885d18f5f226992a">done</a>();</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;};</div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="class_spt.html">  177</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_spt.html">Spt</a>: <span class="keyword">public</span> QThread</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;{</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="class_spt.html#a85befaa5b7cf0d54401985856c29f594">  182</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_spt.html#a85befaa5b7cf0d54401985856c29f594">status</a>;</div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="class_spt.html#a861f20fef462a2c25784ed7fcfeb0fbb">  183</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_spt.html#a861f20fef462a2c25784ed7fcfeb0fbb">now</a>;</div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="class_spt.html#a71a9819edeb47983aeda0d5feaa11718">  184</a></span>&#160;    <a class="code" href="class_repp.html">Repp</a> *<a class="code" href="class_spt.html#a71a9819edeb47983aeda0d5feaa11718">script_repp</a>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="class_spt.html#aaff3a886fcd15d44c71696092b20d418">  185</a></span>&#160;    <a class="code" href="class_spt.html#aaff3a886fcd15d44c71696092b20d418">Spt</a>(QObject *parent = 0)</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        : QThread(parent)</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <a class="code" href="class_spt.html#a85befaa5b7cf0d54401985856c29f594">status</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <a class="code" href="class_spt.html#a71a9819edeb47983aeda0d5feaa11718">script_repp</a>=NULL;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_spt.html#a3a6dd7e2fa4422857925bd76381be961">run</a>();</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;signals:</div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="class_spt.html#aca61931d3ffefe0105eac80e20992dd7">  194</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_spt.html#aca61931d3ffefe0105eac80e20992dd7">done</a>();</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;};</div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="class_team.html">  200</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_team.html">Team</a>: <span class="keyword">public</span> QThread</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;{</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="class_team.html#a3e822c94c25a60afd0af968cbb65304b">  205</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_team.html#a3e822c94c25a60afd0af968cbb65304b">status</a>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno"><a class="line" href="class_team.html#ae98ec4fd450765526095f77a83cb2e39">  206</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_team.html#ae98ec4fd450765526095f77a83cb2e39">now</a>;</div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="class_team.html#afac346a2380d0c8d44e036f3546724fd">  207</a></span>&#160;    <a class="code" href="class_team.html#afac346a2380d0c8d44e036f3546724fd">Team</a>(QObject *parent = 0)</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        : QThread(parent)</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <a class="code" href="class_team.html#a3e822c94c25a60afd0af968cbb65304b">status</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_team.html#ab247d3622b762f0f4a856c79f4823b88">run</a>();</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;signals:</div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="class_team.html#a95af0a49420821596111209407ba3e8c">  215</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_team.html#a95af0a49420821596111209407ba3e8c">sendMessage</a>(QString msg);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;};</div>
+<div class="line"><a name="l00221"></a><span class="lineno"><a class="line" href="class_tower.html">  221</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_tower.html">Tower</a>: <span class="keyword">public</span> QThread</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;{</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="class_tower.html#a23aa1ba4b14b541e9f9173ee4629e0e3">  226</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_tower.html#a23aa1ba4b14b541e9f9173ee4629e0e3">status</a>;</div>
+<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="class_tower.html#a5804456747201e3c4b37611f88d44e28">  227</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_tower.html#a5804456747201e3c4b37611f88d44e28">now</a>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno"><a class="line" href="class_tower.html#a2760063d43d60968ee66720cd02d0919">  228</a></span>&#160;    <a class="code" href="class_tower.html#a2760063d43d60968ee66720cd02d0919">Tower</a>(QObject *parent = 0)</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        : QThread(parent)</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <a class="code" href="class_tower.html#a23aa1ba4b14b541e9f9173ee4629e0e3">status</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tower.html#aca31b7c16e6e29a8d94817e1493bf728">run</a>();</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;signals:</div>
+<div class="line"><a name="l00236"></a><span class="lineno"><a class="line" href="class_tower.html#aad5df4c0006befb30b4edf3799efec4f">  236</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tower.html#aad5df4c0006befb30b4edf3799efec4f">done</a>();</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;};</div>
+<div class="line"><a name="l00242"></a><span class="lineno"><a class="line" href="class_vip.html">  242</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_vip.html">Vip</a>: <span class="keyword">public</span> QThread</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;{</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00247"></a><span class="lineno"><a class="line" href="class_vip.html#a4e779d9997bd0ff4fee0b9116a33ce7c">  247</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_vip.html#a4e779d9997bd0ff4fee0b9116a33ce7c">status</a>;</div>
+<div class="line"><a name="l00248"></a><span class="lineno"><a class="line" href="class_vip.html#a1af7f2a4ac4de40fed3ab2c83e21cd8f">  248</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_vip.html#a1af7f2a4ac4de40fed3ab2c83e21cd8f">now</a>;</div>
+<div class="line"><a name="l00249"></a><span class="lineno"><a class="line" href="class_vip.html#a0f0ddc851650314a47be48ef5832a8d9">  249</a></span>&#160;    <a class="code" href="class_vip.html#a0f0ddc851650314a47be48ef5832a8d9">Vip</a>(QObject *parent = 0)</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        : QThread(parent)</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    {</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <a class="code" href="class_vip.html#a4e779d9997bd0ff4fee0b9116a33ce7c">status</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_vip.html#ae970b8413ff5e8003715e274339fc5a2">run</a>();</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;signals:</div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="class_vip.html#a0da6718066e6a1fedfb6c3c9a3f9d172">  257</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_vip.html#a0da6718066e6a1fedfb6c3c9a3f9d172">done</a>();</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;};</div>
+<div class="line"><a name="l00263"></a><span class="lineno"><a class="line" href="class_wish.html">  263</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_wish.html">Wish</a>: <span class="keyword">public</span> QThread</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;{</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00268"></a><span class="lineno"><a class="line" href="class_wish.html#a544d1f0f5ac89e43f9f72ab933a99f74">  268</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_wish.html#a544d1f0f5ac89e43f9f72ab933a99f74">status</a>;</div>
+<div class="line"><a name="l00269"></a><span class="lineno"><a class="line" href="class_wish.html#aa37bc537d9dd30f49ab5aa9e664f4f3d">  269</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_wish.html#aa37bc537d9dd30f49ab5aa9e664f4f3d">now</a>;</div>
+<div class="line"><a name="l00270"></a><span class="lineno"><a class="line" href="class_wish.html#a479e1b09c43aabf0fb57f090a88b7a61">  270</a></span>&#160;    <a class="code" href="class_wish.html#a479e1b09c43aabf0fb57f090a88b7a61">Wish</a>(QObject *parent = 0)</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        : QThread(parent)</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    {</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <a class="code" href="class_wish.html#a544d1f0f5ac89e43f9f72ab933a99f74">status</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    }</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_wish.html#a437a750262b0ae55e0a76f38b308aa7a">run</a>();</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;signals:</div>
+<div class="line"><a name="l00278"></a><span class="lineno"><a class="line" href="class_wish.html#a2f46bf520facac9e6734a7e0e8f6f7ab">  278</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_wish.html#a2f46bf520facac9e6734a7e0e8f6f7ab">done</a>();</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;};</div>
+<div class="line"><a name="l00284"></a><span class="lineno"><a class="line" href="class_xxlzc.html">  284</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_xxlzc.html">Xxlzc</a>: <span class="keyword">public</span> QThread</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;{</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00289"></a><span class="lineno"><a class="line" href="class_xxlzc.html#ae9359e757db2a4c2f66c8fafda8c3660">  289</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_xxlzc.html#ae9359e757db2a4c2f66c8fafda8c3660">status</a>;</div>
+<div class="line"><a name="l00290"></a><span class="lineno"><a class="line" href="class_xxlzc.html#a5d031e06374f886042bf9d2b54b01311">  290</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_xxlzc.html#a5d031e06374f886042bf9d2b54b01311">now</a>;</div>
+<div class="line"><a name="l00291"></a><span class="lineno"><a class="line" href="class_xxlzc.html#aefa8f8906cb0618ed3188f8069a9c331">  291</a></span>&#160;    <a class="code" href="class_xxlzc.html#aefa8f8906cb0618ed3188f8069a9c331">Xxlzc</a>(QObject *parent = 0)</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        : QThread(parent)</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    {</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <a class="code" href="class_xxlzc.html#ae9359e757db2a4c2f66c8fafda8c3660">status</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_xxlzc.html#a1da799628e7ee157db11b31e4c745245">run</a>();</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;signals:</div>
+<div class="line"><a name="l00299"></a><span class="lineno"><a class="line" href="class_xxlzc.html#a8a0d9ed2515a66a911df4ef5b1fc74a1">  299</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_xxlzc.html#a8a0d9ed2515a66a911df4ef5b1fc74a1">done</a>();</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;};</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
+<div class="line"><a name="l00307"></a><span class="lineno"><a class="line" href="class_pdtop.html">  307</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_pdtop.html">Pdtop</a>: <span class="keyword">public</span> QThread</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;{</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00312"></a><span class="lineno"><a class="line" href="class_pdtop.html#add84a4f1d745ba8caf21e74e92a27fbc">  312</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_pdtop.html#add84a4f1d745ba8caf21e74e92a27fbc">status</a>;</div>
+<div class="line"><a name="l00313"></a><span class="lineno"><a class="line" href="class_pdtop.html#ab421c8ddd62fdd16dfee1e15f9e72971">  313</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_pdtop.html#ab421c8ddd62fdd16dfee1e15f9e72971">now</a>;</div>
+<div class="line"><a name="l00314"></a><span class="lineno"><a class="line" href="class_pdtop.html#a0cc6fe8cdbbab3c472b45c6e5e4d01d6">  314</a></span>&#160;    QString <a class="code" href="class_pdtop.html#a0cc6fe8cdbbab3c472b45c6e5e4d01d6">mode</a>;</div>
+<div class="line"><a name="l00315"></a><span class="lineno"><a class="line" href="class_pdtop.html#a4471d94cc21a6893b3c169222ef91df0">  315</a></span>&#160;    <a class="code" href="class_pdtop.html#a4471d94cc21a6893b3c169222ef91df0">Pdtop</a>(QObject *parent = 0)</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        : QThread(parent)</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <a class="code" href="class_pdtop.html#add84a4f1d745ba8caf21e74e92a27fbc">status</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    }</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pdtop.html#a651e0babbb70430654baf8472594f479">run</a>();</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;signals:</div>
+<div class="line"><a name="l00323"></a><span class="lineno"><a class="line" href="class_pdtop.html#aa25898e1eb8c769282371d5be28c4214">  323</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pdtop.html#aa25898e1eb8c769282371d5be28c4214">done</a>();</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;};</div>
+<div class="line"><a name="l00329"></a><span class="lineno"><a class="line" href="class_ban3.html">  329</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_ban3.html">Ban3</a>: <span class="keyword">public</span> QThread</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;{</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00334"></a><span class="lineno"><a class="line" href="class_ban3.html#a7a388c9a6e2ff5ceeb2c1e453503038c">  334</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_ban3.html#a7a388c9a6e2ff5ceeb2c1e453503038c">status</a>;</div>
+<div class="line"><a name="l00335"></a><span class="lineno"><a class="line" href="class_ban3.html#af6dc89a6f2d2a8fc7b71b3926e523a58">  335</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_ban3.html#af6dc89a6f2d2a8fc7b71b3926e523a58">now</a>;</div>
+<div class="line"><a name="l00336"></a><span class="lineno"><a class="line" href="class_ban3.html#a55ac828b9ed02ea69a5390c32ceae9a8">  336</a></span>&#160;    QString <a class="code" href="class_ban3.html#a55ac828b9ed02ea69a5390c32ceae9a8">mode</a>;</div>
+<div class="line"><a name="l00337"></a><span class="lineno"><a class="line" href="class_ban3.html#afc7bdb2deae63e8b9b15f24503debed2">  337</a></span>&#160;    <a class="code" href="class_ban3.html#afc7bdb2deae63e8b9b15f24503debed2">Ban3</a>(QObject *parent = 0)</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        : QThread(parent)</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    {</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <a class="code" href="class_ban3.html#a7a388c9a6e2ff5ceeb2c1e453503038c">status</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    }</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_ban3.html#ad6787c795d95f5da2857c07ab5b22fef">run</a>();</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;signals:</div>
+<div class="line"><a name="l00345"></a><span class="lineno"><a class="line" href="class_ban3.html#af2659331e27ba1676d3aca0b073c47cb">  345</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_ban3.html#af2659331e27ba1676d3aca0b073c47cb">done</a>();</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;};</div>
+<div class="line"><a name="l00351"></a><span class="lineno"><a class="line" href="class_explode.html">  351</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_explode.html">Explode</a>: <span class="keyword">public</span> QThread</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;{</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160; </div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00356"></a><span class="lineno"><a class="line" href="class_explode.html#ad65df606133469e85ea5be21bc23b017">  356</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_explode.html#ad65df606133469e85ea5be21bc23b017">status</a>;</div>
+<div class="line"><a name="l00357"></a><span class="lineno"><a class="line" href="class_explode.html#a007428218ca38f27f9ace44d97bc47a3">  357</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_explode.html#a007428218ca38f27f9ace44d97bc47a3">now</a>;</div>
+<div class="line"><a name="l00358"></a><span class="lineno"><a class="line" href="class_explode.html#a59552558967f61f8e3bd36717a345b14">  358</a></span>&#160;    QString <a class="code" href="class_explode.html#a59552558967f61f8e3bd36717a345b14">mode</a>;</div>
+<div class="line"><a name="l00359"></a><span class="lineno"><a class="line" href="class_explode.html#a33da0e7396a0e3d5ddb30ab22000c5d9">  359</a></span>&#160;    <a class="code" href="class_explode.html#a33da0e7396a0e3d5ddb30ab22000c5d9">Explode</a>(QObject *parent = 0)</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        : QThread(parent)</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    {</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <a class="code" href="class_explode.html#ad65df606133469e85ea5be21bc23b017">status</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    }</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_explode.html#a98495d45ed7f4506c56fa5af66c3301f">auto33first</a>();</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_explode.html#a4ccd52335babd05ec6ae935dee4789b0">auto33fight</a>();</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_explode.html#aff39855645600bd82019590b50f08596">autofirst</a>();</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_explode.html#a6a99fc603c8bd5921219cc521476636a">autofight</a>();</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_explode.html#a1a51ec7a91585d90e588a4a661ea697a">run</a>();</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;signals:</div>
+<div class="line"><a name="l00371"></a><span class="lineno"><a class="line" href="class_explode.html#a7738f4087e5798b124c5a12e13565ece">  371</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_explode.html#a7738f4087e5798b124c5a12e13565ece">done</a>();</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;};</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
+<div class="line"><a name="l00378"></a><span class="lineno"><a class="line" href="class_top.html">  378</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_top.html">Top</a>: <span class="keyword">public</span> QThread</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;{</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00383"></a><span class="lineno"><a class="line" href="class_top.html#a20cf5eda4f62e6c40a229a125ee8ef7f">  383</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_top.html#a20cf5eda4f62e6c40a229a125ee8ef7f">status</a>;</div>
+<div class="line"><a name="l00384"></a><span class="lineno"><a class="line" href="class_top.html#adf0e345e4ad9f8815001e88d8def54c6">  384</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_top.html#adf0e345e4ad9f8815001e88d8def54c6">now</a>;</div>
+<div class="line"><a name="l00385"></a><span class="lineno"><a class="line" href="class_top.html#ae105555f5213a290d24c07951a344f07">  385</a></span>&#160;    <a class="code" href="class_repp.html">Repp</a> *<a class="code" href="class_top.html#ae105555f5213a290d24c07951a344f07">script_repp</a>;</div>
+<div class="line"><a name="l00386"></a><span class="lineno"><a class="line" href="class_top.html#a09e02d30e6b35220981b6693ecf666de">  386</a></span>&#160;    <a class="code" href="class_pdtop.html">Pdtop</a> *<a class="code" href="class_top.html#a09e02d30e6b35220981b6693ecf666de">script_pdtop</a>;</div>
+<div class="line"><a name="l00387"></a><span class="lineno"><a class="line" href="class_top.html#abdeea4d80c74e0b972ac796db57a9551">  387</a></span>&#160;    <a class="code" href="class_ban3.html">Ban3</a> *<a class="code" href="class_top.html#abdeea4d80c74e0b972ac796db57a9551">script_ban3</a>;</div>
+<div class="line"><a name="l00388"></a><span class="lineno"><a class="line" href="class_top.html#a33f47daea6251ecda9c577c2f40994ab">  388</a></span>&#160;    <a class="code" href="class_explode.html">Explode</a> *<a class="code" href="class_top.html#a33f47daea6251ecda9c577c2f40994ab">script_explode</a>;</div>
+<div class="line"><a name="l00389"></a><span class="lineno"><a class="line" href="class_top.html#ac941f65f2f6845dffc21100d916266dd">  389</a></span>&#160;    QString <a class="code" href="class_top.html#ac941f65f2f6845dffc21100d916266dd">mode</a>;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160; </div>
+<div class="line"><a name="l00391"></a><span class="lineno"><a class="line" href="class_top.html#a8287141c282d41415036411ed752ec63">  391</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_top.html#a8287141c282d41415036411ed752ec63">robot</a>;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160; </div>
+<div class="line"><a name="l00393"></a><span class="lineno"><a class="line" href="class_top.html#a6b8b7b0071d5f0a486c2e9f27f190b3a">  393</a></span>&#160;    <a class="code" href="class_top.html#a6b8b7b0071d5f0a486c2e9f27f190b3a">Top</a>(QObject *parent = 0)</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        : QThread(parent)</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    {</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        <a class="code" href="class_top.html#a20cf5eda4f62e6c40a229a125ee8ef7f">status</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        <a class="code" href="class_top.html#ae105555f5213a290d24c07951a344f07">script_repp</a>=NULL;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        <a class="code" href="class_top.html#abdeea4d80c74e0b972ac796db57a9551">script_ban3</a>=NULL;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <a class="code" href="class_top.html#a09e02d30e6b35220981b6693ecf666de">script_pdtop</a>=NULL;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        <a class="code" href="class_top.html#a33f47daea6251ecda9c577c2f40994ab">script_explode</a>=NULL;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        <a class="code" href="class_top.html#a8287141c282d41415036411ed752ec63">robot</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    }</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160; </div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_top.html#aa1e3e0aa1a814b66dc1e4c78b622e3d2">Robotfight</a>();</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_top.html#ae9f4ac4d51bf31effd9f028f940dbbaf">run</a>();</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;signals:</div>
+<div class="line"><a name="l00408"></a><span class="lineno"><a class="line" href="class_top.html#a6e08a08c516a49d1de627b4c4edfe8af">  408</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_top.html#a6e08a08c516a49d1de627b4c4edfe8af">done</a>();</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;};</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160; </div>
+<div class="line"><a name="l00415"></a><span class="lineno"><a class="line" href="class_searles.html">  415</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_searles.html">Searles</a>: <span class="keyword">public</span> QThread</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;{</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160; </div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00420"></a><span class="lineno"><a class="line" href="class_searles.html#a10475006b215575aa9332fe2ca4a93c8">  420</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_searles.html#a10475006b215575aa9332fe2ca4a93c8">status</a>;</div>
+<div class="line"><a name="l00421"></a><span class="lineno"><a class="line" href="class_searles.html#a32a5b848b22787e0a6f483fa341f3e14">  421</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_searles.html#a32a5b848b22787e0a6f483fa341f3e14">now</a>;</div>
+<div class="line"><a name="l00422"></a><span class="lineno"><a class="line" href="class_searles.html#aeb2ae73b702747acfe9df895b26a4615">  422</a></span>&#160;    QString <a class="code" href="class_searles.html#aeb2ae73b702747acfe9df895b26a4615">mode</a>;</div>
+<div class="line"><a name="l00423"></a><span class="lineno"><a class="line" href="class_searles.html#a6412417950a1fd03b43744f594341c96">  423</a></span>&#160;    <a class="code" href="class_searles.html#a6412417950a1fd03b43744f594341c96">Searles</a>(QObject *parent = 0)</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        : QThread(parent)</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    {</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        <a class="code" href="class_searles.html#a10475006b215575aa9332fe2ca4a93c8">status</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    }</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_searles.html#aa44aa200f9e6f18328a70768d628d2d2">run</a>();</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;signals:</div>
+<div class="line"><a name="l00431"></a><span class="lineno"><a class="line" href="class_searles.html#a411cb09f28076aba773a96742e07ac1c">  431</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_searles.html#a411cb09f28076aba773a96742e07ac1c">sendreset</a>(QString msg);</div>
+<div class="line"><a name="l00432"></a><span class="lineno"><a class="line" href="class_searles.html#a9335258d73a22e27ba6208043d2899c3">  432</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_searles.html#a9335258d73a22e27ba6208043d2899c3">sendlose</a>(QString msg);</div>
+<div class="line"><a name="l00433"></a><span class="lineno"><a class="line" href="class_searles.html#a64a396be7150893da2c2e828fe5794f2">  433</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_searles.html#a64a396be7150893da2c2e828fe5794f2">sendfight</a>(QString msg);</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;};</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160; </div>
+<div class="line"><a name="l00440"></a><span class="lineno"><a class="line" href="class_sixworld.html">  440</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sixworld.html">Sixworld</a>: <span class="keyword">public</span> QThread</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;{</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160; </div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00445"></a><span class="lineno"><a class="line" href="class_sixworld.html#ab4e68bfbeec26c954e9d481caf1ff7b9">  445</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_sixworld.html#ab4e68bfbeec26c954e9d481caf1ff7b9">status</a>;</div>
+<div class="line"><a name="l00446"></a><span class="lineno"><a class="line" href="class_sixworld.html#a03bb985e13097450d68c3614a290acf5">  446</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_sixworld.html#a03bb985e13097450d68c3614a290acf5">now</a>;</div>
+<div class="line"><a name="l00447"></a><span class="lineno"><a class="line" href="class_sixworld.html#a4b3bed5f7a556c1c96f704e3d4df5452">  447</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_sixworld.html#a4b3bed5f7a556c1c96f704e3d4df5452">god</a>;</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sixworld.html#abab0eba831e529ddec2fd1283197cab7">god_condition</a>();</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sixworld.html#abf5733e91df0f5d3d5bd50f8efef335d">god_changesp</a>(QString sp);</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sixworld.html#ae04b87558d8f5c5b41d3a69079eef987">god_method</a>(<span class="keywordtype">int</span> method);</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_sixworld.html#adb299e28d0900c6800a5cd5c61bc8cc3">jianchashoufa</a>(QString shoufajingling);</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sixworld.html#af16334711ab5245bfa051f9b5005aec4">shezhishoufa</a>(QString shoufajingling);</div>
+<div class="line"><a name="l00453"></a><span class="lineno"><a class="line" href="class_sixworld.html#a2b48fb8e029844d726df794e2dfcc7c1">  453</a></span>&#160;    <a class="code" href="class_sixworld.html#a2b48fb8e029844d726df794e2dfcc7c1">Sixworld</a>(QObject *parent = 0)</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;        : QThread(parent)</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    {</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;        <a class="code" href="class_sixworld.html#ab4e68bfbeec26c954e9d481caf1ff7b9">status</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    }</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sixworld.html#a5363d5ae5c05203784eaf6d95b7b0d9e">run</a>();</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160; </div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;};</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160; </div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160; </div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160; </div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160; </div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160; </div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160; </div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160; </div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160; </div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160; </div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160; </div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160; </div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160; </div>
+<div class="line"><a name="l00478"></a><span class="lineno"><a class="line" href="class_form.html">  478</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_form.html">Form</a> : <span class="keyword">public</span> QWidget</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;{</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160; </div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_form.html#a9a921e26a02f23bffdea4330d6795796">Form</a>(QWidget *parent = 0);</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;    <a class="code" href="class_form.html#a9cda7cce41e81bfaca51e922d4f9b98f">~Form</a>();</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160; </div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160; </div>
+<div class="line"><a name="l00487"></a><span class="lineno"><a class="line" href="class_form.html#ae929a57f646d10b24398a90a727f951d">  487</a></span>&#160;    <a class="code" href="class_fw.html">Fw</a> *<a class="code" href="class_form.html#ae929a57f646d10b24398a90a727f951d">script_fw</a>;</div>
+<div class="line"><a name="l00488"></a><span class="lineno"><a class="line" href="class_form.html#a56d7eabeb703db4cb2d48408602f1851">  488</a></span>&#160;    <a class="code" href="class_gem.html">Gem</a> *<a class="code" href="class_form.html#a56d7eabeb703db4cb2d48408602f1851">script_gem</a>;</div>
+<div class="line"><a name="l00489"></a><span class="lineno"><a class="line" href="class_form.html#a14e9b62a549b9ae783aba3a0df442fc2">  489</a></span>&#160;    <a class="code" href="class_hdblk.html">Hdblk</a> *<a class="code" href="class_form.html#a14e9b62a549b9ae783aba3a0df442fc2">script_hdblk</a>;</div>
+<div class="line"><a name="l00490"></a><span class="lineno"><a class="line" href="class_form.html#a20699ebca20f2cb931c6c7cf5bbc36d1">  490</a></span>&#160;    <a class="code" href="class_jlw.html">Jlw</a> *<a class="code" href="class_form.html#a20699ebca20f2cb931c6c7cf5bbc36d1">script_jlw</a>;</div>
+<div class="line"><a name="l00491"></a><span class="lineno"><a class="line" href="class_form.html#a99287168dc63d1a21a69230c10979c46">  491</a></span>&#160;    <a class="code" href="class_spt.html">Spt</a> *<a class="code" href="class_form.html#a99287168dc63d1a21a69230c10979c46">script_spt</a>;</div>
+<div class="line"><a name="l00492"></a><span class="lineno"><a class="line" href="class_form.html#ae4731bce99d9c980b1e7dacc1bc9ad6b">  492</a></span>&#160;    <a class="code" href="class_team.html">Team</a> *<a class="code" href="class_form.html#ae4731bce99d9c980b1e7dacc1bc9ad6b">script_team</a>;</div>
+<div class="line"><a name="l00493"></a><span class="lineno"><a class="line" href="class_form.html#afa455d6e4b86cba44003e47d0250ee43">  493</a></span>&#160;    <a class="code" href="class_tower.html">Tower</a> *<a class="code" href="class_form.html#afa455d6e4b86cba44003e47d0250ee43">script_tower</a>;</div>
+<div class="line"><a name="l00494"></a><span class="lineno"><a class="line" href="class_form.html#a96aacfb78c5096bcbfd52fba2bba2cbf">  494</a></span>&#160;    <a class="code" href="class_vip.html">Vip</a> *<a class="code" href="class_form.html#a96aacfb78c5096bcbfd52fba2bba2cbf">script_vip</a>;</div>
+<div class="line"><a name="l00495"></a><span class="lineno"><a class="line" href="class_form.html#a096034cbc813d4982e4783559af269c8">  495</a></span>&#160;    <a class="code" href="class_wish.html">Wish</a> *<a class="code" href="class_form.html#a096034cbc813d4982e4783559af269c8">script_wish</a>;</div>
+<div class="line"><a name="l00496"></a><span class="lineno"><a class="line" href="class_form.html#a7e29b86d7c4243593a93af5df6d90772">  496</a></span>&#160;    <a class="code" href="class_xxlzc.html">Xxlzc</a> *<a class="code" href="class_form.html#a7e29b86d7c4243593a93af5df6d90772">script_xxlzc</a>;</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160; </div>
+<div class="line"><a name="l00498"></a><span class="lineno"><a class="line" href="class_form.html#af2cad5f82655a80a935da6dfef41ae93">  498</a></span>&#160;    <a class="code" href="class_auto_c.html">AutoC</a> *<a class="code" href="class_form.html#af2cad5f82655a80a935da6dfef41ae93">script_auto</a>;</div>
+<div class="line"><a name="l00499"></a><span class="lineno"><a class="line" href="class_form.html#acca12162f6c79ac007a531dcc8919c17">  499</a></span>&#160;    <a class="code" href="class_top.html">Top</a> *<a class="code" href="class_form.html#acca12162f6c79ac007a531dcc8919c17">script_top</a>;</div>
+<div class="line"><a name="l00500"></a><span class="lineno"><a class="line" href="class_form.html#a2f876c5cf915589354dae39ff8a387b8">  500</a></span>&#160;    <a class="code" href="class_searles.html">Searles</a> *<a class="code" href="class_form.html#a2f876c5cf915589354dae39ff8a387b8">script_searles</a>;</div>
+<div class="line"><a name="l00501"></a><span class="lineno"><a class="line" href="class_form.html#a2aa4adc31c8e4b90418a3b0313a20a2e">  501</a></span>&#160;    <a class="code" href="class_sixworld.html">Sixworld</a> *<a class="code" href="class_form.html#a2aa4adc31c8e4b90418a3b0313a20a2e">script_sixworld</a>;</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160; </div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160; </div>
+<div class="line"><a name="l00504"></a><span class="lineno"><a class="line" href="class_form.html#abd3fb75725f183e9b6de305cff53fba6">  504</a></span>&#160;    QString <a class="code" href="class_form.html#abd3fb75725f183e9b6de305cff53fba6">mode</a>;</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160; </div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00507"></a><span class="lineno"><a class="line" href="class_form.html#a73bcc598a15a14b7a41f941b62571d3d">  507</a></span>&#160;    Ui::Form *<a class="code" href="class_form.html#a73bcc598a15a14b7a41f941b62571d3d">ui</a>;</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160; </div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_form.html#ab225cc1a20235bb39cff8ffa6dd77f96">test</a>();</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_form.html#a7d497c062cabb12a4b848338c1260f60">test2</a>();</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160; </div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    <span class="comment">//单选框槽函数1</span></div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_form.html#a207193002fa6f14b95feb8e0a54c54e0">fw_selected</a>();</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_form.html#ada9fce331f19c9e1208cd89b27e8fabb">gem_selected</a>();</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_form.html#ac22400b3245640f9d1095e87db6a127d">hdblk_selected</a>();</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_form.html#a0a242203f6e310ed61477b23e0092e06">jlw_selected</a>();</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_form.html#a00b45c311c34cb03ba4e347babbc3c12">spt_selected</a>();</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_form.html#a03da9002b8be9f99510e9cd848a36d62">team_selected</a>();</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_form.html#ade05b071ce607b68dbac1d85d525499d">tower_selected</a>();</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_form.html#af6e97e8cf9ba9a1a75b1133d68c4f918">vip_selected</a>();</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_form.html#aaf973af711f216312199032fd9dd7aab">wish_selected</a>();</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_form.html#a56092d39ff2eacc1e4a3a5c633f3df6a">xxlzc_selected</a>();</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    <span class="comment">//巅峰单选框槽函数</span></div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_form.html#a844f99203a7acd1dc755d4d6d022d356">top_jj_selected</a>();</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_form.html#a8b611c7fc95e86861d2fa02811b0df17">top_ky_selected</a>();</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_form.html#a85ed24e1f87ee065a6195cd7c0e38f13">top_33_selected</a>();</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160; </div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_form.html#a641a5bb3e1c2048175938e8b52a9f45f">searles_selected</a>();<span class="comment">//选择圣瑞脚本</span></div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_form.html#aaa5261d5f9b7cede3bd85af0b3a004ca">sixworld_selected</a>();<span class="comment">//选择六界</span></div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_form.html#af6edbcb1dbc3ff6a12f787dd3ca7cc12">showMessageBox</a>(QString msg);</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160; </div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_form.html#a03b5d5b98f11764bd3e045f026eba082">showreset</a>(QString msg);</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_form.html#ac767c69d8bafcedfa43f70c4888577dd">showlose</a>(QString msg);</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_form.html#a06919bb2cd69f31f8c4477f072245226">showfight</a>(QString msg);</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160; </div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;};</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160; </div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160; </div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160; </div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160; </div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160; </div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160; </div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160; </div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;<span class="preprocessor">#endif // FORM_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_form_html_a56092d39ff2eacc1e4a3a5c633f3df6a"><div class="ttname"><a href="class_form.html#a56092d39ff2eacc1e4a3a5c633f3df6a">Form::xxlzc_selected</a></div><div class="ttdeci">void xxlzc_selected()</div><div class="ttdoc">学习力战场脚本单选框被选中后初始化</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00454">form.cpp:454</a></div></div>
+<div class="ttc" id="aclass_xxlzc_html_a1da799628e7ee157db11b31e4c745245"><div class="ttname"><a href="class_xxlzc.html#a1da799628e7ee157db11b31e4c745245">Xxlzc::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">学习力战场脚本-线程启动函数</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l01108">form.cpp:1108</a></div></div>
+<div class="ttc" id="aclass_wish_html_a479e1b09c43aabf0fb57f090a88b7a61"><div class="ttname"><a href="class_wish.html#a479e1b09c43aabf0fb57f090a88b7a61">Wish::Wish</a></div><div class="ttdeci">Wish(QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00270">form.h:270</a></div></div>
+<div class="ttc" id="aclass_gem_html_af6f23b8ce868e2185f204b72937f9d12"><div class="ttname"><a href="class_gem.html#af6f23b8ce868e2185f204b72937f9d12">Gem::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">一键刻印/宝石抽奖脚本-线程启动函数</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00751">form.cpp:751</a></div></div>
+<div class="ttc" id="aclass_top_html_a09e02d30e6b35220981b6693ecf666de"><div class="ttname"><a href="class_top.html#a09e02d30e6b35220981b6693ecf666de">Top::script_pdtop</a></div><div class="ttdeci">Pdtop * script_pdtop</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00386">form.h:386</a></div></div>
+<div class="ttc" id="aclass_sixworld_html_a5363d5ae5c05203784eaf6d95b7b0d9e"><div class="ttname"><a href="class_sixworld.html#a5363d5ae5c05203784eaf6d95b7b0d9e">Sixworld::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">六界脚本-线程启动函数</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l02020">form.cpp:2020</a></div></div>
+<div class="ttc" id="aclass_fw_html_a2336962e1178af8b6fe6dbf349cd1a8e"><div class="ttname"><a href="class_fw.html#a2336962e1178af8b6fe6dbf349cd1a8e">Fw::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">飞王脚本-线程启动函数</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00616">form.cpp:616</a></div></div>
+<div class="ttc" id="aclass_explode_html_aff39855645600bd82019590b50f08596"><div class="ttname"><a href="class_explode.html#aff39855645600bd82019590b50f08596">Explode::autofirst</a></div><div class="ttdeci">void autofirst()</div><div class="ttdoc">首发与出战-自动66首发</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l01767">form.cpp:1767</a></div></div>
+<div class="ttc" id="aclass_xxlzc_html_ae9359e757db2a4c2f66c8fafda8c3660"><div class="ttname"><a href="class_xxlzc.html#ae9359e757db2a4c2f66c8fafda8c3660">Xxlzc::status</a></div><div class="ttdeci">bool status</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00289">form.h:289</a></div></div>
+<div class="ttc" id="aclass_form_html_af6edbcb1dbc3ff6a12f787dd3ca7cc12"><div class="ttname"><a href="class_form.html#af6edbcb1dbc3ff6a12f787dd3ca7cc12">Form::showMessageBox</a></div><div class="ttdeci">void showMessageBox(QString msg)</div><div class="ttdoc">脚本说明提示函数</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00119">form.cpp:119</a></div></div>
+<div class="ttc" id="aclass_ban3_html_a55ac828b9ed02ea69a5390c32ceae9a8"><div class="ttname"><a href="class_ban3.html#a55ac828b9ed02ea69a5390c32ceae9a8">Ban3::mode</a></div><div class="ttdeci">QString mode</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00336">form.h:336</a></div></div>
+<div class="ttc" id="aclass_ban3_html_af2659331e27ba1676d3aca0b073c47cb"><div class="ttname"><a href="class_ban3.html#af2659331e27ba1676d3aca0b073c47cb">Ban3::done</a></div><div class="ttdeci">void done()</div></div>
+<div class="ttc" id="aclass_explode_html"><div class="ttname"><a href="class_explode.html">Explode</a></div><div class="ttdoc">首发与出战-多线程类 巅峰脚本自动选择首发与自动选择出战精灵</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00351">form.h:352</a></div></div>
+<div class="ttc" id="aclass_form_html_ac767c69d8bafcedfa43f70c4888577dd"><div class="ttname"><a href="class_form.html#ac767c69d8bafcedfa43f70c4888577dd">Form::showlose</a></div><div class="ttdeci">void showlose(QString msg)</div><div class="ttdoc">圣瑞脚本战败次数显示</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00305">form.cpp:305</a></div></div>
+<div class="ttc" id="aclass_pdtop_html_add84a4f1d745ba8caf21e74e92a27fbc"><div class="ttname"><a href="class_pdtop.html#add84a4f1d745ba8caf21e74e92a27fbc">Pdtop::status</a></div><div class="ttdeci">bool status</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00312">form.h:312</a></div></div>
+<div class="ttc" id="aclass_repp_html_a155e9490b29f7ac04ed42f14ae78eb1f"><div class="ttname"><a href="class_repp.html#a155e9490b29f7ac04ed42f14ae78eb1f">Repp::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">补pp-线程启动函数</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l01192">form.cpp:1192</a></div></div>
+<div class="ttc" id="aclass_form_html_a8b611c7fc95e86861d2fa02811b0df17"><div class="ttname"><a href="class_form.html#a8b611c7fc95e86861d2fa02811b0df17">Form::top_ky_selected</a></div><div class="ttdeci">void top_ky_selected()</div><div class="ttdoc">巅峰狂野脚本单选框被选中后初始化</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00474">form.cpp:474</a></div></div>
+<div class="ttc" id="aclass_jlw_html_a145a21cdc00244f97d9f91aa52d1a556"><div class="ttname"><a href="class_jlw.html#a145a21cdc00244f97d9f91aa52d1a556">Jlw::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">精灵王大乱斗脚本-线程启动函数</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00853">form.cpp:853</a></div></div>
+<div class="ttc" id="aclass_top_html_aa1e3e0aa1a814b66dc1e4c78b622e3d2"><div class="ttname"><a href="class_top.html#aa1e3e0aa1a814b66dc1e4c78b622e3d2">Top::Robotfight</a></div><div class="ttdeci">void Robotfight()</div><div class="ttdoc">巅峰脚本-精灵智能出招函数</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l01374">form.cpp:1374</a></div></div>
+<div class="ttc" id="aclass_wish_html"><div class="ttname"><a href="class_wish.html">Wish</a></div><div class="ttdoc">一键许愿脚本-多线程类 脚本相关的配置</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00263">form.h:264</a></div></div>
+<div class="ttc" id="aclass_explode_html_a007428218ca38f27f9ace44d97bc47a3"><div class="ttname"><a href="class_explode.html#a007428218ca38f27f9ace44d97bc47a3">Explode::now</a></div><div class="ttdeci">int now</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00357">form.h:357</a></div></div>
+<div class="ttc" id="aclass_ban3_html_a7a388c9a6e2ff5ceeb2c1e453503038c"><div class="ttname"><a href="class_ban3.html#a7a388c9a6e2ff5ceeb2c1e453503038c">Ban3::status</a></div><div class="ttdeci">bool status</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00334">form.h:334</a></div></div>
+<div class="ttc" id="aclass_jlw_html_a4b353bde5f335f7a885d18f5f226992a"><div class="ttname"><a href="class_jlw.html#a4b353bde5f335f7a885d18f5f226992a">Jlw::done</a></div><div class="ttdeci">void done()</div></div>
+<div class="ttc" id="aclass_form_html_afa455d6e4b86cba44003e47d0250ee43"><div class="ttname"><a href="class_form.html#afa455d6e4b86cba44003e47d0250ee43">Form::script_tower</a></div><div class="ttdeci">Tower * script_tower</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00493">form.h:493</a></div></div>
+<div class="ttc" id="aclass_fw_html_a2d9c75f21fed335adcb107d2853355cf"><div class="ttname"><a href="class_fw.html#a2d9c75f21fed335adcb107d2853355cf">Fw::shezhishoufa</a></div><div class="ttdeci">void shezhishoufa(QString shoufajingling)</div><div class="ttdoc">飞王脚本-设置首发</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00592">form.cpp:592</a></div></div>
+<div class="ttc" id="aclass_repp_html_a82986b1f73cd92993d4c52fa10197ee8"><div class="ttname"><a href="class_repp.html#a82986b1f73cd92993d4c52fa10197ee8">Repp::status</a></div><div class="ttdeci">bool status</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00051">form.h:51</a></div></div>
+<div class="ttc" id="aclass_explode_html_ad65df606133469e85ea5be21bc23b017"><div class="ttname"><a href="class_explode.html#ad65df606133469e85ea5be21bc23b017">Explode::status</a></div><div class="ttdeci">bool status</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00356">form.h:356</a></div></div>
+<div class="ttc" id="aclass_form_html_a7e29b86d7c4243593a93af5df6d90772"><div class="ttname"><a href="class_form.html#a7e29b86d7c4243593a93af5df6d90772">Form::script_xxlzc</a></div><div class="ttdeci">Xxlzc * script_xxlzc</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00496">form.h:496</a></div></div>
+<div class="ttc" id="aclass_vip_html_a0f0ddc851650314a47be48ef5832a8d9"><div class="ttname"><a href="class_vip.html#a0f0ddc851650314a47be48ef5832a8d9">Vip::Vip</a></div><div class="ttdeci">Vip(QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00249">form.h:249</a></div></div>
+<div class="ttc" id="aclass_top_html_a6b8b7b0071d5f0a486c2e9f27f190b3a"><div class="ttname"><a href="class_top.html#a6b8b7b0071d5f0a486c2e9f27f190b3a">Top::Top</a></div><div class="ttdeci">Top(QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00393">form.h:393</a></div></div>
+<div class="ttc" id="aclass_gem_html_a238bf65926a182a1304d2bb962a6d2aa"><div class="ttname"><a href="class_gem.html#a238bf65926a182a1304d2bb962a6d2aa">Gem::done</a></div><div class="ttdeci">void done()</div></div>
+<div class="ttc" id="aclass_explode_html_a59552558967f61f8e3bd36717a345b14"><div class="ttname"><a href="class_explode.html#a59552558967f61f8e3bd36717a345b14">Explode::mode</a></div><div class="ttdeci">QString mode</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00358">form.h:358</a></div></div>
+<div class="ttc" id="aclass_searles_html_aa44aa200f9e6f18328a70768d628d2d2"><div class="ttname"><a href="class_searles.html#aa44aa200f9e6f18328a70768d628d2d2">Searles::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">圣瑞脚本-线程启动函数</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l01909">form.cpp:1909</a></div></div>
+<div class="ttc" id="aclass_fw_html_a6c3d8a44da9fcead8c3b3d30638e4495"><div class="ttname"><a href="class_fw.html#a6c3d8a44da9fcead8c3b3d30638e4495">Fw::jianchashoufa</a></div><div class="ttdeci">bool jianchashoufa(QString shoufajingling)</div><div class="ttdoc">飞王脚本-检查首发</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00571">form.cpp:571</a></div></div>
+<div class="ttc" id="aclass_wish_html_aa37bc537d9dd30f49ab5aa9e664f4f3d"><div class="ttname"><a href="class_wish.html#aa37bc537d9dd30f49ab5aa9e664f4f3d">Wish::now</a></div><div class="ttdeci">int now</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00269">form.h:269</a></div></div>
+<div class="ttc" id="aclass_searles_html_a411cb09f28076aba773a96742e07ac1c"><div class="ttname"><a href="class_searles.html#a411cb09f28076aba773a96742e07ac1c">Searles::sendreset</a></div><div class="ttdeci">void sendreset(QString msg)</div></div>
+<div class="ttc" id="aclass_gem_html_ab97ed444348d6390bd73c527593b9eb5"><div class="ttname"><a href="class_gem.html#ab97ed444348d6390bd73c527593b9eb5">Gem::status</a></div><div class="ttdeci">bool status</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00116">form.h:116</a></div></div>
+<div class="ttc" id="aclass_form_html_a9a921e26a02f23bffdea4330d6795796"><div class="ttname"><a href="class_form.html#a9a921e26a02f23bffdea4330d6795796">Form::Form</a></div><div class="ttdeci">Form(QWidget *parent=0)</div><div class="ttdoc">脚本窗口构造函数</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00046">form.cpp:46</a></div></div>
+<div class="ttc" id="aclass_form_html_a14e9b62a549b9ae783aba3a0df442fc2"><div class="ttname"><a href="class_form.html#a14e9b62a549b9ae783aba3a0df442fc2">Form::script_hdblk</a></div><div class="ttdeci">Hdblk * script_hdblk</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00489">form.h:489</a></div></div>
+<div class="ttc" id="aclass_form_html_ada9fce331f19c9e1208cd89b27e8fabb"><div class="ttname"><a href="class_form.html#ada9fce331f19c9e1208cd89b27e8fabb">Form::gem_selected</a></div><div class="ttdeci">void gem_selected()</div><div class="ttdoc">一键抽宝石/刻印脚本单选框被选中后初始化</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00374">form.cpp:374</a></div></div>
+<div class="ttc" id="aclass_spt_html_aaff3a886fcd15d44c71696092b20d418"><div class="ttname"><a href="class_spt.html#aaff3a886fcd15d44c71696092b20d418">Spt::Spt</a></div><div class="ttdeci">Spt(QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00185">form.h:185</a></div></div>
+<div class="ttc" id="aclass_form_html_a03da9002b8be9f99510e9cd848a36d62"><div class="ttname"><a href="class_form.html#a03da9002b8be9f99510e9cd848a36d62">Form::team_selected</a></div><div class="ttdeci">void team_selected()</div><div class="ttdoc">战队贡献脚本单选框被选中后初始化</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00414">form.cpp:414</a></div></div>
+<div class="ttc" id="aclass_pdtop_html_a4471d94cc21a6893b3c169222ef91df0"><div class="ttname"><a href="class_pdtop.html#a4471d94cc21a6893b3c169222ef91df0">Pdtop::Pdtop</a></div><div class="ttdeci">Pdtop(QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00315">form.h:315</a></div></div>
+<div class="ttc" id="aclass_form_html_ab225cc1a20235bb39cff8ffa6dd77f96"><div class="ttname"><a href="class_form.html#ab225cc1a20235bb39cff8ffa6dd77f96">Form::test</a></div><div class="ttdeci">void test()</div><div class="ttdoc">开启脚本</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00129">form.cpp:129</a></div></div>
+<div class="ttc" id="aclass_form_html_a207193002fa6f14b95feb8e0a54c54e0"><div class="ttname"><a href="class_form.html#a207193002fa6f14b95feb8e0a54c54e0">Form::fw_selected</a></div><div class="ttdeci">void fw_selected()</div><div class="ttdoc">飞王脚本单选框被选中后初始化</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00364">form.cpp:364</a></div></div>
+<div class="ttc" id="aclass_team_html_ae98ec4fd450765526095f77a83cb2e39"><div class="ttname"><a href="class_team.html#ae98ec4fd450765526095f77a83cb2e39">Team::now</a></div><div class="ttdeci">int now</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00206">form.h:206</a></div></div>
+<div class="ttc" id="aclass_hdblk_html_a0da03c6e79cdeb0ec518274fe6295b2f"><div class="ttname"><a href="class_hdblk.html#a0da03c6e79cdeb0ec518274fe6295b2f">Hdblk::now</a></div><div class="ttdeci">int now</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00138">form.h:138</a></div></div>
+<div class="ttc" id="aclass_tower_html_a2760063d43d60968ee66720cd02d0919"><div class="ttname"><a href="class_tower.html#a2760063d43d60968ee66720cd02d0919">Tower::Tower</a></div><div class="ttdeci">Tower(QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00228">form.h:228</a></div></div>
+<div class="ttc" id="aclass_ban3_html_ad6787c795d95f5da2857c07ab5b22fef"><div class="ttname"><a href="class_ban3.html#ad6787c795d95f5da2857c07ab5b22fef">Ban3::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">ban黑屋-线程启动函数</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l01552">form.cpp:1552</a></div></div>
+<div class="ttc" id="aclass_hdblk_html_aaf03ee62b81c598e11019cd87a0c3455"><div class="ttname"><a href="class_hdblk.html#aaf03ee62b81c598e11019cd87a0c3455">Hdblk::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">混沌布莱克脚本-线程启动函数</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00814">form.cpp:814</a></div></div>
+<div class="ttc" id="aclass_fw_html_a7d75a90497e4060c766cbfdcb43a7771"><div class="ttname"><a href="class_fw.html#a7d75a90497e4060c766cbfdcb43a7771">Fw::now</a></div><div class="ttdeci">int now</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00094">form.h:94</a></div></div>
+<div class="ttc" id="aclass_xxlzc_html"><div class="ttname"><a href="class_xxlzc.html">Xxlzc</a></div><div class="ttdoc">一键学习力战场脚本-多线程类 脚本相关的配置</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00284">form.h:285</a></div></div>
+<div class="ttc" id="aclass_explode_html_a1a51ec7a91585d90e588a4a661ea697a"><div class="ttname"><a href="class_explode.html#a1a51ec7a91585d90e588a4a661ea697a">Explode::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">首发与出战-线程启动函数</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l01676">form.cpp:1676</a></div></div>
+<div class="ttc" id="aclass_gem_html_a624b0f8b71f7008582b1299801f5820f"><div class="ttname"><a href="class_gem.html#a624b0f8b71f7008582b1299801f5820f">Gem::Gem</a></div><div class="ttdeci">Gem(QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00118">form.h:118</a></div></div>
+<div class="ttc" id="aclass_top_html_ac941f65f2f6845dffc21100d916266dd"><div class="ttname"><a href="class_top.html#ac941f65f2f6845dffc21100d916266dd">Top::mode</a></div><div class="ttdeci">QString mode</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00389">form.h:389</a></div></div>
+<div class="ttc" id="aclass_pdtop_html_aa25898e1eb8c769282371d5be28c4214"><div class="ttname"><a href="class_pdtop.html#aa25898e1eb8c769282371d5be28c4214">Pdtop::done</a></div><div class="ttdeci">void done()</div></div>
+<div class="ttc" id="aclass_tower_html_a5804456747201e3c4b37611f88d44e28"><div class="ttname"><a href="class_tower.html#a5804456747201e3c4b37611f88d44e28">Tower::now</a></div><div class="ttdeci">int now</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00227">form.h:227</a></div></div>
+<div class="ttc" id="aclass_sixworld_html_ae04b87558d8f5c5b41d3a69079eef987"><div class="ttname"><a href="class_sixworld.html#ae04b87558d8f5c5b41d3a69079eef987">Sixworld::god_method</a></div><div class="ttdeci">void god_method(int method)</div><div class="ttdoc">六界脚本-对战出战设置</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l02158">form.cpp:2158</a></div></div>
+<div class="ttc" id="aclass_ban3_html"><div class="ttname"><a href="class_ban3.html">Ban3</a></div><div class="ttdoc">禁用黑屋精灵-多线程类 禁用黑屋精灵以及无黑屋精灵相关的ban操作</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00329">form.h:330</a></div></div>
+<div class="ttc" id="aclass_wish_html_a437a750262b0ae55e0a76f38b308aa7a"><div class="ttname"><a href="class_wish.html#a437a750262b0ae55e0a76f38b308aa7a">Wish::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">一键许愿脚本-线程启动函数</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l01079">form.cpp:1079</a></div></div>
+<div class="ttc" id="aclass_form_html_a641a5bb3e1c2048175938e8b52a9f45f"><div class="ttname"><a href="class_form.html#a641a5bb3e1c2048175938e8b52a9f45f">Form::searles_selected</a></div><div class="ttdeci">void searles_selected()</div><div class="ttdoc">圣战瑞尔斯脚本单选框被选中后初始化</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00494">form.cpp:494</a></div></div>
+<div class="ttc" id="aclass_form_html_a00b45c311c34cb03ba4e347babbc3c12"><div class="ttname"><a href="class_form.html#a00b45c311c34cb03ba4e347babbc3c12">Form::spt_selected</a></div><div class="ttdeci">void spt_selected()</div><div class="ttdoc">spt徽章脚本单选框被选中后初始化</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00404">form.cpp:404</a></div></div>
+<div class="ttc" id="aclass_tower_html_a23aa1ba4b14b541e9f9173ee4629e0e3"><div class="ttname"><a href="class_tower.html#a23aa1ba4b14b541e9f9173ee4629e0e3">Tower::status</a></div><div class="ttdeci">bool status</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00226">form.h:226</a></div></div>
+<div class="ttc" id="aclass_fw_html_a1f390f178d2cbdf1e9798f2274c2821e"><div class="ttname"><a href="class_fw.html#a1f390f178d2cbdf1e9798f2274c2821e">Fw::Fw</a></div><div class="ttdeci">Fw(QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00095">form.h:95</a></div></div>
+<div class="ttc" id="aclass_ban3_html_afc7bdb2deae63e8b9b15f24503debed2"><div class="ttname"><a href="class_ban3.html#afc7bdb2deae63e8b9b15f24503debed2">Ban3::Ban3</a></div><div class="ttdeci">Ban3(QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00337">form.h:337</a></div></div>
+<div class="ttc" id="aclass_explode_html_a4ccd52335babd05ec6ae935dee4789b0"><div class="ttname"><a href="class_explode.html#a4ccd52335babd05ec6ae935dee4789b0">Explode::auto33fight</a></div><div class="ttdeci">void auto33fight()</div><div class="ttdoc">首发与出战-自动33出战</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l01809">form.cpp:1809</a></div></div>
+<div class="ttc" id="aclass_team_html_a95af0a49420821596111209407ba3e8c"><div class="ttname"><a href="class_team.html#a95af0a49420821596111209407ba3e8c">Team::sendMessage</a></div><div class="ttdeci">void sendMessage(QString msg)</div></div>
+<div class="ttc" id="aclass_jlw_html_ab9b5c6d97d114fc5add5cef3ecfd1820"><div class="ttname"><a href="class_jlw.html#ab9b5c6d97d114fc5add5cef3ecfd1820">Jlw::Jlw</a></div><div class="ttdeci">Jlw(QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00161">form.h:161</a></div></div>
+<div class="ttc" id="aclass_form_html_a99287168dc63d1a21a69230c10979c46"><div class="ttname"><a href="class_form.html#a99287168dc63d1a21a69230c10979c46">Form::script_spt</a></div><div class="ttdeci">Spt * script_spt</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00491">form.h:491</a></div></div>
+<div class="ttc" id="aclass_form_html_a9cda7cce41e81bfaca51e922d4f9b98f"><div class="ttname"><a href="class_form.html#a9cda7cce41e81bfaca51e922d4f9b98f">Form::~Form</a></div><div class="ttdeci">~Form()</div><div class="ttdoc">脚本窗口析构函数</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00022">form.cpp:22</a></div></div>
+<div class="ttc" id="axy_8h_html"><div class="ttname"><a href="xy_8h.html">xy.h</a></div><div class="ttdoc">星夜特色函数</div></div>
+<div class="ttc" id="aclass_sixworld_html_a2b48fb8e029844d726df794e2dfcc7c1"><div class="ttname"><a href="class_sixworld.html#a2b48fb8e029844d726df794e2dfcc7c1">Sixworld::Sixworld</a></div><div class="ttdeci">Sixworld(QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00453">form.h:453</a></div></div>
+<div class="ttc" id="aclass_pdtop_html_a651e0babbb70430654baf8472594f479"><div class="ttname"><a href="class_pdtop.html#a651e0babbb70430654baf8472594f479">Pdtop::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">进入巅峰-线程启动函数</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l01407">form.cpp:1407</a></div></div>
+<div class="ttc" id="aclass_tower_html_aad5df4c0006befb30b4edf3799efec4f"><div class="ttname"><a href="class_tower.html#aad5df4c0006befb30b4edf3799efec4f">Tower::done</a></div><div class="ttdeci">void done()</div></div>
+<div class="ttc" id="aclass_top_html_a20cf5eda4f62e6c40a229a125ee8ef7f"><div class="ttname"><a href="class_top.html#a20cf5eda4f62e6c40a229a125ee8ef7f">Top::status</a></div><div class="ttdeci">bool status</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00383">form.h:383</a></div></div>
+<div class="ttc" id="aclass_sixworld_html_af16334711ab5245bfa051f9b5005aec4"><div class="ttname"><a href="class_sixworld.html#af16334711ab5245bfa051f9b5005aec4">Sixworld::shezhishoufa</a></div><div class="ttdeci">void shezhishoufa(QString shoufajingling)</div><div class="ttdoc">六界脚本-设置首发</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l02133">form.cpp:2133</a></div></div>
+<div class="ttc" id="aclass_form_html_ae929a57f646d10b24398a90a727f951d"><div class="ttname"><a href="class_form.html#ae929a57f646d10b24398a90a727f951d">Form::script_fw</a></div><div class="ttdeci">Fw * script_fw</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00487">form.h:487</a></div></div>
+<div class="ttc" id="aclass_auto_c_html_aa6c2f6cdd80b2014a8a02e004af65880"><div class="ttname"><a href="class_auto_c.html#aa6c2f6cdd80b2014a8a02e004af65880">AutoC::status</a></div><div class="ttdeci">bool status</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00072">form.h:72</a></div></div>
+<div class="ttc" id="aclass_form_html_ac22400b3245640f9d1095e87db6a127d"><div class="ttname"><a href="class_form.html#ac22400b3245640f9d1095e87db6a127d">Form::hdblk_selected</a></div><div class="ttdeci">void hdblk_selected()</div><div class="ttdoc">混沌布莱克脚本单选框被选中后初始化</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00384">form.cpp:384</a></div></div>
+<div class="ttc" id="aclass_form_html_a20699ebca20f2cb931c6c7cf5bbc36d1"><div class="ttname"><a href="class_form.html#a20699ebca20f2cb931c6c7cf5bbc36d1">Form::script_jlw</a></div><div class="ttdeci">Jlw * script_jlw</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00490">form.h:490</a></div></div>
+<div class="ttc" id="aclass_jlw_html_a39b89586932907594d7f795ec698c9dc"><div class="ttname"><a href="class_jlw.html#a39b89586932907594d7f795ec698c9dc">Jlw::script_repp</a></div><div class="ttdeci">Repp * script_repp</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00160">form.h:160</a></div></div>
+<div class="ttc" id="aclass_form_html_abd3fb75725f183e9b6de305cff53fba6"><div class="ttname"><a href="class_form.html#abd3fb75725f183e9b6de305cff53fba6">Form::mode</a></div><div class="ttdeci">QString mode</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00504">form.h:504</a></div></div>
+<div class="ttc" id="aclass_fw_html_a48c154e57e82cd89d34e2c5127b8a9b7"><div class="ttname"><a href="class_fw.html#a48c154e57e82cd89d34e2c5127b8a9b7">Fw::status</a></div><div class="ttdeci">bool status</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00093">form.h:93</a></div></div>
+<div class="ttc" id="aclass_hdblk_html_a52a0aec33480af6d0f0baca5f0775c39"><div class="ttname"><a href="class_hdblk.html#a52a0aec33480af6d0f0baca5f0775c39">Hdblk::done</a></div><div class="ttdeci">void done()</div></div>
+<div class="ttc" id="aclass_hdblk_html_acd0af7f2b6c0a4947ecad098568a6cd9"><div class="ttname"><a href="class_hdblk.html#acd0af7f2b6c0a4947ecad098568a6cd9">Hdblk::Hdblk</a></div><div class="ttdeci">Hdblk(QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00139">form.h:139</a></div></div>
+<div class="ttc" id="aclass_auto_c_html_a251f76d25bd745b19810cdc0451e4aac"><div class="ttname"><a href="class_auto_c.html#a251f76d25bd745b19810cdc0451e4aac">AutoC::now</a></div><div class="ttdeci">int now</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00073">form.h:73</a></div></div>
+<div class="ttc" id="aclass_form_html_aaf973af711f216312199032fd9dd7aab"><div class="ttname"><a href="class_form.html#aaf973af711f216312199032fd9dd7aab">Form::wish_selected</a></div><div class="ttdeci">void wish_selected()</div><div class="ttdoc">一键许愿脚本单选框被选中后初始化</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00444">form.cpp:444</a></div></div>
+<div class="ttc" id="aclass_repp_html"><div class="ttname"><a href="class_repp.html">Repp</a></div><div class="ttdoc">补pp-多线程类 对战中0pp时启动此线程可以自动补pp，（bug）如果网速过慢可能点不到药</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00046">form.h:47</a></div></div>
+<div class="ttc" id="aclass_searles_html_a9335258d73a22e27ba6208043d2899c3"><div class="ttname"><a href="class_searles.html#a9335258d73a22e27ba6208043d2899c3">Searles::sendlose</a></div><div class="ttdeci">void sendlose(QString msg)</div></div>
+<div class="ttc" id="aclass_repp_html_a21cd78947ab59570507e6fc8aa3022b7"><div class="ttname"><a href="class_repp.html#a21cd78947ab59570507e6fc8aa3022b7">Repp::done</a></div><div class="ttdeci">void done()</div></div>
+<div class="ttc" id="aclass_form_html_a2aa4adc31c8e4b90418a3b0313a20a2e"><div class="ttname"><a href="class_form.html#a2aa4adc31c8e4b90418a3b0313a20a2e">Form::script_sixworld</a></div><div class="ttdeci">Sixworld * script_sixworld</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00501">form.h:501</a></div></div>
+<div class="ttc" id="aclass_sixworld_html_ab4e68bfbeec26c954e9d481caf1ff7b9"><div class="ttname"><a href="class_sixworld.html#ab4e68bfbeec26c954e9d481caf1ff7b9">Sixworld::status</a></div><div class="ttdeci">bool status</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00445">form.h:445</a></div></div>
+<div class="ttc" id="aclass_wish_html_a544d1f0f5ac89e43f9f72ab933a99f74"><div class="ttname"><a href="class_wish.html#a544d1f0f5ac89e43f9f72ab933a99f74">Wish::status</a></div><div class="ttdeci">bool status</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00268">form.h:268</a></div></div>
+<div class="ttc" id="aclass_spt_html_a71a9819edeb47983aeda0d5feaa11718"><div class="ttname"><a href="class_spt.html#a71a9819edeb47983aeda0d5feaa11718">Spt::script_repp</a></div><div class="ttdeci">Repp * script_repp</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00184">form.h:184</a></div></div>
+<div class="ttc" id="aclass_form_html_a2f876c5cf915589354dae39ff8a387b8"><div class="ttname"><a href="class_form.html#a2f876c5cf915589354dae39ff8a387b8">Form::script_searles</a></div><div class="ttdeci">Searles * script_searles</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00500">form.h:500</a></div></div>
+<div class="ttc" id="aclass_xxlzc_html_a8a0d9ed2515a66a911df4ef5b1fc74a1"><div class="ttname"><a href="class_xxlzc.html#a8a0d9ed2515a66a911df4ef5b1fc74a1">Xxlzc::done</a></div><div class="ttdeci">void done()</div></div>
+<div class="ttc" id="aclass_vip_html_ae970b8413ff5e8003715e274339fc5a2"><div class="ttname"><a href="class_vip.html#ae970b8413ff5e8003715e274339fc5a2">Vip::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">vip礼包领取脚本-线程启动函数</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l01023">form.cpp:1023</a></div></div>
+<div class="ttc" id="aclass_searles_html"><div class="ttname"><a href="class_searles.html">Searles</a></div><div class="ttdoc">圣瑞儿子脚本-多线程类 脚本相关的配置</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00415">form.h:416</a></div></div>
+<div class="ttc" id="aclass_form_html_a096034cbc813d4982e4783559af269c8"><div class="ttname"><a href="class_form.html#a096034cbc813d4982e4783559af269c8">Form::script_wish</a></div><div class="ttdeci">Wish * script_wish</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00495">form.h:495</a></div></div>
+<div class="ttc" id="aclass_xxlzc_html_a5d031e06374f886042bf9d2b54b01311"><div class="ttname"><a href="class_xxlzc.html#a5d031e06374f886042bf9d2b54b01311">Xxlzc::now</a></div><div class="ttdeci">int now</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00290">form.h:290</a></div></div>
+<div class="ttc" id="aclass_top_html_a33f47daea6251ecda9c577c2f40994ab"><div class="ttname"><a href="class_top.html#a33f47daea6251ecda9c577c2f40994ab">Top::script_explode</a></div><div class="ttdeci">Explode * script_explode</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00388">form.h:388</a></div></div>
+<div class="ttc" id="aclass_jlw_html_ad5aae79d255dd8f6a01770f870895e78"><div class="ttname"><a href="class_jlw.html#ad5aae79d255dd8f6a01770f870895e78">Jlw::status</a></div><div class="ttdeci">bool status</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00158">form.h:158</a></div></div>
+<div class="ttc" id="aclass_jlw_html_a86656c30312c2310a7153d4cd7009419"><div class="ttname"><a href="class_jlw.html#a86656c30312c2310a7153d4cd7009419">Jlw::now</a></div><div class="ttdeci">int now</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00159">form.h:159</a></div></div>
+<div class="ttc" id="aclass_form_html_a844f99203a7acd1dc755d4d6d022d356"><div class="ttname"><a href="class_form.html#a844f99203a7acd1dc755d4d6d022d356">Form::top_jj_selected</a></div><div class="ttdeci">void top_jj_selected()</div><div class="ttdoc">巅峰竞技脚本单选框被选中后初始化</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00464">form.cpp:464</a></div></div>
+<div class="ttc" id="aclass_team_html"><div class="ttname"><a href="class_team.html">Team</a></div><div class="ttdoc">一键战队贡献脚本-多线程类 脚本相关的配置</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00200">form.h:201</a></div></div>
+<div class="ttc" id="aclass_vip_html_a4e779d9997bd0ff4fee0b9116a33ce7c"><div class="ttname"><a href="class_vip.html#a4e779d9997bd0ff4fee0b9116a33ce7c">Vip::status</a></div><div class="ttdeci">bool status</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00247">form.h:247</a></div></div>
+<div class="ttc" id="aclass_gem_html"><div class="ttname"><a href="class_gem.html">Gem</a></div><div class="ttdoc">一键刻印/宝石抽奖脚本-多线程类 脚本相关的配置</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00111">form.h:112</a></div></div>
+<div class="ttc" id="aclass_explode_html_a33da0e7396a0e3d5ddb30ab22000c5d9"><div class="ttname"><a href="class_explode.html#a33da0e7396a0e3d5ddb30ab22000c5d9">Explode::Explode</a></div><div class="ttdeci">Explode(QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00359">form.h:359</a></div></div>
+<div class="ttc" id="aclass_top_html_abdeea4d80c74e0b972ac796db57a9551"><div class="ttname"><a href="class_top.html#abdeea4d80c74e0b972ac796db57a9551">Top::script_ban3</a></div><div class="ttdeci">Ban3 * script_ban3</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00387">form.h:387</a></div></div>
+<div class="ttc" id="aclass_repp_html_a5b3cae9ca704d154394810a8e18ab6f9"><div class="ttname"><a href="class_repp.html#a5b3cae9ca704d154394810a8e18ab6f9">Repp::now</a></div><div class="ttdeci">int now</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00052">form.h:52</a></div></div>
+<div class="ttc" id="aclass_auto_c_html_a73b7732669ae629ddc91d696fe5b1d45"><div class="ttname"><a href="class_auto_c.html#a73b7732669ae629ddc91d696fe5b1d45">AutoC::done</a></div><div class="ttdeci">void done()</div></div>
+<div class="ttc" id="aclass_vip_html"><div class="ttname"><a href="class_vip.html">Vip</a></div><div class="ttdoc">一键vip礼包脚本-多线程类 脚本相关的配置</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00242">form.h:243</a></div></div>
+<div class="ttc" id="aclass_auto_c_html"><div class="ttname"><a href="class_auto_c.html">AutoC</a></div><div class="ttdoc">自动确认-多线程类 用于自动按下赛尔号的确认按钮的多线程</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00067">form.h:68</a></div></div>
+<div class="ttc" id="aclass_searles_html_aeb2ae73b702747acfe9df895b26a4615"><div class="ttname"><a href="class_searles.html#aeb2ae73b702747acfe9df895b26a4615">Searles::mode</a></div><div class="ttdeci">QString mode</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00422">form.h:422</a></div></div>
+<div class="ttc" id="aclass_searles_html_a32a5b848b22787e0a6f483fa341f3e14"><div class="ttname"><a href="class_searles.html#a32a5b848b22787e0a6f483fa341f3e14">Searles::now</a></div><div class="ttdeci">int now</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00421">form.h:421</a></div></div>
+<div class="ttc" id="aclass_tower_html"><div class="ttname"><a href="class_tower.html">Tower</a></div><div class="ttdoc">一键勇者之塔脚本-多线程类 脚本相关的配置</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00221">form.h:222</a></div></div>
+<div class="ttc" id="aclass_spt_html_a861f20fef462a2c25784ed7fcfeb0fbb"><div class="ttname"><a href="class_spt.html#a861f20fef462a2c25784ed7fcfeb0fbb">Spt::now</a></div><div class="ttdeci">int now</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00183">form.h:183</a></div></div>
+<div class="ttc" id="aclass_pdtop_html_ab421c8ddd62fdd16dfee1e15f9e72971"><div class="ttname"><a href="class_pdtop.html#ab421c8ddd62fdd16dfee1e15f9e72971">Pdtop::now</a></div><div class="ttdeci">int now</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00313">form.h:313</a></div></div>
+<div class="ttc" id="aclass_explode_html_a7738f4087e5798b124c5a12e13565ece"><div class="ttname"><a href="class_explode.html#a7738f4087e5798b124c5a12e13565ece">Explode::done</a></div><div class="ttdeci">void done()</div></div>
+<div class="ttc" id="aclass_top_html_ae9f4ac4d51bf31effd9f028f940dbbaf"><div class="ttname"><a href="class_top.html#ae9f4ac4d51bf31effd9f028f940dbbaf">Top::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">巅峰脚本-线程启动函数</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l01229">form.cpp:1229</a></div></div>
+<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> <a href="atoken_8h_source.html#l00017">atoken.h:17</a></div></div>
+<div class="ttc" id="aclass_vip_html_a1af7f2a4ac4de40fed3ab2c83e21cd8f"><div class="ttname"><a href="class_vip.html#a1af7f2a4ac4de40fed3ab2c83e21cd8f">Vip::now</a></div><div class="ttdeci">int now</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00248">form.h:248</a></div></div>
+<div class="ttc" id="aclass_spt_html_a3a6dd7e2fa4422857925bd76381be961"><div class="ttname"><a href="class_spt.html#a3a6dd7e2fa4422857925bd76381be961">Spt::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">spt徽章脚本-线程启动函数</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00894">form.cpp:894</a></div></div>
+<div class="ttc" id="aclass_sixworld_html_abab0eba831e529ddec2fd1283197cab7"><div class="ttname"><a href="class_sixworld.html#abab0eba831e529ddec2fd1283197cab7">Sixworld::god_condition</a></div><div class="ttdeci">void god_condition()</div><div class="ttdoc">六界脚本-判断当前界王要求</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l02060">form.cpp:2060</a></div></div>
+<div class="ttc" id="aclass_form_html_a03b5d5b98f11764bd3e045f026eba082"><div class="ttname"><a href="class_form.html#a03b5d5b98f11764bd3e045f026eba082">Form::showreset</a></div><div class="ttdeci">void showreset(QString msg)</div><div class="ttdoc">圣瑞脚本重置次数显示</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00297">form.cpp:297</a></div></div>
+<div class="ttc" id="aclass_form_html_a85ed24e1f87ee065a6195cd7c0e38f13"><div class="ttname"><a href="class_form.html#a85ed24e1f87ee065a6195cd7c0e38f13">Form::top_33_selected</a></div><div class="ttdeci">void top_33_selected()</div><div class="ttdoc">巅峰33脚本单选框被选中后初始化</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00484">form.cpp:484</a></div></div>
+<div class="ttc" id="aclass_form_html_ade05b071ce607b68dbac1d85d525499d"><div class="ttname"><a href="class_form.html#ade05b071ce607b68dbac1d85d525499d">Form::tower_selected</a></div><div class="ttdeci">void tower_selected()</div><div class="ttdoc">勇者之塔脚本单选框被选中后初始化</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00424">form.cpp:424</a></div></div>
+<div class="ttc" id="aclass_top_html"><div class="ttname"><a href="class_top.html">Top</a></div><div class="ttdoc">巅峰主脚本-多线程类 脚本相关的配置</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00378">form.h:379</a></div></div>
+<div class="ttc" id="aclass_xxlzc_html_aefa8f8906cb0618ed3188f8069a9c331"><div class="ttname"><a href="class_xxlzc.html#aefa8f8906cb0618ed3188f8069a9c331">Xxlzc::Xxlzc</a></div><div class="ttdeci">Xxlzc(QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00291">form.h:291</a></div></div>
+<div class="ttc" id="aclass_pdtop_html"><div class="ttname"><a href="class_pdtop.html">Pdtop</a></div><div class="ttdoc">判断进入巅峰-多线程类 用于巅峰脚本判断要进入哪个巅峰以及当前所处的位置</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00307">form.h:308</a></div></div>
+<div class="ttc" id="aclass_form_html_af2cad5f82655a80a935da6dfef41ae93"><div class="ttname"><a href="class_form.html#af2cad5f82655a80a935da6dfef41ae93">Form::script_auto</a></div><div class="ttdeci">AutoC * script_auto</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00498">form.h:498</a></div></div>
+<div class="ttc" id="aclass_form_html_acca12162f6c79ac007a531dcc8919c17"><div class="ttname"><a href="class_form.html#acca12162f6c79ac007a531dcc8919c17">Form::script_top</a></div><div class="ttdeci">Top * script_top</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00499">form.h:499</a></div></div>
+<div class="ttc" id="aclass_top_html_adf0e345e4ad9f8815001e88d8def54c6"><div class="ttname"><a href="class_top.html#adf0e345e4ad9f8815001e88d8def54c6">Top::now</a></div><div class="ttdeci">int now</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00384">form.h:384</a></div></div>
+<div class="ttc" id="aclass_auto_c_html_af53bbcd67d17396788bf86da94b5e372"><div class="ttname"><a href="class_auto_c.html#af53bbcd67d17396788bf86da94b5e372">AutoC::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">自动确认脚本-线程启动函数</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l01134">form.cpp:1134</a></div></div>
+<div class="ttc" id="aclass_repp_html_afde76f54e4d72156591c971dd5056e2c"><div class="ttname"><a href="class_repp.html#afde76f54e4d72156591c971dd5056e2c">Repp::Repp</a></div><div class="ttdeci">Repp(QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00053">form.h:53</a></div></div>
+<div class="ttc" id="aclass_explode_html_a98495d45ed7f4506c56fa5af66c3301f"><div class="ttname"><a href="class_explode.html#a98495d45ed7f4506c56fa5af66c3301f">Explode::auto33first</a></div><div class="ttdeci">void auto33first()</div><div class="ttdoc">首发与出战-自动33首发</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l01740">form.cpp:1740</a></div></div>
+<div class="ttc" id="aclass_searles_html_a6412417950a1fd03b43744f594341c96"><div class="ttname"><a href="class_searles.html#a6412417950a1fd03b43744f594341c96">Searles::Searles</a></div><div class="ttdeci">Searles(QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00423">form.h:423</a></div></div>
+<div class="ttc" id="aclass_wish_html_a2f46bf520facac9e6734a7e0e8f6f7ab"><div class="ttname"><a href="class_wish.html#a2f46bf520facac9e6734a7e0e8f6f7ab">Wish::done</a></div><div class="ttdeci">void done()</div></div>
+<div class="ttc" id="aclass_sixworld_html"><div class="ttname"><a href="class_sixworld.html">Sixworld</a></div><div class="ttdoc">六界神王殿脚本-多线程类 脚本相关的配置</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00440">form.h:441</a></div></div>
+<div class="ttc" id="aclass_form_html"><div class="ttname"><a href="class_form.html">Form</a></div><div class="ttdoc">脚本主窗口类 本类记载了所有的脚本</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00478">form.h:479</a></div></div>
+<div class="ttc" id="aclass_hdblk_html_a0030084a9add1e811f3cca372dc83d80"><div class="ttname"><a href="class_hdblk.html#a0030084a9add1e811f3cca372dc83d80">Hdblk::status</a></div><div class="ttdeci">bool status</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00137">form.h:137</a></div></div>
+<div class="ttc" id="aclass_form_html_a06919bb2cd69f31f8c4477f072245226"><div class="ttname"><a href="class_form.html#a06919bb2cd69f31f8c4477f072245226">Form::showfight</a></div><div class="ttdeci">void showfight(QString msg)</div><div class="ttdoc">圣瑞脚本挑战次数显示</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00313">form.cpp:313</a></div></div>
+<div class="ttc" id="aclass_fw_html_a9064128a17e30a08a88472b130620da0"><div class="ttname"><a href="class_fw.html#a9064128a17e30a08a88472b130620da0">Fw::done</a></div><div class="ttdeci">void done()</div></div>
+<div class="ttc" id="aclass_form_html_a0a242203f6e310ed61477b23e0092e06"><div class="ttname"><a href="class_form.html#a0a242203f6e310ed61477b23e0092e06">Form::jlw_selected</a></div><div class="ttdeci">void jlw_selected()</div><div class="ttdoc">精灵王大乱斗脚本单选框被选中后初始化</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00394">form.cpp:394</a></div></div>
+<div class="ttc" id="aclass_team_html_a3e822c94c25a60afd0af968cbb65304b"><div class="ttname"><a href="class_team.html#a3e822c94c25a60afd0af968cbb65304b">Team::status</a></div><div class="ttdeci">bool status</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00205">form.h:205</a></div></div>
+<div class="ttc" id="aclass_ban3_html_af6dc89a6f2d2a8fc7b71b3926e523a58"><div class="ttname"><a href="class_ban3.html#af6dc89a6f2d2a8fc7b71b3926e523a58">Ban3::now</a></div><div class="ttdeci">int now</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00335">form.h:335</a></div></div>
+<div class="ttc" id="aclass_team_html_afac346a2380d0c8d44e036f3546724fd"><div class="ttname"><a href="class_team.html#afac346a2380d0c8d44e036f3546724fd">Team::Team</a></div><div class="ttdeci">Team(QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00207">form.h:207</a></div></div>
+<div class="ttc" id="aclass_searles_html_a10475006b215575aa9332fe2ca4a93c8"><div class="ttname"><a href="class_searles.html#a10475006b215575aa9332fe2ca4a93c8">Searles::status</a></div><div class="ttdeci">bool status</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00420">form.h:420</a></div></div>
+<div class="ttc" id="aclass_form_html_a7d497c062cabb12a4b848338c1260f60"><div class="ttname"><a href="class_form.html#a7d497c062cabb12a4b848338c1260f60">Form::test2</a></div><div class="ttdeci">void test2()</div><div class="ttdoc">脚本停止函数</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00320">form.cpp:320</a></div></div>
+<div class="ttc" id="aclass_top_html_a6e08a08c516a49d1de627b4c4edfe8af"><div class="ttname"><a href="class_top.html#a6e08a08c516a49d1de627b4c4edfe8af">Top::done</a></div><div class="ttdeci">void done()</div></div>
+<div class="ttc" id="aclass_auto_c_html_ab98d19d8be569a03654240cfd6eaf54f"><div class="ttname"><a href="class_auto_c.html#ab98d19d8be569a03654240cfd6eaf54f">AutoC::AutoC</a></div><div class="ttdeci">AutoC(QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00074">form.h:74</a></div></div>
+<div class="ttc" id="aclass_team_html_ab247d3622b762f0f4a856c79f4823b88"><div class="ttname"><a href="class_team.html#ab247d3622b762f0f4a856c79f4823b88">Team::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">一键战队贡献脚本-线程启动函数</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00923">form.cpp:923</a></div></div>
+<div class="ttc" id="aclass_explode_html_a6a99fc603c8bd5921219cc521476636a"><div class="ttname"><a href="class_explode.html#a6a99fc603c8bd5921219cc521476636a">Explode::autofight</a></div><div class="ttdeci">void autofight()</div><div class="ttdoc">首发与出战-自动66出战</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l01852">form.cpp:1852</a></div></div>
+<div class="ttc" id="aclass_spt_html"><div class="ttname"><a href="class_spt.html">Spt</a></div><div class="ttdoc">spt徽章相关脚本-多线程类 脚本相关的配置</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00177">form.h:178</a></div></div>
+<div class="ttc" id="aclass_form_html_a96aacfb78c5096bcbfd52fba2bba2cbf"><div class="ttname"><a href="class_form.html#a96aacfb78c5096bcbfd52fba2bba2cbf">Form::script_vip</a></div><div class="ttdeci">Vip * script_vip</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00494">form.h:494</a></div></div>
+<div class="ttc" id="aclass_gem_html_acd43a26fe25e877da6dc903d51883d48"><div class="ttname"><a href="class_gem.html#acd43a26fe25e877da6dc903d51883d48">Gem::now</a></div><div class="ttdeci">int now</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00117">form.h:117</a></div></div>
+<div class="ttc" id="aclass_top_html_ae105555f5213a290d24c07951a344f07"><div class="ttname"><a href="class_top.html#ae105555f5213a290d24c07951a344f07">Top::script_repp</a></div><div class="ttdeci">Repp * script_repp</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00385">form.h:385</a></div></div>
+<div class="ttc" id="aclass_pdtop_html_a0cc6fe8cdbbab3c472b45c6e5e4d01d6"><div class="ttname"><a href="class_pdtop.html#a0cc6fe8cdbbab3c472b45c6e5e4d01d6">Pdtop::mode</a></div><div class="ttdeci">QString mode</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00314">form.h:314</a></div></div>
+<div class="ttc" id="aclass_sixworld_html_a03bb985e13097450d68c3614a290acf5"><div class="ttname"><a href="class_sixworld.html#a03bb985e13097450d68c3614a290acf5">Sixworld::now</a></div><div class="ttdeci">int now</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00446">form.h:446</a></div></div>
+<div class="ttc" id="aclass_tower_html_aca31b7c16e6e29a8d94817e1493bf728"><div class="ttname"><a href="class_tower.html#aca31b7c16e6e29a8d94817e1493bf728">Tower::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">勇者之塔脚本-线程启动函数</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00516">form.cpp:516</a></div></div>
+<div class="ttc" id="aclass_top_html_a8287141c282d41415036411ed752ec63"><div class="ttname"><a href="class_top.html#a8287141c282d41415036411ed752ec63">Top::robot</a></div><div class="ttdeci">bool robot</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00391">form.h:391</a></div></div>
+<div class="ttc" id="aclass_hdblk_html"><div class="ttname"><a href="class_hdblk.html">Hdblk</a></div><div class="ttdoc">混沌布莱克脚本-多线程类 脚本相关的配置</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00132">form.h:133</a></div></div>
+<div class="ttc" id="aclass_form_html_af6e97e8cf9ba9a1a75b1133d68c4f918"><div class="ttname"><a href="class_form.html#af6e97e8cf9ba9a1a75b1133d68c4f918">Form::vip_selected</a></div><div class="ttdeci">void vip_selected()</div><div class="ttdoc">vip礼包脚本单选框被选中后初始化</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00434">form.cpp:434</a></div></div>
+<div class="ttc" id="aclass_form_html_ae4731bce99d9c980b1e7dacc1bc9ad6b"><div class="ttname"><a href="class_form.html#ae4731bce99d9c980b1e7dacc1bc9ad6b">Form::script_team</a></div><div class="ttdeci">Team * script_team</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00492">form.h:492</a></div></div>
+<div class="ttc" id="aclass_fw_html"><div class="ttname"><a href="class_fw.html">Fw</a></div><div class="ttdoc">飞王脚本-多线程类 飞王脚本相关的函数配置</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00088">form.h:89</a></div></div>
+<div class="ttc" id="aclass_spt_html_aca61931d3ffefe0105eac80e20992dd7"><div class="ttname"><a href="class_spt.html#aca61931d3ffefe0105eac80e20992dd7">Spt::done</a></div><div class="ttdeci">void done()</div></div>
+<div class="ttc" id="aclass_form_html_a56d7eabeb703db4cb2d48408602f1851"><div class="ttname"><a href="class_form.html#a56d7eabeb703db4cb2d48408602f1851">Form::script_gem</a></div><div class="ttdeci">Gem * script_gem</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00488">form.h:488</a></div></div>
+<div class="ttc" id="aclass_searles_html_a64a396be7150893da2c2e828fe5794f2"><div class="ttname"><a href="class_searles.html#a64a396be7150893da2c2e828fe5794f2">Searles::sendfight</a></div><div class="ttdeci">void sendfight(QString msg)</div></div>
+<div class="ttc" id="aclass_form_html_aaa5261d5f9b7cede3bd85af0b3a004ca"><div class="ttname"><a href="class_form.html#aaa5261d5f9b7cede3bd85af0b3a004ca">Form::sixworld_selected</a></div><div class="ttdeci">void sixworld_selected()</div><div class="ttdoc">六界神王脚本单选框被选中后初始化</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l00504">form.cpp:504</a></div></div>
+<div class="ttc" id="aclass_form_html_a73bcc598a15a14b7a41f941b62571d3d"><div class="ttname"><a href="class_form.html#a73bcc598a15a14b7a41f941b62571d3d">Form::ui</a></div><div class="ttdeci">Ui::Form * ui</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00507">form.h:507</a></div></div>
+<div class="ttc" id="aclass_jlw_html"><div class="ttname"><a href="class_jlw.html">Jlw</a></div><div class="ttdoc">精灵王大乱斗脚本-多线程类 脚本相关的配置</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00153">form.h:154</a></div></div>
+<div class="ttc" id="aclass_vip_html_a0da6718066e6a1fedfb6c3c9a3f9d172"><div class="ttname"><a href="class_vip.html#a0da6718066e6a1fedfb6c3c9a3f9d172">Vip::done</a></div><div class="ttdeci">void done()</div></div>
+<div class="ttc" id="aclass_sixworld_html_adb299e28d0900c6800a5cd5c61bc8cc3"><div class="ttname"><a href="class_sixworld.html#adb299e28d0900c6800a5cd5c61bc8cc3">Sixworld::jianchashoufa</a></div><div class="ttdeci">bool jianchashoufa(QString shoufajingling)</div><div class="ttdoc">六界脚本-检查首发</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l02111">form.cpp:2111</a></div></div>
+<div class="ttc" id="aclass_sixworld_html_a4b3bed5f7a556c1c96f704e3d4df5452"><div class="ttname"><a href="class_sixworld.html#a4b3bed5f7a556c1c96f704e3d4df5452">Sixworld::god</a></div><div class="ttdeci">int god</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00447">form.h:447</a></div></div>
+<div class="ttc" id="aext_8h_html"><div class="ttname"><a href="ext_8h.html">ext.h</a></div><div class="ttdoc">全局变量声明头文件</div></div>
+<div class="ttc" id="aclass_sixworld_html_abf5733e91df0f5d3d5bd50f8efef335d"><div class="ttname"><a href="class_sixworld.html#abf5733e91df0f5d3d5bd50f8efef335d">Sixworld::god_changesp</a></div><div class="ttdeci">void god_changesp(QString sp)</div><div class="ttdoc">六界脚本-对战中更换精灵</div><div class="ttdef"><b>Definition:</b> <a href="form_8cpp_source.html#l02090">form.cpp:2090</a></div></div>
+<div class="ttc" id="aclass_spt_html_a85befaa5b7cf0d54401985856c29f594"><div class="ttname"><a href="class_spt.html#a85befaa5b7cf0d54401985856c29f594">Spt::status</a></div><div class="ttdeci">bool status</div><div class="ttdef"><b>Definition:</b> <a href="form_8h_source.html#l00182">form.h:182</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>星小夜的登录器: atoken.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">星小夜的登录器
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">atoken.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="atoken_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="atoken_8h.html">atoken.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;ui_atoken.h&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_atoken.html#aadd0736364d1ff22bc2d78f6416d0e6c">   18</a></span>&#160;<a class="code" href="class_atoken.html#aadd0736364d1ff22bc2d78f6416d0e6c">Atoken::Atoken</a>(QWidget *parent) :</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    QWidget(parent),</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    ui(new <a class="code" href="namespace_ui.html">Ui</a>::<a class="code" href="class_atoken.html">Atoken</a>)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_atoken.html#a64cd0dfae1f0920f15808455ade0a22d">ui</a>-&gt;setupUi(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    setAttribute(Qt::WA_QuitOnClose,<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    QSettings *configIniWrite = <span class="keyword">new</span> QSettings(<a class="code" href="ext_8cpp.html#a7e6d0f0a8d52069a12b6caa36f38bfa6">allpath</a>+<span class="stringliteral">&quot;/set.ini&quot;</span>, QSettings::IniFormat);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">//向ini文件中写入内容,setValue函数的两个参数是键值对</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_atoken.html#a6d7942c9f7b8efce33ed2be37a1b50f9">uu</a>=configIniWrite-&gt;value(<span class="stringliteral">&quot;agree&quot;</span>).toString();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">if</span>(configIniWrite-&gt;value(<span class="stringliteral">&quot;agree&quot;</span>).toString()!=<span class="stringliteral">&quot;true&quot;</span>)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="class_atoken.html#a64cd0dfae1f0920f15808455ade0a22d">ui</a>-&gt;pushButton-&gt;setEnabled(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }<span class="keywordflow">else</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="class_atoken.html#a64cd0dfae1f0920f15808455ade0a22d">ui</a>-&gt;pushButton-&gt;setEnabled(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">delete</span> configIniWrite;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_atoken.html#a49bf8467cbdeaaa7fa018b87f695a761">time</a> = <span class="keyword">new</span> QTime();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_atoken.html#a8fce27116d6fb0677957e0ff62b89d4f">timer</a> = <span class="keyword">new</span> QTimer();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    connect(<a class="code" href="class_atoken.html#a8fce27116d6fb0677957e0ff62b89d4f">timer</a>,SIGNAL(timeout()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_atoken.html#a360158303dd20c7601f8c19c5801318f">slot_timer_timeout</a>()));</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    connect(<a class="code" href="class_atoken.html#a64cd0dfae1f0920f15808455ade0a22d">ui</a>-&gt;pushButton,SIGNAL(clicked(<span class="keywordtype">bool</span>)),<span class="keyword">this</span>,SLOT(<a class="code" href="class_atoken.html#a2cd286a76a3af55ad5594af6131a0f3a">slot_agree</a>()));</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_atoken.html#a49bf8467cbdeaaa7fa018b87f695a761">time</a>-&gt;start();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_atoken.html#a8fce27116d6fb0677957e0ff62b89d4f">timer</a>-&gt;start(1000);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    Qt::WindowFlags m_flags = windowFlags();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    setWindowFlags(m_flags | Qt::WindowStaysOnTopHint);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    show();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_atoken.html#a2c50e5b20366695582dc559ad1bf864d">   50</a></span>&#160;<a class="code" href="class_atoken.html#a2c50e5b20366695582dc559ad1bf864d">Atoken::~Atoken</a>()</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">delete</span> <a class="code" href="class_atoken.html#a64cd0dfae1f0920f15808455ade0a22d">ui</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">delete</span> <a class="code" href="class_atoken.html#a49bf8467cbdeaaa7fa018b87f695a761">time</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">delete</span> <a class="code" href="class_atoken.html#a8fce27116d6fb0677957e0ff62b89d4f">timer</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_atoken.html#ad6c6ef72c0e5dc3e73b0a0e91955719b">   61</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_atoken.html#ad6c6ef72c0e5dc3e73b0a0e91955719b">Atoken::closeEvent</a>(QCloseEvent *event)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">//QMessageBox::about(NULL,&quot;tip&quot;,&quot;本窗口禁止关闭哦&quot;);</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    show();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    qDebug()&lt;&lt;<span class="stringliteral">&quot;???&quot;</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_atoken.html#a360158303dd20c7601f8c19c5801318f">   72</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_atoken.html#a360158303dd20c7601f8c19c5801318f">Atoken::slot_timer_timeout</a>(){</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">int</span> firetime=30-(<a class="code" href="class_atoken.html#a49bf8467cbdeaaa7fa018b87f695a761">time</a>-&gt;elapsed()/1000);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">//qDebug()&lt;&lt;firetime;</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">//qDebug()&lt;&lt;firetime_sec;</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">//qDebug()&lt;&lt;tmp;</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">if</span>(firetime&lt;3){</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="class_atoken.html#a64cd0dfae1f0920f15808455ade0a22d">ui</a>-&gt;pushButton-&gt;setEnabled(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        setAttribute(Qt::WA_DeleteOnClose);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(firetime&gt;=3 &amp;&amp; <a class="code" href="class_atoken.html#a6d7942c9f7b8efce33ed2be37a1b50f9">uu</a>!=<span class="stringliteral">&quot;true&quot;</span>){</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        Qt::WindowFlags m_flags = windowFlags();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        setWindowFlags(m_flags | Qt::WindowStaysOnTopHint);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        show();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }   </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="class_atoken.html#a64cd0dfae1f0920f15808455ade0a22d">ui</a>-&gt;label-&gt;setText(<span class="stringliteral">&quot;等待&quot;</span>+QString::number(firetime)+<span class="stringliteral">&quot;s后才能确认&quot;</span>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_atoken.html#a2cd286a76a3af55ad5594af6131a0f3a">   93</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_atoken.html#a2cd286a76a3af55ad5594af6131a0f3a">Atoken::slot_agree</a>(){</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    this-&gt;hide();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    QSettings *configIniWrite = <span class="keyword">new</span> QSettings(<a class="code" href="ext_8cpp.html#a7e6d0f0a8d52069a12b6caa36f38bfa6">allpath</a>+<span class="stringliteral">&quot;/set.ini&quot;</span>, QSettings::IniFormat);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">//向ini文件中写入内容,setValue函数的两个参数是键值对</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    configIniWrite-&gt;setValue(<span class="stringliteral">&quot;agree&quot;</span>, <span class="stringliteral">&quot;true&quot;</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">delete</span> configIniWrite;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_atoken_html_a360158303dd20c7601f8c19c5801318f"><div class="ttname"><a href="class_atoken.html#a360158303dd20c7601f8c19c5801318f">Atoken::slot_timer_timeout</a></div><div class="ttdeci">void slot_timer_timeout()</div><div class="ttdoc">免责协议窗口槽函数-定时器处理内容</div><div class="ttdef"><b>Definition:</b> <a href="atoken_8cpp_source.html#l00072">atoken.cpp:72</a></div></div>
+<div class="ttc" id="aatoken_8h_html"><div class="ttname"><a href="atoken_8h.html">atoken.h</a></div><div class="ttdoc">免责协议窗口头文件</div></div>
+<div class="ttc" id="aclass_atoken_html_a49bf8467cbdeaaa7fa018b87f695a761"><div class="ttname"><a href="class_atoken.html#a49bf8467cbdeaaa7fa018b87f695a761">Atoken::time</a></div><div class="ttdeci">QTime * time</div><div class="ttdef"><b>Definition:</b> <a href="atoken_8h_source.html#l00034">atoken.h:34</a></div></div>
+<div class="ttc" id="aclass_atoken_html_a2c50e5b20366695582dc559ad1bf864d"><div class="ttname"><a href="class_atoken.html#a2c50e5b20366695582dc559ad1bf864d">Atoken::~Atoken</a></div><div class="ttdeci">~Atoken()</div><div class="ttdoc">免责协议窗口析构函数</div><div class="ttdef"><b>Definition:</b> <a href="atoken_8cpp_source.html#l00050">atoken.cpp:50</a></div></div>
+<div class="ttc" id="aclass_atoken_html_aadd0736364d1ff22bc2d78f6416d0e6c"><div class="ttname"><a href="class_atoken.html#aadd0736364d1ff22bc2d78f6416d0e6c">Atoken::Atoken</a></div><div class="ttdeci">Atoken(QWidget *parent=0)</div><div class="ttdoc">免责协议窗口构造函数</div><div class="ttdef"><b>Definition:</b> <a href="atoken_8cpp_source.html#l00018">atoken.cpp:18</a></div></div>
+<div class="ttc" id="aclass_atoken_html_a8fce27116d6fb0677957e0ff62b89d4f"><div class="ttname"><a href="class_atoken.html#a8fce27116d6fb0677957e0ff62b89d4f">Atoken::timer</a></div><div class="ttdeci">QTimer * timer</div><div class="ttdef"><b>Definition:</b> <a href="atoken_8h_source.html#l00035">atoken.h:35</a></div></div>
+<div class="ttc" id="aclass_atoken_html_ad6c6ef72c0e5dc3e73b0a0e91955719b"><div class="ttname"><a href="class_atoken.html#ad6c6ef72c0e5dc3e73b0a0e91955719b">Atoken::closeEvent</a></div><div class="ttdeci">void closeEvent(QCloseEvent *event)</div><div class="ttdoc">免责协议窗口关闭重载函数</div><div class="ttdef"><b>Definition:</b> <a href="atoken_8cpp_source.html#l00061">atoken.cpp:61</a></div></div>
+<div class="ttc" id="aext_8cpp_html_a7e6d0f0a8d52069a12b6caa36f38bfa6"><div class="ttname"><a href="ext_8cpp.html#a7e6d0f0a8d52069a12b6caa36f38bfa6">allpath</a></div><div class="ttdeci">QString allpath</div><div class="ttdoc">登录器运行目录</div><div class="ttdef"><b>Definition:</b> <a href="ext_8cpp_source.html#l00045">ext.cpp:45</a></div></div>
+<div class="ttc" id="aclass_atoken_html_a6d7942c9f7b8efce33ed2be37a1b50f9"><div class="ttname"><a href="class_atoken.html#a6d7942c9f7b8efce33ed2be37a1b50f9">Atoken::uu</a></div><div class="ttdeci">QString uu</div><div class="ttdef"><b>Definition:</b> <a href="atoken_8h_source.html#l00037">atoken.h:37</a></div></div>
+<div class="ttc" id="aclass_atoken_html_a2cd286a76a3af55ad5594af6131a0f3a"><div class="ttname"><a href="class_atoken.html#a2cd286a76a3af55ad5594af6131a0f3a">Atoken::slot_agree</a></div><div class="ttdeci">void slot_agree()</div><div class="ttdoc">免责协议窗口槽函数-同意按钮按下处理内容</div><div class="ttdef"><b>Definition:</b> <a href="atoken_8cpp_source.html#l00093">atoken.cpp:93</a></div></div>
+<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> <a href="atoken_8h_source.html#l00017">atoken.h:17</a></div></div>
+<div class="ttc" id="aclass_atoken_html"><div class="ttname"><a href="class_atoken.html">Atoken</a></div><div class="ttdoc">免责协议窗口类 免责协议窗口这个类相关的函数</div><div class="ttdef"><b>Definition:</b> <a href="atoken_8h_source.html#l00025">atoken.h:26</a></div></div>
+<div class="ttc" id="aclass_atoken_html_a64cd0dfae1f0920f15808455ade0a22d"><div class="ttname"><a href="class_atoken.html#a64cd0dfae1f0920f15808455ade0a22d">Atoken::ui</a></div><div class="ttdeci">Ui::Atoken * ui</div><div class="ttdef"><b>Definition:</b> <a href="atoken_8h_source.html#l00043">atoken.h:43</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

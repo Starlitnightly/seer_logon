@@ -1,0 +1,207 @@
+\hypertarget{class_gem}{}\doxysection{Gem类 参考}
+\label{class_gem}\index{Gem@{Gem}}
+
+
+一键刻印/宝石抽奖脚本-\/多线程类 脚本相关的配置  
+
+
+
+
+{\ttfamily \#include $<$form.\+h$>$}
+
+
+
+类 Gem 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_gem__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Gem 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_gem__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{信号}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_gem_a238bf65926a182a1304d2bb962a6d2aa}{done}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gem_a624b0f8b71f7008582b1299801f5820f}{Gem}} (Q\+Object $\ast$parent=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_gem_ab97ed444348d6390bd73c527593b9eb5}{status}}
+\item 
+int \mbox{\hyperlink{class_gem_acd43a26fe25e877da6dc903d51883d48}{now}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_gem_af6f23b8ce868e2185f204b72937f9d12}{run}} ()
+\begin{DoxyCompactList}\small\item\em 一键刻印/宝石抽奖脚本-\/线程启动函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+一键刻印/宝石抽奖脚本-\/多线程类 脚本相关的配置 
+
+在文件 form.\+h 第 111 行定义.
+
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_gem_a624b0f8b71f7008582b1299801f5820f}\label{class_gem_a624b0f8b71f7008582b1299801f5820f}} 
+\index{Gem@{Gem}!Gem@{Gem}}
+\index{Gem@{Gem}!Gem@{Gem}}
+\doxysubsubsection{\texorpdfstring{Gem()}{Gem()}}
+{\footnotesize\ttfamily Gem\+::\+Gem (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+在文件 form.\+h 第 118 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{119         : QThread(parent)}
+\DoxyCodeLine{120     \{}
+\DoxyCodeLine{121         \mbox{\hyperlink{class_gem_ab97ed444348d6390bd73c527593b9eb5}{status}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{122     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_gem_a238bf65926a182a1304d2bb962a6d2aa}\label{class_gem_a238bf65926a182a1304d2bb962a6d2aa}} 
+\index{Gem@{Gem}!done@{done}}
+\index{done@{done}!Gem@{Gem}}
+\doxysubsubsection{\texorpdfstring{done}{done}}
+{\footnotesize\ttfamily void Gem\+::done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_gem_af6f23b8ce868e2185f204b72937f9d12}\label{class_gem_af6f23b8ce868e2185f204b72937f9d12}} 
+\index{Gem@{Gem}!run@{run}}
+\index{run@{run}!Gem@{Gem}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Gem\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+一键刻印/宝石抽奖脚本-\/线程启动函数 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 form.\+cpp 第 751 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{751              \{}
+\DoxyCodeLine{752     QVariant x,y;}
+\DoxyCodeLine{753     \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_gem_ab97ed444348d6390bd73c527593b9eb5}{status}}==\textcolor{keyword}{true})\{}
+\DoxyCodeLine{754         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(1, 46, 105, 135,\textcolor{stringliteral}{"rc-\/scxb.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{755             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt()+7,y.toInt()+7);}
+\DoxyCodeLine{756             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{757         \}}
+\DoxyCodeLine{758 }
+\DoxyCodeLine{759         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_gem_acd43a26fe25e877da6dc903d51883d48}{now}}==10)\{}
+\DoxyCodeLine{760             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(75, 59, 754, 435,\textcolor{stringliteral}{"rc-\/3-\/4.bmp|rc-\/3-\/4-\/1.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{761                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(888,73);}
+\DoxyCodeLine{762                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{763                 \mbox{\hyperlink{class_gem_acd43a26fe25e877da6dc903d51883d48}{now}}=11;}
+\DoxyCodeLine{764             \}\textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{765                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"rc-\/ky.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{766                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(489,492);}
+\DoxyCodeLine{767                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{768                 \}}
+\DoxyCodeLine{769                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"rc-\/3-\/3.bmp|rc-\/3-\/3-\/1.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{770                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(484,509);}
+\DoxyCodeLine{771                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{772                 \}}
+\DoxyCodeLine{773             \}}
+\DoxyCodeLine{774         \}}
+\DoxyCodeLine{775         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_gem_acd43a26fe25e877da6dc903d51883d48}{now}}==11)\{}
+\DoxyCodeLine{776             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(751, 136, 942, 258,\textcolor{stringliteral}{"rc-\/bsm.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{777                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(790,78);}
+\DoxyCodeLine{778                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{779                 \textcolor{comment}{//QMessageBox::information(NULL,"this","宝石/刻印已抽完");}}
+\DoxyCodeLine{780                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{781             \}\textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{782                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"rc-\/bs.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{783                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{784                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{785                 \}}
+\DoxyCodeLine{786                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"rc-\/bsks.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{787                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{788                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{789                 \}}
+\DoxyCodeLine{790                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"rc-\/bsqr.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{791                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{792                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{793                 \}}
+\DoxyCodeLine{794                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"rc-\/bslq.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{795                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{796                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{797                 \}}
+\DoxyCodeLine{798                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"rc-\/bsqr2.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{799                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{800                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{801                 \}}
+\DoxyCodeLine{802 }
+\DoxyCodeLine{803             \}}
+\DoxyCodeLine{804         \}}
+\DoxyCodeLine{805         \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(500);}
+\DoxyCodeLine{806         qDebug()<<\textcolor{stringliteral}{"宝石抽奖中"};}
+\DoxyCodeLine{807 }
+\DoxyCodeLine{808     \}}
+\DoxyCodeLine{809 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{class_gem_af6f23b8ce868e2185f204b72937f9d12_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_gem_acd43a26fe25e877da6dc903d51883d48}\label{class_gem_acd43a26fe25e877da6dc903d51883d48}} 
+\index{Gem@{Gem}!now@{now}}
+\index{now@{now}!Gem@{Gem}}
+\doxysubsubsection{\texorpdfstring{now}{now}}
+{\footnotesize\ttfamily int Gem\+::now}
+
+
+
+在文件 form.\+h 第 117 行定义.
+
+\mbox{\Hypertarget{class_gem_ab97ed444348d6390bd73c527593b9eb5}\label{class_gem_ab97ed444348d6390bd73c527593b9eb5}} 
+\index{Gem@{Gem}!status@{status}}
+\index{status@{status}!Gem@{Gem}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily bool Gem\+::status}
+
+
+
+在文件 form.\+h 第 116 行定义.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{form_8h}{form.\+h}}\item 
+\mbox{\hyperlink{form_8cpp}{form.\+cpp}}\end{DoxyCompactItemize}

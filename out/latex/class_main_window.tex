@@ -1,0 +1,2206 @@
+\hypertarget{class_main_window}{}\doxysection{Main\+Window类 参考}
+\label{class_main_window}\index{MainWindow@{MainWindow}}
+
+
+游戏主窗口类 加载项较多可能会卡一秒  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+
+
+类 Main\+Window 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{class_main_window__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Main\+Window 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 槽}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_window_a8a6b2320c939fa42991326b49968905a}{Fresh\+Seer}} ()
+\begin{DoxyCompactList}\small\item\em 刷新游戏 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ad30bbaa3f1b37abb0924c23445c6eedc}{Mute}} ()
+\begin{DoxyCompactList}\small\item\em 游戏静音 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ab6acc74c3647a1b435edf2e1ee01983e}{un\+Mute}} ()
+\begin{DoxyCompactList}\small\item\em 游戏接触静音 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a51bf1d5bed5cb881b33ed608b08a8ad8}{Optimizing\+Memory}} ()
+\begin{DoxyCompactList}\small\item\em 内存优化 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a05a26366797616c2fa96d12f2a67a07e}{Release\+Memory}} ()
+\begin{DoxyCompactList}\small\item\em 内存释放 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a3afe617eec57e5ff9ec81b150a65c9d3}{Clear\+Cache}} ()
+\begin{DoxyCompactList}\small\item\em 清理ie缓存 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_aa5f1e6793a10f4f0eca4f188877c990b}{Opence}} ()
+\begin{DoxyCompactList}\small\item\em 打开ce \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a4dfb419d170a5cbef0bba6975cdb3499}{Openfd}} ()
+\begin{DoxyCompactList}\small\item\em 打开fd \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ac35ac8908469b893ebb96aab88cd9de6}{Open\+Keyand\+Mouse}} ()
+\begin{DoxyCompactList}\small\item\em 打开鼠标录制工具 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a130e1651ea4ceb170d5d1d8d62115881}{Open\+Mousepoint}} ()
+\begin{DoxyCompactList}\small\item\em 打开鼠标连点器 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a88fec103aa428f529ce34d4dffa0fe35}{Change\+Spirit}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a2b0de07bee8279cea67ed3ac1ed5d845}{Change\+Bag}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a3f6c4bc7d3ced016538567c42c84a235}{Inputcdk}} ()
+\begin{DoxyCompactList}\small\item\em 一键输入cdk \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_aa112b0c5dd3567aab1d4779ffc60b2a3}{Gemsynthesis}} ()
+\begin{DoxyCompactList}\small\item\em 宝石合成 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_aa3963b30322140e81c118090d9f8ed08}{Greenfire\+Timer}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a0b47d9632012b09857c1c1d3cf68c878}{Peak\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em 打开精灵技能快查窗口 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a22ba83a98d37ecc59529e7dbf6bdb8ad}{Openscript}} ()
+\begin{DoxyCompactList}\small\item\em 打开自定义脚本 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ae4ba1ea193bb4c86e1df89e387af0760}{Change\+Speed\+Prepare}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a9e125df59f2b8538a40668b00afa867c}{Change\+Speed}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a2ac29e8dcb6a3b8645220ae56caac82b}{script\+\_\+open}} ()
+\begin{DoxyCompactList}\small\item\em 打开脚本窗口 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a2d8cf3c27d8a0ef1365f95a7f4ebeab8}{speedopen}} ()
+\begin{DoxyCompactList}\small\item\em 打开变速窗口 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a4aee5e17419866a9e5db98de199c9570}{Changebag\+\_\+sk}} ()
+\begin{DoxyCompactList}\small\item\em 一键换装备-\/时空 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a0698988cb169afaba82b543f9f06e3c2}{Changebag\+\_\+fs}} ()
+\begin{DoxyCompactList}\small\item\em 一键换装备-\/腐蚀者 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a4904d7f222f79f6592a765f182e7f7f1}{Changebag\+\_\+ld}} ()
+\begin{DoxyCompactList}\small\item\em 一键换装备-\/零度 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a8d1d66a77c1cc0f2a464d2aefa7adf32}{Changebag\+\_\+hd}} ()
+\begin{DoxyCompactList}\small\item\em 一键换装备-\/皇帝 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ad39f71eb2e8f6e363c7c24f1e7b9270e}{Changebag\+\_\+dy}} ()
+\begin{DoxyCompactList}\small\item\em 一键换装备-\/毒液 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a7d0091787103e42169b0fe52cbc752bc}{Changebag\+\_\+xa}} ()
+\begin{DoxyCompactList}\small\item\em 一键换装备-\/笑傲 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a0184bce95af5551ddf6ebd2c04b34dcb}{Changebag\+\_\+wl}} ()
+\begin{DoxyCompactList}\small\item\em 一键换装备-\/未来 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ae94a0b4e90637692bdd691b82d401e71}{Changebag\+\_\+ys}} ()
+\begin{DoxyCompactList}\small\item\em 一键换装备-\/元神 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_aa8647a92042c41b85e869af0f384c9b6}{Changebag\+\_\+tz}} ()
+\begin{DoxyCompactList}\small\item\em 一键换装备-\/天尊 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ab42f0ca52f7699f40bb2f71dafd8f830}{Changebag\+\_\+yy}} ()
+\begin{DoxyCompactList}\small\item\em 一键换装备-\/银翼骑士 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a21b53de7c272ee93ce95145774e1665a}{Changebag\+\_\+tq}} ()
+\begin{DoxyCompactList}\small\item\em 一键换装备-\/天启 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a02d0ec9daa3e9aec30eae11f7c4ca967}{Changebag\+\_\+yh}} ()
+\begin{DoxyCompactList}\small\item\em 一键换装备-\/浴火 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a2ed0a143484d1184f034c7deb4cc0505}{Changebag}} (Q\+String name)
+\begin{DoxyCompactList}\small\item\em 一键换装备-\/主函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a71a1c39801845c7cf65222cd8520f5db}{dianfeng}} ()
+\begin{DoxyCompactList}\small\item\em 截取对面阵容函数-\/巅峰 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ad5ee26b9f160e460a4328ac94c5aeba4}{show\+\_\+csp}} ()
+\begin{DoxyCompactList}\small\item\em 打开一键换背包窗口 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ac9e3ed4672eb29a4586923b2b8e1693f}{slot\+\_\+sb}} ()
+\begin{DoxyCompactList}\small\item\em 绑定大漠插件函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_abd75722c3471542e831d089f027d22bd}{seer\+\_\+cal}} ()
+\begin{DoxyCompactList}\small\item\em 打开橙汁赛尔数值计算器 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_aec60da4f7cf67bd7ce7f0363235b85c5}{slot\+\_\+shiyongshuoming}} ()
+\begin{DoxyCompactList}\small\item\em 打开登录器使用说明介绍 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ab6eb8bfae845e353b49a91e62e6b06cd}{slot\+\_\+xiangmuyuanma}} ()
+\begin{DoxyCompactList}\small\item\em 打开项目源码仓库 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_abbd616bfc81406e171220b259a3ee850}{slot\+\_\+mianzexieyi}} ()
+\begin{DoxyCompactList}\small\item\em 查看免责协议 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a00c1c9d91a00ea0175d7d2bf16e60dc8}{slot\+\_\+author}} ()
+\begin{DoxyCompactList}\small\item\em 查看作者与鸣谢信息 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a2d7a47a310ea169387df4053f98d2a87}{slot\+\_\+new}} (Q\+Network\+Reply $\ast$reply)
+\begin{DoxyCompactList}\small\item\em 检测更新-\/返回槽函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{信号}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_window_a3e2f1c42ae38b447996b775225fea0d5}{sendcap}} (bool msg)
+\item 
+void \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}} (Q\+String msg)
+\item 
+void \mbox{\hyperlink{class_main_window_a8b9754406957fcdde4024e93a2c34982}{signal\+\_\+openskill}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}{Main\+Window}} (Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em 游戏主窗口构造函数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{$\sim$\+Main\+Window}} ()
+\begin{DoxyCompactList}\small\item\em 脚本窗口析构函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a045eaa684747d4973ad2f1bea6d82e5b}{Binddm}} ()
+\begin{DoxyCompactList}\small\item\em 绑定大漠插件到游戏窗口 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_media_mute}{Media\+Mute}} \mbox{\hyperlink{class_main_window_a76dba45004d2dac59f552623d8d85670}{Cmute}}
+\item 
+bool \mbox{\hyperlink{class_main_window_a5dce98f7d9f0a0af170d9634bdee98c4}{bind\+\_\+status}}
+\item 
+Q\+Network\+Access\+Manager $\ast$ \mbox{\hyperlink{class_main_window_ad7ad62ec1e06cd86e6959a01dd5d5856}{nam}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Main\+Window $\ast$ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}
+\item 
+\mbox{\hyperlink{class_atoken}{Atoken}} $\ast$ \mbox{\hyperlink{class_main_window_a100095f3dd19d63a56c916e1daed0d3e}{ato}}
+\item 
+\mbox{\hyperlink{class_form}{Form}} \mbox{\hyperlink{class_main_window_a33aba264def70affde6c2d44dde25d09}{f}}
+\item 
+\mbox{\hyperlink{class_speed}{Speed}} \mbox{\hyperlink{class_main_window_ad809c7474a4f2b8b061661cae0719b7c}{s}}
+\item 
+\mbox{\hyperlink{class_nono}{Nono}} $\ast$ \mbox{\hyperlink{class_main_window_a9ba6b31af4a1888eb789c5cc2c837412}{n}}
+\item 
+\mbox{\hyperlink{class_changesp}{Changesp}} $\ast$ \mbox{\hyperlink{class_main_window_a81de82284f90a31579de665f9be7982d}{csp}}
+\item 
+\mbox{\hyperlink{class_cdk_form}{Cdk\+Form}} $\ast$ \mbox{\hyperlink{class_main_window_ace87f5ea490fb7571c7d841eb843d246}{cd}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+游戏主窗口类 加载项较多可能会卡一秒 
+
+在文件 mainwindow.\+h 第 40 行定义.
+
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}\label{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}} 
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{MainWindow()}{MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+游戏主窗口构造函数 
+
+
+\begin{DoxyParams}{参数}
+{\em parent} & 父类指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 82 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82                                       :}
+\DoxyCodeLine{83     QMainWindow(parent),}
+\DoxyCodeLine{84     \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}(\textcolor{keyword}{new} Ui::MainWindow)}
+\DoxyCodeLine{85 \{}
+\DoxyCodeLine{86     \textcolor{comment}{//设置ui}}
+\DoxyCodeLine{87     \textcolor{comment}{//setWindowFlags(Qt::FramelessWindowHint | Qt::WindowMinimizeButtonHint |Qt::WindowStaysOnTopHint);}}
+\DoxyCodeLine{88       \textcolor{comment}{//  this-\/>setStyleSheet("QDialog\{border:2px solid green;\}");}}
+\DoxyCodeLine{89     \textcolor{comment}{//setWindowFlags(Qt::FramelessWindowHint);//无边框}}
+\DoxyCodeLine{90     \textcolor{comment}{//setAttribute(Qt::WA\_TranslucentBackground);//背景透明}}
+\DoxyCodeLine{91     \mbox{\hyperlink{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}{allpath}}=QCoreApplication::applicationDirPath();}
+\DoxyCodeLine{92     qDebug()<<\mbox{\hyperlink{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}{allpath}};}
+\DoxyCodeLine{93     \mbox{\hyperlink{class_main_window_a100095f3dd19d63a56c916e1daed0d3e}{ato}}=NULL;}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95     QSettings *configIniWrite = \textcolor{keyword}{new} QSettings(\mbox{\hyperlink{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}{allpath}}+\textcolor{stringliteral}{"/set.ini"}, QSettings::IniFormat);}
+\DoxyCodeLine{96     \textcolor{comment}{//向ini文件中写入内容,setValue函数的两个参数是键值对}}
+\DoxyCodeLine{97     qDebug()<<\textcolor{stringliteral}{"agree"}<<configIniWrite-\/>value(\textcolor{stringliteral}{"agree"}).toString();}
+\DoxyCodeLine{98     \textcolor{keywordflow}{if}(configIniWrite-\/>value(\textcolor{stringliteral}{"agree"}).toString()!=\textcolor{stringliteral}{"true"})}
+\DoxyCodeLine{99     \{}
+\DoxyCodeLine{100         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a100095f3dd19d63a56c916e1daed0d3e}{ato}}==NULL)}
+\DoxyCodeLine{101             \mbox{\hyperlink{class_main_window_a100095f3dd19d63a56c916e1daed0d3e}{ato}}=\textcolor{keyword}{new} \mbox{\hyperlink{class_atoken}{Atoken}}();}
+\DoxyCodeLine{102         \mbox{\hyperlink{class_main_window_a100095f3dd19d63a56c916e1daed0d3e}{ato}}-\/>show();}
+\DoxyCodeLine{103     \}}
+\DoxyCodeLine{104     \textcolor{keyword}{delete} configIniWrite;}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106     \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{107     qDebug()<<\textcolor{stringliteral}{"atosuccess"};}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109     \textcolor{comment}{//setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint | Qt::CustomizeWindowHint);}}
+\DoxyCodeLine{110     \textcolor{comment}{//qDebug()<<"test"<<this-\/>winId();}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116     \textcolor{comment}{//载入赛尔号游戏}}
+\DoxyCodeLine{117     \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>axWidget-\/>setControl(QString::fromUtf8(\textcolor{stringliteral}{"\{8856F961-\/340A-\/11D0-\/A96B-\/00C04FD705A2\}"}));\textcolor{comment}{//注册组件ID}}
+\DoxyCodeLine{118     \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>axWidget-\/>setProperty(\textcolor{stringliteral}{"DisplayAlerts"},\textcolor{keyword}{false});\textcolor{comment}{//不显示警告信息}}
+\DoxyCodeLine{119     \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>axWidget-\/>setProperty(\textcolor{stringliteral}{"DisplayScrollBars"},\textcolor{keyword}{true});\textcolor{comment}{//不显示滚动条}}
+\DoxyCodeLine{120     QString webstr=QString(\textcolor{stringliteral}{"http://seer.61.com/play.shtml"});\textcolor{comment}{//设置要打开的网页}}
+\DoxyCodeLine{121     \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>axWidget-\/>dynamicCall(\textcolor{stringliteral}{"Navigate(const QString\&)"},webstr);\textcolor{comment}{//显示网页}}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123     \mbox{\hyperlink{class_main_window_ace87f5ea490fb7571c7d841eb843d246}{cd}}=NULL;}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125     \mbox{\hyperlink{class_main_window_ad30bbaa3f1b37abb0924c23445c6eedc}{Mute}}();}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127     qDebug()<<\textcolor{stringliteral}{"载入无问题"};}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130     \textcolor{comment}{//信号连接}}
+\DoxyCodeLine{131     \textcolor{comment}{//connect(ui-\/>pushButton, SIGNAL(clicked()), this, SLOT(FreshSeer()));}}
+\DoxyCodeLine{132     \textcolor{comment}{//connect(ui-\/>pushButton\_2, SIGNAL(clicked()), this, SLOT(Mute()));}}
+\DoxyCodeLine{133     \textcolor{comment}{//connect(ui-\/>pushButton\_3, SIGNAL(clicked()), this, SLOT(OptimizingMemory()));}}
+\DoxyCodeLine{134     \textcolor{comment}{//connect(ui-\/>pushButton\_4, SIGNAL(clicked()), this, SLOT(ChangeSpeed()));}}
+\DoxyCodeLine{135     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>action,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_a8a6b2320c939fa42991326b49968905a}{FreshSeer}}()));}
+\DoxyCodeLine{136     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>action\_2,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_ad30bbaa3f1b37abb0924c23445c6eedc}{Mute}}()));}
+\DoxyCodeLine{137     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>action\_3,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_ab6acc74c3647a1b435edf2e1ee01983e}{unMute}}()));}
+\DoxyCodeLine{138     \textcolor{comment}{//connect(ui-\/>action\_4,SIGNAL(triggered()),this,SLOT(open()));}}
+\DoxyCodeLine{139     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>action\_5,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_a2d8cf3c27d8a0ef1365f95a7f4ebeab8}{speedopen}}()));}
+\DoxyCodeLine{140     \textcolor{comment}{//清理缓存}}
+\DoxyCodeLine{141     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>action\_ie,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_a3afe617eec57e5ff9ec81b150a65c9d3}{ClearCache}}()));}
+\DoxyCodeLine{142     \textcolor{comment}{//脚本}}
+\DoxyCodeLine{143     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>action\_8,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_a2ac29e8dcb6a3b8645220ae56caac82b}{script\_open}}()));}
+\DoxyCodeLine{144     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>action\_9,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_a22ba83a98d37ecc59529e7dbf6bdb8ad}{Openscript}}()));}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146     \textcolor{comment}{//工具信号}}
+\DoxyCodeLine{147     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>action\_ce,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_aa5f1e6793a10f4f0eca4f188877c990b}{Opence}}()));}
+\DoxyCodeLine{148     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>action\_fd,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_a4dfb419d170a5cbef0bba6975cdb3499}{Openfd}}()));}
+\DoxyCodeLine{149     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>action\_cdk,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_a3f6c4bc7d3ced016538567c42c84a235}{Inputcdk}}()));}
+\DoxyCodeLine{150     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>action\_4,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_a0b47d9632012b09857c1c1d3cf68c878}{PeakMode}}()));}
+\DoxyCodeLine{151     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>action\_21,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_abd75722c3471542e831d089f027d22bd}{seer\_cal}}()));}
+\DoxyCodeLine{152     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>action\_7,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_aec60da4f7cf67bd7ce7f0363235b85c5}{slot\_shiyongshuoming}}()));}
+\DoxyCodeLine{153     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>action\_12,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_ab6eb8bfae845e353b49a91e62e6b06cd}{slot\_xiangmuyuanma}}()));}
+\DoxyCodeLine{154     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>action\_20,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_abbd616bfc81406e171220b259a3ee850}{slot\_mianzexieyi}}()));}
+\DoxyCodeLine{155     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>action\_22,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_a00c1c9d91a00ea0175d7d2bf16e60dc8}{slot\_author}}()));}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158     \textcolor{comment}{//一键换装备信号}}
+\DoxyCodeLine{159     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>bag\_sk,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_a4aee5e17419866a9e5db98de199c9570}{Changebag\_sk}}()));}
+\DoxyCodeLine{160     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>bag\_fs,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_a0698988cb169afaba82b543f9f06e3c2}{Changebag\_fs}}()));}
+\DoxyCodeLine{161     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>bag\_ld,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_a4904d7f222f79f6592a765f182e7f7f1}{Changebag\_ld}}()));}
+\DoxyCodeLine{162     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>bag\_hd,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_a8d1d66a77c1cc0f2a464d2aefa7adf32}{Changebag\_hd}}()));}
+\DoxyCodeLine{163     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>bag\_dy,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_ad39f71eb2e8f6e363c7c24f1e7b9270e}{Changebag\_dy}}()));}
+\DoxyCodeLine{164     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>bag\_xa,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_a7d0091787103e42169b0fe52cbc752bc}{Changebag\_xa}}()));}
+\DoxyCodeLine{165     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>bag\_wl,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_a0184bce95af5551ddf6ebd2c04b34dcb}{Changebag\_wl}}()));}
+\DoxyCodeLine{166     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>bag\_ys,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_ae94a0b4e90637692bdd691b82d401e71}{Changebag\_ys}}()));}
+\DoxyCodeLine{167     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>bag\_tz,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_aa8647a92042c41b85e869af0f384c9b6}{Changebag\_tz}}()));}
+\DoxyCodeLine{168     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>bag\_yy,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_ab42f0ca52f7699f40bb2f71dafd8f830}{Changebag\_yy}}()));}
+\DoxyCodeLine{169     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>bag\_tq,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_a21b53de7c272ee93ce95145774e1665a}{Changebag\_tq}}()));}
+\DoxyCodeLine{170     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>bag\_yh,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_a02d0ec9daa3e9aec30eae11f7c4ca967}{Changebag\_yh}}()));}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172     \textcolor{comment}{//一键换精灵窗口信号}}
+\DoxyCodeLine{173     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>actionyijian,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_ad5ee26b9f160e460a4328ac94c5aeba4}{show\_csp}}()));}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{175     qDebug()<<\textcolor{stringliteral}{"信号连接无问题"};}
+\DoxyCodeLine{176     \textcolor{comment}{//f.show();}}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178     \textcolor{comment}{//nono窗口}}
+\DoxyCodeLine{179     \textcolor{comment}{//巅峰模式}}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181     \mbox{\hyperlink{class_main_window_a9ba6b31af4a1888eb789c5cc2c837412}{n}}=\textcolor{keyword}{new} \mbox{\hyperlink{class_nono}{Nono}}();}
+\DoxyCodeLine{182     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>action\_13,SIGNAL(triggered(\textcolor{keywordtype}{bool})),\mbox{\hyperlink{class_main_window_a9ba6b31af4a1888eb789c5cc2c837412}{n}},SLOT(slot\_startedTimer\_clicked(\textcolor{keywordtype}{bool})));}
+\DoxyCodeLine{183     connect(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>action\_14,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_a71a1c39801845c7cf65222cd8520f5db}{dianfeng}}()));}
+\DoxyCodeLine{184     connect(\textcolor{keyword}{this},SIGNAL(\mbox{\hyperlink{class_main_window_a3e2f1c42ae38b447996b775225fea0d5}{sendcap}}(\textcolor{keywordtype}{bool})),\mbox{\hyperlink{class_main_window_a9ba6b31af4a1888eb789c5cc2c837412}{n}},SLOT(slot\_capture(\textcolor{keywordtype}{bool})));}
+\DoxyCodeLine{185     connect(\textcolor{keyword}{this},SIGNAL(\mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(QString)),\mbox{\hyperlink{class_main_window_a9ba6b31af4a1888eb789c5cc2c837412}{n}},SLOT(slot\_tip(QString)));}
+\DoxyCodeLine{186     connect(\mbox{\hyperlink{class_main_window_a9ba6b31af4a1888eb789c5cc2c837412}{n}},SIGNAL(signal\_fresh()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_a8a6b2320c939fa42991326b49968905a}{FreshSeer}}()));}
+\DoxyCodeLine{187     connect(\mbox{\hyperlink{class_main_window_a9ba6b31af4a1888eb789c5cc2c837412}{n}},SIGNAL(signal\_sb()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_ac9e3ed4672eb29a4586923b2b8e1693f}{slot\_sb}}()));}
+\DoxyCodeLine{188     connect(\textcolor{keyword}{this},SIGNAL(\mbox{\hyperlink{class_main_window_a8b9754406957fcdde4024e93a2c34982}{signal\_openskill}}()),\mbox{\hyperlink{class_main_window_a9ba6b31af4a1888eb789c5cc2c837412}{n}},SLOT(showskill()));}
+\DoxyCodeLine{189     qDebug()<<\textcolor{stringliteral}{"nono信号无问题"};}
+\DoxyCodeLine{190     \mbox{\hyperlink{class_main_window_a9ba6b31af4a1888eb789c5cc2c837412}{n}}-\/>show();}
+\DoxyCodeLine{191     \textcolor{comment}{//QDesktopWidget* desktopWidget = QApplication::desktop();}}
+\DoxyCodeLine{192     QScreen *screen=QGuiApplication::primaryScreen ();}
+\DoxyCodeLine{193     QRect mm=screen-\/>availableGeometry() ;}
+\DoxyCodeLine{194     \textcolor{keywordtype}{int} screen\_width = mm.width();}
+\DoxyCodeLine{195     \textcolor{keywordtype}{int} screen\_height = mm.height();}
+\DoxyCodeLine{196     \mbox{\hyperlink{class_main_window_a9ba6b31af4a1888eb789c5cc2c837412}{n}}-\/>move(50,screen\_height-\/\mbox{\hyperlink{class_main_window_a9ba6b31af4a1888eb789c5cc2c837412}{n}}-\/>height()-\/50);}
+\DoxyCodeLine{197     this-\/>setAttribute(Qt::WA\_QuitOnClose,\textcolor{keyword}{true});}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200 }
+\DoxyCodeLine{201 }
+\DoxyCodeLine{202     \textcolor{comment}{//初始化大漠插件}}
+\DoxyCodeLine{203     \textcolor{comment}{/*}}
+\DoxyCodeLine{204 \textcolor{comment}{    QAxWidget *dm=new QAxWidget();}}
+\DoxyCodeLine{205 \textcolor{comment}{    dm-\/>setControl(QString::fromUtf8("\{26037A0E-\/7CBD-\/4FFF-\/9C63-\/56F2D0770214\}"));}}
+\DoxyCodeLine{206 \textcolor{comment}{    //QMessageBox::information(this,"this",dm-\/>dynamicCall("Ver()").toString());//测试是否成功}}
+\DoxyCodeLine{207 \textcolor{comment}{    AutoRegDm();}}
+\DoxyCodeLine{208 \textcolor{comment}{    //dm-\/>dynamicCall("BindWindow(int,QString,QString,QString,int)",pid,"dx2", "windows","windows",1)}}
+\DoxyCodeLine{209 \textcolor{comment}{    */}}
+\DoxyCodeLine{210     \textcolor{comment}{//wPid=(HWND)this-\/>winId();}}
+\DoxyCodeLine{211     \textcolor{comment}{//Bind *bdm=new Bind(this);}}
+\DoxyCodeLine{212     \textcolor{comment}{//bdm-\/>start();}}
+\DoxyCodeLine{213     \mbox{\hyperlink{class_main_window_a5dce98f7d9f0a0af170d9634bdee98c4}{bind\_status}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{214     \textcolor{comment}{/*}}
+\DoxyCodeLine{215 \textcolor{comment}{    QFile file("F:/seer/test.json");}}
+\DoxyCodeLine{216 \textcolor{comment}{    //qDebug()<<allpath+"/json/new.json";}}
+\DoxyCodeLine{217 \textcolor{comment}{    file.open(QIODevice::ReadOnly | QIODevice::Text);}}
+\DoxyCodeLine{218 \textcolor{comment}{    QString value = file.readAll();}}
+\DoxyCodeLine{219 \textcolor{comment}{    file.close();}}
+\DoxyCodeLine{220 \textcolor{comment}{    //value.replace("\(\backslash\)n","");}}
+\DoxyCodeLine{221 \textcolor{comment}{    //value.replace("\(\backslash\)t","");}}
+\DoxyCodeLine{222 \textcolor{comment}{    qDebug()<<value.mid(0,100);}}
+\DoxyCodeLine{223 \textcolor{comment}{    QJsonParseError parseJsonErr;}}
+\DoxyCodeLine{224 \textcolor{comment}{    QJsonDocument document = QJsonDocument::fromJson(value.toUtf8(), \&parseJsonErr);}}
+\DoxyCodeLine{225 \textcolor{comment}{    QJsonObject jsonObject = document.object();}}
+\DoxyCodeLine{226 \textcolor{comment}{    if(jsonObject["newversion"]!=current\_version)}}
+\DoxyCodeLine{227 \textcolor{comment}{        qDebug()<<"有新版本";}}
+\DoxyCodeLine{228 \textcolor{comment}{    */}}
+\DoxyCodeLine{229     \mbox{\hyperlink{class_main_window_ad7ad62ec1e06cd86e6959a01dd5d5856}{nam}} = \textcolor{keyword}{new} QNetworkAccessManager(\textcolor{keyword}{this});}
+\DoxyCodeLine{230     connect(\mbox{\hyperlink{class_main_window_ad7ad62ec1e06cd86e6959a01dd5d5856}{nam}},SIGNAL(finished(QNetworkReply*)),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_main_window_a2d7a47a310ea169387df4053f98d2a87}{slot\_new}}(QNetworkReply*)));}
+\DoxyCodeLine{231     QUrl url;}
+\DoxyCodeLine{232     url.setUrl(\textcolor{stringliteral}{"http://jlhsmuseum.cn/news/test.json"});}
+\DoxyCodeLine{233     QNetworkRequest request;}
+\DoxyCodeLine{234     request.setUrl(url);}
+\DoxyCodeLine{235     request.setHeader(QNetworkRequest::ContentTypeHeader,QVariant(\textcolor{stringliteral}{"application/x-\/www-\/form-\/urlencoded"}));}
+\DoxyCodeLine{236     QNetworkReply* reply = \mbox{\hyperlink{class_main_window_ad7ad62ec1e06cd86e6959a01dd5d5856}{nam}}-\/>get(request);}
+\DoxyCodeLine{237     qDebug()<<\textcolor{stringliteral}{"此处无问题"};}
+\DoxyCodeLine{238 }
+\DoxyCodeLine{239     QFile::link(\mbox{\hyperlink{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}{allpath}}+\textcolor{stringliteral}{"/星小夜的seer登录器.exe"}, QStandardPaths::writableLocation(QStandardPaths::DesktopLocation).append(\textcolor{stringliteral}{"/"}).append(\textcolor{stringliteral}{"星小夜的seer登录器.lnk"}));}
+\DoxyCodeLine{240 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}\label{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}} 
+\index{MainWindow@{MainWindow}!````~MainWindow@{$\sim$MainWindow}}
+\index{````~MainWindow@{$\sim$MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{$\sim$MainWindow()}{~MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::$\sim$\+Main\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+脚本窗口析构函数 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 71 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{72 \{}
+\DoxyCodeLine{73     \textcolor{keyword}{delete} \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}};}
+\DoxyCodeLine{74     \textcolor{keyword}{delete} \mbox{\hyperlink{class_main_window_a9ba6b31af4a1888eb789c5cc2c837412}{n}};}
+\DoxyCodeLine{75     \textcolor{keyword}{delete} \mbox{\hyperlink{class_main_window_a81de82284f90a31579de665f9be7982d}{csp}};}
+\DoxyCodeLine{76 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_main_window_a045eaa684747d4973ad2f1bea6d82e5b}\label{class_main_window_a045eaa684747d4973ad2f1bea6d82e5b}} 
+\index{MainWindow@{MainWindow}!Binddm@{Binddm}}
+\index{Binddm@{Binddm}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Binddm()}{Binddm()}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Binddm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+绑定大漠插件到游戏窗口 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 316 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{316                        \{}
+\DoxyCodeLine{317     \textcolor{comment}{//获取游戏窗口pid}}
+\DoxyCodeLine{318     \textcolor{keywordtype}{int} pid;}
+\DoxyCodeLine{319     HWND test;}
+\DoxyCodeLine{320     HWND hq=(HWND)this-\/>winId();}
+\DoxyCodeLine{321     qDebug()<<\textcolor{stringliteral}{"hq"}<<(int)hq;}
+\DoxyCodeLine{322     test=GetWindow(hq,5);}
+\DoxyCodeLine{323     test=GetWindow(test,2);}
+\DoxyCodeLine{324     test=GetWindow(test,5);}
+\DoxyCodeLine{325     test=GetWindow(test,5);}
+\DoxyCodeLine{326     test=GetWindow(test,5);}
+\DoxyCodeLine{327     test=GetWindow(test,5);}
+\DoxyCodeLine{328     test=GetWindow(test,5);}
+\DoxyCodeLine{329     test=GetWindow(test,5);}
+\DoxyCodeLine{330     pid=(int)test;}
+\DoxyCodeLine{331     \mbox{\hyperlink{ext_8cpp_a14599d7d3f033ca76bf7e06523ac8bdd}{Pid}}=test;}
+\DoxyCodeLine{332     \textcolor{comment}{//自动注册大漠}}
+\DoxyCodeLine{333     \mbox{\hyperlink{mainwindow_8cpp_aba7796214ee355db55422f9e96b04c4b}{AutoRegDm}}();}
+\DoxyCodeLine{334     \textcolor{comment}{//初始化大漠}}
+\DoxyCodeLine{335     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.setControl(\textcolor{stringliteral}{"dm.dmsoft"});}
+\DoxyCodeLine{336     \textcolor{comment}{//绑定窗口}}
+\DoxyCodeLine{337     \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ac613915480150995254d94d76db8b5db}{BindWindow}}(pid,\textcolor{stringliteral}{"dx2"}, \textcolor{stringliteral}{"windows"},\textcolor{stringliteral}{"windows"},1)==0)\{}
+\DoxyCodeLine{338         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_aa23a47dcd81e3fc64507cf0364b64adc}{GetLastError}}()==-\/18)\{}
+\DoxyCodeLine{339             QMessageBox::information(\textcolor{keyword}{this},\textcolor{stringliteral}{"this"},\textcolor{stringliteral}{"关于绑定失败，请在群公告内查找解决方法[记得关闭杀毒软件]，若不看公告，私聊星夜大概率会被拉黑"});}
+\DoxyCodeLine{340         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_aa23a47dcd81e3fc64507cf0364b64adc}{GetLastError}}()==0)}
+\DoxyCodeLine{341             QMessageBox::information(\textcolor{keyword}{this},\textcolor{stringliteral}{"this"},\textcolor{stringliteral}{"错误代码：0，本错误请关闭所有杀毒软件，并用管理员模式启动"});}
+\DoxyCodeLine{342         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{343             QString tmp=\textcolor{stringliteral}{"错误代码："}+QString::number(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_aa23a47dcd81e3fc64507cf0364b64adc}{GetLastError}}())+\textcolor{stringliteral}{"，可发送错误代码给星夜咨询错误问题"};}
+\DoxyCodeLine{344             QMessageBox::information(\textcolor{keyword}{this},\textcolor{stringliteral}{"this"},tmp);}
+\DoxyCodeLine{345         \}}
+\DoxyCodeLine{346     \}}
+\DoxyCodeLine{347     \textcolor{comment}{//设置识图目录}}
+\DoxyCodeLine{348     QString path=\mbox{\hyperlink{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}{allpath}}+\textcolor{stringliteral}{"/pic"};}
+\DoxyCodeLine{349     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a9a09b4a9745c5865be71ca6a8c2a7da1}{SetPath}}(path);}
+\DoxyCodeLine{350     \textcolor{comment}{//测试识图效果}}
+\DoxyCodeLine{351     QVariant x,y;}
+\DoxyCodeLine{352     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"test.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y);}
+\DoxyCodeLine{353     qDebug()<<x.toInt()<<y.toInt();}
+\DoxyCodeLine{354     \textcolor{comment}{//设置字库}}
+\DoxyCodeLine{355     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a15736c89aa13ec837b7b359490fafa1a}{SetDict}}(0,path+\textcolor{stringliteral}{"/ziku.txt"});}
+\DoxyCodeLine{356     \mbox{\hyperlink{class_main_window_a5dce98f7d9f0a0af170d9634bdee98c4}{bind\_status}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{357 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a045eaa684747d4973ad2f1bea6d82e5b_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a045eaa684747d4973ad2f1bea6d82e5b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_a2b0de07bee8279cea67ed3ac1ed5d845}\label{class_main_window_a2b0de07bee8279cea67ed3ac1ed5d845}} 
+\index{MainWindow@{MainWindow}!ChangeBag@{ChangeBag}}
+\index{ChangeBag@{ChangeBag}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{ChangeBag}{ChangeBag}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Change\+Bag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+在文件 mainwindow.\+cpp 第 769 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{769                           \{}
+\DoxyCodeLine{770     \textcolor{comment}{//一键换背包}}
+\DoxyCodeLine{771 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_main_window_a2ed0a143484d1184f034c7deb4cc0505}\label{class_main_window_a2ed0a143484d1184f034c7deb4cc0505}} 
+\index{MainWindow@{MainWindow}!Changebag@{Changebag}}
+\index{Changebag@{Changebag}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Changebag}{Changebag}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Changebag (\begin{DoxyParamCaption}\item[{Q\+String}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+一键换装备-\/主函数 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & 要换的装备名 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 618 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{618                                       \{}
+\DoxyCodeLine{619     \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(100);}
+\DoxyCodeLine{620     \textcolor{comment}{//非法确认按钮}}
+\DoxyCodeLine{621     \mbox{\hyperlink{classff_auto_c}{ffAutoC}} *tmp=\textcolor{keyword}{new} \mbox{\hyperlink{classff_auto_c}{ffAutoC}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{622     tmp-\/>\mbox{\hyperlink{classff_auto_c_a5a6eb3bdef2fe445ec3315fc57bfea7c}{status}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{623     tmp-\/>start();}
+\DoxyCodeLine{624     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(582,487);}
+\DoxyCodeLine{625     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{626     \mbox{\hyperlink{mainwindow_8cpp_a2ef2be9078be3fbf8434cc61495d24bd}{Openbag}}();}
+\DoxyCodeLine{627     \mbox{\hyperlink{mainwindow_8cpp_aba1d780cdbc29d99be3cc3fde400d02d}{Searchbag}}(\mbox{\hyperlink{ext_8cpp_a14599d7d3f033ca76bf7e06523ac8bdd}{Pid}},name);}
+\DoxyCodeLine{628     \mbox{\hyperlink{mainwindow_8cpp_abb6ab68f7f5c4af65390e0966c12cb9e}{Wearbag}}();}
+\DoxyCodeLine{629     tmp-\/>\mbox{\hyperlink{classff_auto_c_a5a6eb3bdef2fe445ec3315fc57bfea7c}{status}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{630     \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(1000);}
+\DoxyCodeLine{631     \textcolor{keyword}{delete} tmp;}
+\DoxyCodeLine{632     \textcolor{comment}{//QMessageBox::information(NULL,"this","小铁皮换装成功");}}
+\DoxyCodeLine{633 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a2ed0a143484d1184f034c7deb4cc0505_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a2ed0a143484d1184f034c7deb4cc0505_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_ad39f71eb2e8f6e363c7c24f1e7b9270e}\label{class_main_window_ad39f71eb2e8f6e363c7c24f1e7b9270e}} 
+\index{MainWindow@{MainWindow}!Changebag\_dy@{Changebag\_dy}}
+\index{Changebag\_dy@{Changebag\_dy}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Changebag\_dy}{Changebag\_dy}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Changebag\+\_\+dy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+一键换装备-\/毒液 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 537 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{537                              \{}
+\DoxyCodeLine{538     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a5dce98f7d9f0a0af170d9634bdee98c4}{bind\_status}}==\textcolor{keyword}{false})}
+\DoxyCodeLine{539         \mbox{\hyperlink{class_main_window_a045eaa684747d4973ad2f1bea6d82e5b}{Binddm}}();}
+\DoxyCodeLine{540     \mbox{\hyperlink{class_main_window_a2ed0a143484d1184f034c7deb4cc0505}{Changebag}}(\textcolor{stringliteral}{"毒液"});}
+\DoxyCodeLine{541     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"一键更换毒液成功啦，快看看换好的套装吧"});}
+\DoxyCodeLine{542 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_ad39f71eb2e8f6e363c7c24f1e7b9270e_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_ad39f71eb2e8f6e363c7c24f1e7b9270e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_a0698988cb169afaba82b543f9f06e3c2}\label{class_main_window_a0698988cb169afaba82b543f9f06e3c2}} 
+\index{MainWindow@{MainWindow}!Changebag\_fs@{Changebag\_fs}}
+\index{Changebag\_fs@{Changebag\_fs}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Changebag\_fs}{Changebag\_fs}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Changebag\+\_\+fs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+一键换装备-\/腐蚀者 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 507 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{507                              \{}
+\DoxyCodeLine{508     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a5dce98f7d9f0a0af170d9634bdee98c4}{bind\_status}}==\textcolor{keyword}{false})}
+\DoxyCodeLine{509         \mbox{\hyperlink{class_main_window_a045eaa684747d4973ad2f1bea6d82e5b}{Binddm}}();}
+\DoxyCodeLine{510     \mbox{\hyperlink{class_main_window_a2ed0a143484d1184f034c7deb4cc0505}{Changebag}}(\textcolor{stringliteral}{"腐蚀者"});}
+\DoxyCodeLine{511     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"一键更换腐蚀者成功啦，快看看换好的套装吧"});}
+\DoxyCodeLine{512 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a0698988cb169afaba82b543f9f06e3c2_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a0698988cb169afaba82b543f9f06e3c2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_a8d1d66a77c1cc0f2a464d2aefa7adf32}\label{class_main_window_a8d1d66a77c1cc0f2a464d2aefa7adf32}} 
+\index{MainWindow@{MainWindow}!Changebag\_hd@{Changebag\_hd}}
+\index{Changebag\_hd@{Changebag\_hd}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Changebag\_hd}{Changebag\_hd}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Changebag\+\_\+hd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+一键换装备-\/皇帝 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 527 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{527                              \{}
+\DoxyCodeLine{528     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a5dce98f7d9f0a0af170d9634bdee98c4}{bind\_status}}==\textcolor{keyword}{false})}
+\DoxyCodeLine{529         \mbox{\hyperlink{class_main_window_a045eaa684747d4973ad2f1bea6d82e5b}{Binddm}}();}
+\DoxyCodeLine{530     \mbox{\hyperlink{class_main_window_a2ed0a143484d1184f034c7deb4cc0505}{Changebag}}(\textcolor{stringliteral}{"皇帝"});}
+\DoxyCodeLine{531     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"一键更换皇帝成功啦，快看看换好的套装吧"});}
+\DoxyCodeLine{532 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a8d1d66a77c1cc0f2a464d2aefa7adf32_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a8d1d66a77c1cc0f2a464d2aefa7adf32_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_a4904d7f222f79f6592a765f182e7f7f1}\label{class_main_window_a4904d7f222f79f6592a765f182e7f7f1}} 
+\index{MainWindow@{MainWindow}!Changebag\_ld@{Changebag\_ld}}
+\index{Changebag\_ld@{Changebag\_ld}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Changebag\_ld}{Changebag\_ld}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Changebag\+\_\+ld (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+一键换装备-\/零度 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 517 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{517                              \{}
+\DoxyCodeLine{518     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a5dce98f7d9f0a0af170d9634bdee98c4}{bind\_status}}==\textcolor{keyword}{false})}
+\DoxyCodeLine{519         \mbox{\hyperlink{class_main_window_a045eaa684747d4973ad2f1bea6d82e5b}{Binddm}}();}
+\DoxyCodeLine{520     \mbox{\hyperlink{class_main_window_a2ed0a143484d1184f034c7deb4cc0505}{Changebag}}(\textcolor{stringliteral}{"零度"});}
+\DoxyCodeLine{521     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"一键更换零度成功啦，快看看换好的套装吧"});}
+\DoxyCodeLine{522 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a4904d7f222f79f6592a765f182e7f7f1_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a4904d7f222f79f6592a765f182e7f7f1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_a4aee5e17419866a9e5db98de199c9570}\label{class_main_window_a4aee5e17419866a9e5db98de199c9570}} 
+\index{MainWindow@{MainWindow}!Changebag\_sk@{Changebag\_sk}}
+\index{Changebag\_sk@{Changebag\_sk}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Changebag\_sk}{Changebag\_sk}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Changebag\+\_\+sk (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+一键换装备-\/时空 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 497 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{497                              \{}
+\DoxyCodeLine{498     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a5dce98f7d9f0a0af170d9634bdee98c4}{bind\_status}}==\textcolor{keyword}{false})}
+\DoxyCodeLine{499         \mbox{\hyperlink{class_main_window_a045eaa684747d4973ad2f1bea6d82e5b}{Binddm}}();}
+\DoxyCodeLine{500     \mbox{\hyperlink{class_main_window_a2ed0a143484d1184f034c7deb4cc0505}{Changebag}}(\textcolor{stringliteral}{"时空"});}
+\DoxyCodeLine{501     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"一键更换时空成功啦，快看看换好的套装吧"});}
+\DoxyCodeLine{502 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a4aee5e17419866a9e5db98de199c9570_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a4aee5e17419866a9e5db98de199c9570_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_a21b53de7c272ee93ce95145774e1665a}\label{class_main_window_a21b53de7c272ee93ce95145774e1665a}} 
+\index{MainWindow@{MainWindow}!Changebag\_tq@{Changebag\_tq}}
+\index{Changebag\_tq@{Changebag\_tq}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Changebag\_tq}{Changebag\_tq}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Changebag\+\_\+tq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+一键换装备-\/天启 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 597 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{597                              \{}
+\DoxyCodeLine{598     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a5dce98f7d9f0a0af170d9634bdee98c4}{bind\_status}}==\textcolor{keyword}{false})}
+\DoxyCodeLine{599         \mbox{\hyperlink{class_main_window_a045eaa684747d4973ad2f1bea6d82e5b}{Binddm}}();}
+\DoxyCodeLine{600     \mbox{\hyperlink{class_main_window_a2ed0a143484d1184f034c7deb4cc0505}{Changebag}}(\textcolor{stringliteral}{"天启"});}
+\DoxyCodeLine{601     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"一键更换天启成功啦，快看看换好的套装吧"});}
+\DoxyCodeLine{602 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a21b53de7c272ee93ce95145774e1665a_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a21b53de7c272ee93ce95145774e1665a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_aa8647a92042c41b85e869af0f384c9b6}\label{class_main_window_aa8647a92042c41b85e869af0f384c9b6}} 
+\index{MainWindow@{MainWindow}!Changebag\_tz@{Changebag\_tz}}
+\index{Changebag\_tz@{Changebag\_tz}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Changebag\_tz}{Changebag\_tz}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Changebag\+\_\+tz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+一键换装备-\/天尊 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 577 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{577                              \{}
+\DoxyCodeLine{578     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a5dce98f7d9f0a0af170d9634bdee98c4}{bind\_status}}==\textcolor{keyword}{false})}
+\DoxyCodeLine{579         \mbox{\hyperlink{class_main_window_a045eaa684747d4973ad2f1bea6d82e5b}{Binddm}}();}
+\DoxyCodeLine{580     \mbox{\hyperlink{class_main_window_a2ed0a143484d1184f034c7deb4cc0505}{Changebag}}(\textcolor{stringliteral}{"天尊"});}
+\DoxyCodeLine{581     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"一键更换天尊成功啦，快看看换好的套装吧"});}
+\DoxyCodeLine{582 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_aa8647a92042c41b85e869af0f384c9b6_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_aa8647a92042c41b85e869af0f384c9b6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_a0184bce95af5551ddf6ebd2c04b34dcb}\label{class_main_window_a0184bce95af5551ddf6ebd2c04b34dcb}} 
+\index{MainWindow@{MainWindow}!Changebag\_wl@{Changebag\_wl}}
+\index{Changebag\_wl@{Changebag\_wl}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Changebag\_wl}{Changebag\_wl}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Changebag\+\_\+wl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+一键换装备-\/未来 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 557 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{557                              \{}
+\DoxyCodeLine{558     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a5dce98f7d9f0a0af170d9634bdee98c4}{bind\_status}}==\textcolor{keyword}{false})}
+\DoxyCodeLine{559         \mbox{\hyperlink{class_main_window_a045eaa684747d4973ad2f1bea6d82e5b}{Binddm}}();}
+\DoxyCodeLine{560     \mbox{\hyperlink{class_main_window_a2ed0a143484d1184f034c7deb4cc0505}{Changebag}}(\textcolor{stringliteral}{"未来"});}
+\DoxyCodeLine{561     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"一键更换未来成功啦，快看看换好的套装吧"});}
+\DoxyCodeLine{562 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a0184bce95af5551ddf6ebd2c04b34dcb_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a0184bce95af5551ddf6ebd2c04b34dcb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_a7d0091787103e42169b0fe52cbc752bc}\label{class_main_window_a7d0091787103e42169b0fe52cbc752bc}} 
+\index{MainWindow@{MainWindow}!Changebag\_xa@{Changebag\_xa}}
+\index{Changebag\_xa@{Changebag\_xa}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Changebag\_xa}{Changebag\_xa}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Changebag\+\_\+xa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+一键换装备-\/笑傲 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 547 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{547                              \{}
+\DoxyCodeLine{548     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a5dce98f7d9f0a0af170d9634bdee98c4}{bind\_status}}==\textcolor{keyword}{false})}
+\DoxyCodeLine{549         \mbox{\hyperlink{class_main_window_a045eaa684747d4973ad2f1bea6d82e5b}{Binddm}}();}
+\DoxyCodeLine{550     \mbox{\hyperlink{class_main_window_a2ed0a143484d1184f034c7deb4cc0505}{Changebag}}(\textcolor{stringliteral}{"笑傲"});}
+\DoxyCodeLine{551     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"一键更换笑傲成功啦，快看看换好的套装吧"});}
+\DoxyCodeLine{552 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a7d0091787103e42169b0fe52cbc752bc_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a7d0091787103e42169b0fe52cbc752bc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_a02d0ec9daa3e9aec30eae11f7c4ca967}\label{class_main_window_a02d0ec9daa3e9aec30eae11f7c4ca967}} 
+\index{MainWindow@{MainWindow}!Changebag\_yh@{Changebag\_yh}}
+\index{Changebag\_yh@{Changebag\_yh}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Changebag\_yh}{Changebag\_yh}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Changebag\+\_\+yh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+一键换装备-\/浴火 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 607 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{607                              \{}
+\DoxyCodeLine{608     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a5dce98f7d9f0a0af170d9634bdee98c4}{bind\_status}}==\textcolor{keyword}{false})}
+\DoxyCodeLine{609         \mbox{\hyperlink{class_main_window_a045eaa684747d4973ad2f1bea6d82e5b}{Binddm}}();}
+\DoxyCodeLine{610     \mbox{\hyperlink{class_main_window_a2ed0a143484d1184f034c7deb4cc0505}{Changebag}}(\textcolor{stringliteral}{"浴火"});}
+\DoxyCodeLine{611     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"一键更换浴火成功啦，快看看换好的套装吧"});}
+\DoxyCodeLine{612 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a02d0ec9daa3e9aec30eae11f7c4ca967_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a02d0ec9daa3e9aec30eae11f7c4ca967_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_ae94a0b4e90637692bdd691b82d401e71}\label{class_main_window_ae94a0b4e90637692bdd691b82d401e71}} 
+\index{MainWindow@{MainWindow}!Changebag\_ys@{Changebag\_ys}}
+\index{Changebag\_ys@{Changebag\_ys}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Changebag\_ys}{Changebag\_ys}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Changebag\+\_\+ys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+一键换装备-\/元神 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 567 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{567                              \{}
+\DoxyCodeLine{568     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a5dce98f7d9f0a0af170d9634bdee98c4}{bind\_status}}==\textcolor{keyword}{false})}
+\DoxyCodeLine{569         \mbox{\hyperlink{class_main_window_a045eaa684747d4973ad2f1bea6d82e5b}{Binddm}}();}
+\DoxyCodeLine{570     \mbox{\hyperlink{class_main_window_a2ed0a143484d1184f034c7deb4cc0505}{Changebag}}(\textcolor{stringliteral}{"元神"});}
+\DoxyCodeLine{571     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"一键更换元神成功啦，快看看换好的套装吧"});}
+\DoxyCodeLine{572 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_ae94a0b4e90637692bdd691b82d401e71_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_ae94a0b4e90637692bdd691b82d401e71_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_ab42f0ca52f7699f40bb2f71dafd8f830}\label{class_main_window_ab42f0ca52f7699f40bb2f71dafd8f830}} 
+\index{MainWindow@{MainWindow}!Changebag\_yy@{Changebag\_yy}}
+\index{Changebag\_yy@{Changebag\_yy}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Changebag\_yy}{Changebag\_yy}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Changebag\+\_\+yy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+一键换装备-\/银翼骑士 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 587 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{587                              \{}
+\DoxyCodeLine{588     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a5dce98f7d9f0a0af170d9634bdee98c4}{bind\_status}}==\textcolor{keyword}{false})}
+\DoxyCodeLine{589         \mbox{\hyperlink{class_main_window_a045eaa684747d4973ad2f1bea6d82e5b}{Binddm}}();}
+\DoxyCodeLine{590     \mbox{\hyperlink{class_main_window_a2ed0a143484d1184f034c7deb4cc0505}{Changebag}}(\textcolor{stringliteral}{"银翼骑士"});}
+\DoxyCodeLine{591     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"一键更换银翼成功啦，快看看换好的套装吧"});}
+\DoxyCodeLine{592 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_ab42f0ca52f7699f40bb2f71dafd8f830_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_ab42f0ca52f7699f40bb2f71dafd8f830_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_a9e125df59f2b8538a40668b00afa867c}\label{class_main_window_a9e125df59f2b8538a40668b00afa867c}} 
+\index{MainWindow@{MainWindow}!ChangeSpeed@{ChangeSpeed}}
+\index{ChangeSpeed@{ChangeSpeed}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{ChangeSpeed}{ChangeSpeed}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Change\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+在文件 mainwindow.\+cpp 第 775 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{776 \{}
+\DoxyCodeLine{777 }
+\DoxyCodeLine{778 }
+\DoxyCodeLine{779 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_main_window_ae4ba1ea193bb4c86e1df89e387af0760}\label{class_main_window_ae4ba1ea193bb4c86e1df89e387af0760}} 
+\index{MainWindow@{MainWindow}!ChangeSpeedPrepare@{ChangeSpeedPrepare}}
+\index{ChangeSpeedPrepare@{ChangeSpeedPrepare}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{ChangeSpeedPrepare}{ChangeSpeedPrepare}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Change\+Speed\+Prepare (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+在文件 mainwindow.\+cpp 第 772 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{773 \{}
+\DoxyCodeLine{774 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_main_window_a88fec103aa428f529ce34d4dffa0fe35}\label{class_main_window_a88fec103aa428f529ce34d4dffa0fe35}} 
+\index{MainWindow@{MainWindow}!ChangeSpirit@{ChangeSpirit}}
+\index{ChangeSpirit@{ChangeSpirit}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{ChangeSpirit}{ChangeSpirit}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Change\+Spirit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+在文件 mainwindow.\+cpp 第 766 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{766                              \{}
+\DoxyCodeLine{767     \textcolor{comment}{//一键换精灵窗口}}
+\DoxyCodeLine{768 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_main_window_a3afe617eec57e5ff9ec81b150a65c9d3}\label{class_main_window_a3afe617eec57e5ff9ec81b150a65c9d3}} 
+\index{MainWindow@{MainWindow}!ClearCache@{ClearCache}}
+\index{ClearCache@{ClearCache}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{ClearCache}{ClearCache}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Clear\+Cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+清理ie缓存 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 408 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{408                            \{}
+\DoxyCodeLine{409     \textcolor{comment}{//清理ie缓存}}
+\DoxyCodeLine{410     QProcess process(0);}
+\DoxyCodeLine{411     process.start(\textcolor{stringliteral}{"cmd"},QStringList()<<\textcolor{stringliteral}{"/c"}<<\textcolor{stringliteral}{"RunDll32.exe InetCpl.cpl,ClearMyTracksByProcess 8"});}
+\DoxyCodeLine{412     process.waitForStarted();}
+\DoxyCodeLine{413     process.waitForFinished();}
+\DoxyCodeLine{414     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"ie缓存清理成功，如果还是卡顿建议刷新"});}
+\DoxyCodeLine{415 }
+\DoxyCodeLine{416 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a3afe617eec57e5ff9ec81b150a65c9d3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_a71a1c39801845c7cf65222cd8520f5db}\label{class_main_window_a71a1c39801845c7cf65222cd8520f5db}} 
+\index{MainWindow@{MainWindow}!dianfeng@{dianfeng}}
+\index{dianfeng@{dianfeng}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{dianfeng}{dianfeng}}
+{\footnotesize\ttfamily void Main\+Window\+::dianfeng (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+截取对面阵容函数-\/巅峰 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 305 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{305                          \{}
+\DoxyCodeLine{306     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a5dce98f7d9f0a0af170d9634bdee98c4}{bind\_status}}==\textcolor{keyword}{false})}
+\DoxyCodeLine{307         \mbox{\hyperlink{class_main_window_a045eaa684747d4973ad2f1bea6d82e5b}{Binddm}}();}
+\DoxyCodeLine{308     emit \mbox{\hyperlink{class_main_window_a3e2f1c42ae38b447996b775225fea0d5}{sendcap}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{309     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"精灵阵容已截图完毕"});}
+\DoxyCodeLine{310 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a71a1c39801845c7cf65222cd8520f5db_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a71a1c39801845c7cf65222cd8520f5db_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_a8a6b2320c939fa42991326b49968905a}\label{class_main_window_a8a6b2320c939fa42991326b49968905a}} 
+\index{MainWindow@{MainWindow}!FreshSeer@{FreshSeer}}
+\index{FreshSeer@{FreshSeer}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{FreshSeer}{FreshSeer}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Fresh\+Seer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+刷新游戏 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 362 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{363 \{}
+\DoxyCodeLine{364     qDebug()<<\textcolor{stringliteral}{"通信无异常"};}
+\DoxyCodeLine{365     \textcolor{comment}{//QString webstr=QString("http://seer.61.com/play.shtml");//设置要打开的网页}}
+\DoxyCodeLine{366     \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>axWidget-\/>dynamicCall(\textcolor{stringliteral}{"Refresh(void)"});\textcolor{comment}{//显示网页}}
+\DoxyCodeLine{367 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a8a6b2320c939fa42991326b49968905a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_aa112b0c5dd3567aab1d4779ffc60b2a3}\label{class_main_window_aa112b0c5dd3567aab1d4779ffc60b2a3}} 
+\index{MainWindow@{MainWindow}!Gemsynthesis@{Gemsynthesis}}
+\index{Gemsynthesis@{Gemsynthesis}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Gemsynthesis}{Gemsynthesis}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Gemsynthesis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+宝石合成 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 464 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{464                              \{}
+\DoxyCodeLine{465     \textcolor{comment}{//宝石合成}}
+\DoxyCodeLine{466     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"此功能还在开发中，敬请期待"});}
+\DoxyCodeLine{467 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_main_window_aa3963b30322140e81c118090d9f8ed08}\label{class_main_window_aa3963b30322140e81c118090d9f8ed08}} 
+\index{MainWindow@{MainWindow}!GreenfireTimer@{GreenfireTimer}}
+\index{GreenfireTimer@{GreenfireTimer}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{GreenfireTimer}{GreenfireTimer}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Greenfire\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+在文件 mainwindow.\+cpp 第 763 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{763                                \{}
+\DoxyCodeLine{764     \textcolor{comment}{//绿火计时器}}
+\DoxyCodeLine{765 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_main_window_a3f6c4bc7d3ced016538567c42c84a235}\label{class_main_window_a3f6c4bc7d3ced016538567c42c84a235}} 
+\index{MainWindow@{MainWindow}!Inputcdk@{Inputcdk}}
+\index{Inputcdk@{Inputcdk}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Inputcdk}{Inputcdk}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Inputcdk (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+一键输入cdk 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 695 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{695                          \{}
+\DoxyCodeLine{696     \textcolor{comment}{//一键输入cdk}}
+\DoxyCodeLine{697     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_ace87f5ea490fb7571c7d841eb843d246}{cd}}==NULL)}
+\DoxyCodeLine{698         \mbox{\hyperlink{class_main_window_ace87f5ea490fb7571c7d841eb843d246}{cd}}=\textcolor{keyword}{new} \mbox{\hyperlink{class_cdk_form}{CdkForm}}();}
+\DoxyCodeLine{699     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a5dce98f7d9f0a0af170d9634bdee98c4}{bind\_status}}==\textcolor{keyword}{false})}
+\DoxyCodeLine{700         \mbox{\hyperlink{class_main_window_a045eaa684747d4973ad2f1bea6d82e5b}{Binddm}}();}
+\DoxyCodeLine{701     \mbox{\hyperlink{class_main_window_ace87f5ea490fb7571c7d841eb843d246}{cd}}-\/>show();}
+\DoxyCodeLine{702 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a3f6c4bc7d3ced016538567c42c84a235_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a3f6c4bc7d3ced016538567c42c84a235_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_ad30bbaa3f1b37abb0924c23445c6eedc}\label{class_main_window_ad30bbaa3f1b37abb0924c23445c6eedc}} 
+\index{MainWindow@{MainWindow}!Mute@{Mute}}
+\index{Mute@{Mute}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Mute}{Mute}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Mute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+游戏静音 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 372 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{373 \{}
+\DoxyCodeLine{374     \mbox{\hyperlink{class_main_window_a76dba45004d2dac59f552623d8d85670}{Cmute}}.\mbox{\hyperlink{class_media_mute_a1fbc35448a7f866b4b4ca0e374ee4164}{SetMute}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{375     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"小赛尔，游戏静音成功啦，如果没有成功再按一次"});}
+\DoxyCodeLine{376 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{class_main_window_ad30bbaa3f1b37abb0924c23445c6eedc_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_ad30bbaa3f1b37abb0924c23445c6eedc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_aa5f1e6793a10f4f0eca4f188877c990b}\label{class_main_window_aa5f1e6793a10f4f0eca4f188877c990b}} 
+\index{MainWindow@{MainWindow}!Opence@{Opence}}
+\index{Opence@{Opence}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Opence}{Opence}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Opence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+打开ce 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 421 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{421                        \{}
+\DoxyCodeLine{422     \textcolor{comment}{//打开ce}}
+\DoxyCodeLine{423     QProcess pro;}
+\DoxyCodeLine{424     QString strPath = \mbox{\hyperlink{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}{allpath}}+\textcolor{stringliteral}{"/工具/ce6.8.exe"};}
+\DoxyCodeLine{425     pro.startDetached(strPath);}
+\DoxyCodeLine{426     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"Cheatengine正在加载中，请不要用此工具做出不允许的事情哦"});}
+\DoxyCodeLine{427 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_aa5f1e6793a10f4f0eca4f188877c990b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_a4dfb419d170a5cbef0bba6975cdb3499}\label{class_main_window_a4dfb419d170a5cbef0bba6975cdb3499}} 
+\index{MainWindow@{MainWindow}!Openfd@{Openfd}}
+\index{Openfd@{Openfd}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Openfd}{Openfd}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Openfd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+打开fd 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 432 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{432                        \{}
+\DoxyCodeLine{433     \textcolor{comment}{//打开fd}}
+\DoxyCodeLine{434     QProcess pro;}
+\DoxyCodeLine{435     QString strPath = \mbox{\hyperlink{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}{allpath}}+\textcolor{stringliteral}{"/工具/Fiddler/Fiddlerh.exe"};}
+\DoxyCodeLine{436     pro.startDetached(strPath);}
+\DoxyCodeLine{437     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"fiddler正在加载中，请不要用此工具做出不允许的事情哦"});}
+\DoxyCodeLine{438 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a4dfb419d170a5cbef0bba6975cdb3499_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_ac35ac8908469b893ebb96aab88cd9de6}\label{class_main_window_ac35ac8908469b893ebb96aab88cd9de6}} 
+\index{MainWindow@{MainWindow}!OpenKeyandMouse@{OpenKeyandMouse}}
+\index{OpenKeyandMouse@{OpenKeyandMouse}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{OpenKeyandMouse}{OpenKeyandMouse}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Open\+Keyand\+Mouse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+打开鼠标录制工具 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 443 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{443                                 \{}
+\DoxyCodeLine{444     \textcolor{comment}{//打开键鼠录制器}}
+\DoxyCodeLine{445     QProcess pro;}
+\DoxyCodeLine{446     QString strPath = \mbox{\hyperlink{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}{allpath}}+\textcolor{stringliteral}{"/工具/录制/星小夜的键鼠录制工具.exe"};}
+\DoxyCodeLine{447     pro.startDetached(strPath);}
+\DoxyCodeLine{448     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"鼠标录制器启动中，可以开始做你的脚本啦"});}
+\DoxyCodeLine{449 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_main_window_a130e1651ea4ceb170d5d1d8d62115881}\label{class_main_window_a130e1651ea4ceb170d5d1d8d62115881}} 
+\index{MainWindow@{MainWindow}!OpenMousepoint@{OpenMousepoint}}
+\index{OpenMousepoint@{OpenMousepoint}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{OpenMousepoint}{OpenMousepoint}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Open\+Mousepoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+打开鼠标连点器 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 454 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{454                                \{}
+\DoxyCodeLine{455     \textcolor{comment}{//打开鼠标连点器}}
+\DoxyCodeLine{456     QMessageBox::information(NULL,\textcolor{stringliteral}{"this"},\textcolor{stringliteral}{"开发中"});}
+\DoxyCodeLine{457     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"此功能还在开发中，敬请期待"});}
+\DoxyCodeLine{458 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_main_window_a22ba83a98d37ecc59529e7dbf6bdb8ad}\label{class_main_window_a22ba83a98d37ecc59529e7dbf6bdb8ad}} 
+\index{MainWindow@{MainWindow}!Openscript@{Openscript}}
+\index{Openscript@{Openscript}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Openscript}{Openscript}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Openscript (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+打开自定义脚本 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 683 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{683                            \{}
+\DoxyCodeLine{684     \textcolor{comment}{//打开脚本}}
+\DoxyCodeLine{685     QProcess pro;}
+\DoxyCodeLine{686     QString strPath = \mbox{\hyperlink{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}{allpath}}+\textcolor{stringliteral}{"/工具/自定义脚本工具.exe"};}
+\DoxyCodeLine{687     pro.startDetached(strPath);}
+\DoxyCodeLine{688     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"自定义脚本工具加载中，发挥你的创意吧"});}
+\DoxyCodeLine{689 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a22ba83a98d37ecc59529e7dbf6bdb8ad_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_a51bf1d5bed5cb881b33ed608b08a8ad8}\label{class_main_window_a51bf1d5bed5cb881b33ed608b08a8ad8}} 
+\index{MainWindow@{MainWindow}!OptimizingMemory@{OptimizingMemory}}
+\index{OptimizingMemory@{OptimizingMemory}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{OptimizingMemory}{OptimizingMemory}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Optimizing\+Memory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+内存优化 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 390 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{391 \{}
+\DoxyCodeLine{392     SetProcessWorkingSetSize(GetCurrentProcess(),-\/1,-\/1);}
+\DoxyCodeLine{393     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"内存优化成功，如果还是卡顿建议刷新"});}
+\DoxyCodeLine{394 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_main_window_a0b47d9632012b09857c1c1d3cf68c878}\label{class_main_window_a0b47d9632012b09857c1c1d3cf68c878}} 
+\index{MainWindow@{MainWindow}!PeakMode@{PeakMode}}
+\index{PeakMode@{PeakMode}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{PeakMode}{PeakMode}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Peak\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+打开精灵技能快查窗口 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 717 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{717                          \{}
+\DoxyCodeLine{718     \textcolor{comment}{//精灵技能快查}}
+\DoxyCodeLine{719     emit \mbox{\hyperlink{class_main_window_a8b9754406957fcdde4024e93a2c34982}{signal\_openskill}}();}
+\DoxyCodeLine{720 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a0b47d9632012b09857c1c1d3cf68c878_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_a05a26366797616c2fa96d12f2a67a07e}\label{class_main_window_a05a26366797616c2fa96d12f2a67a07e}} 
+\index{MainWindow@{MainWindow}!ReleaseMemory@{ReleaseMemory}}
+\index{ReleaseMemory@{ReleaseMemory}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{ReleaseMemory}{ReleaseMemory}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Release\+Memory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+内存释放 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 399 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{399                               \{}
+\DoxyCodeLine{400     \textcolor{comment}{//内存释放(之后有空再写，暂时用内存优化代替下)}}
+\DoxyCodeLine{401     SetProcessWorkingSetSize(GetCurrentProcess(),-\/1,-\/1);}
+\DoxyCodeLine{402     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"内存释放成功，如果还是卡顿建议刷新"});}
+\DoxyCodeLine{403 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_main_window_a2ac29e8dcb6a3b8645220ae56caac82b}\label{class_main_window_a2ac29e8dcb6a3b8645220ae56caac82b}} 
+\index{MainWindow@{MainWindow}!script\_open@{script\_open}}
+\index{script\_open@{script\_open}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{script\_open}{script\_open}}
+{\footnotesize\ttfamily void Main\+Window\+::script\+\_\+open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+打开脚本窗口 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 474 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{475 \{}
+\DoxyCodeLine{476     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a5dce98f7d9f0a0af170d9634bdee98c4}{bind\_status}}==\textcolor{keyword}{false})}
+\DoxyCodeLine{477         \mbox{\hyperlink{class_main_window_a045eaa684747d4973ad2f1bea6d82e5b}{Binddm}}();}
+\DoxyCodeLine{478     \mbox{\hyperlink{class_main_window_a33aba264def70affde6c2d44dde25d09}{f}}.show();}
+\DoxyCodeLine{479     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"脚本已打开，本功能搜集自网络，星夜对本功能带来的一切后果概不负责"});}
+\DoxyCodeLine{480 }
+\DoxyCodeLine{481 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a2ac29e8dcb6a3b8645220ae56caac82b_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a2ac29e8dcb6a3b8645220ae56caac82b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_abd75722c3471542e831d089f027d22bd}\label{class_main_window_abd75722c3471542e831d089f027d22bd}} 
+\index{MainWindow@{MainWindow}!seer\_cal@{seer\_cal}}
+\index{seer\_cal@{seer\_cal}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{seer\_cal}{seer\_cal}}
+{\footnotesize\ttfamily void Main\+Window\+::seer\+\_\+cal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+打开橙汁赛尔数值计算器 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 707 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{707                          \{}
+\DoxyCodeLine{708     QProcess pro;}
+\DoxyCodeLine{709     QString strPath = \mbox{\hyperlink{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}{allpath}}+\textcolor{stringliteral}{"/工具/赛尔数据计算器/赛尔数据计算器.exe"};}
+\DoxyCodeLine{710     pro.startDetached(strPath);}
+\DoxyCodeLine{711     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"赛尔数值计算器正在加载中（by橙汁）"});}
+\DoxyCodeLine{712 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_abd75722c3471542e831d089f027d22bd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_a3e2f1c42ae38b447996b775225fea0d5}\label{class_main_window_a3e2f1c42ae38b447996b775225fea0d5}} 
+\index{MainWindow@{MainWindow}!sendcap@{sendcap}}
+\index{sendcap@{sendcap}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{sendcap}{sendcap}}
+{\footnotesize\ttfamily void Main\+Window\+::sendcap (\begin{DoxyParamCaption}\item[{bool}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a3e2f1c42ae38b447996b775225fea0d5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}\label{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}} 
+\index{MainWindow@{MainWindow}!sendtip@{sendtip}}
+\index{sendtip@{sendtip}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{sendtip}{sendtip}}
+{\footnotesize\ttfamily void Main\+Window\+::sendtip (\begin{DoxyParamCaption}\item[{Q\+String}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_ad5ee26b9f160e460a4328ac94c5aeba4}\label{class_main_window_ad5ee26b9f160e460a4328ac94c5aeba4}} 
+\index{MainWindow@{MainWindow}!show\_csp@{show\_csp}}
+\index{show\_csp@{show\_csp}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{show\_csp}{show\_csp}}
+{\footnotesize\ttfamily void Main\+Window\+::show\+\_\+csp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+打开一键换背包窗口 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 286 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{286                          \{}
+\DoxyCodeLine{287     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a5dce98f7d9f0a0af170d9634bdee98c4}{bind\_status}}==\textcolor{keyword}{false})}
+\DoxyCodeLine{288         \mbox{\hyperlink{class_main_window_a045eaa684747d4973ad2f1bea6d82e5b}{Binddm}}();}
+\DoxyCodeLine{289     \mbox{\hyperlink{class_main_window_a81de82284f90a31579de665f9be7982d}{csp}}=\textcolor{keyword}{new} \mbox{\hyperlink{class_changesp}{Changesp}}();}
+\DoxyCodeLine{290     \mbox{\hyperlink{class_main_window_a81de82284f90a31579de665f9be7982d}{csp}}-\/>show();}
+\DoxyCodeLine{291 }
+\DoxyCodeLine{292 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_ad5ee26b9f160e460a4328ac94c5aeba4_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_ad5ee26b9f160e460a4328ac94c5aeba4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_a8b9754406957fcdde4024e93a2c34982}\label{class_main_window_a8b9754406957fcdde4024e93a2c34982}} 
+\index{MainWindow@{MainWindow}!signal\_openskill@{signal\_openskill}}
+\index{signal\_openskill@{signal\_openskill}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{signal\_openskill}{signal\_openskill}}
+{\footnotesize\ttfamily void Main\+Window\+::signal\+\_\+openskill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a8b9754406957fcdde4024e93a2c34982_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_a00c1c9d91a00ea0175d7d2bf16e60dc8}\label{class_main_window_a00c1c9d91a00ea0175d7d2bf16e60dc8}} 
+\index{MainWindow@{MainWindow}!slot\_author@{slot\_author}}
+\index{slot\_author@{slot\_author}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{slot\_author}{slot\_author}}
+{\footnotesize\ttfamily void Main\+Window\+::slot\+\_\+author (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+查看作者与鸣谢信息 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 749 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{749                             \{}
+\DoxyCodeLine{750     QMessageBox::about(NULL,\textcolor{stringliteral}{"help"},\textcolor{stringliteral}{"作者：星夜\(\backslash\)n"}}
+\DoxyCodeLine{751                                          \textcolor{stringliteral}{"联系QQ：2681686121\(\backslash\)n"}}
+\DoxyCodeLine{752                                          \textcolor{stringliteral}{"\(\backslash\)n"}}
+\DoxyCodeLine{753                                          \textcolor{stringliteral}{"-\/\(\backslash\)n "}}
+\DoxyCodeLine{754                                          \textcolor{stringliteral}{"用户鸣谢:\(\backslash\)n"}}
+\DoxyCodeLine{755                                          \textcolor{stringliteral}{"小鸽子 \(\backslash\)n"}}
+\DoxyCodeLine{756                                          \textcolor{stringliteral}{"潜水人员\(\backslash\)n"}}
+\DoxyCodeLine{757                                          \textcolor{stringliteral}{"於城\(\backslash\)n"}}
+\DoxyCodeLine{758                                          \textcolor{stringliteral}{"对本登录器的开发提出的建议与帮助\(\backslash\)n"}}
+\DoxyCodeLine{759                                          \textcolor{stringliteral}{"\(\backslash\)n-\/\(\backslash\)n"}}
+\DoxyCodeLine{760                                          );}
+\DoxyCodeLine{761 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a00c1c9d91a00ea0175d7d2bf16e60dc8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_abbd616bfc81406e171220b259a3ee850}\label{class_main_window_abbd616bfc81406e171220b259a3ee850}} 
+\index{MainWindow@{MainWindow}!slot\_mianzexieyi@{slot\_mianzexieyi}}
+\index{slot\_mianzexieyi@{slot\_mianzexieyi}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{slot\_mianzexieyi}{slot\_mianzexieyi}}
+{\footnotesize\ttfamily void Main\+Window\+::slot\+\_\+mianzexieyi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+查看免责协议 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 739 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{739                                  \{}
+\DoxyCodeLine{740     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a100095f3dd19d63a56c916e1daed0d3e}{ato}}==NULL)}
+\DoxyCodeLine{741         \mbox{\hyperlink{class_main_window_a100095f3dd19d63a56c916e1daed0d3e}{ato}}=\textcolor{keyword}{new} \mbox{\hyperlink{class_atoken}{Atoken}}();}
+\DoxyCodeLine{742     \mbox{\hyperlink{class_main_window_a100095f3dd19d63a56c916e1daed0d3e}{ato}}-\/>show();}
+\DoxyCodeLine{743 }
+\DoxyCodeLine{744 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_abbd616bfc81406e171220b259a3ee850_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_a2d7a47a310ea169387df4053f98d2a87}\label{class_main_window_a2d7a47a310ea169387df4053f98d2a87}} 
+\index{MainWindow@{MainWindow}!slot\_new@{slot\_new}}
+\index{slot\_new@{slot\_new}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{slot\_new}{slot\_new}}
+{\footnotesize\ttfamily void Main\+Window\+::slot\+\_\+new (\begin{DoxyParamCaption}\item[{Q\+Network\+Reply $\ast$}]{reply }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+检测更新-\/返回槽函数 
+
+
+\begin{DoxyParams}{参数}
+{\em reply} & 网页返回内容 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 mainwindow.\+cpp 第 245 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{245                                              \{}
+\DoxyCodeLine{246     QNetworkReply::NetworkError err = reply-\/>error();}
+\DoxyCodeLine{247     \textcolor{comment}{//qDebug()<<reply-\/>readAll();}}
+\DoxyCodeLine{248     \textcolor{keywordflow}{if}(err != QNetworkReply::NoError) \{}
+\DoxyCodeLine{249         qDebug() << \textcolor{stringliteral}{"accFailed: "} << reply-\/>errorString();}
+\DoxyCodeLine{250     \}\textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{251         \textcolor{comment}{// 获取返回内容}}
+\DoxyCodeLine{252         QString str = reply-\/>readAll();\textcolor{comment}{//读取接收到的数据}}
+\DoxyCodeLine{253         \textcolor{comment}{//parse\_UpdateJSON(str);}}
+\DoxyCodeLine{254         QJsonParseError json\_error;}
+\DoxyCodeLine{255         QJsonDocument parse\_doucment = QJsonDocument::fromJson(str.toUtf8(), \&json\_error);}
+\DoxyCodeLine{256         QJsonObject obj = parse\_doucment.object();}
+\DoxyCodeLine{257         \mbox{\hyperlink{ext_8cpp_a19d708634ad960dbce1fb4aa19fbd9a7}{new\_version}}=obj.take(\textcolor{stringliteral}{"newversion"}).toString();}
+\DoxyCodeLine{258         \mbox{\hyperlink{ext_8cpp_a50b9c558e892720ddc4242873b17b5e1}{new\_content}}=obj.take(\textcolor{stringliteral}{"content"}).toString();}
+\DoxyCodeLine{259         \mbox{\hyperlink{ext_8cpp_ab5f11b6ce43976fe2e0e0019c325fda9}{new\_error}}=obj.take(\textcolor{stringliteral}{"error"}).toString();}
+\DoxyCodeLine{260         \mbox{\hyperlink{ext_8cpp_ab18bc0bf3b61de8b1e392066071248cf}{new\_time}}=obj.take(\textcolor{stringliteral}{"time"}).toString();}
+\DoxyCodeLine{261         \mbox{\hyperlink{ext_8cpp_a5e936c2dd07887f9a33ef2ff30f849c6}{new\_upurl}}=obj.take(\textcolor{stringliteral}{"upurl"}).toString();}
+\DoxyCodeLine{262         \mbox{\hyperlink{ext_8cpp_a5dd1956b67fca4895ec42f4c15307b13}{new\_news}}=obj.take(\textcolor{stringliteral}{"news"}).toString();}
+\DoxyCodeLine{263         \mbox{\hyperlink{ext_8cpp_a5821828024a8c713153bebe1a0bd3459}{new\_guanggao}}=obj.take(\textcolor{stringliteral}{"guanggao"}).toString();}
+\DoxyCodeLine{264 }
+\DoxyCodeLine{265 }
+\DoxyCodeLine{266     \}}
+\DoxyCodeLine{267     \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_ab5f11b6ce43976fe2e0e0019c325fda9}{new\_error}}!=\textcolor{stringliteral}{"667"})\{}
+\DoxyCodeLine{268         QMessageBox::about(NULL,\textcolor{stringliteral}{"tip"},\textcolor{stringliteral}{"抱歉，星小夜登录器停止使用，如果非公告停止那么请检查网络连接"});}
+\DoxyCodeLine{269         exit(0);}
+\DoxyCodeLine{270     \}}
+\DoxyCodeLine{271     \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_ab18bc0bf3b61de8b1e392066071248cf}{new\_time}}!=\textcolor{stringliteral}{"假"})\{}
+\DoxyCodeLine{272         QMessageBox::about(NULL,\textcolor{stringliteral}{"tip"},\mbox{\hyperlink{ext_8cpp_a5dd1956b67fca4895ec42f4c15307b13}{new\_news}});}
+\DoxyCodeLine{273         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5821828024a8c713153bebe1a0bd3459}{new\_guanggao}}!=\textcolor{stringliteral}{" "})}
+\DoxyCodeLine{274             QDesktopServices::openUrl(QUrl(\mbox{\hyperlink{ext_8cpp_a5821828024a8c713153bebe1a0bd3459}{new\_guanggao}}));}
+\DoxyCodeLine{275     \}}
+\DoxyCodeLine{276     \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a19d708634ad960dbce1fb4aa19fbd9a7}{new\_version}}!=\mbox{\hyperlink{ext_8cpp_afeda04438e838e6b9ff952b898e49e35}{current\_version}})\{}
+\DoxyCodeLine{277         emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"发现新版本！版本号："}+\mbox{\hyperlink{ext_8cpp_a19d708634ad960dbce1fb4aa19fbd9a7}{new\_version}});}
+\DoxyCodeLine{278         QDesktopServices::openUrl(QUrl(\mbox{\hyperlink{ext_8cpp_a5e936c2dd07887f9a33ef2ff30f849c6}{new\_upurl}}));}
+\DoxyCodeLine{279     \}}
+\DoxyCodeLine{280 }
+\DoxyCodeLine{281 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a2d7a47a310ea169387df4053f98d2a87_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_ac9e3ed4672eb29a4586923b2b8e1693f}\label{class_main_window_ac9e3ed4672eb29a4586923b2b8e1693f}} 
+\index{MainWindow@{MainWindow}!slot\_sb@{slot\_sb}}
+\index{slot\_sb@{slot\_sb}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{slot\_sb}{slot\_sb}}
+{\footnotesize\ttfamily void Main\+Window\+::slot\+\_\+sb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+绑定大漠插件函数 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 297 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{297                         \{}
+\DoxyCodeLine{298     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a5dce98f7d9f0a0af170d9634bdee98c4}{bind\_status}}==\textcolor{keyword}{false})}
+\DoxyCodeLine{299         \mbox{\hyperlink{class_main_window_a045eaa684747d4973ad2f1bea6d82e5b}{Binddm}}();}
+\DoxyCodeLine{300 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_ac9e3ed4672eb29a4586923b2b8e1693f_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_ac9e3ed4672eb29a4586923b2b8e1693f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_aec60da4f7cf67bd7ce7f0363235b85c5}\label{class_main_window_aec60da4f7cf67bd7ce7f0363235b85c5}} 
+\index{MainWindow@{MainWindow}!slot\_shiyongshuoming@{slot\_shiyongshuoming}}
+\index{slot\_shiyongshuoming@{slot\_shiyongshuoming}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{slot\_shiyongshuoming}{slot\_shiyongshuoming}}
+{\footnotesize\ttfamily void Main\+Window\+::slot\+\_\+shiyongshuoming (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+打开登录器使用说明介绍 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 725 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{725                                      \{}
+\DoxyCodeLine{726     QDesktopServices::openUrl(QUrl(\textcolor{stringliteral}{"https://www.bilibili.com/video/BV1qz411B7En"}));}
+\DoxyCodeLine{727 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_aec60da4f7cf67bd7ce7f0363235b85c5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_ab6eb8bfae845e353b49a91e62e6b06cd}\label{class_main_window_ab6eb8bfae845e353b49a91e62e6b06cd}} 
+\index{MainWindow@{MainWindow}!slot\_xiangmuyuanma@{slot\_xiangmuyuanma}}
+\index{slot\_xiangmuyuanma@{slot\_xiangmuyuanma}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{slot\_xiangmuyuanma}{slot\_xiangmuyuanma}}
+{\footnotesize\ttfamily void Main\+Window\+::slot\+\_\+xiangmuyuanma (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+打开项目源码仓库 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 732 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{732                                    \{}
+\DoxyCodeLine{733     QDesktopServices::openUrl(QUrl(\textcolor{stringliteral}{"https://github.com/Starlitnightly/seer\_logon"}));}
+\DoxyCodeLine{734 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_ab6eb8bfae845e353b49a91e62e6b06cd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_a2d8cf3c27d8a0ef1365f95a7f4ebeab8}\label{class_main_window_a2d8cf3c27d8a0ef1365f95a7f4ebeab8}} 
+\index{MainWindow@{MainWindow}!speedopen@{speedopen}}
+\index{speedopen@{speedopen}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{speedopen}{speedopen}}
+{\footnotesize\ttfamily void Main\+Window\+::speedopen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+打开变速窗口 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 486 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{487 \{}
+\DoxyCodeLine{488     \mbox{\hyperlink{class_main_window_ad809c7474a4f2b8b061661cae0719b7c}{s}}.show();}
+\DoxyCodeLine{489     \mbox{\hyperlink{class_main_window_ad809c7474a4f2b8b061661cae0719b7c}{s}}.move(this-\/>x(),this-\/>y()+this-\/>height());}
+\DoxyCodeLine{490     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"变速功能已开启，请正确合理地使用该功能哦"});}
+\DoxyCodeLine{491 }
+\DoxyCodeLine{492 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a2d8cf3c27d8a0ef1365f95a7f4ebeab8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_main_window_ab6acc74c3647a1b435edf2e1ee01983e}\label{class_main_window_ab6acc74c3647a1b435edf2e1ee01983e}} 
+\index{MainWindow@{MainWindow}!unMute@{unMute}}
+\index{unMute@{unMute}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{unMute}{unMute}}
+{\footnotesize\ttfamily void Main\+Window\+::un\+Mute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+游戏接触静音 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 mainwindow.\+cpp 第 381 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{382 \{}
+\DoxyCodeLine{383     \mbox{\hyperlink{class_main_window_a76dba45004d2dac59f552623d8d85670}{Cmute}}.\mbox{\hyperlink{class_media_mute_a1fbc35448a7f866b4b4ca0e374ee4164}{SetMute}}(\textcolor{keyword}{false});}
+\DoxyCodeLine{384     emit \mbox{\hyperlink{class_main_window_a7d7f216e2e6c6de6c2dd882e0b1efd71}{sendtip}}(\textcolor{stringliteral}{"小赛尔，游戏成功解除静音了"});}
+\DoxyCodeLine{385 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_main_window_ab6acc74c3647a1b435edf2e1ee01983e_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_ab6acc74c3647a1b435edf2e1ee01983e_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_main_window_a100095f3dd19d63a56c916e1daed0d3e}\label{class_main_window_a100095f3dd19d63a56c916e1daed0d3e}} 
+\index{MainWindow@{MainWindow}!ato@{ato}}
+\index{ato@{ato}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{ato}{ato}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_atoken}{Atoken}}$\ast$ Main\+Window\+::ato\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 mainwindow.\+h 第 53 行定义.
+
+\mbox{\Hypertarget{class_main_window_a5dce98f7d9f0a0af170d9634bdee98c4}\label{class_main_window_a5dce98f7d9f0a0af170d9634bdee98c4}} 
+\index{MainWindow@{MainWindow}!bind\_status@{bind\_status}}
+\index{bind\_status@{bind\_status}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{bind\_status}{bind\_status}}
+{\footnotesize\ttfamily bool Main\+Window\+::bind\+\_\+status}
+
+
+
+在文件 mainwindow.\+h 第 49 行定义.
+
+\mbox{\Hypertarget{class_main_window_ace87f5ea490fb7571c7d841eb843d246}\label{class_main_window_ace87f5ea490fb7571c7d841eb843d246}} 
+\index{MainWindow@{MainWindow}!cd@{cd}}
+\index{cd@{cd}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{cd}{cd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_cdk_form}{Cdk\+Form}}$\ast$ Main\+Window\+::cd\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 mainwindow.\+h 第 58 行定义.
+
+\mbox{\Hypertarget{class_main_window_a76dba45004d2dac59f552623d8d85670}\label{class_main_window_a76dba45004d2dac59f552623d8d85670}} 
+\index{MainWindow@{MainWindow}!Cmute@{Cmute}}
+\index{Cmute@{Cmute}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Cmute}{Cmute}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_media_mute}{Media\+Mute}} Main\+Window\+::\+Cmute}
+
+
+
+在文件 mainwindow.\+h 第 46 行定义.
+
+\mbox{\Hypertarget{class_main_window_a81de82284f90a31579de665f9be7982d}\label{class_main_window_a81de82284f90a31579de665f9be7982d}} 
+\index{MainWindow@{MainWindow}!csp@{csp}}
+\index{csp@{csp}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{csp}{csp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_changesp}{Changesp}}$\ast$ Main\+Window\+::csp\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 mainwindow.\+h 第 57 行定义.
+
+\mbox{\Hypertarget{class_main_window_a33aba264def70affde6c2d44dde25d09}\label{class_main_window_a33aba264def70affde6c2d44dde25d09}} 
+\index{MainWindow@{MainWindow}!f@{f}}
+\index{f@{f}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{f}{f}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_form}{Form}} Main\+Window\+::f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 mainwindow.\+h 第 54 行定义.
+
+\mbox{\Hypertarget{class_main_window_a9ba6b31af4a1888eb789c5cc2c837412}\label{class_main_window_a9ba6b31af4a1888eb789c5cc2c837412}} 
+\index{MainWindow@{MainWindow}!n@{n}}
+\index{n@{n}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_nono}{Nono}}$\ast$ Main\+Window\+::n\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 mainwindow.\+h 第 56 行定义.
+
+\mbox{\Hypertarget{class_main_window_ad7ad62ec1e06cd86e6959a01dd5d5856}\label{class_main_window_ad7ad62ec1e06cd86e6959a01dd5d5856}} 
+\index{MainWindow@{MainWindow}!nam@{nam}}
+\index{nam@{nam}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{nam}{nam}}
+{\footnotesize\ttfamily Q\+Network\+Access\+Manager$\ast$ Main\+Window\+::nam}
+
+
+
+在文件 mainwindow.\+h 第 50 行定义.
+
+\mbox{\Hypertarget{class_main_window_ad809c7474a4f2b8b061661cae0719b7c}\label{class_main_window_ad809c7474a4f2b8b061661cae0719b7c}} 
+\index{MainWindow@{MainWindow}!s@{s}}
+\index{s@{s}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_speed}{Speed}} Main\+Window\+::s\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 mainwindow.\+h 第 55 行定义.
+
+\mbox{\Hypertarget{class_main_window_a35466a70ed47252a0191168126a352a5}\label{class_main_window_a35466a70ed47252a0191168126a352a5}} 
+\index{MainWindow@{MainWindow}!ui@{ui}}
+\index{ui@{ui}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Main\+Window$\ast$ Main\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 mainwindow.\+h 第 52 行定义.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mainwindow_8h}{mainwindow.\+h}}\item 
+\mbox{\hyperlink{mainwindow_8cpp}{mainwindow.\+cpp}}\end{DoxyCompactItemize}

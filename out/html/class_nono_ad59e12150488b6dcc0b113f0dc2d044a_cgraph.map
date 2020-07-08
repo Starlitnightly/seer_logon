@@ -1,0 +1,4 @@
+<map id="Nono::getAccessToken" name="Nono::getAccessToken">
+<area shape="rect" id="node1" title="获取百度ocr的accesstoken" alt="" coords="5,12,163,39"/>
+<area shape="rect" id="node2" href="$class_nono.html#a2248710774a77c06dd7977bba561e716" title="获取accesstoken网页返回内容处理" alt="" coords="211,5,416,46"/>
+</map>

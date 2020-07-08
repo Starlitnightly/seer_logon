@@ -1,0 +1,330 @@
+\hypertarget{class_atoken}{}\doxysection{Atoken类 参考}
+\label{class_atoken}\index{Atoken@{Atoken}}
+
+
+免责协议窗口类 免责协议窗口这个类相关的函数  
+
+
+
+
+{\ttfamily \#include $<$atoken.\+h$>$}
+
+
+
+类 Atoken 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{class_atoken__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Atoken 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{class_atoken__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 槽}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_atoken_a360158303dd20c7601f8c19c5801318f}{slot\+\_\+timer\+\_\+timeout}} ()
+\begin{DoxyCompactList}\small\item\em 免责协议窗口槽函数-\/定时器处理内容 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_atoken_a2cd286a76a3af55ad5594af6131a0f3a}{slot\+\_\+agree}} ()
+\begin{DoxyCompactList}\small\item\em 免责协议窗口槽函数-\/同意按钮按下处理内容 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_atoken_aadd0736364d1ff22bc2d78f6416d0e6c}{Atoken}} (Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em 免责协议窗口构造函数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_atoken_a2c50e5b20366695582dc559ad1bf864d}{$\sim$\+Atoken}} ()
+\begin{DoxyCompactList}\small\item\em 免责协议窗口析构函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_atoken_ad6c6ef72c0e5dc3e73b0a0e91955719b}{close\+Event}} (Q\+Close\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em 免责协议窗口关闭重载函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Time $\ast$ \mbox{\hyperlink{class_atoken_a49bf8467cbdeaaa7fa018b87f695a761}{time}}
+\item 
+Q\+Timer $\ast$ \mbox{\hyperlink{class_atoken_a8fce27116d6fb0677957e0ff62b89d4f}{timer}}
+\item 
+Q\+String \mbox{\hyperlink{class_atoken_a6d7942c9f7b8efce33ed2be37a1b50f9}{uu}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Atoken $\ast$ \mbox{\hyperlink{class_atoken_a64cd0dfae1f0920f15808455ade0a22d}{ui}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+免责协议窗口类 免责协议窗口这个类相关的函数 
+
+在文件 atoken.\+h 第 25 行定义.
+
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_atoken_aadd0736364d1ff22bc2d78f6416d0e6c}\label{class_atoken_aadd0736364d1ff22bc2d78f6416d0e6c}} 
+\index{Atoken@{Atoken}!Atoken@{Atoken}}
+\index{Atoken@{Atoken}!Atoken@{Atoken}}
+\doxysubsubsection{\texorpdfstring{Atoken()}{Atoken()}}
+{\footnotesize\ttfamily Atoken\+::\+Atoken (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+免责协议窗口构造函数 
+
+
+\begin{DoxyParams}{参数}
+{\em parent} & 父类指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 atoken.\+cpp 第 18 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18                               :}
+\DoxyCodeLine{19     QWidget(parent),}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_atoken_a64cd0dfae1f0920f15808455ade0a22d}{ui}}(\textcolor{keyword}{new} Ui::Atoken)}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_atoken_a64cd0dfae1f0920f15808455ade0a22d}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{23     setAttribute(Qt::WA\_QuitOnClose,\textcolor{keyword}{false});}
+\DoxyCodeLine{24     QSettings *configIniWrite = \textcolor{keyword}{new} QSettings(\mbox{\hyperlink{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}{allpath}}+\textcolor{stringliteral}{"/set.ini"}, QSettings::IniFormat);}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{comment}{//向ini文件中写入内容,setValue函数的两个参数是键值对}}
+\DoxyCodeLine{27     \mbox{\hyperlink{class_atoken_a6d7942c9f7b8efce33ed2be37a1b50f9}{uu}}=configIniWrite-\/>value(\textcolor{stringliteral}{"agree"}).toString();}
+\DoxyCodeLine{28     \textcolor{keywordflow}{if}(configIniWrite-\/>value(\textcolor{stringliteral}{"agree"}).toString()!=\textcolor{stringliteral}{"true"})}
+\DoxyCodeLine{29     \{}
+\DoxyCodeLine{30         \mbox{\hyperlink{class_atoken_a64cd0dfae1f0920f15808455ade0a22d}{ui}}-\/>pushButton-\/>setEnabled(\textcolor{keyword}{false});}
+\DoxyCodeLine{31     \}\textcolor{keywordflow}{else}}
+\DoxyCodeLine{32         \mbox{\hyperlink{class_atoken_a64cd0dfae1f0920f15808455ade0a22d}{ui}}-\/>pushButton-\/>setEnabled(\textcolor{keyword}{true});}
+\DoxyCodeLine{33     \textcolor{keyword}{delete} configIniWrite;}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \mbox{\hyperlink{class_atoken_a49bf8467cbdeaaa7fa018b87f695a761}{time}} = \textcolor{keyword}{new} QTime();}
+\DoxyCodeLine{36     \mbox{\hyperlink{class_atoken_a8fce27116d6fb0677957e0ff62b89d4f}{timer}} = \textcolor{keyword}{new} QTimer();}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     connect(\mbox{\hyperlink{class_atoken_a8fce27116d6fb0677957e0ff62b89d4f}{timer}},SIGNAL(timeout()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_atoken_a360158303dd20c7601f8c19c5801318f}{slot\_timer\_timeout}}()));}
+\DoxyCodeLine{39     connect(\mbox{\hyperlink{class_atoken_a64cd0dfae1f0920f15808455ade0a22d}{ui}}-\/>pushButton,SIGNAL(clicked(\textcolor{keywordtype}{bool})),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_atoken_a2cd286a76a3af55ad5594af6131a0f3a}{slot\_agree}}()));}
+\DoxyCodeLine{40     \mbox{\hyperlink{class_atoken_a49bf8467cbdeaaa7fa018b87f695a761}{time}}-\/>start();}
+\DoxyCodeLine{41     \mbox{\hyperlink{class_atoken_a8fce27116d6fb0677957e0ff62b89d4f}{timer}}-\/>start(1000);}
+\DoxyCodeLine{42     Qt::WindowFlags m\_flags = windowFlags();}
+\DoxyCodeLine{43     setWindowFlags(m\_flags | Qt::WindowStaysOnTopHint);}
+\DoxyCodeLine{44     show();}
+\DoxyCodeLine{45 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{class_atoken_aadd0736364d1ff22bc2d78f6416d0e6c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_atoken_a2c50e5b20366695582dc559ad1bf864d}\label{class_atoken_a2c50e5b20366695582dc559ad1bf864d}} 
+\index{Atoken@{Atoken}!````~Atoken@{$\sim$Atoken}}
+\index{````~Atoken@{$\sim$Atoken}!Atoken@{Atoken}}
+\doxysubsubsection{\texorpdfstring{$\sim$Atoken()}{~Atoken()}}
+{\footnotesize\ttfamily Atoken\+::$\sim$\+Atoken (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+免责协议窗口析构函数 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 atoken.\+cpp 第 50 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{51 \{}
+\DoxyCodeLine{52     \textcolor{keyword}{delete} \mbox{\hyperlink{class_atoken_a64cd0dfae1f0920f15808455ade0a22d}{ui}};}
+\DoxyCodeLine{53     \textcolor{keyword}{delete} \mbox{\hyperlink{class_atoken_a49bf8467cbdeaaa7fa018b87f695a761}{time}};}
+\DoxyCodeLine{54     \textcolor{keyword}{delete} \mbox{\hyperlink{class_atoken_a8fce27116d6fb0677957e0ff62b89d4f}{timer}};}
+\DoxyCodeLine{55 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_atoken_ad6c6ef72c0e5dc3e73b0a0e91955719b}\label{class_atoken_ad6c6ef72c0e5dc3e73b0a0e91955719b}} 
+\index{Atoken@{Atoken}!closeEvent@{closeEvent}}
+\index{closeEvent@{closeEvent}!Atoken@{Atoken}}
+\doxysubsubsection{\texorpdfstring{closeEvent()}{closeEvent()}}
+{\footnotesize\ttfamily void Atoken\+::close\+Event (\begin{DoxyParamCaption}\item[{Q\+Close\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+免责协议窗口关闭重载函数 
+
+
+\begin{DoxyParams}{参数}
+{\em event} & 关闭活动 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 atoken.\+cpp 第 61 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{62 \{}
+\DoxyCodeLine{63     \textcolor{comment}{//QMessageBox::about(NULL,"tip","本窗口禁止关闭哦");}}
+\DoxyCodeLine{64     show();}
+\DoxyCodeLine{65     qDebug()<<\textcolor{stringliteral}{"???"};}
+\DoxyCodeLine{66 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_atoken_a2cd286a76a3af55ad5594af6131a0f3a}\label{class_atoken_a2cd286a76a3af55ad5594af6131a0f3a}} 
+\index{Atoken@{Atoken}!slot\_agree@{slot\_agree}}
+\index{slot\_agree@{slot\_agree}!Atoken@{Atoken}}
+\doxysubsubsection{\texorpdfstring{slot\_agree}{slot\_agree}}
+{\footnotesize\ttfamily void Atoken\+::slot\+\_\+agree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+免责协议窗口槽函数-\/同意按钮按下处理内容 
+
+\begin{DoxyNote}{注解}
+写配置下一次窗口不会自动弹出 
+\end{DoxyNote}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 atoken.\+cpp 第 93 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{93                        \{}
+\DoxyCodeLine{94     this-\/>hide();}
+\DoxyCodeLine{95     QSettings *configIniWrite = \textcolor{keyword}{new} QSettings(\mbox{\hyperlink{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}{allpath}}+\textcolor{stringliteral}{"/set.ini"}, QSettings::IniFormat);}
+\DoxyCodeLine{96     \textcolor{comment}{//向ini文件中写入内容,setValue函数的两个参数是键值对}}
+\DoxyCodeLine{97     configIniWrite-\/>setValue(\textcolor{stringliteral}{"agree"}, \textcolor{stringliteral}{"true"});}
+\DoxyCodeLine{98     \textcolor{keyword}{delete} configIniWrite;}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{class_atoken_a2cd286a76a3af55ad5594af6131a0f3a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_atoken_a360158303dd20c7601f8c19c5801318f}\label{class_atoken_a360158303dd20c7601f8c19c5801318f}} 
+\index{Atoken@{Atoken}!slot\_timer\_timeout@{slot\_timer\_timeout}}
+\index{slot\_timer\_timeout@{slot\_timer\_timeout}!Atoken@{Atoken}}
+\doxysubsubsection{\texorpdfstring{slot\_timer\_timeout}{slot\_timer\_timeout}}
+{\footnotesize\ttfamily void Atoken\+::slot\+\_\+timer\+\_\+timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+免责协议窗口槽函数-\/定时器处理内容 
+
+\begin{DoxyNote}{注解}
+30s后同意按钮才可按下 
+\end{DoxyNote}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 atoken.\+cpp 第 72 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{72                                \{}
+\DoxyCodeLine{73     \textcolor{keywordtype}{int} firetime=30-\/(\mbox{\hyperlink{class_atoken_a49bf8467cbdeaaa7fa018b87f695a761}{time}}-\/>elapsed()/1000);}
+\DoxyCodeLine{74     \textcolor{comment}{//qDebug()<<firetime;}}
+\DoxyCodeLine{75     \textcolor{comment}{//qDebug()<<firetime\_sec;}}
+\DoxyCodeLine{76     \textcolor{comment}{//qDebug()<<tmp;}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78     \textcolor{keywordflow}{if}(firetime<3)\{}
+\DoxyCodeLine{79         \mbox{\hyperlink{class_atoken_a64cd0dfae1f0920f15808455ade0a22d}{ui}}-\/>pushButton-\/>setEnabled(\textcolor{keyword}{true});}
+\DoxyCodeLine{80         setAttribute(Qt::WA\_DeleteOnClose);}
+\DoxyCodeLine{81     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(firetime>=3 \&\& \mbox{\hyperlink{class_atoken_a6d7942c9f7b8efce33ed2be37a1b50f9}{uu}}!=\textcolor{stringliteral}{"true"})\{}
+\DoxyCodeLine{82         Qt::WindowFlags m\_flags = windowFlags();}
+\DoxyCodeLine{83         setWindowFlags(m\_flags | Qt::WindowStaysOnTopHint);}
+\DoxyCodeLine{84         show();}
+\DoxyCodeLine{85     \}   }
+\DoxyCodeLine{86     \mbox{\hyperlink{class_atoken_a64cd0dfae1f0920f15808455ade0a22d}{ui}}-\/>label-\/>setText(\textcolor{stringliteral}{"等待"}+QString::number(firetime)+\textcolor{stringliteral}{"s后才能确认"});}
+\DoxyCodeLine{87 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{class_atoken_a360158303dd20c7601f8c19c5801318f_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_atoken_a49bf8467cbdeaaa7fa018b87f695a761}\label{class_atoken_a49bf8467cbdeaaa7fa018b87f695a761}} 
+\index{Atoken@{Atoken}!time@{time}}
+\index{time@{time}!Atoken@{Atoken}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily Q\+Time$\ast$ Atoken\+::time}
+
+
+
+在文件 atoken.\+h 第 34 行定义.
+
+\mbox{\Hypertarget{class_atoken_a8fce27116d6fb0677957e0ff62b89d4f}\label{class_atoken_a8fce27116d6fb0677957e0ff62b89d4f}} 
+\index{Atoken@{Atoken}!timer@{timer}}
+\index{timer@{timer}!Atoken@{Atoken}}
+\doxysubsubsection{\texorpdfstring{timer}{timer}}
+{\footnotesize\ttfamily Q\+Timer$\ast$ Atoken\+::timer}
+
+
+
+在文件 atoken.\+h 第 35 行定义.
+
+\mbox{\Hypertarget{class_atoken_a64cd0dfae1f0920f15808455ade0a22d}\label{class_atoken_a64cd0dfae1f0920f15808455ade0a22d}} 
+\index{Atoken@{Atoken}!ui@{ui}}
+\index{ui@{ui}!Atoken@{Atoken}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Atoken$\ast$ Atoken\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 atoken.\+h 第 43 行定义.
+
+\mbox{\Hypertarget{class_atoken_a6d7942c9f7b8efce33ed2be37a1b50f9}\label{class_atoken_a6d7942c9f7b8efce33ed2be37a1b50f9}} 
+\index{Atoken@{Atoken}!uu@{uu}}
+\index{uu@{uu}!Atoken@{Atoken}}
+\doxysubsubsection{\texorpdfstring{uu}{uu}}
+{\footnotesize\ttfamily Q\+String Atoken\+::uu}
+
+
+
+在文件 atoken.\+h 第 37 行定义.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{atoken_8h}{atoken.\+h}}\item 
+\mbox{\hyperlink{atoken_8cpp}{atoken.\+cpp}}\end{DoxyCompactItemize}

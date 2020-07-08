@@ -1,0 +1,407 @@
+\hypertarget{class_fw}{}\doxysection{Fw类 参考}
+\label{class_fw}\index{Fw@{Fw}}
+
+
+飞王脚本-\/多线程类 飞王脚本相关的函数配置  
+
+
+
+
+{\ttfamily \#include $<$form.\+h$>$}
+
+
+
+类 Fw 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_fw__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Fw 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_fw__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{信号}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_fw_a9064128a17e30a08a88472b130620da0}{done}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_fw_a1f390f178d2cbdf1e9798f2274c2821e}{Fw}} (Q\+Object $\ast$parent=0)
+\item 
+bool \mbox{\hyperlink{class_fw_a6c3d8a44da9fcead8c3b3d30638e4495}{jianchashoufa}} (Q\+String shoufajingling)
+\begin{DoxyCompactList}\small\item\em 飞王脚本-\/检查首发 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fw_a2d9c75f21fed335adcb107d2853355cf}{shezhishoufa}} (Q\+String shoufajingling)
+\begin{DoxyCompactList}\small\item\em 飞王脚本-\/设置首发 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_fw_a48c154e57e82cd89d34e2c5127b8a9b7}{status}}
+\item 
+int \mbox{\hyperlink{class_fw_a7d75a90497e4060c766cbfdcb43a7771}{now}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_fw_a2336962e1178af8b6fe6dbf349cd1a8e}{run}} ()
+\begin{DoxyCompactList}\small\item\em 飞王脚本-\/线程启动函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+飞王脚本-\/多线程类 飞王脚本相关的函数配置 
+
+在文件 form.\+h 第 88 行定义.
+
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_fw_a1f390f178d2cbdf1e9798f2274c2821e}\label{class_fw_a1f390f178d2cbdf1e9798f2274c2821e}} 
+\index{Fw@{Fw}!Fw@{Fw}}
+\index{Fw@{Fw}!Fw@{Fw}}
+\doxysubsubsection{\texorpdfstring{Fw()}{Fw()}}
+{\footnotesize\ttfamily Fw\+::\+Fw (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+在文件 form.\+h 第 95 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{96         : QThread(parent)}
+\DoxyCodeLine{97     \{}
+\DoxyCodeLine{98         \mbox{\hyperlink{class_fw_a48c154e57e82cd89d34e2c5127b8a9b7}{status}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{99     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_fw_a9064128a17e30a08a88472b130620da0}\label{class_fw_a9064128a17e30a08a88472b130620da0}} 
+\index{Fw@{Fw}!done@{done}}
+\index{done@{done}!Fw@{Fw}}
+\doxysubsubsection{\texorpdfstring{done}{done}}
+{\footnotesize\ttfamily void Fw\+::done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_fw_a6c3d8a44da9fcead8c3b3d30638e4495}\label{class_fw_a6c3d8a44da9fcead8c3b3d30638e4495}} 
+\index{Fw@{Fw}!jianchashoufa@{jianchashoufa}}
+\index{jianchashoufa@{jianchashoufa}!Fw@{Fw}}
+\doxysubsubsection{\texorpdfstring{jianchashoufa()}{jianchashoufa()}}
+{\footnotesize\ttfamily bool Fw\+::jianchashoufa (\begin{DoxyParamCaption}\item[{Q\+String}]{shoufajingling }\end{DoxyParamCaption})}
+
+
+
+飞王脚本-\/检查首发 
+
+
+\begin{DoxyParams}{参数}
+{\em shoufajingling} & 要检查的精灵 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+返回当前首发是否与检查相同 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{返回值}
+{\em true} & 当前首发与检查相同 \\
+\hline
+{\em false} & 当前首发与检查不同 \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 form.\+cpp 第 571 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{571                                             \{}
+\DoxyCodeLine{572     \textcolor{comment}{//QVariant x,y;}}
+\DoxyCodeLine{573     \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(1000);}
+\DoxyCodeLine{574     QString tmp=\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a7abfd21911d9917bad69f48e54c22eed}{Ocr}}(194,376,293,477,\textcolor{stringliteral}{"ffffff-\/111111"},1.0);}
+\DoxyCodeLine{575     \textcolor{keywordflow}{if}(tmp.contains(shoufajingling))\{}
+\DoxyCodeLine{576         qDebug()<<shoufajingling;}
+\DoxyCodeLine{577         qDebug()<<tmp;}
+\DoxyCodeLine{578         \mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}=shoufajingling;}
+\DoxyCodeLine{579         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(940,28);}
+\DoxyCodeLine{580         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{581         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{582     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{583         qDebug()<<shoufajingling;}
+\DoxyCodeLine{584         qDebug()<<tmp;}
+\DoxyCodeLine{585         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{586     \}}
+\DoxyCodeLine{587 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{class_fw_a6c3d8a44da9fcead8c3b3d30638e4495_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_fw_a6c3d8a44da9fcead8c3b3d30638e4495_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_fw_a2336962e1178af8b6fe6dbf349cd1a8e}\label{class_fw_a2336962e1178af8b6fe6dbf349cd1a8e}} 
+\index{Fw@{Fw}!run@{run}}
+\index{run@{run}!Fw@{Fw}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Fw\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+飞王脚本-\/线程启动函数 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 form.\+cpp 第 616 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{616             \{}
+\DoxyCodeLine{617     QVariant x,y;}
+\DoxyCodeLine{618     \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_fw_a48c154e57e82cd89d34e2c5127b8a9b7}{status}}==\textcolor{keyword}{true})\{}
+\DoxyCodeLine{619         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}!=\textcolor{stringliteral}{"艾欧丽娅"} \&\& \mbox{\hyperlink{xy_8cpp_a41461f0789f05b4eada3c31940bc6e52}{xy\_shibiejifangjingling}}()==\textcolor{stringliteral}{"艾欧丽娅"})}
+\DoxyCodeLine{620             \mbox{\hyperlink{ext_8cpp_a77f100ccfb5a76cf7077eca85eda6643}{jinglingjineng}}=\textcolor{stringliteral}{"有女初长成1"};}
+\DoxyCodeLine{621         \mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}=\mbox{\hyperlink{xy_8cpp_a41461f0789f05b4eada3c31940bc6e52}{xy\_shibiejifangjingling}}();}
+\DoxyCodeLine{622         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}==\textcolor{stringliteral}{"圣灵谱尼"})}
+\DoxyCodeLine{623             \mbox{\hyperlink{ext_8cpp_a77f100ccfb5a76cf7077eca85eda6643}{jinglingjineng}}=\textcolor{stringliteral}{"第五"};}
+\DoxyCodeLine{624         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}( 0, 0, 1000, 600, \textcolor{stringliteral}{"fw-\/djjh.bmp"}, \textcolor{stringliteral}{"000000"}, 0.9, 0, x, y)!=-\/1)\{}
+\DoxyCodeLine{625             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{626             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{627             \mbox{\hyperlink{ext_8cpp_a5561be898305c4b40cf9b218a9407583}{fw\_allactive}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{628         \}}
+\DoxyCodeLine{629         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"fw-\/djjh.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)==-\/1 \&\& \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}( 0, 0, 1000, 600, \textcolor{stringliteral}{"fw-\/pd1.bmp"}, \textcolor{stringliteral}{"000000"}, 0.9, 0, x, y)!=-\/1)}
+\DoxyCodeLine{630             \mbox{\hyperlink{ext_8cpp_a5561be898305c4b40cf9b218a9407583}{fw\_allactive}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{631         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"fw-\/lq.bmp|fw-\/lq1.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)}
+\DoxyCodeLine{632             \mbox{\hyperlink{ext_8cpp_a395a7992015450933dac4492565ad55a}{fw\_lqactive}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{633         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"fw-\/ll.bmp|fw-\/ll1.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)}
+\DoxyCodeLine{634             \mbox{\hyperlink{ext_8cpp_a7339b67042185a9e72b1b9ba1ca648c9}{fw\_llactive}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{635         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"fw-\/cx.bmp|fw-\/cx.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)}
+\DoxyCodeLine{636             \mbox{\hyperlink{ext_8cpp_a1c0b0e4f03d9cde71fe369d5cdeec786}{fw\_cxactive}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{637         qDebug()<<\mbox{\hyperlink{ext_8cpp_a395a7992015450933dac4492565ad55a}{fw\_lqactive}}<<\mbox{\hyperlink{ext_8cpp_a7339b67042185a9e72b1b9ba1ca648c9}{fw\_llactive}}<<\mbox{\hyperlink{ext_8cpp_a1c0b0e4f03d9cde71fe369d5cdeec786}{fw\_cxactive}};}
+\DoxyCodeLine{638         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5561be898305c4b40cf9b218a9407583}{fw\_allactive}}==\textcolor{keyword}{true} \&\& \mbox{\hyperlink{ext_8cpp_a395a7992015450933dac4492565ad55a}{fw\_lqactive}}==\textcolor{keyword}{true} \&\& \mbox{\hyperlink{ext_8cpp_a7339b67042185a9e72b1b9ba1ca648c9}{fw\_llactive}}==\textcolor{keyword}{true} \&\& \mbox{\hyperlink{ext_8cpp_a1c0b0e4f03d9cde71fe369d5cdeec786}{fw\_cxactive}}==\textcolor{keyword}{true})\{}
+\DoxyCodeLine{639             \mbox{\hyperlink{ext_8cpp_ae498a9bffa16c29faa9b4580f90ea270}{fw\_trueactive}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{640             \textcolor{comment}{//QMessageBox::information(NULL,"this","三种效果已成功打完");}}
+\DoxyCodeLine{641             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{642         \}\textcolor{keywordflow}{else}}
+\DoxyCodeLine{643             \mbox{\hyperlink{ext_8cpp_ae498a9bffa16c29faa9b4580f90ea270}{fw\_trueactive}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{644 }
+\DoxyCodeLine{645         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5561be898305c4b40cf9b218a9407583}{fw\_allactive}}==\textcolor{keyword}{true} \&\& \mbox{\hyperlink{ext_8cpp_ae498a9bffa16c29faa9b4580f90ea270}{fw\_trueactive}}==\textcolor{keyword}{false})\{}
+\DoxyCodeLine{646             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"fw-\/bf.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{647                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{648                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{649             \}}
+\DoxyCodeLine{650             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"fw-\/wg.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{651                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{652                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{653             \}}
+\DoxyCodeLine{654             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"fw-\/bs.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{655                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{656                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{657             \}}
+\DoxyCodeLine{658             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"fw-\/js.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{659                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{660                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{661             \}}
+\DoxyCodeLine{662             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"fw-\/qz.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{663                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{664                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{665             \}}
+\DoxyCodeLine{666         \}}
+\DoxyCodeLine{667 }
+\DoxyCodeLine{668         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5561be898305c4b40cf9b218a9407583}{fw\_allactive}}==\textcolor{keyword}{false} || \mbox{\hyperlink{ext_8cpp_ae498a9bffa16c29faa9b4580f90ea270}{fw\_trueactive}}==\textcolor{keyword}{false})\{}
+\DoxyCodeLine{669             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(150,189,329,223,\textcolor{stringliteral}{"fw-\/lj0.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1 \&\& \mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}!=\textcolor{stringliteral}{"艾欧丽娅"})\{}
+\DoxyCodeLine{670                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"fw-\/bb.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{671                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{672                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{673                 \}}
+\DoxyCodeLine{674             \}}
+\DoxyCodeLine{675             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"fw-\/zdmb1.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1 \&\& \mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}==\textcolor{stringliteral}{"艾欧丽娅"})\{}
+\DoxyCodeLine{676                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(169,485);}
+\DoxyCodeLine{677                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{678                 \mbox{\hyperlink{ext_8cpp_a7fb78f5bc261d2f34aae351dc13c28cc}{fw\_goal}}=\textcolor{stringliteral}{"第一"};}
+\DoxyCodeLine{679             \}}
+\DoxyCodeLine{680             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(172,283,295,384,\textcolor{stringliteral}{"fw-\/wc1.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1 \&\& \mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}==\textcolor{stringliteral}{"艾欧丽娅"})\{}
+\DoxyCodeLine{681                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(415,485);}
+\DoxyCodeLine{682                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{683                 \mbox{\hyperlink{ext_8cpp_a7fb78f5bc261d2f34aae351dc13c28cc}{fw\_goal}}=\textcolor{stringliteral}{"第二"};}
+\DoxyCodeLine{684             \}}
+\DoxyCodeLine{685             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(172,283,295,384,\textcolor{stringliteral}{"fw-\/wc1.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1 \&\& \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(435, 296, 539, 364,\textcolor{stringliteral}{"fw-\/wc2.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{686                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(679, 184, 800, 231,\textcolor{stringliteral}{"fw-\/30.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{687                     \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}!=\textcolor{stringliteral}{"艾欧丽娅"})\{}
+\DoxyCodeLine{688                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"fw-\/bb.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{689                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{690                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{691                         \}}
+\DoxyCodeLine{692                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_fw_a6c3d8a44da9fcead8c3b3d30638e4495}{jianchashoufa}}(\textcolor{stringliteral}{"艾欧丽娅"})==\textcolor{keyword}{false})}
+\DoxyCodeLine{693                             \mbox{\hyperlink{class_fw_a2d9c75f21fed335adcb107d2853355cf}{shezhishoufa}}(\textcolor{stringliteral}{"艾欧丽娅"});}
+\DoxyCodeLine{694                     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}==\textcolor{stringliteral}{"艾欧丽娅"})\{}
+\DoxyCodeLine{695                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(689,485);}
+\DoxyCodeLine{696                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{697                         \mbox{\hyperlink{ext_8cpp_a7fb78f5bc261d2f34aae351dc13c28cc}{fw\_goal}}=\textcolor{stringliteral}{"第三0"};}
+\DoxyCodeLine{698                     \}}
+\DoxyCodeLine{699                 \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(679, 184, 800, 231,\textcolor{stringliteral}{"fw-\/31.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{700                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(689,485);}
+\DoxyCodeLine{701                     \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{702                     \mbox{\hyperlink{ext_8cpp_a7fb78f5bc261d2f34aae351dc13c28cc}{fw\_goal}}=\textcolor{stringliteral}{"第三1"};}
+\DoxyCodeLine{703                 \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(679, 184, 800, 231,\textcolor{stringliteral}{"fw-\/32.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{704                     \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}!=\textcolor{stringliteral}{"圣灵谱尼"})\{}
+\DoxyCodeLine{705                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"fw-\/bb.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{706                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{707                             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{708                         \}}
+\DoxyCodeLine{709                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_fw_a6c3d8a44da9fcead8c3b3d30638e4495}{jianchashoufa}}(\textcolor{stringliteral}{"圣灵谱尼"})==\textcolor{keyword}{false})}
+\DoxyCodeLine{710                             \mbox{\hyperlink{class_fw_a2d9c75f21fed335adcb107d2853355cf}{shezhishoufa}}(\textcolor{stringliteral}{"圣灵谱尼"});}
+\DoxyCodeLine{711                     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}==\textcolor{stringliteral}{"圣灵谱尼"})\{}
+\DoxyCodeLine{712                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(689,485);}
+\DoxyCodeLine{713                         \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{714                         \mbox{\hyperlink{ext_8cpp_a7fb78f5bc261d2f34aae351dc13c28cc}{fw\_goal}}=\textcolor{stringliteral}{"第三2"};}
+\DoxyCodeLine{715                     \}}
+\DoxyCodeLine{716                 \}}
+\DoxyCodeLine{717             \}}
+\DoxyCodeLine{718             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a7fb78f5bc261d2f34aae351dc13c28cc}{fw\_goal}}==\textcolor{stringliteral}{"第一"} || \mbox{\hyperlink{ext_8cpp_a7fb78f5bc261d2f34aae351dc13c28cc}{fw\_goal}}==\textcolor{stringliteral}{"第二"} || \mbox{\hyperlink{ext_8cpp_a7fb78f5bc261d2f34aae351dc13c28cc}{fw\_goal}}==\textcolor{stringliteral}{"第三0"} || \mbox{\hyperlink{ext_8cpp_a7fb78f5bc261d2f34aae351dc13c28cc}{fw\_goal}}==\textcolor{stringliteral}{"第三1"})\{}
+\DoxyCodeLine{719                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}==\textcolor{stringliteral}{"艾欧丽娅"})}
+\DoxyCodeLine{720                     \mbox{\hyperlink{xy_8cpp_ac42138cfdbe6de4a997a561ae8d4b0c0}{xy\_skill}}(\textcolor{stringliteral}{"有女初长成1"},\textcolor{stringliteral}{"jn-\/ynczc.bmp"},\textcolor{stringliteral}{"有女初长成1"});}
+\DoxyCodeLine{721 }
+\DoxyCodeLine{722             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a7fb78f5bc261d2f34aae351dc13c28cc}{fw\_goal}}==\textcolor{stringliteral}{"第三2"})\{}
+\DoxyCodeLine{723                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a5bd7389a02c70f26bc06def4612f1021}{dangqianjingling}}==\textcolor{stringliteral}{"圣灵谱尼"})}
+\DoxyCodeLine{724                     \mbox{\hyperlink{xy_8cpp_ac42138cfdbe6de4a997a561ae8d4b0c0}{xy\_skill}}(\textcolor{stringliteral}{"第五"},\textcolor{stringliteral}{""},\textcolor{stringliteral}{"第五"});}
+\DoxyCodeLine{725             \}}
+\DoxyCodeLine{726 }
+\DoxyCodeLine{727         \}}
+\DoxyCodeLine{728         \textcolor{comment}{//确认}}
+\DoxyCodeLine{729         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"fw-\/zdqr.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{730             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{731             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{732         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"fw-\/sbqr.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{733             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{734             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{735         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"fw-\/cxjhqr.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{736             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{737             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{738         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(319,180,656,399,\textcolor{stringliteral}{"fw-\/xgqr.bmp"},\textcolor{stringliteral}{"000000"},0.9,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{739             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{740             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{741         \}}
+\DoxyCodeLine{742 }
+\DoxyCodeLine{743         \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(200);}
+\DoxyCodeLine{744     \}}
+\DoxyCodeLine{745 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_fw_a2336962e1178af8b6fe6dbf349cd1a8e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_fw_a2d9c75f21fed335adcb107d2853355cf}\label{class_fw_a2d9c75f21fed335adcb107d2853355cf}} 
+\index{Fw@{Fw}!shezhishoufa@{shezhishoufa}}
+\index{shezhishoufa@{shezhishoufa}!Fw@{Fw}}
+\doxysubsubsection{\texorpdfstring{shezhishoufa()}{shezhishoufa()}}
+{\footnotesize\ttfamily void Fw\+::shezhishoufa (\begin{DoxyParamCaption}\item[{Q\+String}]{shoufajingling }\end{DoxyParamCaption})}
+
+
+
+飞王脚本-\/设置首发 
+
+
+\begin{DoxyParams}{参数}
+{\em shoufajingling} & 要设置的精灵 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 form.\+cpp 第 592 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{592                                            \{}
+\DoxyCodeLine{593     QVariant x,y;}
+\DoxyCodeLine{594     \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_fw_a6c3d8a44da9fcead8c3b3d30638e4495}{jianchashoufa}}(shoufajingling)==\textcolor{keyword}{false})\{}
+\DoxyCodeLine{595         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_abb23c0c5cb164e723889392930b6b12e}{FindStr}}(192,377,791,476,shoufajingling,\textcolor{stringliteral}{"ffffff-\/111111"},0.9,x,y)!=-\/1)\{}
+\DoxyCodeLine{596             qDebug()<<x.toInt()<<y.toInt();}
+\DoxyCodeLine{597             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt()+5,y.toInt()+20);}
+\DoxyCodeLine{598             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{599             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{600             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{601             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_abb23c0c5cb164e723889392930b6b12e}{FindStr}}(0,0,1000,600,\textcolor{stringliteral}{"fw-\/sf.bmp"},\textcolor{stringliteral}{"000000"},0.9,x,y)!=-\/1)\{}
+\DoxyCodeLine{602                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{603                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{604             \}}
+\DoxyCodeLine{605             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_fw_a6c3d8a44da9fcead8c3b3d30638e4495}{jianchashoufa}}(shoufajingling))\{}
+\DoxyCodeLine{606                 \mbox{\hyperlink{ext_8cpp_ac26512b3c2b9e30f1b821ecd075baa7c}{dangqianshoufa}}=shoufajingling;}
+\DoxyCodeLine{607                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{608             \}}
+\DoxyCodeLine{609         \}}
+\DoxyCodeLine{610     \}}
+\DoxyCodeLine{611 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_fw_a2d9c75f21fed335adcb107d2853355cf_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{class_fw_a2d9c75f21fed335adcb107d2853355cf_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_fw_a7d75a90497e4060c766cbfdcb43a7771}\label{class_fw_a7d75a90497e4060c766cbfdcb43a7771}} 
+\index{Fw@{Fw}!now@{now}}
+\index{now@{now}!Fw@{Fw}}
+\doxysubsubsection{\texorpdfstring{now}{now}}
+{\footnotesize\ttfamily int Fw\+::now}
+
+
+
+在文件 form.\+h 第 94 行定义.
+
+\mbox{\Hypertarget{class_fw_a48c154e57e82cd89d34e2c5127b8a9b7}\label{class_fw_a48c154e57e82cd89d34e2c5127b8a9b7}} 
+\index{Fw@{Fw}!status@{status}}
+\index{status@{status}!Fw@{Fw}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily bool Fw\+::status}
+
+
+
+在文件 form.\+h 第 93 行定义.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{form_8h}{form.\+h}}\item 
+\mbox{\hyperlink{form_8cpp}{form.\+cpp}}\end{DoxyCompactItemize}

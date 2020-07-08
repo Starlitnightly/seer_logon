@@ -1,0 +1,10 @@
+<map id="Nono::slot_shibie" name="Nono::slot_shibie">
+<area shape="rect" id="node1" title="识别对战精灵" alt="" coords="5,34,128,61"/>
+<area shape="rect" id="node2" href="$xy_8cpp.html#a925196a6417535216cfd7ea936e4ca50" title="延迟线程（非阻塞）" alt="" coords="787,33,842,60"/>
+<area shape="rect" id="node3" href="$class_nono.html#ad59e12150488b6dcc0b113f0dc2d044a" title="获取百度ocr的accesstoken" alt="" coords="176,34,333,61"/>
+<area shape="rect" id="node5" href="$class_nono.html#a103f87a55f9ec70d34f7c219b6343761" title="识别对面精灵的名字" alt="" coords="193,93,316,120"/>
+<area shape="rect" id="node4" href="$class_nono.html#a2248710774a77c06dd7977bba561e716" title="获取accesstoken网页返回内容处理" alt="" coords="381,27,587,68"/>
+<area shape="rect" id="node6" href="$class_dm_1_1_idmsoft.html#a030020531afa28b1ce053468ffe95888" title=" " alt="" coords="411,93,557,120"/>
+<area shape="rect" id="node7" href="$class_nono.html#ae6ae4d7add2cd4d6ffc0bfc62ba5351b" title="Nono::recognitionRequestFinished" alt="" coords="399,144,569,186"/>
+<area shape="rect" id="node8" href="$class_nono.html#aa793569399f3e07fb9513129a6df55ac" title="nono窗口提示信息" alt="" coords="635,89,738,116"/>
+</map>

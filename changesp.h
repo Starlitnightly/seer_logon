@@ -1,3 +1,12 @@
+/**
+ * @file changesp.h
+ * @brief 一键换背包窗口头文件
+ * @author starlitnightly
+ * @email Starlitnightly@163.com
+ * @version 1.0.0
+ * @date 2020-07-09
+ * @license GPL
+ */
 #ifndef CHANGESP_H
 #define CHANGESP_H
 
@@ -18,7 +27,11 @@
 namespace Ui {
 class Changesp;
 }
-//非法确认
+
+/**
+ * @brief 自动非法确认-多线程类
+ * 用于自动按下赛尔号的确认按钮的多线程
+ */
 class ffAutoC: public QThread
 {
     Q_OBJECT
@@ -36,7 +49,10 @@ protected:
 signals:
     void done();
 };
-
+/**
+ * @brief 一键换背包窗口类
+ * 一键换背包窗口这个类相关的函数
+ */
 class Changesp : public QWidget
 {
     Q_OBJECT

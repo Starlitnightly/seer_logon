@@ -1,0 +1,6 @@
+<map id="xy_shibiemap" name="xy_shibiemap">
+<area shape="rect" id="node1" title="星夜_识别当前所在的地图" alt="" coords="134,56,237,83"/>
+<area shape="rect" id="node2" href="$class_jlw.html#a145a21cdc00244f97d9f91aa52d1a556" title="精灵王大乱斗脚本&#45;线程启动函数" alt="" coords="12,5,79,32"/>
+<area shape="rect" id="node3" href="$class_team.html#ab247d3622b762f0f4a856c79f4823b88" title="一键战队贡献脚本&#45;线程启动函数" alt="" coords="5,56,85,83"/>
+<area shape="rect" id="node4" href="$class_top.html#ae9f4ac4d51bf31effd9f028f940dbbaf" title="巅峰脚本&#45;线程启动函数" alt="" coords="11,107,80,133"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Form::spt_selected" name="Form::spt_selected">
+<area shape="rect" id="node1" title="spt徽章脚本单选框被选中后初始化" alt="" coords="145,5,279,32"/>
+<area shape="rect" id="node2" href="$class_form.html#a9a921e26a02f23bffdea4330d6795796" title="脚本窗口构造函数" alt="" coords="5,5,96,32"/>
+</map>

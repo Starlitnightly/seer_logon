@@ -1,0 +1,5 @@
+<map id="Sixworld::god_changesp" name="Sixworld::god_changesp">
+<area shape="rect" id="node1" title="六界脚本&#45;对战中更换精灵" alt="" coords="352,5,515,32"/>
+<area shape="rect" id="node2" href="$class_sixworld.html#ae04b87558d8f5c5b41d3a69079eef987" title="六界脚本&#45;对战出战设置" alt="" coords="153,5,303,32"/>
+<area shape="rect" id="node3" href="$class_sixworld.html#a5363d5ae5c05203784eaf6d95b7b0d9e" title="六界脚本&#45;线程启动函数" alt="" coords="6,5,103,32"/>
+</map>

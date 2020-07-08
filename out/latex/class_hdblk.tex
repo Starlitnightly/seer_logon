@@ -1,0 +1,183 @@
+\hypertarget{class_hdblk}{}\doxysection{Hdblk类 参考}
+\label{class_hdblk}\index{Hdblk@{Hdblk}}
+
+
+混沌布莱克脚本-\/多线程类 脚本相关的配置  
+
+
+
+
+{\ttfamily \#include $<$form.\+h$>$}
+
+
+
+类 Hdblk 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_hdblk__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Hdblk 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_hdblk__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{信号}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_hdblk_a52a0aec33480af6d0f0baca5f0775c39}{done}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_hdblk_acd0af7f2b6c0a4947ecad098568a6cd9}{Hdblk}} (Q\+Object $\ast$parent=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_hdblk_a0030084a9add1e811f3cca372dc83d80}{status}}
+\item 
+int \mbox{\hyperlink{class_hdblk_a0da03c6e79cdeb0ec518274fe6295b2f}{now}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_hdblk_aaf03ee62b81c598e11019cd87a0c3455}{run}} ()
+\begin{DoxyCompactList}\small\item\em 混沌布莱克脚本-\/线程启动函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+混沌布莱克脚本-\/多线程类 脚本相关的配置 
+
+在文件 form.\+h 第 132 行定义.
+
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_hdblk_acd0af7f2b6c0a4947ecad098568a6cd9}\label{class_hdblk_acd0af7f2b6c0a4947ecad098568a6cd9}} 
+\index{Hdblk@{Hdblk}!Hdblk@{Hdblk}}
+\index{Hdblk@{Hdblk}!Hdblk@{Hdblk}}
+\doxysubsubsection{\texorpdfstring{Hdblk()}{Hdblk()}}
+{\footnotesize\ttfamily Hdblk\+::\+Hdblk (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+在文件 form.\+h 第 139 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{140         : QThread(parent)}
+\DoxyCodeLine{141     \{}
+\DoxyCodeLine{142         \mbox{\hyperlink{class_hdblk_a0030084a9add1e811f3cca372dc83d80}{status}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{143     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_hdblk_a52a0aec33480af6d0f0baca5f0775c39}\label{class_hdblk_a52a0aec33480af6d0f0baca5f0775c39}} 
+\index{Hdblk@{Hdblk}!done@{done}}
+\index{done@{done}!Hdblk@{Hdblk}}
+\doxysubsubsection{\texorpdfstring{done}{done}}
+{\footnotesize\ttfamily void Hdblk\+::done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_hdblk_aaf03ee62b81c598e11019cd87a0c3455}\label{class_hdblk_aaf03ee62b81c598e11019cd87a0c3455}} 
+\index{Hdblk@{Hdblk}!run@{run}}
+\index{run@{run}!Hdblk@{Hdblk}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Hdblk\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+混沌布莱克脚本-\/线程启动函数 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 form.\+cpp 第 814 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{814                \{}
+\DoxyCodeLine{815     QVariant x,y;}
+\DoxyCodeLine{816     \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_hdblk_a0030084a9add1e811f3cca372dc83d80}{status}}==\textcolor{keyword}{true})\{}
+\DoxyCodeLine{817         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"混布-\/宝箱.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)==-\/1)\{}
+\DoxyCodeLine{818             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"混布-\/抽取对手.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{819                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{820                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{821             \}}
+\DoxyCodeLine{822             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"混布-\/开启挑战.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{823                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{824                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{825             \}}
+\DoxyCodeLine{826             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"混布-\/抽取对手3.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{827                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{828                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{829             \}}
+\DoxyCodeLine{830             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"混布-\/开启挑战3.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{831                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{832                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{833             \}}
+\DoxyCodeLine{834             \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"混布-\/魔灵王一键.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{835                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{836                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{837             \}\textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"混布-\/690，592.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{838                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(690,592);}
+\DoxyCodeLine{839                 \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{840             \}}
+\DoxyCodeLine{841             \mbox{\hyperlink{xy_8cpp_afc5a3afd15ea1c25148483bd1df95ebf}{xy\_autofight}}();}
+\DoxyCodeLine{842             \mbox{\hyperlink{xy_8cpp_a719182cdae3e46550dffed25970ee9e0}{hdblk\_scriptset}}();}
+\DoxyCodeLine{843             \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(1000);}
+\DoxyCodeLine{844         \}\textcolor{keywordflow}{else}}
+\DoxyCodeLine{845             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{846             \textcolor{comment}{//QMessageBox::information(NULL,"this","混布脚本已自动停止");}}
+\DoxyCodeLine{847     \}}
+\DoxyCodeLine{848 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_hdblk_aaf03ee62b81c598e11019cd87a0c3455_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_hdblk_a0da03c6e79cdeb0ec518274fe6295b2f}\label{class_hdblk_a0da03c6e79cdeb0ec518274fe6295b2f}} 
+\index{Hdblk@{Hdblk}!now@{now}}
+\index{now@{now}!Hdblk@{Hdblk}}
+\doxysubsubsection{\texorpdfstring{now}{now}}
+{\footnotesize\ttfamily int Hdblk\+::now}
+
+
+
+在文件 form.\+h 第 138 行定义.
+
+\mbox{\Hypertarget{class_hdblk_a0030084a9add1e811f3cca372dc83d80}\label{class_hdblk_a0030084a9add1e811f3cca372dc83d80}} 
+\index{Hdblk@{Hdblk}!status@{status}}
+\index{status@{status}!Hdblk@{Hdblk}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily bool Hdblk\+::status}
+
+
+
+在文件 form.\+h 第 137 行定义.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{form_8h}{form.\+h}}\item 
+\mbox{\hyperlink{form_8cpp}{form.\+cpp}}\end{DoxyCompactItemize}

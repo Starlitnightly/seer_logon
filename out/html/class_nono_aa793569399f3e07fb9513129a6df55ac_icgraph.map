@@ -1,0 +1,8 @@
+<map id="Nono::slot_tip" name="Nono::slot_tip">
+<area shape="rect" id="node1" title="nono窗口提示信息" alt="" coords="747,33,850,59"/>
+<area shape="rect" id="node2" href="$class_nono.html#a3a59dc5f43458df16fc2dd5cd4aace99" title="nono窗口构造函数" alt="" coords="5,33,96,59"/>
+<area shape="rect" id="node3" href="$class_nono.html#ae6ae4d7add2cd4d6ffc0bfc62ba5351b" title="Nono::recognitionRequestFinished" alt="" coords="528,25,699,67"/>
+<area shape="rect" id="node6" href="$class_nono.html#a4cce37537ea1b3c71e05ed92a52570f2" title="nono状态改变" alt="" coords="315,87,480,114"/>
+<area shape="rect" id="node4" href="$class_nono.html#a103f87a55f9ec70d34f7c219b6343761" title="识别对面精灵的名字" alt="" coords="336,33,459,59"/>
+<area shape="rect" id="node5" href="$class_nono.html#ab754e1ac200a41a51f6d90b5d537fcea" title="识别对战精灵" alt="" coords="144,33,267,59"/>
+</map>

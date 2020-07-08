@@ -1,0 +1,5 @@
+<map id="Changesp::Putsp_bag" name="Changesp::Putsp_bag">
+<area shape="rect" id="node1" title="仓库精灵放入背包函数" alt="" coords="419,5,570,32"/>
+<area shape="rect" id="node2" href="$class_changesp.html#a94ce8e3a047a1b40319a51efed195f42" title="一键换背包主函数" alt="" coords="201,5,370,32"/>
+<area shape="rect" id="node3" href="$class_changesp.html#a70138fd9c5b0929a2c32a6700ed410af" title="一键换背包窗口构造函数" alt="" coords="5,5,152,32"/>
+</map>

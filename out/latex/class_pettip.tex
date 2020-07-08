@@ -1,0 +1,445 @@
+\hypertarget{class_pettip}{}\doxysection{Pettip类 参考}
+\label{class_pettip}\index{Pettip@{Pettip}}
+
+
+精灵技能快查窗口类 这个类写了整整一天，格式化精灵技能真难  
+
+
+
+
+{\ttfamily \#include $<$pettip.\+h$>$}
+
+
+
+类 Pettip 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{class_pettip__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Pettip 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{class_pettip__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 槽}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pettip_a951eadc166b8e212ef9b582ba6ea597c}{slot\+\_\+tip}} ()
+\begin{DoxyCompactList}\small\item\em 展示查询内容（ie控件模式） \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pettip_a3f10357631e72f192d6386b5c28c78a9}{slot\+\_\+replay\+Finished}} (Q\+Network\+Reply $\ast$reply)
+\begin{DoxyCompactList}\small\item\em 读取精灵技能 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pettip_ab7db62eecc28f6628081bb7b50920bd2}{slot\+\_\+getname}} (Q\+String name)
+\begin{DoxyCompactList}\small\item\em 读取json中精灵名称对应的图鉴地址 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pettip_a586e47bc92f4b71f8a0b7eef1cae4fe5}{slot\+\_\+buttonget}} ()
+\begin{DoxyCompactList}\small\item\em 精灵技能查询 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{信号}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pettip_a66a86a3b4925c3b8a5034739a5dd80b9}{sendmes}} (Q\+String msg)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pettip_a334c039991cc749c36d87ea74c6d28dd}{Pettip}} (Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em 精灵技能快查窗口构造函数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pettip_af86a6ad917437d54e1fbe19cbd406b92}{$\sim$\+Pettip}} ()
+\begin{DoxyCompactList}\small\item\em 精灵技能快查窗口析构函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \mbox{\hyperlink{class_pettip_a561a941df352b581194e6177285dddc7}{petname}}
+\item 
+Q\+Json\+Object \mbox{\hyperlink{class_pettip_ae584f5e8dc50d5671b3d75d1dc1d0771}{json\+Object}}
+\item 
+Q\+Json\+Parse\+Error \mbox{\hyperlink{class_pettip_a839b66a9db1ca36a28e7a80ae51356d2}{parse\+Json\+Err}}
+\item 
+Q\+Network\+Access\+Manager $\ast$ \mbox{\hyperlink{class_pettip_af64421e1010d79947c0ed5ff8f5615a0}{m\+\_\+manager}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Pettip $\ast$ \mbox{\hyperlink{class_pettip_abcc0c8db20700f6dc1ebd410d48ee2ff}{ui}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+精灵技能快查窗口类 这个类写了整整一天，格式化精灵技能真难 
+
+在文件 pettip.\+h 第 36 行定义.
+
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_pettip_a334c039991cc749c36d87ea74c6d28dd}\label{class_pettip_a334c039991cc749c36d87ea74c6d28dd}} 
+\index{Pettip@{Pettip}!Pettip@{Pettip}}
+\index{Pettip@{Pettip}!Pettip@{Pettip}}
+\doxysubsubsection{\texorpdfstring{Pettip()}{Pettip()}}
+{\footnotesize\ttfamily Pettip\+::\+Pettip (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+精灵技能快查窗口构造函数 
+
+
+\begin{DoxyParams}{参数}
+{\em parent} & 父类指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 pettip.\+cpp 第 19 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19                               :}
+\DoxyCodeLine{20     QWidget(parent),}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_pettip_abcc0c8db20700f6dc1ebd410d48ee2ff}{ui}}(\textcolor{keyword}{new} Ui::Pettip)}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_pettip_abcc0c8db20700f6dc1ebd410d48ee2ff}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{24     setAttribute(Qt::WA\_QuitOnClose,\textcolor{keyword}{false});}
+\DoxyCodeLine{25     \textcolor{comment}{//ui-\/>axWidget-\/>setControl(QString::fromUtf8("\{8856F961-\/340A-\/11D0-\/A96B-\/00C04FD705A2\}"));//注册组件ID}}
+\DoxyCodeLine{26     \textcolor{comment}{//ui-\/>axWidget-\/>setProperty("DisplayAlerts",false);//不显示警告信息}}
+\DoxyCodeLine{27     \textcolor{comment}{//ui-\/>axWidget-\/>setProperty("DisplayScrollBars",true);//不显示滚动条}}
+\DoxyCodeLine{28     \mbox{\hyperlink{class_pettip_af64421e1010d79947c0ed5ff8f5615a0}{m\_manager}} = \textcolor{keyword}{new} QNetworkAccessManager(\textcolor{keyword}{this});\textcolor{comment}{//新建QNetworkAccessManager对象}}
+\DoxyCodeLine{29     connect(\mbox{\hyperlink{class_pettip_af64421e1010d79947c0ed5ff8f5615a0}{m\_manager}}, SIGNAL(finished(QNetworkReply    *)), \textcolor{keyword}{this}, SLOT(\mbox{\hyperlink{class_pettip_a3f10357631e72f192d6386b5c28c78a9}{slot\_replayFinished}}(QNetworkReply*))); \textcolor{comment}{//关联信号和槽}}
+\DoxyCodeLine{30     connect(\mbox{\hyperlink{class_pettip_abcc0c8db20700f6dc1ebd410d48ee2ff}{ui}}-\/>pushButton,SIGNAL(clicked(\textcolor{keywordtype}{bool})),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_pettip_a586e47bc92f4b71f8a0b7eef1cae4fe5}{slot\_buttonget}}()));}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     QFile file(\mbox{\hyperlink{ext_8cpp_a7e6d0f0a8d52069a12b6caa36f38bfa6}{allpath}}+\textcolor{stringliteral}{"/json/data.json"});}
+\DoxyCodeLine{33     file.open(QIODevice::ReadOnly | QIODevice::Text);}
+\DoxyCodeLine{34     QString value = file.readAll();}
+\DoxyCodeLine{35     file.close();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     QJsonDocument document = QJsonDocument::fromJson(value.toUtf8(), \&\mbox{\hyperlink{class_pettip_a839b66a9db1ca36a28e7a80ae51356d2}{parseJsonErr}});}
+\DoxyCodeLine{38     \mbox{\hyperlink{class_pettip_ae584f5e8dc50d5671b3d75d1dc1d0771}{jsonObject}} = document.object();}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{class_pettip_a334c039991cc749c36d87ea74c6d28dd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_pettip_af86a6ad917437d54e1fbe19cbd406b92}\label{class_pettip_af86a6ad917437d54e1fbe19cbd406b92}} 
+\index{Pettip@{Pettip}!````~Pettip@{$\sim$Pettip}}
+\index{````~Pettip@{$\sim$Pettip}!Pettip@{Pettip}}
+\doxysubsubsection{\texorpdfstring{$\sim$Pettip()}{~Pettip()}}
+{\footnotesize\ttfamily Pettip\+::$\sim$\+Pettip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+精灵技能快查窗口析构函数 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 pettip.\+cpp 第 85 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{86 \{}
+\DoxyCodeLine{87     \textcolor{keyword}{delete} \mbox{\hyperlink{class_pettip_abcc0c8db20700f6dc1ebd410d48ee2ff}{ui}};}
+\DoxyCodeLine{88     \textcolor{keyword}{delete} \mbox{\hyperlink{class_pettip_af64421e1010d79947c0ed5ff8f5615a0}{m\_manager}};}
+\DoxyCodeLine{89 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_pettip_a66a86a3b4925c3b8a5034739a5dd80b9}\label{class_pettip_a66a86a3b4925c3b8a5034739a5dd80b9}} 
+\index{Pettip@{Pettip}!sendmes@{sendmes}}
+\index{sendmes@{sendmes}!Pettip@{Pettip}}
+\doxysubsubsection{\texorpdfstring{sendmes}{sendmes}}
+{\footnotesize\ttfamily void Pettip\+::sendmes (\begin{DoxyParamCaption}\item[{Q\+String}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_pettip_a66a86a3b4925c3b8a5034739a5dd80b9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_pettip_a586e47bc92f4b71f8a0b7eef1cae4fe5}\label{class_pettip_a586e47bc92f4b71f8a0b7eef1cae4fe5}} 
+\index{Pettip@{Pettip}!slot\_buttonget@{slot\_buttonget}}
+\index{slot\_buttonget@{slot\_buttonget}!Pettip@{Pettip}}
+\doxysubsubsection{\texorpdfstring{slot\_buttonget}{slot\_buttonget}}
+{\footnotesize\ttfamily void Pettip\+::slot\+\_\+buttonget (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+精灵技能查询 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 pettip.\+cpp 第 48 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48                            \{}
+\DoxyCodeLine{49     \mbox{\hyperlink{class_pettip_a561a941df352b581194e6177285dddc7}{petname}}=\mbox{\hyperlink{class_pettip_abcc0c8db20700f6dc1ebd410d48ee2ff}{ui}}-\/>textEdit-\/>toPlainText();}
+\DoxyCodeLine{50     qDebug()<<\mbox{\hyperlink{class_pettip_ae584f5e8dc50d5671b3d75d1dc1d0771}{jsonObject}}[\mbox{\hyperlink{class_pettip_a561a941df352b581194e6177285dddc7}{petname}}];}
+\DoxyCodeLine{51     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_pettip_ae584f5e8dc50d5671b3d75d1dc1d0771}{jsonObject}}[\mbox{\hyperlink{class_pettip_a561a941df352b581194e6177285dddc7}{petname}}].isNull())}
+\DoxyCodeLine{52         emit \mbox{\hyperlink{class_pettip_a66a86a3b4925c3b8a5034739a5dd80b9}{sendmes}}(\textcolor{stringliteral}{"当前精灵不存在，请输入完整名字"});}
+\DoxyCodeLine{53     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{54     \textcolor{keywordflow}{if} (!(\mbox{\hyperlink{class_pettip_a839b66a9db1ca36a28e7a80ae51356d2}{parseJsonErr}}.error == QJsonParseError::NoError)) \{}
+\DoxyCodeLine{55         qDebug()<<\textcolor{stringliteral}{"配置文件错误！"};}
+\DoxyCodeLine{56         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{57     \}}
+\DoxyCodeLine{58     emit \mbox{\hyperlink{class_pettip_a66a86a3b4925c3b8a5034739a5dd80b9}{sendmes}}(\mbox{\hyperlink{class_pettip_a561a941df352b581194e6177285dddc7}{petname}}+\textcolor{stringliteral}{"的技能查询中"});}
+\DoxyCodeLine{59     \mbox{\hyperlink{class_pettip_af64421e1010d79947c0ed5ff8f5615a0}{m\_manager}}-\/>get(QNetworkRequest(QUrl(\mbox{\hyperlink{class_pettip_ae584f5e8dc50d5671b3d75d1dc1d0771}{jsonObject}}[\mbox{\hyperlink{class_pettip_a561a941df352b581194e6177285dddc7}{petname}}].toString())));\textcolor{comment}{//发送请求}}
+\DoxyCodeLine{60     \}}
+\DoxyCodeLine{61 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{class_pettip_a586e47bc92f4b71f8a0b7eef1cae4fe5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_pettip_ab7db62eecc28f6628081bb7b50920bd2}\label{class_pettip_ab7db62eecc28f6628081bb7b50920bd2}} 
+\index{Pettip@{Pettip}!slot\_getname@{slot\_getname}}
+\index{slot\_getname@{slot\_getname}!Pettip@{Pettip}}
+\doxysubsubsection{\texorpdfstring{slot\_getname}{slot\_getname}}
+{\footnotesize\ttfamily void Pettip\+::slot\+\_\+getname (\begin{DoxyParamCaption}\item[{Q\+String}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+读取json中精灵名称对应的图鉴地址 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & 精灵名称 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 pettip.\+cpp 第 67 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{67                                      \{}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69     \mbox{\hyperlink{class_pettip_a561a941df352b581194e6177285dddc7}{petname}}=name;}
+\DoxyCodeLine{70     qDebug()<<\mbox{\hyperlink{class_pettip_ae584f5e8dc50d5671b3d75d1dc1d0771}{jsonObject}}[\mbox{\hyperlink{class_pettip_a561a941df352b581194e6177285dddc7}{petname}}];}
+\DoxyCodeLine{71     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_pettip_ae584f5e8dc50d5671b3d75d1dc1d0771}{jsonObject}}[\mbox{\hyperlink{class_pettip_a561a941df352b581194e6177285dddc7}{petname}}].isNull())}
+\DoxyCodeLine{72         emit \mbox{\hyperlink{class_pettip_a66a86a3b4925c3b8a5034739a5dd80b9}{sendmes}}(\textcolor{stringliteral}{"当前精灵不存在，请输入完整名字"});}
+\DoxyCodeLine{73     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{74         \textcolor{keywordflow}{if} (!(\mbox{\hyperlink{class_pettip_a839b66a9db1ca36a28e7a80ae51356d2}{parseJsonErr}}.error == QJsonParseError::NoError)) \{}
+\DoxyCodeLine{75             qDebug()<<\textcolor{stringliteral}{"配置文件错误！"};}
+\DoxyCodeLine{76             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{77         \}}
+\DoxyCodeLine{78         \mbox{\hyperlink{class_pettip_af64421e1010d79947c0ed5ff8f5615a0}{m\_manager}}-\/>get(QNetworkRequest(QUrl(\mbox{\hyperlink{class_pettip_ae584f5e8dc50d5671b3d75d1dc1d0771}{jsonObject}}[\mbox{\hyperlink{class_pettip_a561a941df352b581194e6177285dddc7}{petname}}].toString())));\textcolor{comment}{//发送请求}}
+\DoxyCodeLine{79     \}}
+\DoxyCodeLine{80 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_pettip_a3f10357631e72f192d6386b5c28c78a9}\label{class_pettip_a3f10357631e72f192d6386b5c28c78a9}} 
+\index{Pettip@{Pettip}!slot\_replayFinished@{slot\_replayFinished}}
+\index{slot\_replayFinished@{slot\_replayFinished}!Pettip@{Pettip}}
+\doxysubsubsection{\texorpdfstring{slot\_replayFinished}{slot\_replayFinished}}
+{\footnotesize\ttfamily void Pettip\+::slot\+\_\+replay\+Finished (\begin{DoxyParamCaption}\item[{Q\+Network\+Reply $\ast$}]{reply }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+读取精灵技能 
+
+
+\begin{DoxyParams}{参数}
+{\em reply} & 网页返回内容 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 pettip.\+cpp 第 108 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{109 \{}
+\DoxyCodeLine{110     QTextCodec *codec = QTextCodec::codecForName(\textcolor{stringliteral}{"GBK"});}
+\DoxyCodeLine{111         \textcolor{comment}{//使用utf8编码, 这样可以显示中文}}
+\DoxyCodeLine{112     QString str = codec-\/>toUnicode(reply-\/>readAll());}
+\DoxyCodeLine{113     \textcolor{comment}{//qDebug()<<str;}}
+\DoxyCodeLine{114     str.replace(QString(\textcolor{stringliteral}{"\(\backslash\)n"}), QString(\textcolor{stringliteral}{""}));}
+\DoxyCodeLine{115     str.replace(QString(\textcolor{stringliteral}{"\(\backslash\)t"}), QString(\textcolor{stringliteral}{""}));}
+\DoxyCodeLine{116     str.replace(QString(\textcolor{stringliteral}{"\(\backslash\)r"}), QString(\textcolor{stringliteral}{""}));}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118     QString tmp;}
+\DoxyCodeLine{119     QStringList li=str.split(\textcolor{stringliteral}{"<tbody>"});}
+\DoxyCodeLine{120     QStringList li1;}
+\DoxyCodeLine{121     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<li.length();i++)\{}
+\DoxyCodeLine{122         li1=li[i].split(\textcolor{stringliteral}{"</tbody>"});}
+\DoxyCodeLine{123         \textcolor{keywordflow}{if}(li1.length()!=0)}
+\DoxyCodeLine{124             tmp=li1[0];}
+\DoxyCodeLine{125     \}}
+\DoxyCodeLine{126     \textcolor{comment}{//tmp.replace("<td>","");}}
+\DoxyCodeLine{127     \textcolor{comment}{//tmp.replace("</td>","");}}
+\DoxyCodeLine{128     \mbox{\hyperlink{class_pettip_abcc0c8db20700f6dc1ebd410d48ee2ff}{ui}}-\/>tableWidget-\/>clear();}
+\DoxyCodeLine{129     \mbox{\hyperlink{class_pettip_abcc0c8db20700f6dc1ebd410d48ee2ff}{ui}}-\/>tableWidget-\/>horizontalHeader()-\/>setSectionResizeMode(QHeaderView::Stretch);\textcolor{comment}{//}}
+\DoxyCodeLine{130     \mbox{\hyperlink{class_pettip_abcc0c8db20700f6dc1ebd410d48ee2ff}{ui}}-\/>tableWidget-\/>verticalHeader()-\/>setSectionResizeMode(QHeaderView::Stretch);}
+\DoxyCodeLine{131     li=tmp.split(\textcolor{stringliteral}{"</tr>"});}
+\DoxyCodeLine{132     QStringList header;}
+\DoxyCodeLine{133     header << QStringLiteral(\textcolor{stringliteral}{"技能名"}) << QStringLiteral(\textcolor{stringliteral}{"攻击类型"}) << QStringLiteral(\textcolor{stringliteral}{"威力"})<<QStringLiteral(\textcolor{stringliteral}{"PP"})<<QStringLiteral(\textcolor{stringliteral}{"学习等级"})<<\textcolor{stringliteral}{"技能效果"};}
+\DoxyCodeLine{134     \mbox{\hyperlink{class_pettip_abcc0c8db20700f6dc1ebd410d48ee2ff}{ui}}-\/>tableWidget-\/>setRowCount(li.length());}
+\DoxyCodeLine{135     \mbox{\hyperlink{class_pettip_abcc0c8db20700f6dc1ebd410d48ee2ff}{ui}}-\/>tableWidget-\/>setColumnCount(6);}
+\DoxyCodeLine{136     \mbox{\hyperlink{class_pettip_abcc0c8db20700f6dc1ebd410d48ee2ff}{ui}}-\/>tableWidget-\/>setHorizontalHeaderLabels(header);}
+\DoxyCodeLine{137     \mbox{\hyperlink{class_pettip_abcc0c8db20700f6dc1ebd410d48ee2ff}{ui}}-\/>tableWidget-\/>horizontalHeader()-\/>setSectionResizeMode(0,QHeaderView::ResizeToContents);}
+\DoxyCodeLine{138     \mbox{\hyperlink{class_pettip_abcc0c8db20700f6dc1ebd410d48ee2ff}{ui}}-\/>tableWidget-\/>horizontalHeader()-\/>setSectionResizeMode(1,QHeaderView::ResizeToContents);}
+\DoxyCodeLine{139     \mbox{\hyperlink{class_pettip_abcc0c8db20700f6dc1ebd410d48ee2ff}{ui}}-\/>tableWidget-\/>horizontalHeader()-\/>setSectionResizeMode(2,QHeaderView::ResizeToContents);}
+\DoxyCodeLine{140     \mbox{\hyperlink{class_pettip_abcc0c8db20700f6dc1ebd410d48ee2ff}{ui}}-\/>tableWidget-\/>horizontalHeader()-\/>setSectionResizeMode(3,QHeaderView::ResizeToContents);}
+\DoxyCodeLine{141     \mbox{\hyperlink{class_pettip_abcc0c8db20700f6dc1ebd410d48ee2ff}{ui}}-\/>tableWidget-\/>horizontalHeader()-\/>setSectionResizeMode(4,QHeaderView::ResizeToContents);}
+\DoxyCodeLine{142     \mbox{\hyperlink{class_pettip_abcc0c8db20700f6dc1ebd410d48ee2ff}{ui}}-\/>tableWidget-\/>horizontalHeader()-\/>setSectionResizeMode(5,QHeaderView::ResizeToContents);}
+\DoxyCodeLine{143     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<li.length();i++)\{}
+\DoxyCodeLine{144         li1=li[i].split(\textcolor{stringliteral}{"</td>"});}
+\DoxyCodeLine{145         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<li1.length();j++)\{}
+\DoxyCodeLine{146            li1[j].replace(\textcolor{stringliteral}{"<td>"},\textcolor{stringliteral}{""});}
+\DoxyCodeLine{147            li1[j].replace(\textcolor{stringliteral}{"<td style=\(\backslash\)"text-\/align:left\(\backslash\)">"},\textcolor{stringliteral}{""});}
+\DoxyCodeLine{148            li1[j].replace(\textcolor{stringliteral}{"<tr>"},\textcolor{stringliteral}{""});}
+\DoxyCodeLine{149            li1[j].replace(\textcolor{stringliteral}{"<tr class=\(\backslash\)"odd\(\backslash\)">"},\textcolor{stringliteral}{""});}
+\DoxyCodeLine{150            \textcolor{keywordflow}{if}(li1[j].indexOf(\textcolor{stringliteral}{"check"})!=-\/1 || li1[j].indexOf(\textcolor{stringliteral}{"rel"})!=-\/1)}
+\DoxyCodeLine{151                \textcolor{keywordflow}{break};}
+\DoxyCodeLine{152            \mbox{\hyperlink{class_pettip_abcc0c8db20700f6dc1ebd410d48ee2ff}{ui}}-\/>tableWidget-\/>setItem(i, j, \textcolor{keyword}{new} QTableWidgetItem(li1[j]));}
+\DoxyCodeLine{153            qDebug()<<li1[j];}
+\DoxyCodeLine{154         \}}
+\DoxyCodeLine{155     \}}
+\DoxyCodeLine{156     \textcolor{comment}{//qDebug()<<str.indexOf("<tbody>");}}
+\DoxyCodeLine{157     \textcolor{comment}{//qDebug()<<str.indexOf("</tbody>");}}
+\DoxyCodeLine{158     \textcolor{comment}{//qDebug()<<str.mid(str.indexOf("<tbody>"),str.indexOf("</tbody>"));}}
+\DoxyCodeLine{159     \textcolor{comment}{//qDebug()<<str;}}
+\DoxyCodeLine{160     \textcolor{comment}{//QRegExp rx("<tbody.*?>*</tbody>");}}
+\DoxyCodeLine{161     \textcolor{comment}{//QRegExp rx("[a-\/zA-\/z]+://[\string^\(\backslash\)\(\backslash\)s]*");}}
+\DoxyCodeLine{162     \textcolor{comment}{//int pos = rx.indexIn(str);}}
+\DoxyCodeLine{163     \textcolor{comment}{//qDebug() << pos;}}
+\DoxyCodeLine{164     \textcolor{comment}{//for(int i=0;i<pos;i++)}}
+\DoxyCodeLine{165     \textcolor{comment}{//    qDebug()<<rx.cap(i);}}
+\DoxyCodeLine{166     reply-\/>deleteLater();\textcolor{comment}{//最后要释放replay对象}}
+\DoxyCodeLine{167 \}}
+
+\end{DoxyCode}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{class_pettip_a3f10357631e72f192d6386b5c28c78a9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_pettip_a951eadc166b8e212ef9b582ba6ea597c}\label{class_pettip_a951eadc166b8e212ef9b582ba6ea597c}} 
+\index{Pettip@{Pettip}!slot\_tip@{slot\_tip}}
+\index{slot\_tip@{slot\_tip}!Pettip@{Pettip}}
+\doxysubsubsection{\texorpdfstring{slot\_tip}{slot\_tip}}
+{\footnotesize\ttfamily void Pettip\+::slot\+\_\+tip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+展示查询内容（ie控件模式） 
+
+\begin{DoxyReturn}{返回}
+无 已作废，换用table来展示 
+\end{DoxyReturn}
+
+
+在文件 pettip.\+cpp 第 95 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{95                      \{}
+\DoxyCodeLine{96     \textcolor{comment}{//ui-\/>axWidget-\/>setControl(QString::fromUtf8("\{d27cdb6e-\/ae6d-\/11cf-\/96b8-\/444553540000\}"));}}
+\DoxyCodeLine{97     \textcolor{comment}{//ui-\/>axWidget-\/>setControl(QString::fromUtf8("\{8856F961-\/340A-\/11D0-\/A96B-\/00C04FD705A2\}"));//注册组件ID}}
+\DoxyCodeLine{98     \textcolor{comment}{//QString str=QString("http://news.4399.com/seer/tujian/64106.htm");//设置要打开的网页}}
+\DoxyCodeLine{99     \textcolor{comment}{//ui-\/>axWidget-\/>dynamicCall("Navigate(QString)",str);//显示网页}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_pettip_ae584f5e8dc50d5671b3d75d1dc1d0771}\label{class_pettip_ae584f5e8dc50d5671b3d75d1dc1d0771}} 
+\index{Pettip@{Pettip}!jsonObject@{jsonObject}}
+\index{jsonObject@{jsonObject}!Pettip@{Pettip}}
+\doxysubsubsection{\texorpdfstring{jsonObject}{jsonObject}}
+{\footnotesize\ttfamily Q\+Json\+Object Pettip\+::json\+Object}
+
+
+
+在文件 pettip.\+h 第 44 行定义.
+
+\mbox{\Hypertarget{class_pettip_af64421e1010d79947c0ed5ff8f5615a0}\label{class_pettip_af64421e1010d79947c0ed5ff8f5615a0}} 
+\index{Pettip@{Pettip}!m\_manager@{m\_manager}}
+\index{m\_manager@{m\_manager}!Pettip@{Pettip}}
+\doxysubsubsection{\texorpdfstring{m\_manager}{m\_manager}}
+{\footnotesize\ttfamily Q\+Network\+Access\+Manager$\ast$ Pettip\+::m\+\_\+manager}
+
+
+
+在文件 pettip.\+h 第 47 行定义.
+
+\mbox{\Hypertarget{class_pettip_a839b66a9db1ca36a28e7a80ae51356d2}\label{class_pettip_a839b66a9db1ca36a28e7a80ae51356d2}} 
+\index{Pettip@{Pettip}!parseJsonErr@{parseJsonErr}}
+\index{parseJsonErr@{parseJsonErr}!Pettip@{Pettip}}
+\doxysubsubsection{\texorpdfstring{parseJsonErr}{parseJsonErr}}
+{\footnotesize\ttfamily Q\+Json\+Parse\+Error Pettip\+::parse\+Json\+Err}
+
+
+
+在文件 pettip.\+h 第 45 行定义.
+
+\mbox{\Hypertarget{class_pettip_a561a941df352b581194e6177285dddc7}\label{class_pettip_a561a941df352b581194e6177285dddc7}} 
+\index{Pettip@{Pettip}!petname@{petname}}
+\index{petname@{petname}!Pettip@{Pettip}}
+\doxysubsubsection{\texorpdfstring{petname}{petname}}
+{\footnotesize\ttfamily Q\+String Pettip\+::petname}
+
+
+
+在文件 pettip.\+h 第 43 行定义.
+
+\mbox{\Hypertarget{class_pettip_abcc0c8db20700f6dc1ebd410d48ee2ff}\label{class_pettip_abcc0c8db20700f6dc1ebd410d48ee2ff}} 
+\index{Pettip@{Pettip}!ui@{ui}}
+\index{ui@{ui}!Pettip@{Pettip}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Pettip$\ast$ Pettip\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 pettip.\+h 第 56 行定义.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{pettip_8h}{pettip.\+h}}\item 
+\mbox{\hyperlink{pettip_8cpp}{pettip.\+cpp}}\end{DoxyCompactItemize}

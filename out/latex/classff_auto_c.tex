@@ -1,0 +1,167 @@
+\hypertarget{classff_auto_c}{}\doxysection{ff\+Auto\+C类 参考}
+\label{classff_auto_c}\index{ffAutoC@{ffAutoC}}
+
+
+自动非法确认-\/多线程类 用于自动按下赛尔号的确认按钮的多线程  
+
+
+
+
+{\ttfamily \#include $<$changesp.\+h$>$}
+
+
+
+类 ff\+AutoC 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{classff_auto_c__inherit__graph}
+\end{center}
+\end{figure}
+
+
+ff\+AutoC 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{classff_auto_c__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{信号}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classff_auto_c_abec5f3db10cb5042ae2066a6ed426a8f}{done}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classff_auto_c_a1a2db6539c9ad5024173403b45e34d88}{ff\+AutoC}} (Q\+Object $\ast$parent=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classff_auto_c_a5a6eb3bdef2fe445ec3315fc57bfea7c}{status}}
+\item 
+int \mbox{\hyperlink{classff_auto_c_a9f47fc33cdabcb07d30e2e226f9f5c34}{now}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classff_auto_c_a47e3627ad87c9951dd0138a59b8a062e}{run}} ()
+\begin{DoxyCompactList}\small\item\em 自动非法确认-\/线程启动函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+自动非法确认-\/多线程类 用于自动按下赛尔号的确认按钮的多线程 
+
+在文件 changesp.\+h 第 35 行定义.
+
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classff_auto_c_a1a2db6539c9ad5024173403b45e34d88}\label{classff_auto_c_a1a2db6539c9ad5024173403b45e34d88}} 
+\index{ffAutoC@{ffAutoC}!ffAutoC@{ffAutoC}}
+\index{ffAutoC@{ffAutoC}!ffAutoC@{ffAutoC}}
+\doxysubsubsection{\texorpdfstring{ffAutoC()}{ffAutoC()}}
+{\footnotesize\ttfamily ff\+Auto\+C\+::ff\+AutoC (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+在文件 changesp.\+h 第 42 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43         : QThread(parent)}
+\DoxyCodeLine{44     \{}
+\DoxyCodeLine{45         \mbox{\hyperlink{classff_auto_c_a5a6eb3bdef2fe445ec3315fc57bfea7c}{status}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{46     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classff_auto_c_abec5f3db10cb5042ae2066a6ed426a8f}\label{classff_auto_c_abec5f3db10cb5042ae2066a6ed426a8f}} 
+\index{ffAutoC@{ffAutoC}!done@{done}}
+\index{done@{done}!ffAutoC@{ffAutoC}}
+\doxysubsubsection{\texorpdfstring{done}{done}}
+{\footnotesize\ttfamily void ff\+Auto\+C\+::done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{classff_auto_c_a47e3627ad87c9951dd0138a59b8a062e}\label{classff_auto_c_a47e3627ad87c9951dd0138a59b8a062e}} 
+\index{ffAutoC@{ffAutoC}!run@{run}}
+\index{run@{run}!ffAutoC@{ffAutoC}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void ff\+Auto\+C\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+自动非法确认-\/线程启动函数 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 changesp.\+cpp 第 230 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{230                  \{}
+\DoxyCodeLine{231     QVariant x,y;}
+\DoxyCodeLine{232     \textcolor{keywordflow}{while}(\mbox{\hyperlink{classff_auto_c_a5a6eb3bdef2fe445ec3315fc57bfea7c}{status}}==\textcolor{keyword}{true})\{}
+\DoxyCodeLine{233         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(406, 322, 562, 402,\textcolor{stringliteral}{"放入背包确认.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{234             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{235             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{236         \}}
+\DoxyCodeLine{237         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(400, 200, 600, 300, \textcolor{stringliteral}{"数据非法.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{238             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{239             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{240         \}}
+\DoxyCodeLine{241         \textcolor{keywordflow}{if}(\mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a1fde0da7b0ec5c141bdb8b38bc809ea0}{FindPic}}(0,0,1000,600,\textcolor{stringliteral}{"消息盒子x.bmp"},\textcolor{stringliteral}{"000000"},0.8,0,x,y)!=-\/1)\{}
+\DoxyCodeLine{242             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_a49c9f38bed76689957f7218c265b7c49}{MoveTo}}(x.toInt(),y.toInt());}
+\DoxyCodeLine{243             \mbox{\hyperlink{ext_8cpp_a02a7230d0f93f7aa4a80065a9e032ae1}{dm}}.\mbox{\hyperlink{class_dm_1_1_idmsoft_ad28afe0a9d51358420621d7db04fce5a}{LeftClick}}();}
+\DoxyCodeLine{244         \}}
+\DoxyCodeLine{245 }
+\DoxyCodeLine{246         \mbox{\hyperlink{xy_8cpp_a925196a6417535216cfd7ea936e4ca50}{Delay}}(1000);}
+\DoxyCodeLine{247     \}}
+\DoxyCodeLine{248 \}}
+
+\end{DoxyCode}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{classff_auto_c_a47e3627ad87c9951dd0138a59b8a062e_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classff_auto_c_a9f47fc33cdabcb07d30e2e226f9f5c34}\label{classff_auto_c_a9f47fc33cdabcb07d30e2e226f9f5c34}} 
+\index{ffAutoC@{ffAutoC}!now@{now}}
+\index{now@{now}!ffAutoC@{ffAutoC}}
+\doxysubsubsection{\texorpdfstring{now}{now}}
+{\footnotesize\ttfamily int ff\+Auto\+C\+::now}
+
+
+
+在文件 changesp.\+h 第 41 行定义.
+
+\mbox{\Hypertarget{classff_auto_c_a5a6eb3bdef2fe445ec3315fc57bfea7c}\label{classff_auto_c_a5a6eb3bdef2fe445ec3315fc57bfea7c}} 
+\index{ffAutoC@{ffAutoC}!status@{status}}
+\index{status@{status}!ffAutoC@{ffAutoC}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily bool ff\+Auto\+C\+::status}
+
+
+
+在文件 changesp.\+h 第 40 行定义.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{changesp_8h}{changesp.\+h}}\item 
+\mbox{\hyperlink{changesp_8cpp}{changesp.\+cpp}}\end{DoxyCompactItemize}

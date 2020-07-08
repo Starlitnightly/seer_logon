@@ -1,0 +1,9 @@
+<map id="MainWindow::Binddm" name="MainWindow::Binddm">
+<area shape="rect" id="node1" title="绑定大漠插件到游戏窗口" alt="" coords="6,132,154,159"/>
+<area shape="rect" id="node2" href="$mainwindow_8cpp.html#aba7796214ee355db55422f9e96b04c4b" title="自动注册大漠插件函数" alt="" coords="245,5,337,32"/>
+<area shape="rect" id="node3" href="$class_dm_1_1_idmsoft.html#ac613915480150995254d94d76db8b5db" title=" " alt="" coords="205,56,377,83"/>
+<area shape="rect" id="node4" href="$class_dm_1_1_idmsoft.html#a1fde0da7b0ec5c141bdb8b38bc809ea0" title=" " alt="" coords="219,107,363,133"/>
+<area shape="rect" id="node5" href="$class_dm_1_1_idmsoft.html#aa23a47dcd81e3fc64507cf0364b64adc" title=" " alt="" coords="203,157,378,184"/>
+<area shape="rect" id="node6" href="$class_dm_1_1_idmsoft.html#a15736c89aa13ec837b7b359490fafa1a" title=" " alt="" coords="219,208,362,235"/>
+<area shape="rect" id="node7" href="$class_dm_1_1_idmsoft.html#a9a09b4a9745c5865be71ca6a8c2a7da1" title=" " alt="" coords="217,259,364,285"/>
+</map>

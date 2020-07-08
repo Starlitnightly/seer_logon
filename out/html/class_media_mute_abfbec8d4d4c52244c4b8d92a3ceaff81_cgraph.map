@@ -1,0 +1,4 @@
+<map id="MediaMute::UnMute" name="MediaMute::UnMute">
+<area shape="rect" id="node1" title="解除静音" alt="" coords="5,12,144,39"/>
+<area shape="rect" id="node2" href="$class_c_muted_session_events.html#a10c7f85eca91e1ddb87a714deb928e05" title=" " alt="" coords="193,5,346,46"/>
+</map>
