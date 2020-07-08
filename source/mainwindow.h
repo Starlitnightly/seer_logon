@@ -48,6 +48,7 @@ public:
     void Binddm();
     bool bind_status;
     QNetworkAccessManager *nam;
+    void closeEvent(QCloseEvent *event);
 private:
     Ui::MainWindow *ui;
     Atoken *ato;
@@ -56,6 +57,7 @@ private:
     Nono *n;
     Changesp *csp;
     CdkForm *cd;
+
 
 
 

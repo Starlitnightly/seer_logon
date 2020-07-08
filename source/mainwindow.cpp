@@ -759,6 +759,15 @@ void MainWindow::slot_author(){
                                          "\n-\n"
                                          );
 }
+/**
+ * @brief 主窗口关闭重载函数
+ * @param event 关闭活动
+ * @return 无
+ */
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+    exit(0);
+}
 /*以下函数作废*/
 void MainWindow::GreenfireTimer(){
     //绿火计时器

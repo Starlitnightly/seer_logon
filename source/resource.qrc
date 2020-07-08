@@ -1,10 +1,10 @@
 <RCC>
     <qresource prefix="/">
-        <file>test.dll</file>
         <file>style.qss</file>
         <file>nono3.gif</file>
         <file>buff_VIP_5.png</file>
         <file>nonotip.png</file>
         <file>nonobiao.png</file>
+        <file>test.dll</file>
     </qresource>
 </RCC>
