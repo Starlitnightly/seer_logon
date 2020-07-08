@@ -1,0 +1,18 @@
+/* This is just an example.  You shouldn't do this. */
+#fiddlerhook-toolbar-button
+{
+  list-style-image: url("chrome://fiddlerhook/skin/toolbar-button.png");
+  -moz-image-region: rect(0px 24px 24px 0px);
+}
+#fiddlerhook-toolbar-button:hover
+{
+  -moz-image-region: rect(24px 24px 48px  0px);
+}
+[iconsize="small"] #fiddlerhook-toolbar-button
+{
+  -moz-image-region: rect( 0px 40px 16px 24px);
+}
+[iconsize="small"] #fiddlerhook-toolbar-button:hover
+{
+  -moz-image-region: rect(24px 40px 40px 24px);
+}

@@ -1,0 +1,11 @@
+<!ENTITY fiddlerhook.label "Monitor with Fiddler">
+<!ENTITY fiddlerhookToolbar.label "Fiddler">
+<!ENTITY fiddlerhookToolbar.tooltip "Launch Fiddler">
+<!ENTITY fiddlerhookStatusBar.optionOpportune "Use Fiddler automatically">
+<!ENTITY fiddlerhookStatusBar.optionForce "Force traffic to Fiddler">
+<!ENTITY fiddlerhookStatusBar.optionDisable "Do not use Fiddler">
+<!ENTITY fiddlerhookStatusBar.miClearCache "Clear Firefox Cache">
+<!ENTITY fiddlerhookStatusBar.miClearCookies "Clear Firefox Cookies">
+<!ENTITY fiddlerhookStatusBar.showStatusBar "Show StatusBar item">
+<!ENTITY fiddlerhookStatusBar.launchFiddler "Launch Fiddler now">
+<!ENTITY fiddlerhookStatusBar.showCertMgr "Trust FiddlerRoot certificate...">

@@ -1,0 +1,55 @@
+﻿<!-- id=3：最后一周 
+     king=“”:图标类型，1=精灵，2=付费，3=其他，4=暂时作废的ICON -->
+<seerBox>
+	<subPanel id="1" className="com.robot.app2.control.SeerBox.SeerBoxOnePanel" res="SeerBoxOnePanel">
+		<btn type="module" url = "app/ChangLeaderMainPanel" />
+		<btn type="module" url = "app/XteamChimerismMainPanel" />
+		<btn type="module" url = "app/OranCompletelyBodyMianPanel" />
+	</subPanel>
+	<subPanel id="2" className="com.robot.app2.control.SeerBox.SeerBoxTwoPanel" res="SeerBoxTwoPanel">
+		<btn type="module" url = "app/DiamondTaskMainPanel" itemClass="com.robot.app2.control.SeerBox.MiniItem1Panel"/>
+		<btn type="module" url = "app/SeerOnlineSendGiftPanel2015"  itemClass="com.robot.app2.control.SeerBox.MiniItem2Panel"/>
+		<btn type="module" url = "app/MeritSystemOnlineMianPanel"  itemClass="com.robot.app2.control.SeerBox.MiniItem3Panel"/>
+		<btn type="module" url = "app/PetWarMain2105NewPanel"  itemClass="com.robot.app2.control.SeerBox.MiniItem4Panel"/>
+		<btn type="module" url = "app/CollectResistantStonePanel"  itemClass="com.robot.app2.control.SeerBox.MiniItem5Panel"/>
+		<btn type="module" url = "app/AnniversaryLoginGiftPanel"  itemClass="com.robot.app2.control.SeerBox.MiniItem6Panel"/>
+		<btn type="module" url = "app/TeamJoinPanel"  itemClass="com.robot.app2.control.SeerBox.MiniItem7Panel"/>
+		<btn type="map" url = "1095" itemClass="com.robot.app2.control.SeerBox.MiniItem8Panel"/>
+	</subPanel>
+	<subPanel id="3" className="com.robot.app2.control.SeerBox.SeerBoxSevenPanel" res="SeerBoxSevenPanel">
+		<btn type="module" url = "app/SuitChange
+		" name="谱尼40W" kind="3"/>
+		<btn type="module" url = "app/FilmStarDraw" name="三神兽" kind="3"/>
+        <btn type="module" url = "app/FireDragonPreheatPanel" name="炎龙抽奖" kind="3"/>
+		<btn type="module" url = "app/SendGodPetEveryDayPanel" name="朱雀之子" kind="3"/>
+		<btn type="module" url = "app/MidAutumnCheerPanel" name="阿多拉" kind="3"/>	
+        <btn type="module" url = "app/ThanksgivingDayActivityPanel" name="每天抽精灵" kind="3"/>
+        <btn type="module" url = "app/KingSoulBelss0324MainPanel" name="每日体力上限" kind="3"/>
+        <btn type="module" url = "app/ReturnLoginChild4Panel" name="代金券" kind="3"/>	
+		<btn type="module" url = "app/VIPSevenAnniversaryOfTheFiveTreasuresLotteryPanel" name="每天两次" kind="3"/>	
+		<btn type="module" url = "app/MengPetGivePanel" name="萌神兽" kind="3"/>	
+		<btn type="module" url = "app/GiftLuckyStarPanel1" name="年费兔子" kind="3"/>	
+		<btn type="module" url = "app/TotemWorshipPanel" name="图腾水晶" kind="3"/>	
+		<btn type="module" url = "app/LiYaSiMainPanel" name="星空之子" kind="3"/>	
+		<btn type="module" url = "app/LordOfLightMainPanel" name="灵王强化" kind="3"/>	
+		<btn type="module" url = "app/RewardForOldPlayersPanel" name="迈尔斯" kind="3"/>	
+		<btn type="module" url = "app/BootyBayPanel" name="每日骰子重组" kind="3"/>	
+		<btn type="module" url = "app/TigerFightShadowPanel" name="每日重组" kind="3"/>	
+		<btn type="module" url = "app/ImperishableLightPanel" name="五天两个重组" kind="3"/>
+		<btn type="module" url = "app/KSdarkWing0407MainPanel" name="红绿宝石" kind="3"/>
+		<btn type="module" url = "app/ClassicPetSkinSellPanel" name="经典皮肤" kind="3"/>
+		<btn type="module" url = "app/DragonhawkMainPanel" name="黄金龙鹰" kind="3"/>
+	</subPanel>
+	<subPanel id="4" className="com.robot.app2.control.SeerBox.SeerBoxFourPanel" res="SeerBoxFourPanel">
+		<!-- <btn type="module" url = "app/GoldAndSilverDevilMainPanel"  startTime="2017/3/24"  endTime="2017/3/31" />  -->
+	</subPanel>
+	<subPanel id="5" updateNum="0" className="com.robot.app2.control.SeerBox.SeerBoxFivePanel" res="SeerBoxFivePanel">
+		<item name="雷伊" productId="" sAni="5" dAni="4"/>
+		<item name="盖亚" productId="" sAni="5" dAni="4"/>
+		<item name="卡修斯" productId="249098" sAni="5" dAni="4"/>
+		<item name="布莱克" productId="249099" sAni="5" dAni="4"/>
+		<item name="缪斯" productId="249100" sAni="5" dAni="4"/>
+	</subPanel>
+	<subPanel id="6" className="com.robot.app2.control.SeerBox.SeerBoxSixPanel" res="SeerBoxSixPanel">
+	</subPanel>
+</seerBox>

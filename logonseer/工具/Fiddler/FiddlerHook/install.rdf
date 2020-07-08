@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+ xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>fiddlerhook@fiddler2.com</em:id>
+    <em:name>FiddlerHook</em:name>
+    <em:type>2</em:type>
+    <em:version>2.6.0.4</em:version>
+    <em:creator>Telerik</em:creator>
+    <em:description>Integrate Fiddler into Firefox</em:description>
+    <em:homepageURL>http://fiddler2.com/r/?FIDDLERHOOKHELP</em:homepageURL>
+    <!--em:updateURL>http://fiddler2.com/r/?FIDDLERHOOKRDF</em:updateURL -->
+    <em:aboutURL>chrome://fiddlerhook/content/about.xul</em:aboutURL>
+    <!--em:optionsURL>chrome://fiddlerhook/content/options.xul</em:optionsURL-->
+    <em:iconURL>chrome://fiddlerhook/content/fiddlerhook.png</em:iconURL>
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- firefox -->
+        <em:minVersion>4.0</em:minVersion>
+        <em:maxVersion>42.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+  </Description>
+</RDF>

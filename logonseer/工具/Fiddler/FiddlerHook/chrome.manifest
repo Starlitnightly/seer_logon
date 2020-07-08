@@ -1,0 +1,5 @@
+content	fiddlerhook	content/
+locale	fiddlerhook	en-US	locale/en-US/
+skin	fiddlerhook	classic/1.0	skin/
+overlay	chrome://browser/content/browser.xul	chrome://fiddlerhook/content/firefoxOverlay.xul
+style	chrome://global/content/customizeToolbar.xul	chrome://fiddlerhook/skin/overlay.css

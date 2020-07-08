@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	- Copyright (c) 2014 Telerik
+	-
+	- Permission to use, copy, modify, and distribute this file for any
+	- purpose with or without fee is hereby granted, provided that the above
+	- copyright notice and this permission notice appear in all copies.
+	-
+	- THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+	- WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+	- MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+	- ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+	- WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+	- ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+	- OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+	- -->
+
+<?xml-stylesheet href="chrome://fiddlerhook/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://fiddlerhook/locale/fiddlerhook.dtd">
+<overlay id="fiddlerhook-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+		<script src="overlay.js"/>
+		
+	<stringbundleset id="stringbundleset">
+			<stringbundle id="fiddlerhook-strings" src="chrome://fiddlerhook/locale/fiddlerhook.properties"/>
+	</stringbundleset>
+
+	<!-- https://developer.mozilla.org/En/Code_snippets:Toolbar#Adding_button_by_default -->
+	<toolbarpalette id="BrowserToolbarPalette">
+		<toolbarbutton id="fiddlerhook-toolbar-button"
+			label="&fiddlerhookToolbar.label;"
+			tooltiptext="&fiddlerhookToolbar.tooltip;"
+			oncommand="fiddlerhook.onToolbarButtonCommand()"
+			class="toolbarbutton-1 chromeclass-toolbar-additional"/>
+	</toolbarpalette>
+
+		<!-- https://developer.mozilla.org/en/XUL/menuitem -->
+		<menupopup id="menu_ToolsPopup">
+		<menu id="fiddlerhookMenu" accesskey="f"  label="&fiddlerhook.label;" insertbefore="sanitizeSeparator">
+			<menupopup id="fiddlerHookMainMenu">
+				<menuitem id="rdoMainFHOptionOpportune" accesskey="a" label="&fiddlerhookStatusBar.optionOpportune;" name="rdoMainFHOption" type="radio" oncommand="fiddlerhook.onMenuCommand(event);"/>
+				<menuitem id="rdoMainFHOptionForce" accesskey="F" label="&fiddlerhookStatusBar.optionForce;" name="rdoMainFHOption" type="radio"  oncommand="fiddlerhook.onMenuCommand(event);"/>
+				<menuitem id="rdoMainFHOptionDisable" accesskey="n" label="&fiddlerhookStatusBar.optionDisable;" name="rdoMainFHOption" type="radio" oncommand="fiddlerhook.onMenuCommand(event);"/>
+				<menuseparator/>
+				<menuitem id="miCertMgr" label="&fiddlerhookStatusBar.showCertMgr;" accesskey="R" oncommand="fiddlerhook.onCertImport(event)"/>
+				<menuitem id="miMainShowSB" accesskey="S" label="&fiddlerhookStatusBar.showStatusBar;" checked="true" name="miMainShowSB" type="checkbox" oncommand="fiddlerhook.onMenuCommand(event);"/>
+				<menuseparator/>
+				<menuitem id="miMnuClearCache" accesskey="C" label="&fiddlerhookStatusBar.miClearCache;" oncommand="fiddlerhook.onClearCacheCommand(event)"/>
+				<menuitem id="miMnuClearCookies" accesskey="K" label="&fiddlerhookStatusBar.miClearCookies;" oncommand="fiddlerhook.onClearCookiesCommand(event);"/>
+				<menuseparator/>
+				<menuitem id="miLaunchFiddler" accesskey="L" label="&fiddlerhookStatusBar.launchFiddler;" name="miMainLaunchFiddler" oncommand="fiddlerhook.onToolbarButtonCommand();"/>
+			</menupopup>
+		</menu>
+	</menupopup>
+ 
+	<!-- https://developer.mozilla.org/en/XUL/PopupGuide/MenuItems#Checkbox_Menu_Items -->
+	<popupset>
+		<menupopup id="fiddlerHookStatusMenu" position="before_end">
+		<menuitem id="rdoFHOptionOpportune" accesskey="a" label="&fiddlerhookStatusBar.optionOpportune;" name="rdoFHOption" type="radio" oncommand="fiddlerhook.onMenuCommand(event);"/>
+		<menuitem id="rdoFHOptionForce" accesskey="F" label="&fiddlerhookStatusBar.optionForce;" name="rdoFHOption" type="radio"  oncommand="fiddlerhook.onMenuCommand(event);"/>
+			<menuitem id="rdoFHOptionDisable" accesskey="n" label="&fiddlerhookStatusBar.optionDisable;" name="rdoFHOption" type="radio" oncommand="fiddlerhook.onMenuCommand(event);"/>
+			<menuseparator/>
+		<menuitem id="miClearCache" accesskey="C" label="&fiddlerhookStatusBar.miClearCache;" type="menuitem"  oncommand="fiddlerhook.onClearCacheCommand(event);"/>
+			<menuitem id="miClearCookies" accesskey="k" label="&fiddlerhookStatusBar.miClearCookies;" type="menuitem" oncommand="fiddlerhook.onClearCookiesCommand(event);"/>
+		 </menupopup>
+	</popupset>
+
+	<!-- https://developer.mozilla.org/en/Creating_a_dynamic_status_bar_extension -->
+	<statusbar id="status-bar">
+		<statusbarpanel id="status-bar-panel-FiddlerHook"
+			 label="FiddlerHook"
+			 tooltiptext="Fiddler"
+			 popup="fiddlerHookStatusMenu"
+			 context="fiddlerHookStatusMenu"
+		/>
+	</statusbar>
+
+</overlay>
